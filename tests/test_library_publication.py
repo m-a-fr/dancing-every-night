@@ -1,0 +1,69 @@
+"""Isolated publication lifecycle; no live catalogue or R2 writes."""
+import argparse
+import json
+from pathlib import Path
+import sys
+import tempfile
+from unittest.mock import patch
+import urllib.request
+import unittest
+import zipfile
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'tools'))
+import catalog as cat
+import library_publish as pub
+import library_fetch as fetch
+
+
+class PublicationTest(unittest.TestCase):
+    def test_private_attachment_authentication(self):
+        with patch.dict('os.environ', {'GH_TOKEN': 'test-only-credential'}):
+            request = fetch.attachment_request('https://github.com/user-attachments/files/1/test.zip')
+            self.assertEqual(request.get_header('Authorization'), 'Bearer test-only-credential')
+            redirected = fetch.CheckedRedirect().redirect_request(
+                request, None, 302, 'Found', {}, 'https://objects.githubusercontent.com/test.zip')
+            self.assertIsNone(redirected.get_header('Authorization'))
+            external = fetch.attachment_request('https://objects.githubusercontent.com/test.zip')
+            self.assertIsNone(external.get_header('Authorization'))
+            with self.assertRaises(urllib.error.URLError):
+                fetch.CheckedRedirect().redirect_request(request, None, 302, 'Found', {}, 'https://example.com/test.zip')
+
+    def test_lifecycle(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            original = cat.CATALOG, cat.REMOVALS
+            cat.CATALOG, cat.REMOVALS = root / 'catalog.json', root / 'removals.json'
+            try:
+                fixture = ROOT / 'library/tests/test_clicks.zip'
+                pub.prepare(fixture, 'alice', 42, root / 'dist')
+                entry = cat.load(cat.CATALOG, {})['songs'][0]
+                self.assertEqual(entry['id'], 'community-42')
+                self.assertEqual(entry['local_id'], cat.check_zip(fixture)['id'])
+                self.assertTrue(cat.check_zip(root / 'dist/publication.zip')['ok'])
+                with self.assertRaises(ValueError):
+                    pub.prepare(fixture, 'alice', 42, root / 'dist')
+                updated = root / 'v2.zip'
+                with zipfile.ZipFile(fixture) as src, zipfile.ZipFile(updated, 'w') as dst:
+                    for name in src.namelist():
+                        data = src.read(name)
+                        if name.endswith('.chart'):
+                            data = data.replace(b'VERSION 1', b'VERSION 2')
+                        dst.writestr(name, data)
+                with self.assertRaises(ValueError):
+                    pub.prepare(updated, 'bob', 42, root / 'dist')
+                pub.prepare(updated, 'alice', 42, root / 'dist')
+                self.assertEqual(cat.load(cat.CATALOG, {})['songs'][0]['id'], 'community-42')
+                pub.remove('community-42', 'Test withdrawal', root / 'dist')
+                self.assertFalse(cat.load(cat.CATALOG, {})['songs'])
+                transfer = json.loads((root / 'dist/transfer.json').read_text())
+                self.assertIn('songs/community-42-v1.zip', transfer['delete'])
+                self.assertIn('songs/community-42-v2.zip', transfer['delete'])
+                with self.assertRaises(ValueError):
+                    pub.prepare(updated, 'alice', 42, root / 'dist')
+            finally:
+                cat.CATALOG, cat.REMOVALS = original
+
+
+if __name__ == '__main__':
+    unittest.main()

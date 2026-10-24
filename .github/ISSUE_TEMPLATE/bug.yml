@@ -1,0 +1,55 @@
+name: Bug report
+description: Something does not work as it should (game, PC version or song editor)
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. English or French are both fine.
+        For a crash on the PS Vita, please attach the `.psp2dmp` file you find in `ux0:data/`.
+  - type: input
+    id: version
+    attributes:
+      label: Game version
+      description: Shown at the bottom right of the title screen (for example `v0.9.0`). For the editor, say "online editor".
+      placeholder: v0.9.0
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Where does it happen?
+      options:
+        - PS Vita
+        - Windows
+        - macOS
+        - Linux
+        - Online song editor
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the song list
+        2. Select ...
+        3. ...
+  - type: input
+    id: song
+    attributes:
+      label: Song and difficulty (if it depends on one)
+      placeholder: breaking_dawn / EXPERT
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, a `.psp2dmp` crash file, the `.zip` of the song, your browser and its version (editor)...

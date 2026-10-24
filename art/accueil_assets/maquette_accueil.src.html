@@ -1,0 +1,184 @@
+<title>Écran d'accueil Dancing Every Night</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&family=M+PLUS+Rounded+1c:wght@800&display=swap">
+<style>
+/* Écran d'accueil v2 : six calques en parallaxe, chacun avec sa propre pulsation au tempo */
+:root {
+  --bg: #F3F5F8; --surface: #FFFFFF; --fg: #161A22; --muted: #586274; --line: #D9DEE6; --accent: #D81E6A;
+  --display: "Archivo Black", "Arial Black", sans-serif;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141A; --surface: #191D26; --fg: #E7EBF2; --muted: #98A3B5; --line: #2A3040; --accent: #FF5C9A; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #11141A; --surface: #191D26; --fg: #E7EBF2; --muted: #98A3B5; --line: #2A3040; --accent: #FF5C9A; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.6 var(--body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 80px; display: grid; gap: 40px; }
+h1, h2 { font-family: var(--display); font-weight: 400; line-height: 1.1; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+p { margin: 0; max-width: 70ch; }
+.eyebrow { font: 500 0.78rem var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.head { display: grid; gap: 10px; }
+section { display: grid; gap: 16px; }
+.lede { font-size: 1.12rem; max-width: 72ch; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.controls button { font: 600 0.88rem var(--body); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 7px 13px; cursor: pointer; }
+.controls button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.controls button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.controls span { font-size: 0.85rem; color: var(--muted); }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 0.92rem; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+th { font: 500 0.75rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+td:first-child { font-weight: 600; white-space: nowrap; }
+td.num { font-variant-numeric: tabular-nums; }
+.ask { border-left: 4px solid var(--accent); padding: 4px 0 4px 18px; display: grid; gap: 10px; max-width: 74ch; }
+.ask ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+
+.screen { position: relative; width: 100%; aspect-ratio: 960 / 544; border-radius: 10px; overflow: hidden; box-shadow: 0 0 0 6px #0B0C10; background: #0E0824; cursor: crosshair; }
+.vita { position: absolute; left: 0; top: 0; width: 960px; height: 544px; transform-origin: 0 0; transform: scale(var(--s, 1)); overflow: hidden; }
+.lay { position: absolute; will-change: transform; }
+.vita canvas { left: 0; top: 0; width: 960px; height: 544px; }
+.strip { left: 0; width: 100%; background-repeat: repeat-x; }
+.far { bottom: 70px; height: 348px; background-size: 2000px 348px; opacity: .9; }
+.near { bottom: -6px; height: 291px; background-size: 2600px 291px; }
+.dots { left: 0; right: 0; bottom: -20px; height: 200px; background-image: radial-gradient(rgba(255,46,138,.6) 1.8px, transparent 2.2px); background-size: 12px 12px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 85%); mask-image: linear-gradient(to bottom, transparent, #000 85%); }
+.vig { position:absolute; inset: 0; background: radial-gradient(ellipse at 50% 42%, rgba(14,8,36,0) 35%, rgba(14,8,36,.7) 100%); pointer-events: none; }
+.grp { left: 0; top: 0; width: 960px; height: 544px; transform-origin: 480px 270px; }
+.logo { left: 50%; }
+#ball { top: 8px; width: 440px; height: 379px; margin-left: -200px; }
+#girl { top: 4px; width: 340px; height: 420px; margin-left: -210px; transform-origin: 50% 90%; }
+#text { top: 232px; width: 470px; height: 271px; margin-left: -235px; transform-origin: 50% 55%; }
+.logo img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.spark { left: 0; width: 26px; height: 26px; background: #FFE14A; clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%); }
+.press { position:absolute; left: 0; right: 0; bottom: 14px; text-align:center; }
+.press span { display:inline-block; font: 800 17px "M PLUS Rounded 1c"; letter-spacing: 4px; color: #fff; background: #140C2E; padding: 6px 18px; border-radius: 999px; box-shadow: 0 0 0 2px rgba(255,255,255,.4); }
+.press b { display:inline-grid; place-items:center; width: 22px; height: 22px; border-radius: 50%; background: #fff; color: #140C2E; font-size: 12px; margin: 0 6px; }
+</style>
+
+<div class="wrap">
+  <header class="head">
+    <span class="eyebrow">Phase 4 · Écran d'accueil · v3 · 14 octobre 2026</span>
+    <h1>L'accueil en défilement infini</h1>
+    <p class="lede">Le logo est recomposé à partir de tes trois couches (boule disco, hôtesse, bandeau-titre), chacune animée à part. Les calques défilent horizontalement, chacun à sa vitesse, et leurs motifs se répètent sans fin : deux plans de ville (tes versions nettoyées), trame de points, étoiles. Le fond de facettes reste fixe et ne fait que scintiller. Le logo reste au centre, en deux couches qui battent différemment au tempo (120 BPM, temps fort tous les 4 temps). Toutes les pulsations suivent la même courbe : montée brève puis retombée douce, plus marquée sur le temps fort.</p>
+  </header>
+
+  <section>
+    <div class="controls" id="mode"><span>Vitesse :</span></div>
+    <figure style="margin:0"><div class="screen" id="screen"><div class="vita" id="vita"></div></div></figure>
+  </section>
+
+  <section>
+    <div class="head"><span class="eyebrow">Calques</span><h2>Du fond vers l'avant</h2></div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Calque</th><th>Vitesse</th><th>Pulsation</th></tr></thead>
+      <tbody>
+        <tr><td>Facettes de vitrail</td><td class="num">fixe</td><td>Quelques facettes s'allument doucement sur le temps</td></tr>
+        <tr><td>Ville lointaine</td><td class="num">28 px/s</td><td>Luminosité +12 % sur le temps fort</td></tr>
+        <tr><td>Trame de points</td><td class="num">40 px/s</td><td>Aucune</td></tr>
+        <tr><td>Ville proche</td><td class="num">64 px/s</td><td>Luminosité +8 % sur le temps fort</td></tr>
+        <tr><td>Étoiles</td><td class="num">110 px/s</td><td>Grossissent et brillent sur le temps</td></tr>
+        <tr><td>Logo : boule et hôtesse</td><td class="num">fixe</td><td>Battent ensemble, d'un bloc (+1,8 % sur le temps fort)</td></tr>
+        <tr><td>Logo : bandeau-titre</td><td class="num">fixe</td><td>Suit le bloc et ajoute +1,4 %</td></tr>
+      </tbody>
+    </table></div>
+    <p>Sur la Vita, chaque ville est une bande de 2000 px raccordée par miroir (taille d'atlas acceptable, sous 2048) dessinée deux fois côte à côte ; le fond de facettes est fixe. Coût faible.</p>
+  </section>
+
+  <section>
+    <div class="ask">
+      <h2>Ton avis</h2>
+      <ol>
+        <li>Les vitesses : plus lent, plus rapide, ou un calque à ajuster ?</li>
+        <li>Le sens : vers la gauche comme ici, ou vers la droite ?</li>
+        <li>Les pulsations : un calque à calmer ou à pousser ?</li>
+      </ol>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  var A = {{assets}};
+  var vita = document.getElementById('vita'), screen = document.getElementById('screen');
+  var SPARKS = [[90, 26], [330, 18], [150, 22], [410, 20], [60, 16], [240, 24]];
+  vita.innerHTML =
+    '<canvas class="lay" width="960" height="544"></canvas>' +
+    '<div class="lay strip far" style="background-image:url(' + A.far + ')"></div>' +
+    '<div class="lay dots"></div>' +
+    '<div class="lay strip near" style="background-image:url(' + A.near + ')"></div>' +
+    '<div class="vig"></div>' +
+    SPARKS.map(function (p) { return '<i class="lay spark" style="top:' + p[0] + 'px;width:' + p[1] + 'px;height:' + p[1] + 'px"></i>'; }).join('') +
+    '<div class="lay grp" id="grp"><div class="lay logo" id="ball"><img alt="Boule disco du logo" src="' + A.ball + '"></div>' +
+    '<div class="lay logo" id="girl"><img alt="L\'hôtesse" src="' + A.girl + '"></div>' +
+    '<div class="lay logo" id="text"><img alt="Bandeau-titre du logo : Dancing Every Night" src="' + A.text + '"></div></div>' +
+    '<div class="press"><span>PRESS<b>✕</b>TO START</span></div>';
+  var far = vita.querySelector('.far'), near = vita.querySelector('.near'), dots = vita.querySelector('.dots');
+  var sparks = [].slice.call(vita.querySelectorAll('.spark')), grp = document.getElementById('grp'), text = document.getElementById('text');
+  var cv = vita.querySelector('canvas'), c = cv.getContext('2d');
+  var PAL = ['#3B1FA8', '#6A3FD1', '#9A7CF0', '#C9B6FF', '#45C8E8', '#2E8FD6', '#FF2E8A', '#D04BC8'];
+  function hash(a, b) { var x = Math.sin(a * 127.1 + b * 311.7) * 43758.5453; return x - Math.floor(x); }
+  var S = 58, H = S * .866, ROWS = Math.ceil(544 / H) + 1;
+  /* facettes : position dans le monde -> couleur stable, le motif défile sans couture */
+  function drawFacets(off, t, k) {
+    var g = c.createRadialGradient(480, 250, 40, 480, 280, 620); g.addColorStop(0, '#2A1670'); g.addColorStop(1, '#0E0824');
+    c.globalAlpha = 1; c.fillStyle = g; c.fillRect(0, 0, 960, 544);
+    var c0 = Math.floor(off / S) - 2, c1 = c0 + Math.ceil(960 / S) + 4, polys = [];
+    for (var r = -1; r < ROWS; r++) for (var col = c0; col < c1; col++) {
+      var x0 = col * S + (((r % 2) + 2) % 2) * S / 2 - off, y0 = r * H;
+      polys.push([col * 2, r, [[x0, y0], [x0 + S, y0], [x0 + S / 2, y0 + H]]], [col * 2 + 1, r, [[x0 + S, y0], [x0 + S * 1.5, y0 + H], [x0 + S / 2, y0 + H]]]);
+    }
+    polys.forEach(function (p) {
+      var tr = p[2], cx = (tr[0][0] + tr[1][0] + tr[2][0]) / 3, cy = (tr[0][1] + tr[1][1] + tr[2][1]) / 3;
+      var d = Math.hypot(cx - 480, (cy - 250) * 1.3) / 600, tw = hash(p[0] + Math.floor(t * 2), p[1]) > .95 ? k * .35 : 0;
+      c.globalAlpha = Math.max(0, Math.min(1, .14 + (1 - d) * .3 + tw + .05 * Math.sin(t * 1.3 + p[0] + p[1])));
+      c.fillStyle = PAL[Math.floor(hash(p[0], p[1]) * PAL.length)];
+      c.beginPath(); c.moveTo(tr[0][0], tr[0][1]); c.lineTo(tr[1][0], tr[1][1]); c.lineTo(tr[2][0], tr[2][1]); c.closePath(); c.fill();
+    });
+    c.globalAlpha = 1; c.strokeStyle = 'rgba(14,8,36,.85)'; c.lineWidth = 2.5;
+    polys.forEach(function (p) { var tr = p[2]; c.beginPath(); c.moveTo(tr[0][0], tr[0][1]); c.lineTo(tr[1][0], tr[1][1]); c.lineTo(tr[2][0], tr[2][1]); c.closePath(); c.stroke(); });
+    var a = Math.sin(t * .35) * .6; c.save(); c.translate(480, -40); c.rotate(a);
+    var bg = c.createLinearGradient(0, 0, 0, 640); bg.addColorStop(0, 'rgba(255,255,255,.2)'); bg.addColorStop(1, 'rgba(255,255,255,0)');
+    c.fillStyle = bg; c.beginPath(); c.moveTo(-30, 0); c.lineTo(30, 0); c.lineTo(180, 680); c.lineTo(-180, 680); c.fill(); c.restore();
+  }
+  var SPEEDS = { facets: 0, far: 28, dots: 40, near: 64, sparks: 110 };   /* le fond mosaïque ne défile pas */
+  var mult = 1, box = document.getElementById('mode');
+  [[.5, 'Lente'], [1, 'Normale'], [2, 'Rapide'], [0, 'Pause']].forEach(function (m) {
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = m[1]; b.setAttribute('aria-pressed', m[0] === 1 ? 'true' : 'false');
+    b.addEventListener('click', function () { mult = m[0]; box.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); }); b.setAttribute('aria-pressed', 'true'); });
+    box.appendChild(b);
+  });
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) mult = 0;
+  var dist = 0, last = performance.now(), t0 = last;
+  function tick(now) {
+    var dt = Math.min(.05, (now - last) / 1000); last = now; dist += dt * mult;
+    var t = (now - t0) / 1000, beat = t * 2, n = Math.floor(beat), ph = beat - n;
+    /* enveloppe commune à tous les calques : montée courte puis retombée douce (pas de saut sec) */
+    var env = ph < .08 ? Math.sin(ph / .08 * Math.PI / 2) : Math.exp(-(ph - .08) * 4.5);
+    var k = reduce ? 0 : env, kd = n % 4 === 0 ? k : 0, acc = k * (n % 4 === 0 ? 1 : .55);
+    drawFacets(dist * SPEEDS.facets, t, k);
+    far.style.backgroundPosition = (-(dist * SPEEDS.far) % 2000).toFixed(1) + 'px 0';
+    far.style.filter = 'brightness(' + (1 + acc * .12).toFixed(3) + ')';
+    dots.style.backgroundPosition = (-(dist * SPEEDS.dots) % 12).toFixed(1) + 'px 0';
+    near.style.backgroundPosition = (-(dist * SPEEDS.near) % 2600).toFixed(1) + 'px 0';
+    near.style.filter = 'brightness(' + (1 + acc * .08).toFixed(3) + ')';
+    sparks.forEach(function (el, i) {
+      var span = 1100, x = ((i * 197 - dist * SPEEDS.sparks * (.8 + i % 3 * .2)) % span + span) % span - 70;
+      el.style.transform = 'translateX(' + x.toFixed(1) + 'px) scale(' + (.75 + acc * .35).toFixed(3) + ') rotate(' + (acc * 15).toFixed(1) + 'deg)';
+      el.style.opacity = (.55 + acc * .45).toFixed(2);
+    });
+    /* le logo bat d'un bloc (boule et hôtesse ensemble, autour du même centre) ; le titre en rajoute un peu */
+    grp.style.transform = 'scale(' + (1 + acc * .018).toFixed(4) + ')';
+    text.style.transform = 'scale(' + (1 + acc * .014).toFixed(4) + ')';
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+  function fit() { vita.style.setProperty('--s', screen.clientWidth / 960); }
+  fit(); window.addEventListener('resize', fit); if (window.ResizeObserver) new ResizeObserver(fit).observe(document.body);
+})();
+</script>

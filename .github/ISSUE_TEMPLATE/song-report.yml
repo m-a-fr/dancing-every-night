@@ -1,0 +1,53 @@
+name: Report a song
+description: A song is broken, badly timed, or should not be shared (rights, content)
+labels: ["song-report", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for a **song** (its charts, audio, image or video): wrong timing, a broken file, offensive content,
+        or a rights problem. Rights holders can use it too: please say who you are and what you ask for.
+        For a bug in the game itself, use "Bug report".
+  - type: input
+    id: song
+    attributes:
+      label: Song
+      description: Title and song ID (the folder name, for example `breaking_dawn`).
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong?
+      options:
+        - Notes out of sync with the music
+        - Broken or missing file (audio, image, video)
+        - Does not install or does not appear in the game
+        - Offensive or inappropriate content
+        - Rights problem (copyright, licence)
+        - Something else
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where did you get the song?
+      options:
+        - Included in the game
+        - Song library
+        - A `.zip` shared by someone
+        - Made it myself
+    validations:
+      required: true
+  - type: input
+    id: difficulty
+    attributes:
+      label: Difficulty concerned (if not all)
+      placeholder: HARD
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What exactly is wrong, and where (a time in the song helps). For a rights problem, say who you are and what you request.
+    validations:
+      required: true

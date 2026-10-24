@@ -1,0 +1,33 @@
+name: Idea or feature request
+description: Suggest an improvement to the game or to the song editor
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome. English or French are both fine.
+        Not sure it is a good idea yet? Start a conversation in [Discussions](https://github.com/m-a-fr/dancing-every-night/discussions) instead.
+  - type: dropdown
+    id: area
+    attributes:
+      label: What is it about?
+      options:
+        - Gameplay
+        - Menus and interface
+        - Song editor
+        - Song library
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would it solve?
+      description: Describe what you are trying to do and what gets in the way.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: How would you like it to work? Sketches and links to other games are welcome.

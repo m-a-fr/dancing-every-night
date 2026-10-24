@@ -1,0 +1,36 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "chart-editor",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "tools/chart_editor.py",
+        "--no-browser"
+      ],
+      "port": 8765,
+      "autoPort": true
+    },
+    {
+      "name": "editor-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8766",
+        "--directory",
+        "build-site"
+      ],
+      "port": 8766
+    },
+    {
+      "name": "editor-site-isolated",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-c",
+        "import http.server as h, functools as f\nclass H(h.SimpleHTTPRequestHandler):\n    def end_headers(s):\n        s.send_header('Cross-Origin-Opener-Policy', 'same-origin'); s.send_header('Cross-Origin-Embedder-Policy', 'require-corp'); super().end_headers()\nh.ThreadingHTTPServer(('', 8767), f.partial(H, directory='build-site')).serve_forever()"
+      ],
+      "port": 8767
+    }
+  ]
+}

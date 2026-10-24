@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creator guide · Dancing Every Night</title>
+<meta name="description" content="How to make songs for Dancing Every Night, a community rhythm game for PS Vita: the editor step by step, mapping tips, media formats, sharing.">
+<meta name="theme-color" content="#0b0720">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="guide.css">
+</head>
+<body>
+<nav class="top">
+  <a class="brand" href="./">Dancing Every Night</a>
+  <span class="spacer"></span>
+  <a class="btn" href="guide.fr.html" hreflang="fr" lang="fr">Français</a>
+  <a class="btn primary" href="./">Open the editor</a>
+</nav>
+<main>
+<h1>Creator guide</h1>
+<p class="lead">Everything you need to turn a piece of music into a song for <b>Dancing Every Night</b>, the community
+rhythm game for PS Vita: the editor step by step, how to make a chart fun to play, and how to share it.</p>
+
+<div class="toc"><b>Contents</b>
+<ol>
+  <li><a href="#song">What a song is</a></li>
+  <li><a href="#first">Your first song</a></li>
+  <li><a href="#notes">Placing notes</a></li>
+  <li><a href="#fun">Making it fun</a></li>
+  <li><a href="#difficulties">Difficulties</a></li>
+  <li><a href="#media">Music, background, video</a></li>
+  <li><a href="#test">Playing your song</a></li>
+  <li><a href="#share">Sharing</a></li>
+  <li><a href="#help">When something goes wrong</a></li>
+  <li><a href="#format">File format</a></li>
+</ol></div>
+
+<h2 id="song"><span class="n">1</span>What a song is</h2>
+<p>A <b>song</b> is one folder that holds a piece of music and one or more <b>difficulties</b> (EASY, NORMAL, HARD,
+EXPERT, or names of your own). Each difficulty is the list of notes the player hits, timed on the music.
+A song can also have a background image and a video that play behind the notes.</p>
+<p>You share a song as a single <code>.zip</code> file. Players copy it to their console (or their computer) and the game
+installs it the next time it starts.</p>
+<p class="note">The editor runs entirely in your browser: nothing is uploaded. Your songs are saved in this browser, on
+this device, so export a <code>.zip</code> to keep a copy. Chrome, Edge and Firefox work best; older versions of Safari
+cannot read Ogg audio.</p>
+
+<h2 id="first"><span class="n">2</span>Your first song</h2>
+<ol class="steps">
+  <li><b>Create a song.</b> On the editor's home screen, click <i>Create a song</i> and drop your music, or a
+  <b>video clip</b>: any common audio or video format works, it is converted in the browser (the converter is downloaded
+  the first time, about 31 MB). With a clip, keep <i>Also use this video as the song's background</i> ticked: the
+  editor takes a picture from it for the background and converts the video for the game. Give the song a title and an
+  artist.</li>
+  <li><b>Set the tempo.</b> The tempo (BPM) and the offset (where the first beat is, in milliseconds) place every note
+  in time, so they matter most. Click <i>Detect the BPM</i> (the first time, the editor downloads the analysis tools,
+  about 30 MB), or tap the tempo with the <kbd>T</kbd> key. If the result is twice or half the real tempo, use
+  <i>×2</i> / <i>÷2</i>.</li>
+  <li><b>Check by ear and on the waveform.</b> Click <i>Listen</i>, with the metronome checked. Adjust the BPM and first
+  beat while playback continues. Click the waveform to place the cursor, then <i>First beat here</i>, or drag a beat line
+  to align the grid. Use zoom and <i>−10 ms</i> / <i>+10 ms</i> for fine adjustment. The same tool is available in the
+  editor’s <i>Tempo</i> step.</li>
+  <li><b>Pick the first difficulty.</b> Start empty, or choose <i>Automatic draft</i>: the editor analyses the music and
+  writes a complete difficulty you can then fix. It's a good way to start, not a finished chart.</li>
+  <li><b>Place the notes.</b> Click in a column to add a note, press <kbd>Space</kbd> to listen. See
+  <a href="#notes">Placing notes</a>.</li>
+  <li><b>Add the other difficulties</b> with <i>Add a difficulty</i> in the left panel: empty, a copy of another one,
+  or an automatic draft at another density.</li>
+  <li><b>Prepare for publication.</b> In the <i>Publish</i> step, fill in <i>Author</i> (your nickname, shown to players) and
+  <i>Licence</i> (see <a href="#share">Sharing</a>). These details do not block exports for playing; this step does not upload anything.</li>
+  <li><b>Export and play it.</b> <i>Export the .zip</i>, then copy it to your Vita or to the PC version (see
+  <a href="#test">Playing your song</a>).</li>
+</ol>
+
+<h2 id="notes"><span class="n">3</span>Placing notes</h2>
+<p>Notes fly towards two arcs of targets. The player uses the <b>left hand</b> on the directional buttons and the
+<b>right hand</b> on the face buttons:</p>
+<div class="lanes">
+  <div><b>Left hand</b>UP · LEFT · DOWN</div>
+  <div><b>Right hand</b>TRIANGLE · CIRCLE · CROSS</div>
+</div>
+<table>
+  <tr><th>Note</th><th>In the editor</th><th>For the player</th></tr>
+  <tr><td>TAP</td><td>Click in a column</td><td>Press the button on time</td></tr>
+  <tr><td>HOLD</td><td>Click and drag up</td><td>Press and hold until the end</td></tr>
+  <tr><td>DOUBLE</td><td>Click and drag to the other side (or <kbd>Alt</kbd>+click)</td><td>Two buttons at once, one per hand</td></tr>
+  <tr><td>SCRATCH</td><td>Click the SCRATCH column (<kbd>Alt</kbd>+click: other direction)</td><td><kbd>L</kbd>/<kbd>R</kbd> or a flick of the stick</td></tr>
+</table>
+<p>The <b>grid</b> (top bar, or <kbd>[</kbd> <kbd>]</kbd>) sets where notes snap: 1 beat, 1/2, 1/4, triplets…
+<b>Preview</b> (<kbd>P</kbd>) shows the song as in the game, next to the timeline. Press <kbd>?</kbd> in the editor for
+every shortcut: selection, copy and paste, undo, moving notes, and more.</p>
+<p>The <b>START</b> bar on the timeline is the offset: drag it to shift the whole grid against the music. The
+<b>END</b> bar sets when the results screen appears; by default, just after the last note.</p>
+
+<h2 id="fun"><span class="n">4</span>Making it fun</h2>
+<p>A good chart feels like playing the music. A few principles, from playtesting:</p>
+<h3>Follow what you hear</h3>
+<ul>
+  <li>Put notes on sounds the player can hear: mostly the <b>vocals</b>, and the <b>drums</b> in the intro and breaks.
+  A note on silence feels random.</li>
+  <li>Use <b>holds</b> on long vowels and sustained notes, <b>doubles</b> on strong accents and section starts, not
+  everywhere.</li>
+  <li>Let the height follow the melody: higher notes on the top buttons, lower ones on the bottom.</li>
+  <li>When the music repeats (a chorus, a riff), <b>repeat the pattern</b>, or mirror it between the hands: players love
+  recognising it.</li>
+</ul>
+<h3>Think in hands, not in buttons</h3>
+<ul>
+  <li>Alternate the hands in phrases (call and response) rather than switching on every note.</li>
+  <li>What players feel is what the hands do: a repeated note, one hand rolling, the two hands answering each other.
+  Swapping which buttons you use without changing the movement doesn't make a chart more varied.</li>
+  <li>Give fast passages to alternating hands; keep a single hand's bursts short.</li>
+</ul>
+<h3>Respect the difficulty</h3>
+<table>
+  <tr><th>Difficulty</th><th>Rhythm</th><th>Density (rough guide)</th></tr>
+  <tr><td>EASY</td><td>On the beats, no off-beats; half notes on fast songs</td><td>about 1 note per second at most</td></tr>
+  <tr><td>NORMAL</td><td>Eighth notes, very few off-beats</td><td>up to ~1.6 notes per second in the busiest parts</td></tr>
+  <tr><td>HARD</td><td>Sixteenth notes only when switching hands, short bursts</td><td>up to ~2.6 notes per second</td></tr>
+  <tr><td>EXPERT</td><td>Syncopation, doubles, scratches in intense sections</td><td>up to ~3 notes per second</td></tr>
+</table>
+<ul>
+  <li>Leave at least an eighth note between two notes on the <b>same lane</b>: on fast songs, closer notes overlap on
+  screen.</li>
+  <li>Don't leave more than a bar without notes while the music plays, but give the player short rests between
+  intense parts.</li>
+  <li>A harder difficulty doesn't need many more notes: it gets harder through the kind of notes (off-beats, doubles,
+  holds with the other hand still playing).</li>
+</ul>
+<h3>Play it</h3>
+<p>Watch the preview, then play the song for real on the console or the PC version, at every difficulty. If you
+stumble on a passage you know by heart, players will too.</p>
+
+<h2 id="difficulties"><span class="n">5</span>Difficulties</h2>
+<ul>
+  <li><b>Names.</b> EASY, NORMAL, HARD and EXPERT are suggested, but any name works (up to 23 characters). Two
+  difficulties of the same song can't share a name, because best scores are stored by name: the editor suggests
+  <i>EASY 2</i>, <i>EASY 3</i>… when you want several levels of the same kind.</li>
+  <li><b>Order.</b> Use the <i>↑</i> / <i>↓</i> buttons in a difficulty's settings to choose the order players see in the
+  game. By default: EASY, NORMAL, HARD, EXPERT, then other names.</li>
+  <li><b>Note speed.</b> How long a note takes to reach its target. Leave it empty for the game's normal speed (1500 ms).</li>
+  <li><b>Shared settings.</b> Title, artist, music, BPM, offset, end and background belong to the song: changing them
+  changes every difficulty.</li>
+</ul>
+
+<h2 id="media"><span class="n">6</span>Music, background, video</h2>
+<table>
+  <tr><th>File</th><th>What the game reads</th><th>In the online editor</th></tr>
+  <tr><td>Music</td><td>Ogg Vorbis (<code>.ogg</code>)</td><td>kept as is; other formats converted</td></tr>
+  <tr><td>Background image</td><td>JPEG or PNG, up to 2048 px</td><td>converted to a 960×544 JPEG</td></tr>
+  <tr><td>Video</td><td>MPEG-1 (<code>.mpg</code>), no sound; 480×272 at 24 fps recommended</td><td><code>.mpg</code> kept as is; other formats converted</td></tr>
+</table>
+<ul>
+  <li>The video is silent: the sound always comes from the music file. Use <i>Video offset</i> and <i>Test the sync</i>
+  if the video starts later than the music.</li>
+  <li><i>Darken</i> dims the background so the notes stay readable.</li>
+  <li>Keep files reasonable: a 3-minute video at the default settings is about 20 MB.</li>
+  <li>After opening a ZIP, the editor prepares the video preview automatically (about a minute on first load).
+  It appears in <i>Background</i> and in the gameplay preview, following playback and the video offset.
+  If preparation fails, use <i>Show the video</i> to try again.</li>
+  <li>Recent YouTube downloads are often in <b>AV1</b>, which the online converter can't read: you still get the music
+  and a background picture, but convert the video to MP4 (H.264) first if you want it in the game.</li>
+</ul>
+
+<h2 id="test"><span class="n">7</span>Playing your song</h2>
+<h3>On a PS Vita</h3>
+<ol>
+  <li>Export the <code>.zip</code> (<i>File → Export the .zip</i>). Its name defaults to the song title; you can change it without changing the song identity in the game.</li>
+  <li>Copy it into <code>ux0:data/dancingeverynight/import/</code> with VitaShell (USB or FTP mode). The folder is
+  created the first time you launch the game.</li>
+  <li>Launch the game: it installs the song while loading, then it shows up in the list. Installing a new version
+  replaces the old one and keeps your best scores.</li>
+</ol>
+<h3>On a computer</h3>
+<p>The PC version (Windows, macOS, Linux) installs songs the same way, through an <code>import/</code> folder: in the
+<code>save/</code> folder next to the game on Windows and Linux, in
+<code>~/Library/Application Support/Dancing Every Night/save/</code> on macOS.</p>
+
+<h2 id="share"><span class="n">8</span>Sharing</h2>
+<ul>
+  <li><b>Author</b>: your nickname, shown to players.</li>
+  <li><b>Source</b> (optional): where the music comes from: album, show, game…</li>
+  <li><b>Licence</b>: the rights you have on the music and the media, for example <i>CC BY 4.0</i>, <i>my own
+  music</i> or <i>artist's permission</i>. Be honest: it is shown with the song.</li>
+  <li><b>Version</b>: increase it when you share an update of a song you already shared.</li>
+</ul>
+<p>Respect the artists: credit them, follow the terms of their licence, and when in doubt prefer music that is free to
+share. The <b>song library</b>, where you'll be able to submit your songs, is coming; until then, share the
+<code>.zip</code> directly.</p>
+
+<h2 id="help"><span class="n">9</span>When something goes wrong</h2>
+<table>
+  <tr><th>Problem</th><th>What to do</th></tr>
+  <tr><td>Notes drift away from the music</td><td>The BPM is slightly wrong, or the song changes tempo. Re-detect the BPM, check it with the metronome over the whole song.</td></tr>
+  <tr><td>Notes are all early or all late</td><td>Adjust the offset (drag the START bar or use −10 ms / +10 ms). If it's only on the console, use the game's audio calibration (L/R in pause).</td></tr>
+  <tr><td>Detected BPM is double or half</td><td>Use ×2 / ÷2.</td></tr>
+  <tr><td>The song doesn't appear in the game</td><td>Look in <code>import/failed/</code>: the zip is there with a <code>.txt</code> file explaining why.</td></tr>
+  <tr><td>Notes in red in the editor</td><td>Two notes conflict (for example a note on a lane during a hold on the same lane).</td></tr>
+  <tr><td>My songs disappeared from the editor</td><td>They live in the browser's storage: clearing the site's data or private browsing erases them. Re-open your exported <code>.zip</code>.</td></tr>
+</table>
+
+<h2 id="format"><span class="n">10</span>File format</h2>
+<p>You don't need this to make songs, but it helps if you want to edit files by hand. A song is a folder
+<code>&lt;ID&gt;/</code> (letters, digits, <code>_</code> and <code>-</code>) containing <code>audio.ogg</code>, optional
+<code>background.jpg</code> and <code>video.mpg</code>, and one text file per difficulty, for example
+<code>normal.chart</code>:</p>
+<pre><code>FORMAT 1
+ID my_song
+VERSION 1
+MAPPER your_name
+LICENSE CC BY 4.0
+TITLE My Song
+ARTIST Some Artist
+DIFFICULTY NORMAL
+ORDER 2
+BPM 120
+OFFSET_MS 500
+AUDIO audio.ogg
+BACKGROUND background.jpg
+END 276
+
+4 TRIANGLE TAP
+5.5 CIRCLE TAP
+8 CROSS HOLD 2
+12 TRIANGLE DOUBLE UP
+16 SCRATCH CW</code></pre>
+<p>Times are in <b>beats</b> from the offset (<code>0.5</code> = an eighth note). Each note line is
+<code>beat LANE TYPE [length or second lane]</code>; notes are sorted by time. Optional lines: <code>PACK</code>,
+<code>SOURCE</code>, <code>APPROACH_MS</code> (note speed), <code>VIDEO</code>, <code>VIDEO_OFFSET_MS</code>,
+<code>BACKGROUND_DIM</code> (0–100), <code>PREVIEW</code> (start of the menu preview, in beats). Lines starting with
+<code>#</code> are comments.</p>
+
+<footer>Dancing Every Night is free software (GNU GPL v3). <a href="guide.fr.html" hreflang="fr" lang="fr">Ce guide en français</a>.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+# Contrôle automatique des chansons proposées à la bibliothèque : se lance à l'ouverture ou à la modification d'une issue
+# « Submit a song » (et quand son auteur commente avec un nouveau fichier). Valide le .zip avec le validateur du jeu et
+# commente le rapport ; ne publie rien (la publication est faite par un mainteneur, voir library-publish.yml).
+# Sécurité : le texte de l'issue est traité comme une donnée (variables d'environnement, jamais collé dans une commande),
+# seules des pièces jointes GitHub sont téléchargées (tools/library_fetch.py), et le job n'a aucun secret ni droit d'écriture
+# sur le code : issues: write seulement.
+name: Check a submitted song
+
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      zip_path:
+        description: "Test : chemin d'un .zip du dépôt à vérifier (sans issue)"
+        required: true
+        default: library/tests/test_clicks.zip
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: song-check-${{ github.event.issue.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    # issue de proposition ; pour un commentaire : seulement celui de l'auteur de l'issue
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (contains(github.event.issue.labels.*.name, 'song-submission') &&
+       (github.event_name == 'issues' || github.event.comment.user.login == github.event.issue.user.login))
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the validator
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq cmake build-essential libsdl2-dev
+          cmake -S . -B build-desktop -DCMAKE_BUILD_TYPE=Release -DGAME_COPY_ASSETS=OFF > /dev/null
+          cmake --build build-desktop -j --target vitagame
+      - name: Get the song
+        id: get
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TEXT: ${{ github.event.comment.body || github.event.issue.body }}
+          TEST_ZIP: ${{ inputs.zip_path }}
+        run: |
+          if [ -n "$TEST_ZIP" ]; then cp "$TEST_ZIP" submission.zip; echo "found=1" >> "$GITHUB_OUTPUT"; exit 0; fi
+          set +e
+          python3 tools/library_fetch.py submission.zip > fetch.txt
+          code=$?
+          if [ $code -eq 0 ]; then echo "found=1" >> "$GITHUB_OUTPUT"
+          elif [ $code -eq 2 ]; then echo "I couldn't find a \`.zip\` in your submission. Drag the file into the \"Your song\" box of the form (edit the issue), or reply here with the file." > fetch.txt
+          fi
+      - name: Check it
+        env:
+          SUBMITTER: ${{ github.event.issue.user.login }}
+          VITAGAME: build-desktop/vitagame
+        run: |
+          pip install --quiet pillow
+          if [ "${{ steps.get.outputs.found }}" = 1 ]; then
+            python3 tools/library_report.py submission.zip --submitter "$SUBMITTER" --status-file status.txt > report.md
+          else
+            { echo "### ❌ Needs changes"; echo; cat fetch.txt; } > report.md; echo invalid > status.txt
+          fi
+          cat report.md | tee -a "$GITHUB_STEP_SUMMARY"
+          # test manuel : le job échoue si la chanson est refusée (« succès » = chanson valide)
+          if [ "${{ github.event_name }}" = workflow_dispatch ] && [ "$(cat status.txt)" != valid ]; then exit 1; fi
+      - name: Comment and label
+        if: github.event_name != 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$NUMBER" --edit-last --create-if-none --body-file report.md
+          if [ "$(cat status.txt)" = valid ]; then add=check-passed; remove=check-failed; else add=check-failed; remove=check-passed; fi
+          gh issue edit "$NUMBER" --add-label "$add" --remove-label "$remove" || true

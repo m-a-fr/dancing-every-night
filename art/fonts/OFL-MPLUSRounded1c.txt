@@ -1,0 +1,4 @@
+M PLUS Rounded 1c — Copyright 2016 The M+ Project Authors.
+Distribuée sous la SIL Open Font License, Version 1.1 (même texte que OFL-Anton.txt, voir aussi
+https://openfontlicense.org). Source : https://github.com/google/fonts/tree/main/ofl/mplusrounded1c
+(le dépôt Google Fonts ne fournit pas de fichier OFL.txt pour cette famille ; licence indiquée dans METADATA.pb).

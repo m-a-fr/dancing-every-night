@@ -1,0 +1,49 @@
+build-desktop/
+build-vita/
+build-release/
+build-pc/
+build-site/
+dist/
+save/
+.env
+.DS_Store
+*.o
+*.velf
+*.elf
+compile_commands.json
+tools/.venv/
+__pycache__/
+*.pyc
+
+# Morceaux locaux (sous droits, jamais publiés). Une map = un dossier assets/songs/<ID>/ ; une map officielle
+# s'ajoute par une exception :   !assets/songs/<ID>/
+assets/songs/*
+# Chansons officielles (HARDCORE TANO*C, voir assets/CREDITS.md)
+!assets/songs/breaking_dawn/
+!assets/songs/break_through_myself/
+!assets/songs/make_up_your_world/
+# ... mais leur audio reste hors du dépôt public (scripts/official-audio.sh, dépôt privé dne-official-audio)
+assets/songs/*/audio.ogg
+assets/charts/
+.chart_trash/
+
+# Documents internes (références à d'autres jeux, décisions de sortie) : gardés en local
+GAME_DESIGN.md
+RELEASE_PLAN.md
+PROMPTS.md
+
+# Fichiers de travail et rapports : gardés en local
+art/videos/
+art/refs/
+art/analysis/
+art/backups/
+dev/videos/
+
+# Hôtesse : génération IA (dataset, références, essais) et outils liés à la machine de rendu
+art/hostess/*
+!art/hostess/FICHE.md
+tools/comfy/
+tools/comfy_gen.py
+
+# Copies datées des conditions d'utilisation des morceaux (pages des labels) : preuves locales, pas à publier
+art/licences/

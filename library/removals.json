@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "removals": [
+    {
+      "id": "community-2",
+      "version": 1,
+      "title": "Test Clicks",
+      "date": "2026-10-24",
+      "reason": "Synthetic publication lifecycle test completed; withdrawing disposable CC0 fixture"
+    }
+  ]
+}

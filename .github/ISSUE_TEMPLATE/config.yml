@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or discussion
+    url: https://github.com/m-a-fr/dancing-every-night/discussions
+    about: Ask how something works, share your songs, talk about ideas that are not ready yet.
+  - name: Creator guide
+    url: https://dancing-every-night.pages.dev/guide.html
+    about: How to make songs with the online editor, mapping tips, media formats.

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide du créateur · Dancing Every Night</title>
+<meta name="description" content="Créer des chansons pour Dancing Every Night, jeu de rythme communautaire pour PS Vita : l'éditeur pas à pas, conseils de mapping, formats des médias, partage.">
+<meta name="theme-color" content="#0b0720">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="guide.css">
+</head>
+<body>
+<nav class="top">
+  <a class="brand" href="./">Dancing Every Night</a>
+  <span class="spacer"></span>
+  <a class="btn" href="guide.html" hreflang="en" lang="en">English</a>
+  <a class="btn primary" href="./">Ouvrir l'éditeur</a>
+</nav>
+<main>
+<h1>Guide du créateur</h1>
+<p class="lead">Tout ce qu'il faut pour transformer une musique en chanson pour <b>Dancing Every Night</b>, le jeu de
+rythme communautaire pour PS Vita : l'éditeur pas à pas, comment rendre une difficulté agréable à jouer, et comment la
+partager.</p>
+
+<div class="toc"><b>Sommaire</b>
+<ol>
+  <li><a href="#song">Qu'est-ce qu'une chanson</a></li>
+  <li><a href="#first">Ta première chanson</a></li>
+  <li><a href="#notes">Poser les notes</a></li>
+  <li><a href="#fun">Rendre la chanson agréable</a></li>
+  <li><a href="#difficulties">Les difficultés</a></li>
+  <li><a href="#media">Musique, fond, vidéo</a></li>
+  <li><a href="#test">Jouer ta chanson</a></li>
+  <li><a href="#share">Partager</a></li>
+  <li><a href="#help">Quand quelque chose ne va pas</a></li>
+  <li><a href="#format">Format des fichiers</a></li>
+</ol></div>
+
+<h2 id="song"><span class="n">1</span>Qu'est-ce qu'une chanson</h2>
+<p>Une <b>chanson</b>, c'est un dossier qui contient une musique et une ou plusieurs <b>difficultés</b> (EASY, NORMAL,
+HARD, EXPERT, ou des noms à toi). Chaque difficulté est la liste des notes que le joueur frappe, calées sur la musique.
+Une chanson peut aussi avoir une image de fond et une vidéo, derrière les notes.</p>
+<p>Une chanson se partage en un seul fichier <code>.zip</code>. Le joueur le copie sur sa console (ou son ordinateur) et
+le jeu l'installe au prochain démarrage.</p>
+<p class="note">L'éditeur fonctionne entièrement dans ton navigateur : rien n'est envoyé sur internet. Tes chansons sont
+enregistrées dans ce navigateur, sur cet appareil : exporte un <code>.zip</code> pour en garder une copie. Chrome, Edge
+et Firefox marchent le mieux ; les anciennes versions de Safari ne lisent pas l'audio Ogg.</p>
+
+<h2 id="first"><span class="n">2</span>Ta première chanson</h2>
+<ol class="steps">
+  <li><b>Crée une chanson.</b> Sur l'accueil de l'éditeur, clique sur <i>Créer une chanson</i> et glisse ta musique, ou un
+  <b>clip vidéo</b> : tous les formats audio et vidéo courants marchent, ils sont convertis dans le navigateur (le
+  convertisseur se télécharge la première fois, environ 31 Mo). Avec un clip, laisse coché <i>Utiliser aussi cette vidéo
+  comme fond de la chanson</i> : l'éditeur en tire une image de fond et convertit la vidéo pour le jeu. Donne un titre et
+  un artiste.</li>
+  <li><b>Règle le tempo.</b> Le tempo (BPM) et le décalage (la position du premier temps, en millisecondes) placent
+  chaque note dans le temps : c'est le réglage le plus important. Clique sur <i>Détecter le BPM</i> (la première fois,
+  l'éditeur télécharge les outils d'analyse, environ 30 Mo), ou tape le tempo avec la touche <kbd>T</kbd>. Si le résultat
+  vaut le double ou la moitié du vrai tempo, utilise <i>×2</i> / <i>÷2</i>.</li>
+  <li><b>Vérifie à l’oreille et sur l’onde.</b> Clique sur <i>Écouter</i>, avec le métronome coché. Le BPM et le premier
+  temps restent réglables pendant la lecture. Clique sur l’onde pour placer le curseur, puis sur <i>Premier temps ici</i>,
+  ou glisse une barre pour recaler la grille. Le zoom et les boutons <i>−10 ms</i> / <i>+10 ms</i> affinent le réglage.
+  Le même outil est disponible dans l’étape <i>Tempo</i> de l’éditeur.</li>
+  <li><b>Choisis la première difficulté.</b> Pars de zéro, ou choisis <i>Brouillon automatique</i> : l'éditeur analyse la
+  musique et écrit une difficulté complète, que tu corriges ensuite. C'est un bon point de départ, pas une difficulté
+  finie.</li>
+  <li><b>Pose les notes.</b> Clique dans une colonne pour ajouter une note, <kbd>Espace</kbd> pour écouter. Voir
+  <a href="#notes">Poser les notes</a>.</li>
+  <li><b>Ajoute les autres difficultés</b> avec <i>Ajouter une difficulté</i> dans le panneau de gauche : vide, copie d'une
+  autre, ou brouillon automatique à une autre densité.</li>
+  <li><b>Prépare la publication.</b> Dans l’étape <i>Publier</i>, remplis <i>Auteur</i> (ton pseudo, affiché aux joueurs) et
+  <i>Licence</i> (voir <a href="#share">Partager</a>). Ces informations ne bloquent pas l’export pour jouer ; cette étape n’envoie aucun fichier.</li>
+  <li><b>Exporte et joue.</b> <i>Exporter le .zip</i>, puis copie-le sur ta Vita ou dans la version PC (voir
+  <a href="#test">Jouer ta chanson</a>).</li>
+</ol>
+
+<h2 id="notes"><span class="n">3</span>Poser les notes</h2>
+<p>Les notes volent vers deux arcs de cibles. Le joueur utilise la <b>main gauche</b> sur la croix directionnelle et la
+<b>main droite</b> sur les boutons :</p>
+<div class="lanes">
+  <div><b>Main gauche</b>HAUT · GAUCHE · BAS</div>
+  <div><b>Main droite</b>TRIANGLE · ROND · CROIX</div>
+</div>
+<table>
+  <tr><th>Note</th><th>Dans l'éditeur</th><th>Pour le joueur</th></tr>
+  <tr><td>TAP</td><td>Clic dans une colonne</td><td>Appuyer au bon moment</td></tr>
+  <tr><td>HOLD</td><td>Clic-glisser vers le haut</td><td>Appuyer et tenir jusqu'au bout</td></tr>
+  <tr><td>DOUBLE</td><td>Clic-glisser vers l'autre côté (ou <kbd>Alt</kbd>+clic)</td><td>Deux boutons à la fois, un par main</td></tr>
+  <tr><td>SCRATCH</td><td>Clic dans la colonne SCRATCH (<kbd>Alt</kbd>+clic : autre sens)</td><td><kbd>L</kbd>/<kbd>R</kbd> ou un coup de stick</td></tr>
+</table>
+<p>La <b>grille</b> (barre du haut, ou <kbd>[</kbd> <kbd>]</kbd>) dit où les notes s'aimantent : 1 temps, 1/2, 1/4,
+triolets… L'<b>Aperçu</b> (<kbd>P</kbd>) montre la chanson comme dans le jeu, à côté de la timeline. Appuie sur
+<kbd>?</kbd> dans l'éditeur pour tous les raccourcis : sélection, copier-coller, annuler, déplacer des notes…</p>
+<p>La barre <b>DÉBUT</b> de la timeline, c'est le décalage : fais-la glisser pour décaler toute la grille par rapport à la
+musique. La barre <b>FIN</b> règle l'apparition des résultats ; par défaut, juste après la dernière note.</p>
+
+<h2 id="fun"><span class="n">4</span>Rendre la chanson agréable</h2>
+<p>Une bonne difficulté donne l'impression de jouer la musique. Quelques principes, tirés des tests en jeu :</p>
+<h3>Suis ce qu'on entend</h3>
+<ul>
+  <li>Pose les notes sur des sons que le joueur entend : surtout la <b>voix</b>, et la <b>batterie</b> dans l'intro et les
+  cassures. Une note sur un silence paraît aléatoire.</li>
+  <li>Mets des <b>tenues</b> sur les voyelles longues et les notes tenues, des <b>doubles</b> sur les accents forts et les
+  débuts de section, pas partout.</li>
+  <li>Fais suivre la mélodie : les notes aiguës sur les boutons du haut, les graves en bas.</li>
+  <li>Quand la musique se répète (un refrain, un riff), <b>reprends le même motif</b>, ou en miroir entre les mains : les
+  joueurs adorent le reconnaître.</li>
+</ul>
+<h3>Pense en mains, pas en boutons</h3>
+<ul>
+  <li>Alterne les mains par phrases (question-réponse) plutôt qu'à chaque note.</li>
+  <li>Ce que le joueur ressent, c'est ce que font ses mains : une note répétée, une main qui roule, les deux mains qui se
+  répondent. Changer de boutons sans changer le mouvement ne rend pas une difficulté plus variée.</li>
+  <li>Confie les passages rapides aux deux mains en alternance ; garde courtes les rafales d'une seule main.</li>
+</ul>
+<h3>Respecte la difficulté</h3>
+<table>
+  <tr><th>Difficulté</th><th>Rythme</th><th>Densité (ordre d'idée)</th></tr>
+  <tr><td>EASY</td><td>Sur les temps, pas de contretemps ; blanches sur les chansons rapides</td><td>environ 1 note par seconde au plus</td></tr>
+  <tr><td>NORMAL</td><td>Croches, très peu de contretemps</td><td>jusqu'à ~1,6 note par seconde dans les passages les plus chargés</td></tr>
+  <tr><td>HARD</td><td>Doubles croches seulement en changeant de main, rafales courtes</td><td>jusqu'à ~2,6 notes par seconde</td></tr>
+  <tr><td>EXPERT</td><td>Syncopes, doubles, scratchs dans les passages intenses</td><td>jusqu'à ~3 notes par seconde</td></tr>
+</table>
+<ul>
+  <li>Laisse au moins une croche entre deux notes de la <b>même lane</b> : sur une chanson rapide, des notes plus proches
+  se chevauchent à l'écran.</li>
+  <li>Ne laisse pas plus d'une mesure sans note tant que la musique joue, mais offre de courtes pauses entre les
+  passages intenses.</li>
+  <li>Une difficulté plus dure n'a pas besoin de beaucoup plus de notes : elle se durcit par le type de notes
+  (contretemps, doubles, tenues pendant que l'autre main joue).</li>
+</ul>
+<h3>Joue-la</h3>
+<p>Regarde l'aperçu, puis joue vraiment la chanson sur la console ou la version PC, dans chaque difficulté. Si tu bloques
+sur un passage que tu connais par cœur, les joueurs bloqueront aussi.</p>
+
+<h2 id="difficulties"><span class="n">5</span>Les difficultés</h2>
+<ul>
+  <li><b>Noms.</b> EASY, NORMAL, HARD et EXPERT sont proposés, mais tout nom convient (23 caractères au plus). Deux
+  difficultés d'une même chanson ne peuvent pas porter le même nom, car les records sont rangés par nom : l'éditeur
+  propose <i>EASY 2</i>, <i>EASY 3</i>… quand tu veux plusieurs niveaux du même genre.</li>
+  <li><b>Ordre.</b> Les boutons <i>↑</i> / <i>↓</i> dans les réglages d'une difficulté choisissent l'ordre que voient les
+  joueurs dans le jeu. Par défaut : EASY, NORMAL, HARD, EXPERT, puis les autres noms.</li>
+  <li><b>Vitesse des notes.</b> Le temps que met une note à atteindre sa cible. Laisse vide pour la vitesse normale du jeu
+  (1500 ms).</li>
+  <li><b>Réglages communs.</b> Titre, artiste, musique, BPM, décalage, fin et fond appartiennent à la chanson : les changer
+  change toutes les difficultés.</li>
+</ul>
+
+<h2 id="media"><span class="n">6</span>Musique, fond, vidéo</h2>
+<table>
+  <tr><th>Fichier</th><th>Ce que lit le jeu</th><th>Dans l'éditeur en ligne</th></tr>
+  <tr><td>Musique</td><td>Ogg Vorbis (<code>.ogg</code>)</td><td>gardée telle quelle ; autres formats convertis</td></tr>
+  <tr><td>Image de fond</td><td>JPEG ou PNG, 2048 px au plus</td><td>convertie en JPEG 960×544</td></tr>
+  <tr><td>Vidéo</td><td>MPEG-1 (<code>.mpg</code>), sans son ; 480×272 à 24 ips conseillé</td><td><code>.mpg</code> gardée telle quelle ; autres formats convertis</td></tr>
+</table>
+<ul>
+  <li>La vidéo est muette : le son vient toujours du fichier de musique. Utilise <i>Décalage vidéo</i> et
+  <i>Tester la synchro</i> si la vidéo commence après la musique.</li>
+  <li><i>Assombrir</i> fonce le fond pour que les notes restent lisibles.</li>
+  <li>Garde des fichiers raisonnables : une vidéo de 3 minutes aux réglages par défaut fait environ 20 Mo.</li>
+  <li>Après l’ouverture d’un ZIP, l’éditeur prépare automatiquement l’aperçu vidéo (environ une minute au premier
+  chargement). Il apparaît dans <i>Fond</i> et dans l’aperçu du jeu, où il suit la lecture et le décalage vidéo.
+  Si la préparation échoue, <i>Afficher la vidéo</i> permet de réessayer.</li>
+  <li>Les vidéos téléchargées récemment sur YouTube sont souvent en <b>AV1</b>, que le convertisseur en ligne ne sait pas
+  lire : tu obtiens quand même la musique et une image de fond, mais convertis d'abord la vidéo en MP4 (H.264) si tu la
+  veux dans le jeu.</li>
+</ul>
+
+<h2 id="test"><span class="n">7</span>Jouer ta chanson</h2>
+<h3>Sur PS Vita</h3>
+<ol>
+  <li>Exporte le <code>.zip</code> (<i>Fichier → Exporter le .zip</i>). Son nom reprend le titre de la chanson ; tu peux le modifier sans changer son identité dans le jeu.</li>
+  <li>Copie-le dans <code>ux0:data/dancingeverynight/import/</code> avec VitaShell (mode USB ou FTP). Le dossier est créé
+  au premier lancement du jeu.</li>
+  <li>Lance le jeu : il installe la chanson pendant le chargement, puis elle apparaît dans la liste. Une nouvelle version
+  remplace l'ancienne et garde tes records.</li>
+</ol>
+<h3>Sur ordinateur</h3>
+<p>La version PC (Windows, macOS, Linux) installe les chansons de la même façon, par un dossier <code>import/</code> :
+dans le dossier <code>save/</code> à côté du jeu sous Windows et Linux, dans
+<code>~/Library/Application Support/Dancing Every Night/save/</code> sous macOS.</p>
+
+<h2 id="share"><span class="n">8</span>Partager</h2>
+<ul>
+  <li><b>Auteur</b> : ton pseudo, affiché aux joueurs.</li>
+  <li><b>Source</b> (optionnel) : d'où vient la musique : album, série, jeu…</li>
+  <li><b>Licence</b> : les droits que tu as sur la musique et les médias, par exemple <i>CC BY 4.0</i>, <i>ma propre
+  musique</i> ou <i>accord de l'artiste</i>. Sois honnête : elle est affichée avec la chanson.</li>
+  <li><b>Version</b> : à augmenter quand tu partages une mise à jour d'une chanson déjà partagée.</li>
+</ul>
+<p>Respecte les artistes : crédite-les, suis les conditions de leur licence, et dans le doute préfère une musique libre
+de partage. La <b>bibliothèque de chansons</b>, où tu pourras proposer tes chansons, arrive bientôt ; en attendant,
+partage directement le <code>.zip</code>.</p>
+
+<h2 id="help"><span class="n">9</span>Quand quelque chose ne va pas</h2>
+<table>
+  <tr><th>Problème</th><th>Que faire</th></tr>
+  <tr><td>Les notes se décalent peu à peu de la musique</td><td>Le BPM est un peu faux, ou la chanson change de tempo. Relance la détection du BPM, vérifie au métronome sur toute la chanson.</td></tr>
+  <tr><td>Toutes les notes sont en avance ou en retard</td><td>Ajuste le décalage (fais glisser la barre DÉBUT ou utilise −10 ms / +10 ms). Si c'est seulement sur la console, utilise la calibration audio du jeu (L/R en pause).</td></tr>
+  <tr><td>Le BPM détecté est le double ou la moitié</td><td>Utilise ×2 / ÷2.</td></tr>
+  <tr><td>La chanson n'apparaît pas dans le jeu</td><td>Regarde dans <code>import/failed/</code> : le zip y est, avec un fichier <code>.txt</code> qui explique pourquoi.</td></tr>
+  <tr><td>Des notes en rouge dans l'éditeur</td><td>Deux notes sont en conflit (par exemple une note sur une lane pendant une tenue sur la même lane).</td></tr>
+  <tr><td>Mes chansons ont disparu de l'éditeur</td><td>Elles sont dans le stockage du navigateur : effacer les données du site ou la navigation privée les efface. Rouvre ton <code>.zip</code> exporté.</td></tr>
+</table>
+
+<h2 id="format"><span class="n">10</span>Format des fichiers</h2>
+<p>Pas besoin de ça pour créer des chansons, mais c'est utile pour modifier les fichiers à la main. Une chanson est un
+dossier <code>&lt;ID&gt;/</code> (lettres, chiffres, <code>_</code> et <code>-</code>) qui contient <code>audio.ogg</code>,
+éventuellement <code>background.jpg</code> et <code>video.mpg</code>, et un fichier texte par difficulté, par exemple
+<code>normal.chart</code> :</p>
+<pre><code>FORMAT 1
+ID ma_chanson
+VERSION 1
+MAPPER ton_pseudo
+LICENSE CC BY 4.0
+TITLE Ma chanson
+ARTIST Un artiste
+DIFFICULTY NORMAL
+ORDER 2
+BPM 120
+OFFSET_MS 500
+AUDIO audio.ogg
+BACKGROUND background.jpg
+END 276
+
+4 TRIANGLE TAP
+5.5 CIRCLE TAP
+8 CROSS HOLD 2
+12 TRIANGLE DOUBLE UP
+16 SCRATCH CW</code></pre>
+<p>Les temps sont en <b>temps (beats)</b> depuis le décalage (<code>0.5</code> = une croche). Chaque ligne de note est
+<code>temps LANE TYPE [durée ou deuxième lane]</code> ; les notes sont triées par temps. Lignes optionnelles :
+<code>PACK</code>, <code>SOURCE</code>, <code>APPROACH_MS</code> (vitesse des notes), <code>VIDEO</code>,
+<code>VIDEO_OFFSET_MS</code>, <code>BACKGROUND_DIM</code> (0–100), <code>PREVIEW</code> (début de l'extrait du menu, en
+temps). Les lignes qui commencent par <code>#</code> sont des commentaires.</p>
+
+<footer>Dancing Every Night est un logiciel libre (GNU GPL v3). <a href="guide.html" hreflang="en" lang="en">This guide in English</a>.</footer>
+</main>
+</body>
+</html>

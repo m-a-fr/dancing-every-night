@@ -1,0 +1,38 @@
+name: Submit a song
+description: Share a song with everyone through the song library (checked automatically, then approved by a person)
+title: "Song: "
+labels: ["song-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for sharing! Make your song with the [online editor](https://dancing-every-night.pages.dev), export the `.zip`,
+        and attach it below. It is checked automatically within a minute (a comment tells you what to fix), then a person listens to it
+        before it goes online. English or French are both fine.
+
+        **Before you start:** the song is public and anyone can download it. Only share music and images you have the right to share,
+        and say so honestly in the `LICENSE` field of your song (the editor's *Finish* step).
+  - type: textarea
+    id: zip
+    attributes:
+      label: Your song (.zip)
+      description: Drag your `.zip` into this box (25 MB maximum). Too big? Reduce the video bitrate and export again. Only GitHub issue attachments are accepted.
+      placeholder: Drop the .zip here
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything to tell us?
+      description: Where the music comes from, what you want players to know, special setup... (optional)
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Rights and permission
+      options:
+        - label: I made these difficulties, or their author allows me to share them.
+          required: true
+        - label: I have the right to share the music, images and video in this song, or the rights holder allows it. The `LICENSE` field tells the truth.
+          required: true
+        - label: I understand the song will be public, and will be removed if a rights holder asks.
+          required: true

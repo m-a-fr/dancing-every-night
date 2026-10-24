@@ -1,0 +1,126 @@
+name: Publish or remove a song
+on:
+  issues:
+    types: [labeled]
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: Proposal number (publish)
+        default: ''
+      remove:
+        description: Published ID to remove (leave empty to publish)
+        default: ''
+      fixture_test:
+        description: Test only - publish the committed CC0 fixture instead of a private attachment
+        type: boolean
+        default: false
+      reason:
+        description: Required removal reason
+        default: ''
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: library-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.label.name == 'approved' && contains(github.event.issue.labels.*.name, 'song-submission'))
+    runs-on: ubuntu-22.04
+    environment: library-production
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Authorize and snapshot proposal
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ACTOR: ${{ github.actor }}
+          NUMBER: ${{ inputs.issue || github.event.issue.number }}
+          REMOVE_ID: ${{ inputs.remove }}
+          APPROVED_AT: ${{ github.event.issue.updated_at }}
+          FIXTURE_TEST: ${{ inputs.fixture_test }}
+        run: |
+          python3 - <<'PYCODE'
+          import json
+          from urllib.parse import urlparse
+          url = urlparse(json.load(open('library/config.json'))['download_base'])
+          if url.scheme != 'https' or not url.hostname:
+              raise SystemExit('Configure download_base before publishing')
+          PYCODE
+          permission=$(gh api "repos/$GITHUB_REPOSITORY/collaborators/$ACTOR/permission" --jq .permission)
+          case "$permission" in admin|maintain|write) ;; *) echo 'Maintainer permission required'; exit 1;; esac
+          if [ -n "$REMOVE_ID" ]; then exit 0; fi
+          [[ "$NUMBER" =~ ^[1-9][0-9]*$ ]]
+          gh issue view "$NUMBER" --json body,title,author,labels > proposal.json
+          gh api --paginate --slurp "repos/$GITHUB_REPOSITORY/issues/$NUMBER/comments" > proposal-comments.json
+          if [ "$FIXTURE_TEST" = true ]; then
+            cp library/tests/test_clicks.zip submission.zip
+            python3 - <<'FIXTURE'
+          import json, os
+          proposal = json.load(open('proposal.json'))
+          if proposal['author']['login'] != os.environ['ACTOR'] or 'publication lifecycle test' not in proposal.get('body', '') + proposal.get('title', ''):
+              raise SystemExit('Fixture tests require a maintainer-owned test proposal')
+          FIXTURE
+            echo 'TEST ONLY: publishing the committed CC0 fixture; private attachment access is not exercised.' > source.txt
+          else
+            python3 tools/library_proposal.py > source.txt
+          fi
+          cat source.txt >> "$GITHUB_STEP_SUMMARY"
+      - name: Build validator
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq cmake build-essential libsdl2-dev
+          pip install pillow awscli
+          cmake -S . -B build-desktop -DCMAKE_BUILD_TYPE=Release -DGAME_COPY_ASSETS=OFF
+          cmake --build build-desktop -j --target vitagame
+      - name: Prepare publication or removal
+        env:
+          NUMBER: ${{ inputs.issue || github.event.issue.number }}
+          REMOVE_ID: ${{ inputs.remove }}
+          REASON: ${{ inputs.reason }}
+        run: |
+          if [ -n "$REMOVE_ID" ]; then
+            python3 tools/library_publish.py --remove "$REMOVE_ID" --reason "$REASON"
+          else
+            submitter=$(python3 -c 'import json; print(json.load(open("proposal.json"))["author"]["login"])')
+            python3 tools/library_publish.py --zip submission.zip --submitter "$submitter" --issue "$NUMBER"
+          fi
+          python3 tools/catalog.py check
+          bash scripts/build-editor-site.sh
+      - name: Transfer prepared files to R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          R2_ENDPOINT: ${{ vars.R2_ENDPOINT }}
+          R2_BUCKET: ${{ vars.R2_BUCKET }}
+        run: python3 tools/library_transfer.py
+      - name: Save catalogue
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add library/catalog.json library/removals.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Update the community song library'
+          git push origin HEAD:main
+      - name: Notify proposal
+        if: inputs.remove == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ inputs.issue || github.event.issue.number }}
+        run: |
+          python3 - <<'PY' > published.md
+          import json, os
+          config = json.load(open('library/config.json'))
+          entry = next(s for s in json.load(open('library/catalog.json'))['songs'] if s.get('issue') == int(os.environ['NUMBER']))
+          print('Published: ' + config['site_url'].rstrip('/') + '/songs/' + entry['id'] + '/')
+          print('\nThe site will update after its next successful deployment.')
+          print('\nPublication ID: `' + entry['id'] + '`. Submit future versions in this same proposal.')
+          print('\nLocal records remain attached to the original local ID; automatic record migration is not available yet.')
+          PY
+          gh issue comment "$NUMBER" --body-file published.md
+          gh issue edit "$NUMBER" --add-label published --remove-label approved

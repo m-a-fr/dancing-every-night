@@ -1,0 +1,90 @@
+/* Bibliothèque de chansons : composants au-dessus de guide.css (jetons « Cascade pop » de l'éditeur) */
+:root { --easy: #4fd1c5; --normal: #c4a7ff; --hard: #ff7a6b; --expert: #ce6ed6; --other: #cfcbdc; --focus: #4fc8f0; }
+main { max-width: 1120px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+
+/* Boutons (aussi dans la barre du haut) */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 8px 16px;
+  font: 800 14px var(--label); letter-spacing: .2px; color: var(--text); background: var(--panel2); border: 1px solid var(--line);
+  border-radius: 8px; text-decoration: none; cursor: pointer; white-space: nowrap; transition: border-color .15s, transform .15s; }
+.btn:hover { border-color: var(--lemon); }
+.btn.primary { background: var(--pink); border-color: var(--ink); color: var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+.btn.big { min-height: 56px; padding: 12px 28px; font-size: 17px; }
+.btn.big small { font: 600 13px "Bricolage Grotesque", system-ui, sans-serif; opacity: .85; }
+.btn.small { min-height: 36px; padding: 4px 12px; font-size: 13px; }
+.btn.disabled { opacity: .6; cursor: not-allowed; }
+.top { flex-wrap: wrap; }
+.top .nav[aria-current="page"] { border-color: var(--lemon); }
+.top .lang { min-width: 48px; }
+@media (max-width: 640px) { .top a.btn:not(.primary) { display: inline-flex; } .top .nav { padding: 6px 10px; } }
+
+/* Recherche et filtres */
+.how { background: var(--panel); border: 1px solid var(--line-soft); border-radius: 10px; padding: 4px 16px; margin: 12px 0; }
+.how summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; font-weight: 600; }
+.how ol { margin: 0 0 8px; padding-left: 22px; }
+.tools { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: end; margin: 24px 0 8px; }
+.tools label { display: block; font: 800 12px var(--label); letter-spacing: .4px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.tools input, .tools select { width: 100%; min-height: 44px; padding: 8px 12px; font: 16px "Bricolage Grotesque", system-ui, sans-serif;
+  color: var(--text); background: var(--panel2); border: 1px solid var(--line); border-radius: 8px; }
+.chips { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; border: 0; padding: 0; margin: 0; }
+.chips legend { float: left; margin-right: 8px; padding: 0; font: 800 12px var(--label); letter-spacing: .4px; text-transform: uppercase; color: var(--muted); line-height: 44px; }
+.chip { min-height: 44px; padding: 6px 16px; font: 800 13px var(--label); color: var(--text); background: transparent;
+  border: 1px solid var(--line); border-radius: 999px; cursor: pointer; transition: background .15s, border-color .15s; }
+.chip:hover { border-color: var(--lemon); }
+.chip[aria-pressed="true"] { background: var(--lemon); border-color: var(--ink); color: var(--ink); box-shadow: 2px 2px 0 var(--pink); }
+.status { display: flex; align-items: center; gap: 12px; min-height: 44px; margin: 8px 0 12px; }
+#count { margin: 0; color: var(--muted); }
+@media (max-width: 640px) { .tools { grid-template-columns: 1fr; } .chips legend { float: none; width: 100%; line-height: 1.4; margin: 0 0 2px; } }
+
+/* Grille de cartes */
+.grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.card { position: relative; display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line-soft);
+  border-radius: 12px; overflow: hidden; transition: border-color .15s, transform .15s, box-shadow .15s; }
+.card:hover, .card:focus-within { border-color: var(--lemon); transform: translateY(-2px); box-shadow: 4px 4px 0 var(--pink); }
+.card[hidden] { display: none; }
+.cover { display: block; aspect-ratio: 16 / 9; background: #000; }
+.cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.noimg { display: grid; place-items: center; width: 100%; height: 100%; font: 400 56px var(--display); color: var(--line);
+  background: linear-gradient(135deg, var(--panel2), var(--ink)); }
+.body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.body h2 { margin: 0; font: 400 22px/1.15 var(--display); letter-spacing: .3px; text-transform: none; scroll-margin-top: 0; }
+.body h2 a { color: var(--text); text-decoration: none; }
+.body h2 a::after { content: ""; position: absolute; inset: 0; }   /* toute la carte est cliquable, un seul lien pour le clavier */
+.artist { margin: 0; color: var(--muted); }
+.meta { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 0; font-size: 14px; color: var(--muted); }
+.meta span + span::before { content: "·"; margin-right: 12px; color: var(--line); }
+.by { margin: auto 0 0; font-size: 13px; color: var(--muted); padding-top: 6px; }
+.pills { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 6px 0; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border: 1px solid var(--line); border-radius: 999px; font: 800 11px var(--label); letter-spacing: .4px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--other); }
+.pill.easy .dot { background: var(--easy); } .pill.normal .dot { background: var(--normal); }
+.pill.hard .dot { background: var(--hard); } .pill.expert .dot { background: var(--expert); }
+.empty { text-align: center; padding: 48px 16px; border: 2px dashed var(--line); border-radius: 12px; margin-top: 8px; }
+.empty h2 { margin-top: 0; }
+.empty.first { margin-top: 24px; background: var(--panel); }
+.empty[hidden], [hidden] { display: none !important; }
+
+/* Page d'une chanson */
+.crumb { margin: 0 0 8px; }
+.crumb a { display: inline-flex; align-items: center; min-height: 44px; }
+.hero { display: grid; grid-template-columns: minmax(0, 480px) 1fr; gap: 28px; align-items: start; }
+.hero .art { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid var(--line-soft); border-radius: 12px; background: #000; }
+.hero h1 { margin-top: 0; font-size: clamp(30px, 5vw, 44px); }
+.song .artist { font-size: 18px; }
+.dl { margin: 18px 0 0; }
+@media (max-width: 760px) { .hero { grid-template-columns: 1fr; } }
+.diffs { max-width: 520px; }
+.diffs th[scope="row"] { font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--text); font-size: 15px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px 24px; margin: 0; }
+.facts dt { font: 800 12px var(--label); letter-spacing: .4px; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 2px 0 0; overflow-wrap: anywhere; }
+.how-list { padding-left: 22px; }
+.hash { margin: 16px 0; } .hash summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+.hash code { overflow-wrap: anywhere; }
+.actions { margin-top: 24px; }
+.status p { margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  .card:hover, .card:focus-within { transform: none; }
+}
