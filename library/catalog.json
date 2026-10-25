@@ -48,6 +48,52 @@
       "source_sha256": "6e2e0ac9b5b327ed95b07f95052fb9292ba84168b050486315de597ee1b5d063"
     },
     {
+      "id": "community-27",
+      "version": 1,
+      "title": "Ai no Sukima",
+      "artist": "MIMI feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=fztKqreP1pk",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 174,
+          "bpm": 102.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 281,
+          "bpm": 102.0
+        },
+        {
+          "name": "HARD",
+          "notes": 415,
+          "bpm": 102.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 515,
+          "bpm": 102.0
+        }
+      ],
+      "duration_s": 218.9,
+      "size_bytes": 4809337,
+      "has_video": false,
+      "zip": "songs/community-27-v1.zip",
+      "zip_bytes": 4783129,
+      "sha256": "c12dd1d639ae86f764ca54f2b57570abb94a9bed983bba4bf85c7d81c4da27b6",
+      "thumb": "thumbs/community-27-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 27,
+      "local_id": "popular_ai_no_sukima",
+      "previous_objects": [],
+      "source_sha256": "863ebcaaee2c619a54da3b498e33c31dd5945c5d009ab7ca8ab2aab21edb0c3f"
+    },
+    {
       "id": "community-20",
       "version": 1,
       "title": "Arpanauts",
