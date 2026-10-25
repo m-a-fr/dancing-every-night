@@ -49,6 +49,13 @@
       "title": "Test Clicks",
       "date": "2026-10-25",
       "reason": "Discord announcement test; remove disposable CC0 fixture"
+    },
+    {
+      "id": "community-26",
+      "version": 1,
+      "title": "Test Clicks",
+      "date": "2026-10-25",
+      "reason": "Retrait demandé par le mainteneur : Test Clicks ne doit pas rester dans la bibliothèque de production."
     }
   ]
 }
