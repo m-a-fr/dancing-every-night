@@ -922,6 +922,52 @@
       "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
     },
     {
+      "id": "community-37",
+      "version": 1,
+      "title": "Shinzou wo Sasageyo! (TV Size)",
+      "artist": "Linked Horizon",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=CID-sYQNCew",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 91,
+          "bpm": 160.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 125,
+          "bpm": 160.0
+        },
+        {
+          "name": "HARD",
+          "notes": 190,
+          "bpm": 160.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 219,
+          "bpm": 160.0
+        }
+      ],
+      "duration_s": 89.5,
+      "size_bytes": 1963157,
+      "has_video": false,
+      "zip": "songs/community-37-v1.zip",
+      "zip_bytes": 1953218,
+      "sha256": "3b5cfd736d4e5fec29e8c80d94646ed6347becfae4c8ee268d7d3837e31bc9a6",
+      "thumb": "thumbs/community-37-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 37,
+      "local_id": "popular_shinzou",
+      "previous_objects": [],
+      "source_sha256": "6748fa7a36da1c1cfb874c64a81258f9727fb0e7679d0dc16701d561f9004187"
+    },
+    {
       "id": "community-15",
       "version": 1,
       "title": "Some Things Must (OutFox Edit)",
