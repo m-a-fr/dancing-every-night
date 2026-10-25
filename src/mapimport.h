@@ -12,6 +12,10 @@
    Un dossier déjà décompressé est aussi accepté, directement ou dans un unique dossier enveloppe.
    ID : ligne ID d'une carte, sinon nom de ce dossier, sinon nom du zip. */
 
+/* ID de chanson acceptable pour un nom de dossier sur tous les systèmes : lettres, chiffres, _ et - (47 au plus), et pas un
+   nom réservé de Windows (CON, NUL, COM1...) */
+bool mapimport_valid_id(const char *id);
+
 #define MAPIMPORT_MAX 64   /* imports traités par lancement (les suivants au lancement d'après) */
 
 typedef struct {

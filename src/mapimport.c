@@ -18,13 +18,23 @@ static bool has_suffix(const char *s, const char *suffix) {
     return n > k && SDL_strcasecmp(s + n - k, suffix) == 0;
 }
 
+/* Noms que Windows refuse pour un dossier (CON, NUL, COM1...) : une chanson ne peut pas s'installer sous ce nom */
+static bool windows_reserved(const char *s) {
+    static const char *const names[] = { "con", "prn", "aux", "nul" };
+    for (size_t i = 0; i < sizeof names / sizeof *names; i++)
+        if (SDL_strcasecmp(s, names[i]) == 0) return true;
+    return (SDL_strncasecmp(s, "com", 3) == 0 || SDL_strncasecmp(s, "lpt", 3) == 0) && s[3] >= '1' && s[3] <= '9' && !s[4];
+}
+
 static bool valid_id(const char *id) {
-    if (!id[0] || strlen(id) >= CHART_ID_MAX) return false;
+    if (!id[0] || strlen(id) >= CHART_ID_MAX || windows_reserved(id)) return false;
     for (const char *c = id; *c; c++)
         if (!((*c >= 'a' && *c <= 'z') || (*c >= 'A' && *c <= 'Z') || (*c >= '0' && *c <= '9') || *c == '_' || *c == '-'))
             return false;
     return true;
 }
+
+bool mapimport_valid_id(const char *id) { return valid_id(id); }
 
 int mapimport_scan(MapImport *mi) {
     *mi = (MapImport){0};

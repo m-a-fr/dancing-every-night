@@ -40,6 +40,8 @@ First version prepared for public release.
 - Songs install from the LIBRARY with Cross: download with a progress bar (Circle cancels), SHA-256 check against the
   catalogue, then installation. The song appears in the song list right away, and a newer version replaces the old one
   (your scores are kept).
+- The LIBRARY also works on Windows (WinHTTP), macOS (system libcurl) and Linux (libcurl loaded at run time: without it the
+  game still starts and the LIBRARY says it needs libcurl). A build without network shows "not available in this version".
 - Startup imports accept extracted song folders as well as ZIPs, including a single enclosing folder.
 - Approving several songs together keeps every publication queued instead of cancelling earlier pending approvals.
 - Attachment downloads support GitHub authentication without forwarding credentials on redirects.

@@ -146,14 +146,28 @@ else()
   endif()
   target_link_libraries(${PROJECT_NAME} m)
 
-  # Bibliothèque en ligne (src/net.c) : libcurl si le système l'a (essai en développement) ; les paquets distribués
-  # n'en embarquent pas, la bibliothèque y affiche « connexion requise »
-  option(GAME_NET "PC : lire le catalogue en ligne avec libcurl, si disponible" ON)
+  # Bibliothèque en ligne (src/net.c) : WinHTTP sur Windows (aucune dépendance) ; libcurl du système sur macOS ; sur Linux,
+  # libcurl est chargée à l'exécution (dlopen) : seuls ses en-têtes servent à la compilation, le jeu démarre sans elle.
+  # Sans le nécessaire, le jeu compile sans réseau et la bibliothèque le dit.
+  option(GAME_NET "PC : accès réseau de la bibliothèque en ligne" ON)
   if(GAME_NET)
-    find_package(CURL QUIET)
-    if(CURL_FOUND)
-      target_compile_definitions(${PROJECT_NAME} PRIVATE HAVE_CURL=1)
-      target_link_libraries(${PROJECT_NAME} CURL::libcurl)
+    if(WIN32)
+      target_compile_definitions(${PROJECT_NAME} PRIVATE HAVE_WINHTTP=1)
+      target_link_libraries(${PROJECT_NAME} winhttp)
+    else()
+      find_package(CURL QUIET)
+      if(CURL_FOUND)
+        target_compile_definitions(${PROJECT_NAME} PRIVATE HAVE_CURL=1)
+        if(APPLE)
+          target_link_libraries(${PROJECT_NAME} CURL::libcurl)
+        else()
+          target_compile_definitions(${PROJECT_NAME} PRIVATE NET_DLOPEN=1)
+          target_include_directories(${PROJECT_NAME} PRIVATE ${CURL_INCLUDE_DIRS})
+          target_link_libraries(${PROJECT_NAME} ${CMAKE_DL_LIBS})
+        endif()
+      else()
+        message(STATUS "libcurl introuvable : compilation sans réseau (la bibliothèque en ligne sera indisponible)")
+      endif()
     endif()
   endif()
 

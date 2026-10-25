@@ -30,7 +30,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y build-essential cmake libasound2-dev libpulse-dev libx11-dev libxext-dev \
             libxrandr-dev libxcursor-dev libxi-dev libxss-dev libxfixes-dev libxkbcommon-dev libwayland-dev \
-            wayland-protocols libegl1-mesa-dev libgles2-mesa-dev libdrm-dev libgbm-dev libdbus-1-dev libudev-dev
+            wayland-protocols libegl1-mesa-dev libgles2-mesa-dev libdrm-dev libgbm-dev libdbus-1-dev libudev-dev \
+            libcurl4-openssl-dev   # en-têtes seulement : libcurl est chargée à l'exécution (src/net.c)
       - uses: actions/cache@v4
         with:
           path: build-pc/sdl-${{ env.SDL_VERSION }}-linux

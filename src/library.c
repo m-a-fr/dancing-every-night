@@ -120,13 +120,7 @@ static bool js_text(Js *j, char *out, size_t cap) {
     return js_skip(j, 0);
 }
 
-static bool valid_id(const char *s) {
-    size_t n = strlen(s);
-    if (n == 0 || n >= CHART_ID_MAX) return false;
-    for (; *s; s++)
-        if (!((*s >= 'a' && *s <= 'z') || (*s >= 'A' && *s <= 'Z') || (*s >= '0' && *s <= '9') || *s == '_' || *s == '-')) return false;
-    return true;
-}
+static bool valid_id(const char *s) { return mapimport_valid_id(s); }
 
 /* Clé relative au serveur : préfixe imposé, jamais de « .. » ni de caractère inattendu */
 static bool valid_key(const char *s, const char *prefix) {
@@ -291,6 +285,7 @@ static int fetch_thread(void *data) {
     if (local) json = read_local(local);
 #endif
     if (!json) {
+        if (!net_supported()) { SDL_AtomicSet(&l->status, LIBST_UNSUPPORTED); return 0; }
         if (!net_online()) { net_log("library: offline"); SDL_AtomicSet(&l->status, LIBST_OFFLINE); return 0; }
         int len = 0;
         json = net_get(LIBRARY_URL, LIB_JSON_MAX, &len);
@@ -811,7 +806,13 @@ void library_draw(const Library *l, SDL_Renderer *r, const Font *f, const Sprite
     float hx = 34.0f;
 
     if (st != LIBST_READY || !l->order) {
-        if (st == LIBST_OFFLINE) draw_message(r, f, "CONNECTION REQUIRED", "THE LIBRARY NEEDS THE INTERNET. CONNECT THE CONSOLE TO WI-FI, THEN TRY AGAIN.", l->time, false);
+        if (st == LIBST_UNSUPPORTED)
+#ifdef __linux__
+            draw_message(r, f, "NETWORK UNAVAILABLE", "THE LIBRARY NEEDS THE CURL LIBRARY (LIBCURL4). INSTALL IT, THEN RESTART THE GAME.", l->time, false);
+#else
+            draw_message(r, f, "NOT AVAILABLE IN THIS VERSION", "THIS VERSION OF THE GAME CANNOT USE THE INTERNET.", l->time, false);
+#endif
+        else if (st == LIBST_OFFLINE) draw_message(r, f, "CONNECTION REQUIRED", "THE LIBRARY NEEDS THE INTERNET. CONNECT THE CONSOLE TO WI-FI, THEN TRY AGAIN.", l->time, false);
         else if (st == LIBST_FAILED) draw_message(r, f, "LIBRARY UNAVAILABLE", "THE CATALOGUE COULD NOT BE READ. TRY AGAIN IN A MOMENT.", l->time, false);
         else draw_message(r, f, "CONTACTING THE LIBRARY", "ONE MOMENT", l->time, true);
         if (st == LIBST_OFFLINE || st == LIBST_FAILED)

@@ -63,7 +63,7 @@ Règles d'architecture :
   (`_newlib_heap_size_user`). VRAM limitée : textures raisonnables (≤ 2048×2048,
   puissance de 2 de préférence), atlas plutôt que des centaines de petites images.
 - Charger les assets **au démarrage ou aux changements de niveau**, jamais pendant le jeu.
-- Pas de bibliothèques dynamiques, pas de `system()`. Réseau (libcurl, `src/net.c`) seulement pour : l'annonce des mises à jour (`src/update.c`, lit `latest.json` au démarrage, désactivable dans OPTIONS ; rien n'est installé) et l'écran LIBRARY (`src/library.c`, lit `catalog.json` à chaque ouverture et télécharge les zips choisis, vérifiés par SHA-256 puis installés par `mapimport_install` ; sans réseau, pas de catalogue, aucune copie gardée). Sur PC, libcurl n'est liée que si le système l'a (`GAME_NET`, coupé dans les paquets distribués).
+- Pas de bibliothèques dynamiques, pas de `system()`. Réseau (libcurl, `src/net.c`) seulement pour : l'annonce des mises à jour (`src/update.c`, lit `latest.json` au démarrage, désactivable dans OPTIONS ; rien n'est installé) et l'écran LIBRARY (`src/library.c`, lit `catalog.json` à chaque ouverture et télécharge les zips choisis, vérifiés par SHA-256 puis installés par `mapimport_install` ; sans réseau, pas de catalogue, aucune copie gardée). Moteur par système (`src/net.c`) : libcurl sur Vita, libcurl du système sur macOS, libcurl chargée par `dlopen` sur Linux (en-têtes seulement à la compilation), WinHTTP sur Windows ; `GAME_NET=OFF` compile sans réseau.
 - Budget : **60 fps stables** visés ; si impossible, 30 fps assumés et constants.
 - Audio : SDL2 audio fonctionne ; pour du son/musique, SDL2_mixer est disponible dans VitaSDK
   (vérifier avant d'ajouter toute dépendance : elle doit exister dans `vdpm` / l'image Docker).

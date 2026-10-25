@@ -44,7 +44,7 @@ typedef struct {
     int   installed_version;       /* 0 = inconnue (installée sous son ID d'origine) */
 } LibSong;
 
-typedef enum { LIBST_IDLE, LIBST_LOADING, LIBST_READY, LIBST_OFFLINE, LIBST_FAILED } LibStatus;
+typedef enum { LIBST_IDLE, LIBST_LOADING, LIBST_READY, LIBST_OFFLINE, LIBST_FAILED, LIBST_UNSUPPORTED } LibStatus;
 typedef enum { LIBF_ALL, LIBF_NEW, LIBF_INSTALLED, LIBF_UPDATE, LIBF_COUNT } LibFilter;
 typedef enum { LIBS_NEWEST, LIBS_TITLE, LIBS_ARTIST, LIBS_COUNT } LibSort;
 
