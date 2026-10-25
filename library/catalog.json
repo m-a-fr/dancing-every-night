@@ -232,6 +232,52 @@
       "source_sha256": "e4657de2fc1af89f76cbfe8f2a237d95b6c78901191fccc0c860bc1ad8fad08e"
     },
     {
+      "id": "community-30",
+      "version": 1,
+      "title": "Blue Zenith",
+      "artist": "xi",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=vatcanQQJvQ",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 197,
+          "bpm": 100.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 342,
+          "bpm": 100.0
+        },
+        {
+          "name": "HARD",
+          "notes": 416,
+          "bpm": 100.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 501,
+          "bpm": 100.0
+        }
+      ],
+      "duration_s": 259.0,
+      "size_bytes": 6246524,
+      "has_video": false,
+      "zip": "songs/community-30-v1.zip",
+      "zip_bytes": 6208154,
+      "sha256": "37326ecd579034390d76f746b360761cfd9ed894ab5dd27e75c4df63282fadc0",
+      "thumb": "thumbs/community-30-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 30,
+      "local_id": "popular_blue_zenith",
+      "previous_objects": [],
+      "source_sha256": "7b98caedab4f9ca7858115b9d4300cac23980e77640ee1cffb46126921a61040"
+    },
+    {
       "id": "community-18",
       "version": 2,
       "title": "Bounded Quietude",
