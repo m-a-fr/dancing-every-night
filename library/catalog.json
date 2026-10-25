@@ -1152,6 +1152,52 @@
       "source_sha256": "f14b26c25975062e074fe6ee8f53336cece45f4267d4be674c5f7b9202d574f3"
     },
     {
+      "id": "community-53",
+      "version": 1,
+      "title": "Kyouran Hey Kids!! (TV Size)",
+      "artist": "THE ORAL CIGARETTES",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=aZenmeRytEM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 85,
+          "bpm": 142.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 135,
+          "bpm": 142.0
+        },
+        {
+          "name": "HARD",
+          "notes": 189,
+          "bpm": 142.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 231,
+          "bpm": 142.0
+        }
+      ],
+      "duration_s": 89.9,
+      "size_bytes": 12185935,
+      "has_video": true,
+      "zip": "songs/community-53-v1.zip",
+      "zip_bytes": 11909443,
+      "sha256": "e07d1dc06ec3b8e56778b74fa46acc60ac05067eb16c356eca08a3d6b82b3401",
+      "thumb": "thumbs/community-53-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 53,
+      "local_id": "popular2_kyouran_hey_kids",
+      "previous_objects": [],
+      "source_sha256": "34afbabf14e60d668da7a62c4c60d84cf4aed92da4be9416ec2235b90c4b4d96"
+    },
+    {
       "id": "community-36",
       "version": 1,
       "title": "Marshmary",
