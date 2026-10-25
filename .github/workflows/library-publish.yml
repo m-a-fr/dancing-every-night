@@ -14,6 +14,10 @@ on:
         description: Test only - publish the committed CC0 fixture instead of a private attachment
         type: boolean
         default: false
+      fixture_unlicensed:
+        description: Test only - with fixture_test, use the fixture that has no LICENSE
+        type: boolean
+        default: false
       reason:
         description: Required removal reason
         default: ''
@@ -43,6 +47,7 @@ jobs:
           REMOVE_ID: ${{ inputs.remove }}
           APPROVED_AT: ${{ github.event.issue.updated_at }}
           FIXTURE_TEST: ${{ inputs.fixture_test }}
+          FIXTURE_UNLICENSED: ${{ inputs.fixture_unlicensed }}
         run: |
           python3 - <<'PYCODE'
           import json
@@ -58,7 +63,8 @@ jobs:
           gh issue view "$NUMBER" --json body,title,author,labels > proposal.json
           gh api --paginate --slurp "repos/$GITHUB_REPOSITORY/issues/$NUMBER/comments" > proposal-comments.json
           if [ "$FIXTURE_TEST" = true ]; then
-            cp library/tests/test_clicks.zip submission.zip
+            if [ "$FIXTURE_UNLICENSED" = true ]; then cp library/tests/test_clicks_unlicensed.zip submission.zip
+            else cp library/tests/test_clicks.zip submission.zip; fi
             python3 - <<'FIXTURE'
           import json, os
           proposal = json.load(open('proposal.json'))
