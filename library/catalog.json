@@ -600,6 +600,52 @@
       "source_sha256": "4754802f9fde8b959197ae27501d0de375a00d5445187dc356b395fda20e750f"
     },
     {
+      "id": "community-35",
+      "version": 1,
+      "title": "Idol",
+      "artist": "YOASOBI",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 223,
+          "bpm": 166.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 314,
+          "bpm": 166.0
+        },
+        {
+          "name": "HARD",
+          "notes": 477,
+          "bpm": 166.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 553,
+          "bpm": 166.0
+        }
+      ],
+      "duration_s": 225.8,
+      "size_bytes": 5099218,
+      "has_video": false,
+      "zip": "songs/community-35-v1.zip",
+      "zip_bytes": 5072618,
+      "sha256": "9fc75f0e695778f76919cff6dd69f328b0b904a85ba6a5865d14c6f0e238a7f8",
+      "thumb": "thumbs/community-35-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 35,
+      "local_id": "popular_idol",
+      "previous_objects": [],
+      "source_sha256": "c932a32f9784a09d97549c00e2afa9b5d7910d819c6daf60060aa7d42dd86aca"
+    },
+    {
       "id": "community-11",
       "version": 1,
       "title": "Into My Dream",
