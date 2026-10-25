@@ -94,6 +94,52 @@
       "source_sha256": "cc9f2e13184adbbe7c8d766c47bd7a4c92966abc145913e404b349b68245f648"
     },
     {
+      "id": "community-18",
+      "version": 2,
+      "title": "Bounded Quietude",
+      "artist": "SiLiS vs Finite Limit",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "OutFox Serenity; see CREDITS.txt",
+      "license": "Music: CC BY-SA 4.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 147,
+          "bpm": 140.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 230,
+          "bpm": 140.0
+        },
+        {
+          "name": "HARD",
+          "notes": 310,
+          "bpm": 140.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 368,
+          "bpm": 140.0
+        }
+      ],
+      "duration_s": 151.1,
+      "size_bytes": 3907495,
+      "has_video": false,
+      "zip": "songs/community-18-v2.zip",
+      "zip_bytes": 3886593,
+      "sha256": "815dee8af477c11b5711edc6ba2196518ea19327d6be8f2b35bd1f30c14f1cf0",
+      "thumb": "thumbs/community-18-v2.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 18,
+      "local_id": "launch_bounded_quietude",
+      "previous_objects": [],
+      "source_sha256": "98ab3d562facc812b784685518ba2d6db13646392bae92e4e4362ebcbd0cecea"
+    },
+    {
       "id": "community-8",
       "version": 1,
       "title": "brokenHeart resurrection ~estelle~",
