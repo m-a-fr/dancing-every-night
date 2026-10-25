@@ -16,8 +16,8 @@ enum { PAUSE_RESUME, PAUSE_RESTART, PAUSE_MENU, PAUSE_OPTIONS };
 static const char *PAUSE_LABELS[PAUSE_OPTIONS] = { "RESUME", "RESTART", "SONG SELECT" };
 enum { MAIN_BEATMAPS, MAIN_OPTIONS, MAIN_QUIT, MAIN_COUNT };
 static const char *MAIN_LABELS[MAIN_COUNT] = { "SONGS", "OPTIONS", "QUIT" };
-enum { OPT_OFFSET, OPT_CALIBRATE, OPT_COUNT };
-static const char *OPT_LABELS[OPT_COUNT] = { "AUDIO OFFSET", "CALIBRATE" };
+enum { OPT_OFFSET, OPT_CALIBRATE, OPT_UPDATES, OPT_COUNT };
+static const char *OPT_LABELS[OPT_COUNT] = { "AUDIO OFFSET", "CALIBRATE", "UPDATE CHECK" };
 
 
 static void stop_song(Game *g) {
@@ -113,6 +113,7 @@ void game_init(Game *g, SDL_Renderer *r, const char *chart_path) {
     }
     splash_show(&splash, r, 1.0f);
     splash_shutdown(&splash);
+    if (!chart_path && g->settings.update_check) { g->update = update_create(); update_start(g->update, GAME_VERSION); }
 }
 
 void game_shutdown(Game *g) {
@@ -296,6 +297,12 @@ static void update_options(Game *g, const Input *in, float dt) {
             settings_save(&g->settings);
             sfx_play(&g->sfx, SFX_DIFFICULTY);
         }
+    }
+    if (g->opt_sel == OPT_UPDATES && (in->pressed[BTN_CROSS] || in->pressed[BTN_LEFT] || in->pressed[BTN_RIGHT])) {
+        g->settings.update_check = !g->settings.update_check;
+        settings_save(&g->settings);
+        if (g->settings.update_check && !g->update) { g->update = update_create(); update_start(g->update, GAME_VERSION); }
+        sfx_play(&g->sfx, SFX_DIFFICULTY);
     }
     if (in->pressed[BTN_CIRCLE]) { g->screen = SCREEN_MAIN; sfx_play(&g->sfx, SFX_CANCEL); return; }
     if (in->pressed[BTN_CROSS] && g->opt_sel == OPT_CALIBRATE) {
@@ -559,10 +566,43 @@ static void draw_header(const Game *g, SDL_Renderer *r, const char *text) {
                 text);
 }
 
+/* Copie `text` dans `out`, coupée par « ... » pour tenir dans maxw px (sans casser un caractère UTF-8) */
+static void fit_text(const Font *f, FontFace face, const char *text, int maxw, char *out, size_t cap) {
+    snprintf(out, cap, "%s", text);
+    size_t n = strlen(out);
+    while (n > 4 && font_width(f, face, out) > maxw) {
+        n--;
+        while (n > 0 && ((unsigned char)out[n] & 0xC0) == 0x80) n--;
+        out[n] = '\0';
+        if (n > 3) out[n - 1] = out[n - 2] = out[n - 3] = '.';
+    }
+}
+
+/* Cartouche « nouvelle version » du menu principal (annonce seulement : la mise à jour se fait par VitaDB ou la page de
+   téléchargement). Les nouveautés sont tronquées pour tenir sur une ligne. */
+static void draw_update_banner(const Game *g, SDL_Renderer *r) {
+    if (!g->settings.update_check || update_state(g->update) != UPDATE_AVAILABLE) return;
+    const FontRot flat = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
+    const SDL_FRect box = { SCREEN_W - 452.0f, 352.0f, 412.0f, 104.0f };
+    ui_round_rect_rot(r, (SDL_FRect){ box.x - 2.0f, box.y - 2.0f, box.w + 4.0f, box.h + 4.0f }, 16.0f, flat, CH_GOLD);
+    ui_round_rect_rot(r, box, 14.0f, flat, CH_INK);
+    char head[64];
+    snprintf(head, sizeof head, "NEW VERSION  %s", g->update->version);
+    font_draw(&g->font, r, FONT_CARD_NAME, box.x + 18.0f, box.y + 12.0f, ALIGN_LEFT, CH_GOLD, head);
+    const char *where = g->update->url[0] ? g->update->url : "dancing-every-night.pages.dev";
+    if (!strncmp(where, "https://", 8)) where += 8;
+    char line[sizeof g->update->notes];
+    fit_text(&g->font, FONT_CARD, g->update->notes, (int)box.w - 36, line, sizeof line);
+    font_draw(&g->font, r, FONT_CARD, box.x + 18.0f, box.y + 48.0f, ALIGN_LEFT, CH_WHITE, line);
+    fit_text(&g->font, FONT_CARD, where, (int)box.w - 36, line, sizeof line);
+    font_draw(&g->font, r, FONT_CARD, box.x + 18.0f, box.y + 74.0f, ALIGN_LEFT, CH_CYAN, line);
+}
+
 static void draw_main(const Game *g, SDL_Renderer *r) {
     draw_menu_backdrop(g, r);
     draw_header(g, r, "MAIN MENU");
     draw_cascade(g, r, MAIN_LABELS, MAIN_COUNT, g->main_cursor, 202.0f, 78.0f);
+    draw_update_banner(g, r);
     const float hy = SCREEN_H - 26.0f;
     float hx = ui_button_hint_pop(r, &g->font, &g->sprites, 34.0f, hy, (const Button[]){BTN_UP, BTN_DOWN}, 2, "CHOOSE") + 18.0f;
     hx = ui_button_hint_pop(r, &g->font, &g->sprites, hx, hy, (const Button[]){BTN_CROSS}, 1, "OK") + 18.0f;
@@ -588,9 +628,19 @@ static void draw_options(const Game *g, SDL_Renderer *r) {
         shapes_filled_triangle(r, px - 18.0f, pcy, 9.0f, -1.5707963f, CH_WHITE);
         shapes_filled_triangle(r, px + pw + 18.0f, pcy, 9.0f, 1.5707963f, CH_WHITE);
     }
+    {   /* vérification des mises à jour : pastille ON / OFF sur sa ligne */
+        const float ucy = y0 + 2.0f * step, uw = 110.0f;
+        ui_round_rect_rot(r, (SDL_FRect){px - 2.0f, ucy - ph * 0.5f - 2.0f, uw + 4.0f, ph + 4.0f}, ph * 0.5f + 2.0f, flat,
+                          ui_alpha(CH_CYAN, g->opt_sel == OPT_UPDATES ? 230 : 110));
+        ui_round_rect_rot(r, (SDL_FRect){px, ucy - ph * 0.5f, uw, ph}, ph * 0.5f, flat, CH_INK);
+        ui_pop_text(r, &g->font, FONT_POP, px + uw * 0.5f, ucy, 28.0f / 38.0f, 1.0f, 0.0f, 0.0f,
+                    g->settings.update_check ? CH_CYAN : ui_alpha(CH_WHITE, 150), UI_NONE, UI_NONE, 0, 0,
+                    g->settings.update_check ? "ON" : "OFF");
+    }
     const char *help = g->opt_sel == OPT_OFFSET ? "HITS JUDGED LATE? LOWER IT  \xC2\xB7  JUDGED EARLY? RAISE IT"
+                     : g->opt_sel == OPT_UPDATES ? "ON: ASKS THE WEBSITE AT START IF A NEW VERSION EXISTS. NOTHING ELSE IS SENT."
                                                  : "TAP ALONG A CLICK TO MEASURE YOUR OFFSET";
-    font_draw(&g->font, r, FONT_CARD, 62.0f, 380.0f, ALIGN_LEFT, ui_alpha(CH_WHITE, 204), help);
+    font_draw(&g->font, r, FONT_CARD, 62.0f, 438.0f, ALIGN_LEFT, ui_alpha(CH_WHITE, 204), help);
 
     const float hy = SCREEN_H - 26.0f;
     float hx = ui_button_hint_pop(r, &g->font, &g->sprites, 34.0f, hy, (const Button[]){BTN_UP, BTN_DOWN}, 2, "CHOOSE") + 18.0f;
@@ -598,7 +648,8 @@ static void draw_options(const Game *g, SDL_Renderer *r) {
         hx = ui_button_hint_pop(r, &g->font, &g->sprites, hx, hy, (const Button[]){BTN_LEFT, BTN_RIGHT}, 2, "1 MS") + 18.0f;
         hx = ui_button_hint_pop(r, &g->font, &g->sprites, hx, hy, (const Button[]){BTN_L, BTN_R}, 2, "10 MS") + 18.0f;
     } else {
-        hx = ui_button_hint_pop(r, &g->font, &g->sprites, hx, hy, (const Button[]){BTN_CROSS}, 1, "START") + 18.0f;
+        hx = ui_button_hint_pop(r, &g->font, &g->sprites, hx, hy, (const Button[]){BTN_CROSS}, 1,
+                                g->opt_sel == OPT_UPDATES ? "SWITCH" : "START") + 18.0f;
     }
     ui_button_hint_pop(r, &g->font, &g->sprites, hx, hy, (const Button[]){BTN_CIRCLE}, 1, "BACK");
 }

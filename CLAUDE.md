@@ -62,7 +62,7 @@ Règles d'architecture :
   (`_newlib_heap_size_user`). VRAM limitée : textures raisonnables (≤ 2048×2048,
   puissance de 2 de préférence), atlas plutôt que des centaines de petites images.
 - Charger les assets **au démarrage ou aux changements de niveau**, jamais pendant le jeu.
-- Pas de bibliothèques dynamiques, pas de `system()`, pas de réseau par défaut.
+- Pas de bibliothèques dynamiques, pas de `system()`, pas de réseau sauf l'annonce des mises à jour (`src/update.c`, Vita : lit `latest.json` au démarrage, désactivable dans OPTIONS ; rien n'est téléchargé ni installé).
 - Budget : **60 fps stables** visés ; si impossible, 30 fps assumés et constants.
 - Audio : SDL2 audio fonctionne ; pour du son/musique, SDL2_mixer est disponible dans VitaSDK
   (vérifier avant d'ajouter toute dépendance : elle doit exister dans `vdpm` / l'image Docker).

@@ -91,6 +91,9 @@ if(VITA)
       m)
   endif()
 
+  # Annonce des mises à jour (src/update.c) : réseau, HTTP(S) ; quelle que soit la façon dont SDL2 a été trouvée
+  target_link_libraries(${PROJECT_NAME} SceHttp_stub SceNet_stub SceNetCtl_stub SceSsl_stub SceSysmodule_stub)
+
   # SDL2 récentes de VitaSDK (image Docker de la CI) : rendu par vitaGL, écrit en C++, dont l'interface CMake oublie
   # ces bibliothèques. Sans effet sur une SDL2 qui ne s'en sert pas (archives statiques non référencées).
   # Groupe de l'éditeur de liens en fin de ligne, chemins complets : ni réordonné ni dédoublonné par CMake.

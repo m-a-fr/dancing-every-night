@@ -24,6 +24,9 @@
 #define USER_SONGS_DIR SAVE_DIR "songs/"
 #define IMPORT_DIR     SAVE_DIR "import/"
 
+/* Fiche de la dernière version (publiée avec le site) : lue au démarrage sur Vita pour annoncer une mise à jour (update.h) */
+#define UPDATE_URL "https://dancing-every-night.pages.dev/latest.json"
+
 #define ASSET_PATH(p) ASSET_DIR p /* littéral concaténé : ASSET_PATH("a.png") */
 
 #endif

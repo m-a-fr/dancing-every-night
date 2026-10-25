@@ -41,13 +41,16 @@ void settings_migrate_legacy(void) {
 }
 
 void settings_load(Settings *s) {
-    *s = (Settings){ .audio_offset_ms = 0 };
+    *s = (Settings){ .audio_offset_ms = 0, .update_check = 1 };
     FILE *f = fopen(SETTINGS_FILE, "r");
     if (!f) return;
     char line[128];
     int v;
     while (fgets(line, sizeof line, f))
+    {
         if (sscanf(line, "AUDIO_OFFSET_MS %d", &v) == 1) s->audio_offset_ms = settings_clamp_offset(v);
+        else if (sscanf(line, "UPDATE_CHECK %d", &v) == 1) s->update_check = v != 0;
+    }
     fclose(f);
 }
 
@@ -55,6 +58,6 @@ void settings_save(const Settings *s) {
     files_mkdir(SAVE_DIR);
     FILE *f = fopen(SETTINGS_FILE, "w");
     if (!f) { fprintf(stderr, "settings: impossible d'écrire %s\n", SETTINGS_FILE); return; }
-    fprintf(f, "AUDIO_OFFSET_MS %d\n", s->audio_offset_ms);
+    fprintf(f, "AUDIO_OFFSET_MS %d\nUPDATE_CHECK %d\n", s->audio_offset_ms, s->update_check ? 1 : 0);
     fclose(f);
 }

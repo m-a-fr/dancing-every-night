@@ -83,6 +83,9 @@ First version prepared for public release.
 - GitHub Actions workflow builds the four packages (Windows, macOS, Linux, Vita) by hand or on a version tag, and
   prepares a draft release.
 
+### Update notice
+- On the Vita, the main menu announces a newer version when one exists (the game reads `latest.json` from the website at start-up). Switch it off in OPTIONS > UPDATE CHECK. Nothing is downloaded or installed yet.
+
 ### Website
 - The website has a home page and a common menu: game download, song library, song editor and creator guide. The editor moved to `/editor/` (your songs are kept).
 

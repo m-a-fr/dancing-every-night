@@ -14,6 +14,7 @@ cp tools/editor/guide.html tools/editor/guide.fr.html tools/editor/guide.css "$O
 cp tools/editor/fonts/* "$OUT/fonts/"   # polices de la charte (tools/editor_fonts.py)
 cp assets/ui/pad_icons.png "$OUT/assets/ui/"   # mêmes icônes de touches que le jeu
 cp sce_sys/icon0.png "$OUT/favicon.png"         # icône du jeu (celle de la Vita)
+cp release/latest.json "$OUT/"                  # fiche de la dernière version, lue par le jeu (src/update.c)
 cp tools/editor/social.jpg "$OUT/"              # aperçu quand le lien est partagé (écran titre du jeu)
 E="$OUT/editor"
 cp tools/editor/index.html tools/editor/i18n.js tools/editor/local.js tools/editor/tempo.js tools/editor/mapper-worker.js "$E/"
@@ -30,6 +31,10 @@ cat > "$OUT/_headers" <<'HEADERS'
 /*
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Embedder-Policy: require-corp
+HEADERS
+cat >> "$OUT/_headers" <<'HEADERS'
+/latest.json
+  Cache-Control: no-cache
 HEADERS
 
 echo "==> Site de l'éditeur : $OUT/ ($(find "$OUT" -type f | wc -l | tr -d ' ') fichiers, $(du -sh "$OUT" | cut -f1))"

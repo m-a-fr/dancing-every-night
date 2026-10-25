@@ -12,6 +12,7 @@
 #include "title.h"
 #include "sfx.h"
 #include "settings.h"
+#include "update.h"
 #include "calib.h"
 
 /* Titre -> menu principal (BEATMAPS / OPTIONS / QUIT) -> sélection de chanson (SCREEN_MENU) -> jeu ;
@@ -45,7 +46,8 @@ typedef struct {
     float       time;             /* secondes depuis le lancement : animations d'UI (clignotements, pulsations) */
     bool        fixed_clock;      /* outil d'enregistrement : l'horloge de jeu ne suit pas l'audio (images rendues hors temps réel) */
     float       pause_cursor;     /* position affichée de la sélection du menu pause (suit pause_sel) */
-    Settings    settings;         /* réglages du joueur (décalage audio), sauvegardés */
+    Settings    settings;         /* réglages du joueur (décalage audio, vérification des mises à jour), sauvegardés */
+    Update      *update;          /* annonce d'une nouvelle version (update.h) ; NULL si désactivée */
     int         main_sel;         /* menu principal : MAIN_BEATMAPS / OPTIONS / QUIT */
     float       main_cursor;
     int         opt_sel;          /* options : OPT_OFFSET / OPT_CALIBRATE */

@@ -9,6 +9,7 @@
 
 typedef struct {
     int audio_offset_ms;   /* calibration de latence (Audio.calib_ms) : < 0 = compense un son entendu en retard */
+    int update_check;      /* 1 = vérifier au démarrage s'il existe une nouvelle version (Vita, réseau) ; 0 = jamais */
 } Settings;
 
 /* Vita : au premier lancement d'une version qui a changé de dossier de sauvegarde, recopie les réglages et

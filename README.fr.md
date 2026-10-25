@@ -30,6 +30,8 @@ Il faut une PS Vita avec un firmware modifié (suivre https://vita.hacks.guide) 
 
 Les sauvegardes sont dans `ux0:data/dancingeverynight/`.
 
+**Mises à jour :** quand la Vita est en ligne, le jeu lit au démarrage un petit fichier (`latest.json`, sur le site du projet) et, s'il existe une version plus récente, l'annonce dans le menu principal. Rien n'est téléchargé ni installé, et rien sur toi n'est envoyé en dehors de la requête elle-même. Désactivable dans OPTIONS > UPDATE CHECK.
+
 ### Installer une chanson
 
 1. Copier le `.zip` de la chanson dans `ux0:data/dancingeverynight/import/` (mode USB ou FTP de VitaShell).

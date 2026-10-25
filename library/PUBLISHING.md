@@ -79,6 +79,16 @@ slows bulk sending instead. Nothing is published without the `approved` label.
 
 Test: `node tools/test_submit.mjs`.
 
+## Announcing a new game version
+
+After publishing a GitHub release of the game (draft > Publish), update the file the game reads at start-up and push it:
+
+    scripts/release-manifest.sh DancingEveryNight-<version>.vpk "English notes" "Notes en français"
+    git add release/latest.json && git commit && git push
+
+Cloudflare Pages then serves it as `/latest.json`; the Vita's main menu announces the version to every player whose game is
+older. Keep the notes to one sentence. Do this only once the release is public (the page it links to must exist).
+
 ## Remove / Retirer
 
 Run **Publish or remove a song** manually. Fill `remove` with the exact published ID and `reason` with
