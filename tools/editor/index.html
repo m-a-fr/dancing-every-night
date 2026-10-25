@@ -453,12 +453,15 @@
       <p class="file" id="pubHint"></p>
       <div id="pubSubmit" hidden>
         <h2>Proposer à la bibliothèque</h2>
-        <ol class="note">
-          <li data-i18n>Exporte le .zip avec le bouton ci-dessus.</li>
-          <li data-i18n>Ouvre le formulaire de proposition (il demande un compte GitHub gratuit) et glisse le .zip dans la case « Your song ».</li>
-          <li data-i18n>La chanson est vérifiée automatiquement, écoutée par une personne, puis mise en ligne dans la bibliothèque. Tu suis l’avancement dans la même page.</li>
-        </ol>
-        <div class="detect"><button type="button" id="pubOpenForm" class="primary">Ouvrir le formulaire de proposition</button></div>
+        <div id="pubDirect" hidden>
+          <p class="note" data-i18n>La chanson est envoyée telle qu’elle est ici, sans compte ni téléchargement. Elle est vérifiée automatiquement, écoutée par une personne, puis mise en ligne dans la bibliothèque.</p>
+          <label class="row">Ton nom <input id="pubName" maxlength="40" placeholder="affiché avec la chanson" title="2 à 40 lettres, chiffres ou espaces"></label>
+          <label class="row"><input type="checkbox" id="pubConsent"> <span data-i18n>Je suis responsable de la musique, des images et de la vidéo de cette chanson ; je sais qu’elle sera publique et retirée si un ayant droit le demande.</span></label>
+          <div class="detect"><button type="button" id="pubSend" class="primary">Envoyer à la bibliothèque</button></div>
+          <p class="file" id="pubSendMsg" role="status"></p>
+        </div>
+        <p class="note" data-i18n>Tu préfères ton compte GitHub ? Exporte le .zip, ouvre le formulaire (compte gratuit) et glisse le fichier dans la case « Your song ».</p>
+        <div class="detect"><button type="button" id="pubOpenForm">Ouvrir le formulaire GitHub</button></div>
         <p class="note" data-i18n>Tu peux d’abord parcourir la <a href="songs/" target="_blank" rel="noopener">bibliothèque</a>.</p>
       </div>
           </div>
@@ -2770,7 +2773,10 @@ mel("bgPick").addEventListener("click", async () => {
     } catch (err) { setMediaMsg(err.message, true); }
   });
 });
-mel("bgClear").addEventListener("click", () => { setSongField("background", ""); fillMedia(); setMediaMsg(tr("Image retirée de toutes les difficultés.")); });
+mel("bgClear").addEventListener("click", async () => {
+  setSongField("background", ""); await pruneUnreferenced(mapIdOf(S.cur)); fillMedia(); renderPublish();
+  setMediaMsg(tr("Image retirée de toutes les difficultés."));
+});
 mel("bgDim").addEventListener("input", e => { setSongField("backgroundDim", parseInt(e.target.value, 10)); });
 mel("vidPick").addEventListener("click", async () => {
   const file = await pickFile("vidFile");
@@ -2896,7 +2902,28 @@ async function convertVideo(url, body, what, song = S.song) {
   } catch (err) { setMediaMsg(err.message, true); }
   fillMedia();
 }
-mel("vidClear").addEventListener("click", () => { clearVideoPreview(mapIdOf(S.cur)); setSongField("video", ""); fillMedia(); setMediaMsg(tr("Vidéo retirée de toutes les difficultés.")); });
+/* « Retirer » un fond ou une vidéo ne touchait que la référence dans les difficultés : le fichier restait dans la chanson, donc
+   dans le .zip exporté et dans sa taille. On supprime les images et vidéos que plus aucune difficulté n'utilise. */
+var MEDIA_EXT = /\.(mpg|mpeg|mp4|jpe?g|png|webp)$/i;
+var prunedOnce = new Set();
+async function pruneUnreferenced(id) {
+  if (!LOCAL || mediaJobs.has(id)) return false;
+  const charts = S.charts.filter(c => mapIdOf(c) === id);
+  if (!charts.length) return false;
+  const used = new Set();
+  for (const c of charts) for (const k of ["audio", "background", "video"]) if (c.chart[k]) used.add(String(c.chart[k]).split("/").pop());
+  let removed = false;
+  for (const p of mapFiles(id)) {
+    const name = p.split("/").pop();
+    if (MEDIA_EXT.test(name) && !used.has(name)) { await vfsDelete(p); removed = true; }
+  }
+  return removed;
+}
+mel("vidClear").addEventListener("click", async () => {
+  const id = mapIdOf(S.cur);
+  clearVideoPreview(id); setSongField("video", ""); await pruneUnreferenced(id); fillMedia(); renderPublish();
+  setMediaMsg(tr("Vidéo retirée de toutes les difficultés."));
+});
 mel("vidOffset").addEventListener("input", e => {
   const i = parseInt(e.target.value, 10); if (isNaN(i)) return;
   setSongField("videoOffset", i);
@@ -3374,12 +3401,14 @@ window.addEventListener("keydown", e => {
   if (e.key === "?" && tag !== "INPUT" && tag !== "TEXTAREA" && !document.querySelector("dialog[open]")) { e.preventDefault(); showKeys(); }
 });
 
+const LIBRARY_MAX_MB = 25;
 /* Onglet Publication : ce qu'il manque pour publier la map */
 function renderPublish() {
   const list = mel("pubCheck");
   list.innerHTML = "";
   if (!S.cur) return;
   const c = C(), id = mapIdOf(S.cur);
+  if (LOCAL && !prunedOnce.has(id)) { prunedOnce.add(id); pruneUnreferenced(id).then(removed => removed && renderPublish()); }
   const items = [
     [!!c.title, "Titre de la chanson"],
     [!!c.audio, "Piste audio (.ogg)"],
@@ -3387,18 +3416,86 @@ function renderPublish() {
     [!!c.mapper, "Auteur (ton pseudo)"],
     [!dirtyCharts().some(d => mapIdOf(d) === id), "Modifications enregistrées"],
   ];
+  if (LOCAL) {   // la bibliothèque refuse plus de 25 Mo (limite des pièces jointes GitHub, et de l'envoi direct)
+    const mb = mapBytes(id) / 1048576, over = mb > LIBRARY_MAX_MB;
+    items.push([!over, () => over
+      ? tr("Taille : {mb} Mo, au-dessus des {max} Mo acceptés par la bibliothèque. Baisse le débit de la vidéo (étape Fond) ou retire-la.", { mb: mb.toFixed(1), max: LIBRARY_MAX_MB })
+      : tr("Taille : {mb} Mo sur {max} Mo maximum pour la bibliothèque", { mb: mb.toFixed(1), max: LIBRARY_MAX_MB })]);
+  }
   for (const [ok, label] of items) {
     const li = document.createElement("li");
     li.className = ok ? "ok" : "todo";
-    li.textContent = tr(label);
+    li.textContent = typeof label === "function" ? label() : tr(label);
     list.appendChild(li);
   }
+  if (LOCAL) { detectDirect(); if (!mel("pubName").value && C().mapper) mel("pubName").value = C().mapper; }
   mel("pubHint").textContent = LOCAL
     ? tr("Le .zip exporté se copie dans ux0:data/dancingeverynight/import/ sur la Vita.")
     : tr("La chanson est dans {dir} · à vérifier avec : make check MAP={map}", { dir: `assets/songs/${id}/`, map: `assets/songs/${id}` });
 }
 document.querySelector("aside").addEventListener("input", () => renderPublish());
 mel("pubExport").addEventListener("click", () => mel("btnExportZip").click());
+/* Envoi direct à la bibliothèque (functions/api/submit.js) : le .zip est construit ici et envoyé sans téléchargement.
+   Le serveur demande une petite preuve de travail (anti-spam) ; s'il n'est pas disponible (essai local, fonction non
+   configurée), seule la voie GitHub reste proposée. */
+var directReady = null;
+async function detectDirect() {
+  if (directReady === null) {
+    try { directReady = LOCAL && (await fetch("api/submit", { cache: "no-store" })).ok; } catch (_) { directReady = false; }
+  }
+  mel("pubDirect").hidden = !directReady;
+}
+async function solveChallenge(token, bits) {
+  const enc = new TextEncoder();
+  for (let i = 0; ; i++) {
+    const answer = i.toString(36);
+    const d = new Uint8Array(await crypto.subtle.digest("SHA-256", enc.encode(`${token}:${answer}`)));
+    let n = 0; for (const b of d) { if (b === 0) { n += 8; continue; } n += Math.clz32(b) - 24; break; }
+    if (n >= bits) return answer;
+  }
+}
+async function sendToLibrary() {
+  const msg = mel("pubSendMsg"), btn = mel("pubSend");
+  const say = (t, err) => { msg.textContent = t; msg.style.color = err ? "var(--bad, #c0392b)" : ""; };
+  if (!S.cur) return;
+  const id = mapIdOf(S.cur), c = C();
+  if (mediaJobs.has(id)) return say(tr("Préparation du fond en cours : attends la fin avant d’envoyer."), true);
+  if (dirtyCharts().some(x => mapIdOf(x) === id)) await saveAll({ quiet: true });
+  if (dirtyCharts().some(x => mapIdOf(x) === id)) return;
+  const missing = [];
+  if (!c.title) missing.push(tr("titre")); if (!c.audio) missing.push(tr("piste audio")); if (!c.mapper) missing.push(tr("auteur"));
+  if (missing.length) return say(tr("À compléter avant d’envoyer : {list}", { list: missing.join(", ") }), true);
+  const pseudo = mel("pubName").value.trim();
+  if (!/^[\p{L}\p{N} ._'’-]{2,40}$/u.test(pseudo)) return say(tr("Choisis un nom de 2 à 40 lettres, chiffres ou espaces."), true);
+  if (!mel("pubConsent").checked) return say(tr("Coche la case de responsabilité pour envoyer."), true);
+  btn.disabled = true;
+  try {
+    say(tr("Préparation de la chanson…"));
+    const zip = await buildMapZip(id, zipNameForTitle(c.title || id));
+    if (zip.length > LIBRARY_MAX_MB * 1048576) throw new Error(tr("La chanson fait plus de 25 Mo ({mb} Mo). Baisse le débit de la vidéo et réessaie.", { mb: (zip.length / 1048576).toFixed(1) }));
+    say(tr("Vérification anti-spam…"));
+    const ch = await (await fetch("api/submit", { cache: "no-store" })).json();
+    const answer = await solveChallenge(ch.token, ch.bits);
+    say(tr("Envoi ({mb} Mo)…", { mb: (zip.length / 1048576).toFixed(1) }));
+    const form = new FormData();
+    form.set("file", new Blob([zip], { type: "application/zip" }), "song.zip");
+    form.set("pseudo", pseudo); form.set("title", c.title); form.set("consent", "1");
+    form.set("challenge", ch.token); form.set("answer", answer);
+    const prev = (metaGet(id) || {}).submittedIssue;
+    if (prev) form.set("previous_issue", String(prev));
+    const res = await fetch("api/submit", { method: "POST", body: form });
+    const out = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(out.error || tr("Envoi impossible ({code}).", { code: res.status }));
+    await metaSet(id, { submittedIssue: out.issue });
+    renderSteps();
+    msg.textContent = "";
+    msg.append(tr("Envoyée ! Suis la vérification et la réponse ici : "));
+    const a = document.createElement("a"); a.href = out.url; a.target = "_blank"; a.rel = "noopener"; a.textContent = "#" + out.issue;
+    msg.append(a);
+  } catch (e) { say(e.message, true); }
+  finally { btn.disabled = false; }
+}
+mel("pubSend").addEventListener("click", sendToLibrary);
 mel("pubOpenForm").addEventListener("click", () => window.open("https://github.com/m-a-fr/dancing-every-night/issues/new?template=song-submit.yml", "_blank", "noopener"));
 
 // la barre de lecture peut passer sur deux lignes : la timeline suit la place réelle

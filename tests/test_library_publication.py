@@ -5,6 +5,7 @@ from pathlib import Path
 import sys
 import tempfile
 from unittest.mock import patch
+from urllib.parse import urlparse
 import urllib.request
 import unittest
 import zipfile
@@ -15,6 +16,7 @@ import catalog as cat
 import library_publish as pub
 import library_fetch as fetch
 import library_ledger as ledger
+import library_submitter as submitter
 
 
 class PublicationTest(unittest.TestCase):
@@ -91,6 +93,21 @@ class PublicationTest(unittest.TestCase):
                 self.assertEqual(cat.load(cat.CATALOG, {})['songs'][-1]['id'], 'community-8')
             finally:
                 cat.CATALOG, cat.REMOVALS = original
+
+    def test_editor_submission_identity_and_download_host(self):
+        body = 'x\nSent from the online editor by **Alice B.**. \n<!-- editor-submission v1 -->'
+        mine = {'author': {'login': 'owner'}, 'body': body}
+        self.assertEqual(submitter.submitter_of(mine, 'owner'), 'Alice B.')
+        # a stranger copying the marker keeps his own GitHub login
+        self.assertEqual(submitter.submitter_of({'author': {'login': 'mallory'}, 'body': body}, 'owner'), 'mallory')
+        self.assertEqual(submitter.submitter_of({'author': {'login': 'owner'}, 'body': 'plain'}, 'owner'), 'owner')
+        good = urlparse('https://incoming.example/' + 'a' * 32 + '.zip')
+        with patch.object(fetch, 'INCOMING', 'incoming.example'):
+            self.assertTrue(fetch.ALLOWED(good))
+            self.assertFalse(fetch.ALLOWED(urlparse('https://incoming.example/other/' + 'a' * 32 + '.zip')))
+            self.assertFalse(fetch.ALLOWED(urlparse('https://evil.example/' + 'a' * 32 + '.zip')))
+        with patch.object(fetch, 'INCOMING', ''):
+            self.assertFalse(fetch.ALLOWED(good))
 
 
 if __name__ == '__main__':

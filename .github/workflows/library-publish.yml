@@ -92,7 +92,7 @@ jobs:
           if [ -n "$REMOVE_ID" ]; then
             python3 tools/library_publish.py --remove "$REMOVE_ID" --reason "$REASON"
           else
-            submitter=$(python3 -c 'import json; print(json.load(open("proposal.json"))["author"]["login"])')
+            submitter=$(python3 tools/library_submitter.py proposal.json)
             python3 tools/library_publish.py --zip submission.zip --submitter "$submitter" --issue "$NUMBER"
           fi
           python3 tools/catalog.py check

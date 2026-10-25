@@ -2,5 +2,7 @@
   "site_url": "https://dancing-every-night.pages.dev",
   "download_base": "https://pub-37ecf3c7b220441a9eefbd3fa46ef239.r2.dev",
   "submit_url": "https://github.com/m-a-fr/dancing-every-night/issues/new?template=song-submit.yml",
-  "report_url": "https://github.com/m-a-fr/dancing-every-night/issues/new?template=song-report.yml"
+  "report_url": "https://github.com/m-a-fr/dancing-every-night/issues/new?template=song-report.yml",
+  "incoming_base": "",
+  "editor_login": "m-a-fr"
 }

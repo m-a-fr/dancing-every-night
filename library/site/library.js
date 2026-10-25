@@ -16,7 +16,7 @@ const FR = {
   "Copy it into <code>ux0:data/dancingeverynight/import/</code> on your Vita (VitaShell, USB or FTP mode).": "Copie-le dans <code>ux0:data/dancingeverynight/import/</code> sur ta Vita (VitaShell, mode USB ou FTP).",
   "Launch the game: it installs the song while loading, and it shows up in the list.": "Lance le jeu : il installe la chanson pendant le chargement, et elle apparaît dans la liste.",
   "On a computer, use the <code>import/</code> folder of the game's save folder instead.": "Sur ordinateur, utilise plutôt le dossier <code>import/</code> du dossier de sauvegarde du jeu.",
-  "Want to share a song? Make it with the <a href=\"/\">online editor</a>, then <a href=\"{submit}\">submit it here</a>. It is checked, and published once approved.": "Envie de partager une chanson ? Fais-la avec l'<a href=\"/\">éditeur en ligne</a>, puis <a href=\"{submit}\">propose-la ici</a>. Elle est vérifiée, puis publiée une fois approuvée.",
+  "Want to share a song? Make it with the <a href=\"/\">online editor</a>, then <a href=\"{submit}\">submit it here</a>. It is checked, and published once approved. Songs can be up to 25 MB.": "Envie de partager une chanson ? Fais-la avec l'<a href=\"/\">éditeur en ligne</a>, puis <a href=\"{submit}\">propose-la ici</a>. Elle est vérifiée, puis publiée une fois approuvée. Une chanson peut faire jusqu'à 25 Mo.",
   "The library is empty for now": "La bibliothèque est vide pour le moment",
   "Songs made by the community will appear here once they are approved. Be the first to share one!": "Les chansons de la communauté apparaîtront ici une fois approuvées. Sois le premier à en partager une !",
   "Read the creator guide": "Lire le guide du créateur",

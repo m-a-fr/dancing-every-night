@@ -3,17 +3,29 @@
 
     TEXT="…" tools/library_fetch.py sortie.zip
 
-Ne télécharge que des pièces jointes GitHub (github.com/user-attachments/files/…, …/files/…, githubusercontent.com) : jamais une
-adresse quelconque donnée par un inconnu. Taille limitée (25 Mo, comme les pièces jointes GitHub), délai limité. Code de sortie :
+Ne télécharge que des pièces jointes GitHub (github.com/user-attachments/files/…, …/files/…, githubusercontent.com) ou un envoi
+de l'éditeur (bucket « incoming », adresse dans library/config.json) : jamais une adresse quelconque donnée par un inconnu. Taille limitée (25 Mo, comme les pièces jointes GitHub), délai limité. Code de sortie :
 0 zip récupéré (adresse sur stdout), 2 aucun zip trouvé, 3 refusé ou illisible (message sur stdout).
 """
-import os, re, sys, urllib.request, urllib.error
+import json, os, re, sys, urllib.request, urllib.error
 from urllib.parse import urlparse
 
 MAX_BYTES = 25 * 1024 * 1024
 URL = re.compile(r"https://[^\s)\]>\"']+\.zip\b[^\s)\]>\"']*", re.I)
+def incoming_host():
+    """Hôte du bucket R2 des envois depuis l'éditeur (library/config.json, « incoming_base ») ; vide tant qu'il n'est pas créé."""
+    try:
+        base = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "library", "config.json"))).get("incoming_base", "")
+    except (OSError, ValueError):
+        return ""
+    parsed = urlparse(base)
+    return parsed.hostname if parsed.scheme == "https" and parsed.hostname else ""
+
+
+INCOMING = incoming_host()
 ALLOWED = (lambda u: u.hostname == "github.com" and (u.path.startswith("/user-attachments/files/") or "/files/" in u.path)
-           or (u.hostname or "").endswith(".githubusercontent.com"))
+           or (u.hostname or "").endswith(".githubusercontent.com")
+           or (bool(INCOMING) and u.hostname == INCOMING and re.fullmatch(r"/[0-9a-f]{32}\.zip", u.path or "") is not None))
 
 
 class CheckedRedirect(urllib.request.HTTPRedirectHandler):

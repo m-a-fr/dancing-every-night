@@ -110,7 +110,7 @@ def list_page(cfg, songs):
   </ol>
   <p data-i18n>On a computer, use the <code>import/</code> folder of the game's save folder instead.</p>
 </details>
-<p class="note" data-i18n>Want to share a song? Make it with the <a href="/">online editor</a>, then <a href="{submit}">submit it here</a>. It is checked, and published once approved.</p>
+<p class="note" data-i18n>Want to share a song? Make it with the <a href="/">online editor</a>, then <a href="{submit}">submit it here</a>. It is checked, and published once approved. Songs can be up to 25 MB.</p>
 """
     listing = f"""<section class="tools" aria-label="Search and filters">
   <div class="search">

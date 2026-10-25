@@ -53,6 +53,32 @@ environment). Nothing is printed in the public logs. The note is written at publ
 check job handles untrusted zips and holds no secrets. Caveat: the code is public, so the mechanism is visible, and an
 empty `license` in `catalog.json` is technically readable; the site simply hides the field.
 
+## Sending from the editor, without a GitHub account
+
+The editor's *Publish* step can send the song straight to the library (`functions/api/submit.js`, a Cloudflare Pages
+Function). It stores the .zip in a separate R2 bucket and opens a normal `song-submission` issue with the editor's bot
+account (`editor_login` in `library/config.json`, normally the owner). From there the flow is unchanged: automatic
+check, then `approved` by a maintainer. The issue is created by that account, so the submitter shown in the catalogue
+comes from the chosen name (`tools/library_submitter.py`), read only when the issue author is `editor_login`.
+Updating a song from the editor opens a new proposal (a new `community-N`); remove the old one by hand.
+
+Setup (once, in the Cloudflare dashboard and on GitHub):
+
+1. R2 > create the bucket `dne-incoming`; enable public access (r2.dev address) and add an object lifecycle rule that
+   deletes objects after 30 days. Put the address in `library/config.json` as `incoming_base` (no trailing `/`).
+2. Workers & Pages > Pages project > Settings > Bindings: R2 bucket `INCOMING` = `dne-incoming`; KV namespace `STATE`
+   (create an empty one).
+3. GitHub > fine-grained personal access token, repository `dancing-every-night` only, permission *Issues: read and write*.
+4. Pages project > Settings > Variables and secrets (production): `INCOMING_BASE` (same address as `incoming_base`),
+   `GITHUB_TOKEN` (secret), `CHALLENGE_SECRET` (secret, any 32+ random characters).
+5. Redeploy. Until all of this exists the editor hides the direct send and only the GitHub form is offered.
+
+Limits: 25 MB per song, 4 songs per hour per connection, 40 per day for everyone (`functions/api/submit.js`). No
+third-party CAPTCHA: the editor needs cross-origin isolation, which Turnstile does not allow; a small proof-of-work
+slows bulk sending instead. Nothing is published without the `approved` label.
+
+Test: `node tools/test_submit.mjs`.
+
 ## Remove / Retirer
 
 Run **Publish or remove a song** manually. Fill `remove` with the exact published ID and `reason` with

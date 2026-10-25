@@ -352,7 +352,7 @@ async function installMap(id, files) {
   for (const [name, data] of files) await vfsPut(`songs/${id}/${name}`, new Blob([data]));
   await metaSet(id, { modified: Date.now(), tempoOk: true });   // une map ouverte depuis un zip a déjà son tempo
 }
-async function exportMap(id, filename = id) {
+async function buildMapZip(id, filename = id) {
   if (new TextEncoder().encode(`${filename}.zip`).length >= 96)
     throw new Error(tr("Le nom du ZIP est trop long pour la Vita. Choisis un nom plus court."));
   const portableId = portableSongId(id);
@@ -373,7 +373,10 @@ async function exportMap(id, filename = id) {
       ? new TextEncoder().encode((await VFS.get(p).text()).replace(/^([ \t]*ID[ \t]+)\S+/gm, `$1${portableId}`))
       : new Uint8Array(await VFS.get(p).arrayBuffer());
   }
-  const zip = fflate.zipSync(out, { level: 0 });   // médias déjà compressés : stockés tels quels
+  return fflate.zipSync(out, { level: 0 });   // médias déjà compressés : stockés tels quels
+}
+async function exportMap(id, filename = id) {
+  const zip = await buildMapZip(id, filename);
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([zip], { type: "application/zip" }));
   a.download = `${filename}.zip`;
