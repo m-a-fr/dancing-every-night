@@ -554,6 +554,52 @@
       "source_sha256": "59b8c4e8fd9a32054556055a1f8abc8e79ddc1dea9b65627c11e48733d1bacea"
     },
     {
+      "id": "community-34",
+      "version": 1,
+      "title": "Hitorigoto",
+      "artist": "ClariS",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=DVt13wPJqmw",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 250,
+          "bpm": 165.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 329,
+          "bpm": 165.0
+        },
+        {
+          "name": "HARD",
+          "notes": 534,
+          "bpm": 165.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 642,
+          "bpm": 165.0
+        }
+      ],
+      "duration_s": 234.9,
+      "size_bytes": 5313130,
+      "has_video": false,
+      "zip": "songs/community-34-v1.zip",
+      "zip_bytes": 5281050,
+      "sha256": "e87a335a2bc0f42ed989d5d39a365fa7b6faeda4bb4174aaf9cb7d8b91f85024",
+      "thumb": "thumbs/community-34-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 34,
+      "local_id": "popular_hitorigoto",
+      "previous_objects": [],
+      "source_sha256": "4754802f9fde8b959197ae27501d0de375a00d5445187dc356b395fda20e750f"
+    },
+    {
       "id": "community-11",
       "version": 1,
       "title": "Into My Dream",
