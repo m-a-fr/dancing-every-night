@@ -138,6 +138,52 @@
       "local_id": "ytdown_com_youtube_media_mmw_ppwhkfg_k_ddfc0732",
       "previous_objects": [],
       "source_sha256": "59b8c4e8fd9a32054556055a1f8abc8e79ddc1dea9b65627c11e48733d1bacea"
+    },
+    {
+      "id": "community-9",
+      "version": 1,
+      "title": "Neutralize (PTB10 Mix)",
+      "artist": "SiLiS",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "OutFox Serenity; see CREDITS.txt",
+      "license": "Music: CC BY-SA 4.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 116,
+          "bpm": 175.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 146,
+          "bpm": 175.0
+        },
+        {
+          "name": "HARD",
+          "notes": 214,
+          "bpm": 175.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 255,
+          "bpm": 175.0
+        }
+      ],
+      "duration_s": 116.6,
+      "size_bytes": 3010877,
+      "has_video": false,
+      "zip": "songs/community-9-v1.zip",
+      "zip_bytes": 2984041,
+      "sha256": "87a1629795cc643fb0bed57ac2c4fedef3aee8c45d60432f5c5e492bb43061de",
+      "thumb": "thumbs/community-9-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 9,
+      "local_id": "launch_neutralize",
+      "previous_objects": [],
+      "source_sha256": "014e703fcedf382f785ad958fd6b5cb6a4ece16b77b2ab50c1aefcf38a04f1b2"
     }
   ]
 }
