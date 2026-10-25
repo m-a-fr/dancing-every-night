@@ -42,6 +42,7 @@ src/
   sdl.h       include portable de SDL2 — toujours inclure "sdl.h", jamais <SDL.h>
   input.h/.c  abstraction des contrôles -> struct Input (held / pressed / sticks)
   game.h/.c   état du jeu (struct Game) + update + draw
+  net.h/.c    GET HTTPS (libcurl) ; library.h/.c  écran LIBRARY : catalogue en ligne, liste, fiche, état installé
 assets/       fichiers du jeu, copiés dans app0:assets/ sur Vita
 sce_sys/      icône et LiveArea (PNG indexés 8 bits obligatoires)
 ```
@@ -62,7 +63,7 @@ Règles d'architecture :
   (`_newlib_heap_size_user`). VRAM limitée : textures raisonnables (≤ 2048×2048,
   puissance de 2 de préférence), atlas plutôt que des centaines de petites images.
 - Charger les assets **au démarrage ou aux changements de niveau**, jamais pendant le jeu.
-- Pas de bibliothèques dynamiques, pas de `system()`, pas de réseau sauf l'annonce des mises à jour (`src/update.c`, Vita : lit `latest.json` au démarrage, désactivable dans OPTIONS ; rien n'est téléchargé ni installé).
+- Pas de bibliothèques dynamiques, pas de `system()`. Réseau (libcurl, `src/net.c`) seulement pour : l'annonce des mises à jour (`src/update.c`, lit `latest.json` au démarrage, désactivable dans OPTIONS ; rien n'est installé) et l'écran LIBRARY (`src/library.c`, lit `catalog.json` à chaque ouverture et télécharge les zips choisis, vérifiés par SHA-256 puis installés par `mapimport_install` ; sans réseau, pas de catalogue, aucune copie gardée). Sur PC, libcurl n'est liée que si le système l'a (`GAME_NET`, coupé dans les paquets distribués).
 - Budget : **60 fps stables** visés ; si impossible, 30 fps assumés et constants.
 - Audio : SDL2 audio fonctionne ; pour du son/musique, SDL2_mixer est disponible dans VitaSDK
   (vérifier avant d'ajouter toute dépendance : elle doit exister dans `vdpm` / l'image Docker).
@@ -110,6 +111,7 @@ Convention occidentale : Croix = valider, Rond = annuler.
   se combine avec `VITAGAME_SHOT`. Sans carte en argument, le jeu démarre sur l'écran titre (Croix = menu principal, Croix encore = sélection de chanson).
 - Capturer l'écran de jeu ou de résultats sans jouer (desktop) : `VITAGAME_AUTOPLAY=1` joue la carte parfaitement
   (Start et les touches simulées restent actifs en pause), à combiner avec `VITAGAME_SHOT` / `VITAGAME_KEYS`.
+- Essayer l'écran LIBRARY sans réseau (desktop) : `VITAGAME_LIBRARY_JSON=catalogue.json` lit un catalogue local (même format que `catalog.json`) ; l'état « installée » se lit dans `save/songs/<ID>/*.chart` (ligne `VERSION`). Se combine avec `VITAGAME_KEYS` (Croix, Bas, Croix depuis l'écran titre) et `VITAGAME_SHOT`.
 - Un comportement qui marche sur desktop mais pas sur Vita vient presque toujours de :
   chemin de fichier, mémoire insuffisante, format de texture, ou alignement/endianness
   dans du code de sérialisation.

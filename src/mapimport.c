@@ -170,3 +170,21 @@ bool mapimport_run(MapImport *mi, int i) {
     mi->imported++;
     return true;
 }
+
+const char *mapimport_install(const char *zip_path, const char *expect_id) {
+    char id[CHART_ID_MAX];
+    const char *base = strrchr(zip_path, '/');
+    const char *problem = mapimport_unpack(zip_path, base ? base + 1 : zip_path, STAGING_DIR, id, sizeof id);
+    if (problem) { files_remove_tree(STAGING_DIR); return problem; }
+    if (strcmp(id, expect_id) != 0) { files_remove_tree(STAGING_DIR); return "the song's ID does not match the catalogue"; }
+
+    char official[CHART_PATH];
+    snprintf(official, sizeof official, "%ssongs/%s", ASSET_DIR, id);
+    if (files_is_dir(official)) { files_remove_tree(STAGING_DIR); return "song ID already used by a song shipped with the game"; }
+
+    char dest[CHART_PATH];
+    snprintf(dest, sizeof dest, "%s%s", USER_SONGS_DIR, id);
+    files_remove_tree(dest);
+    if (!files_rename(STAGING_DIR, dest)) { files_remove_tree(STAGING_DIR); return "cannot install the song folder"; }
+    return NULL;
+}

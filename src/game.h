@@ -14,10 +14,11 @@
 #include "settings.h"
 #include "update.h"
 #include "calib.h"
+#include "library.h"
 
-/* Titre -> menu principal (BEATMAPS / OPTIONS / QUIT) -> sélection de chanson (SCREEN_MENU) -> jeu ;
+/* Titre -> menu principal (SONGS / LIBRARY / OPTIONS / QUIT) -> sélection de chanson (SCREEN_MENU) -> jeu ;
    OPTIONS -> calibration */
-typedef enum { SCREEN_TITLE, SCREEN_MAIN, SCREEN_MENU, SCREEN_OPTIONS, SCREEN_CALIB, SCREEN_PLAY } Screen;
+typedef enum { SCREEN_TITLE, SCREEN_MAIN, SCREEN_MENU, SCREEN_LIBRARY, SCREEN_OPTIONS, SCREEN_CALIB, SCREEN_PLAY } Screen;
 
 /* Tout l'état du jeu vit ici. Pas de variables globales dans la logique de jeu. */
 typedef struct {
@@ -48,7 +49,8 @@ typedef struct {
     float       pause_cursor;     /* position affichée de la sélection du menu pause (suit pause_sel) */
     Settings    settings;         /* réglages du joueur (décalage audio, vérification des mises à jour), sauvegardés */
     Update      *update;          /* annonce d'une nouvelle version (update.h) ; NULL si désactivée */
-    int         main_sel;         /* menu principal : MAIN_BEATMAPS / OPTIONS / QUIT */
+    Library     *library;         /* bibliothèque en ligne (library.h) ; créée à la première ouverture */
+    int         main_sel;         /* menu principal : MAIN_BEATMAPS / LIBRARY / OPTIONS / QUIT */
     float       main_cursor;
     int         opt_sel;          /* options : OPT_OFFSET / OPT_CALIBRATE */
     float       opt_cursor;

@@ -96,6 +96,8 @@ typedef struct {
 void menu_init(Menu *m, SDL_Renderer *r);
 /* Libère les tableaux du menu et son image de fond */
 void menu_shutdown(Menu *m);
+/* Relit les chansons installées (après une installation depuis la bibliothèque) : la sélection revient au début */
+void menu_reload(Menu *m);
 void menu_update(Menu *m, const Input *in, float dt);
 /* Avant de lancer une chanson : coupe l'aperçu musical (libère le périphérique audio) et les images de fond
    (VRAM). Tout revient au prochain menu_update. */

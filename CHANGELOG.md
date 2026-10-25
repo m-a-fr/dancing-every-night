@@ -33,6 +33,13 @@ First version prepared for public release.
   paths are replaced with instructions about editing, playback and sharing.
 
 ### Community songs
+- New LIBRARY screen in the main menu: browse the whole online catalogue in a dense list with a detail panel
+  (cover picture, difficulties, notes, size), filter (all / not installed / installed / updates) and sort (newest / title / artist).
+  Each song shows whether it is already in your library: a check for an installed song, an arrow when a newer
+  version exists. The catalogue is read each time the screen opens; without a connection there is none ("connection required").
+- Songs install from the LIBRARY with Cross: download with a progress bar (Circle cancels), SHA-256 check against the
+  catalogue, then installation. The song appears in the song list right away, and a newer version replaces the old one
+  (your scores are kept).
 - Approving several songs together keeps every publication queued instead of cancelling earlier pending approvals.
 - Attachment downloads support GitHub authentication without forwarding credentials on redirects.
   Private attachments remain inaccessible with the default Actions token; a manual CC0 fixture test

@@ -14,8 +14,8 @@
 
 enum { PAUSE_RESUME, PAUSE_RESTART, PAUSE_MENU, PAUSE_OPTIONS };
 static const char *PAUSE_LABELS[PAUSE_OPTIONS] = { "RESUME", "RESTART", "SONG SELECT" };
-enum { MAIN_BEATMAPS, MAIN_OPTIONS, MAIN_QUIT, MAIN_COUNT };
-static const char *MAIN_LABELS[MAIN_COUNT] = { "SONGS", "OPTIONS", "QUIT" };
+enum { MAIN_BEATMAPS, MAIN_LIBRARY, MAIN_OPTIONS, MAIN_QUIT, MAIN_COUNT };
+static const char *MAIN_LABELS[MAIN_COUNT] = { "SONGS", "LIBRARY", "OPTIONS", "QUIT" };
 enum { OPT_OFFSET, OPT_CALIBRATE, OPT_UPDATES, OPT_COUNT };
 static const char *OPT_LABELS[OPT_COUNT] = { "AUDIO OFFSET", "CALIBRATE", "UPDATE CHECK" };
 
@@ -119,6 +119,7 @@ void game_init(Game *g, SDL_Renderer *r, const char *chart_path) {
 void game_shutdown(Game *g) {
     stop_song(g);
     if (g->screen == SCREEN_CALIB) calib_stop(&g->calib);
+    library_destroy(g->library);
     menu_shutdown(&g->menu);   /* ferme le périphérique qui mixe les bruitages : ils peuvent ensuite être libérés */
     sfx_shutdown(&g->sfx);
     title_shutdown(&g->title);
@@ -275,6 +276,11 @@ static void update_main(Game *g, const Input *in, float dt) {
     if (g->main_sel == MAIN_BEATMAPS) {
         g->screen = SCREEN_MENU;
         sfx_play(&g->sfx, SFX_CONFIRM);
+    } else if (g->main_sel == MAIN_LIBRARY) {
+        if (!g->library) g->library = library_create(g->renderer);
+        library_open(g->library);
+        g->screen = SCREEN_LIBRARY;
+        sfx_play(&g->sfx, SFX_CONFIRM);
     } else if (g->main_sel == MAIN_OPTIONS) {
         g->screen = SCREEN_OPTIONS;
         g->opt_sel = 0;
@@ -284,6 +290,16 @@ static void update_main(Game *g, const Input *in, float dt) {
         sfx_play(&g->sfx, SFX_QUIT);
         g->wants_quit = true;
     }
+}
+
+static void update_library(Game *g, const Input *in, float dt) {
+    menu_ambient(g, dt);
+    int ev = library_update(g->library, in, dt);
+    if (ev & LIB_EV_BACK) { g->screen = SCREEN_MAIN; sfx_play(&g->sfx, SFX_CANCEL); }
+    else if (ev & LIB_EV_INSTALLED) { menu_reload(&g->menu); sfx_play(&g->sfx, SFX_START); }
+    else if (ev & LIB_EV_CONFIRM) sfx_play(&g->sfx, SFX_CONFIRM);
+    else if (ev & LIB_EV_CHANGE) sfx_play(&g->sfx, SFX_DIFFICULTY);
+    else if (ev & LIB_EV_CURSOR) sfx_play(&g->sfx, SFX_CURSOR);
 }
 
 static void update_options(Game *g, const Input *in, float dt) {
@@ -350,6 +366,7 @@ void game_update(Game *g, const Input *in, float dt) {
         return;
     }
     if (g->screen == SCREEN_MAIN)    { update_main(g, in, dt); return; }
+    if (g->screen == SCREEN_LIBRARY) { update_library(g, in, dt); return; }
     if (g->screen == SCREEN_OPTIONS) { update_options(g, in, dt); return; }
     if (g->screen == SCREEN_CALIB)   { update_calib(g, in, dt); return; }
 
@@ -609,6 +626,12 @@ static void draw_main(const Game *g, SDL_Renderer *r) {
     ui_button_hint_pop(r, &g->font, &g->sprites, hx, hy, (const Button[]){BTN_CIRCLE}, 1, "BACK");
 }
 
+static void draw_library(const Game *g, SDL_Renderer *r) {
+    draw_menu_backdrop(g, r);
+    draw_header(g, r, "LIBRARY");
+    library_draw(g->library, r, &g->font, &g->sprites);
+}
+
 static void draw_options(const Game *g, SDL_Renderer *r) {
     draw_menu_backdrop(g, r);
     draw_header(g, r, "OPTIONS");
@@ -685,6 +708,7 @@ void game_draw(const Game *g, SDL_Renderer *r) {
         return;
     }
     if (g->screen == SCREEN_MAIN)    { draw_main(g, r); return; }
+    if (g->screen == SCREEN_LIBRARY) { draw_library(g, r); return; }
     if (g->screen == SCREEN_OPTIONS) { draw_options(g, r); return; }
     if (g->screen == SCREEN_CALIB) {
         calib_draw(&g->calib, r, &g->font, &g->sprites, g->settings.audio_offset_ms);

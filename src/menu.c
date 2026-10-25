@@ -362,6 +362,26 @@ static void load_entries(Menu *m) {
             m->has_packs ? m->pack_count : 0, (unsigned)(SDL_GetTicks() - scan_start));
 }
 
+void menu_reload(Menu *m) {
+    bgcache_clear(&m->bgc);
+    bgcache_clear(&m->thumbs);
+    m->bg_shown[0] = '\0';
+    m->bg = NULL;
+    free(m->entries); free(m->songs); free(m->packs); free(m->other_scores);
+    m->entries = NULL; m->songs = NULL; m->packs = NULL; m->other_scores = NULL;
+    m->entry_count = m->song_count = m->pack_count = m->other_score_count = 0;
+    m->has_packs = false;
+    m->tab = MENU_TAB_ALL;
+    m->in_pack = false;
+    m->pack = m->song = m->diff = 0;
+    m->confirm_delete = false;
+    m->cursor = 0.0f;
+    m->info_song = -1;
+    m->info_t = 1.0f;
+    m->deco_prev = -1;
+    load_entries(m);
+}
+
 void menu_shutdown(Menu *m) {
     menu_suspend(m);
     bgcache_shutdown(&m->bgc);

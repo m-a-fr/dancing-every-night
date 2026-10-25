@@ -27,6 +27,9 @@
 /* Fiche de la dernière version (publiée avec le site) : lue au démarrage sur Vita pour annoncer une mise à jour (update.h) */
 #define UPDATE_URL "https://dancing-every-night.pages.dev/latest.json"
 
+/* Catalogue de la bibliothèque de chansons (publié avec le site, tools/catalog.py) : lu à chaque ouverture de l'écran LIBRARY */
+#define LIBRARY_URL "https://dancing-every-night.pages.dev/catalog.json"
+
 #define ASSET_PATH(p) ASSET_DIR p /* littéral concaténé : ASSET_PATH("a.png") */
 
 #endif

@@ -46,7 +46,7 @@ fi
 
 # ---- 2. Le jeu ----
 echo "==> $GAME_NAME $VERSION ($PLATFORM)"
-cmake -S . -B "$OUT/game" "${EXTRA[@]}" -DCMAKE_BUILD_TYPE=Release -DGAME_STATIC_SDL=ON -DGAME_COPY_ASSETS=OFF \
+cmake -S . -B "$OUT/game" "${EXTRA[@]}" -DCMAKE_BUILD_TYPE=Release -DGAME_STATIC_SDL=ON -DGAME_NET=OFF -DGAME_COPY_ASSETS=OFF \
       -DCMAKE_PREFIX_PATH="$SDL_PREFIX" > /dev/null
 cmake --build "$OUT/game" -j "$JOBS"
 BIN="$OUT/game/vitagame"

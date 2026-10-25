@@ -146,6 +146,17 @@ else()
   endif()
   target_link_libraries(${PROJECT_NAME} m)
 
+  # Bibliothèque en ligne (src/net.c) : libcurl si le système l'a (essai en développement) ; les paquets distribués
+  # n'en embarquent pas, la bibliothèque y affiche « connexion requise »
+  option(GAME_NET "PC : lire le catalogue en ligne avec libcurl, si disponible" ON)
+  if(GAME_NET)
+    find_package(CURL QUIET)
+    if(CURL_FOUND)
+      target_compile_definitions(${PROJECT_NAME} PRIVATE HAVE_CURL=1)
+      target_link_libraries(${PROJECT_NAME} CURL::libcurl)
+    endif()
+  endif()
+
   # Copie des assets à côté de l'exécutable (équivalent de app0: sur Vita) ; les builds distribués
   # (scripts/build-pc.sh) prennent eux-mêmes les seuls assets commités
   option(GAME_COPY_ASSETS "PC : copier assets/ à côté de l'exécutable" ON)

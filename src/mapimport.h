@@ -28,4 +28,8 @@ bool mapimport_run(MapImport *mi, int i);
    par le validateur (mapcheck.h). */
 const char *mapimport_unpack(const char *zip_path, const char *zip_name, const char *dest, char *id, size_t id_size);
 
+/* Installe le zip `zip_path` téléchargé depuis la bibliothèque dans USER_SONGS_DIR/<expect_id>/ (remplace la version
+   installée). Refuse un zip dont l'ID n'est pas expect_id. Retourne NULL si tout va bien, sinon la raison du refus. */
+const char *mapimport_install(const char *zip_path, const char *expect_id);
+
 #endif
