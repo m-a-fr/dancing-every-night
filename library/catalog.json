@@ -278,6 +278,52 @@
       "source_sha256": "e4657de2fc1af89f76cbfe8f2a237d95b6c78901191fccc0c860bc1ad8fad08e"
     },
     {
+      "id": "community-45",
+      "version": 1,
+      "title": "Blank",
+      "artist": "Disfigure",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=p7ZsBPK656s",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 194,
+          "bpm": 140.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 297,
+          "bpm": 140.0
+        },
+        {
+          "name": "HARD",
+          "notes": 446,
+          "bpm": 140.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 538,
+          "bpm": 140.0
+        }
+      ],
+      "duration_s": 209.0,
+      "size_bytes": 5106368,
+      "has_video": false,
+      "zip": "songs/community-45-v1.zip",
+      "zip_bytes": 5075245,
+      "sha256": "ad8bd90c815f85d69230c426662ee0b73e0b15c643af2cdecdd8837524bf1ba4",
+      "thumb": "thumbs/community-45-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 45,
+      "local_id": "popular2_blank",
+      "previous_objects": [],
+      "source_sha256": "0f157382b962180413ebee2cf919324a9e41c8f57bc6daaacbe3b15e6009e085"
+    },
+    {
       "id": "community-30",
       "version": 1,
       "title": "Blue Zenith",
