@@ -8,8 +8,10 @@ button targets; hit the right button on the beat, keep your combo, chase the S r
 The goal is an osu!-style community: the game ships with a couple of original songs, and players
 create, share and download new ones.
 
-> **Status: 0.9.0, pre-release.** The game is playable and community songs can be installed; the
-> official songs are still in progress.
+> **Status: 0.9.0, first public version.** The game is playable, with 3 official songs, and community songs can be
+> installed. An in-game song store is planned for 1.0.
+
+**Community:** [Discord](https://discord.gg/vTJDvgJe74) · [Song library](https://dancing-every-night.pages.dev/songs/) · [Online editor](https://dancing-every-night.pages.dev)
 
 ## For players
 

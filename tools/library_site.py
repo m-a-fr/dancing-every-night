@@ -167,7 +167,7 @@ def list_page(cfg, songs):
 """
     h += listing if songs else empty_library(cfg)
     h += f"""<footer><span data-i18n>Songs belong to their authors. Something wrong?</span>
-  <a href="/songs/legal.html" data-i18n>Takedown and content policy</a></footer>
+  <a href="/songs/legal.html" data-i18n>Takedown and content policy</a> · <a href="https://discord.gg/vTJDvgJe74">Discord</a></footer>
 """
     return h + TAIL.format(rel=rel)
 
