@@ -1842,6 +1842,52 @@
       "source_sha256": "9281f329ab4f87243a4f45fde5e42a540b9990d84b3c2e6a59b5f9e9d7545c66"
     },
     {
+      "id": "community-58",
+      "version": 1,
+      "title": "Tower of Heaven (You Are Slaves)",
+      "artist": "Feint",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=z-sAl3S5qB8",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 197,
+          "bpm": 175.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 275,
+          "bpm": 175.0
+        },
+        {
+          "name": "HARD",
+          "notes": 405,
+          "bpm": 175.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 491,
+          "bpm": 175.0
+        }
+      ],
+      "duration_s": 188.4,
+      "size_bytes": 4301729,
+      "has_video": false,
+      "zip": "songs/community-58-v1.zip",
+      "zip_bytes": 4269384,
+      "sha256": "6d387bd4e7c2ff067a4367251633b486802a700444a61cc4157e9a1bc233b81c",
+      "thumb": "thumbs/community-58-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 58,
+      "local_id": "popular2_tower_of_heaven",
+      "previous_objects": [],
+      "source_sha256": "1ae9f19ad708c03ba72d96a56e1a5f3fa0014531b0a87bf1b47274e6ffc690c9"
+    },
+    {
       "id": "community-12",
       "version": 1,
       "title": "Umi's Secret (Chiptune Mix)",
