@@ -278,6 +278,52 @@
       "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
     },
     {
+      "id": "community-13",
+      "version": 1,
+      "title": "Sweeteners",
+      "artist": "Jack5",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "OutFox Serenity; see CREDITS.txt",
+      "license": "Music: CC BY 3.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 148,
+          "bpm": 153.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 203,
+          "bpm": 153.0
+        },
+        {
+          "name": "HARD",
+          "notes": 333,
+          "bpm": 153.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 377,
+          "bpm": 153.0
+        }
+      ],
+      "duration_s": 156.9,
+      "size_bytes": 4074290,
+      "has_video": false,
+      "zip": "songs/community-13-v1.zip",
+      "zip_bytes": 4043635,
+      "sha256": "e644a72bce7543d5bd7997ffe53bfcec9f89d9a1cd22759a24c27482bee8fb63",
+      "thumb": "thumbs/community-13-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 13,
+      "local_id": "launch_sweeteners",
+      "previous_objects": [],
+      "source_sha256": "71b56a2343ed9161193d669323998a73f6266393db70d5e5b5915dd0fed08f6d"
+    },
+    {
       "id": "community-26",
       "version": 1,
       "title": "Test Clicks",
