@@ -1,4 +1,41 @@
 {
   "schema": 1,
-  "songs": []
+  "songs": [
+    {
+      "id": "community-3",
+      "version": 1,
+      "title": "Test Clicks",
+      "artist": "Dancing Every Night",
+      "pack": "",
+      "mapper": "Library test",
+      "source": "",
+      "license": "",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 21,
+          "bpm": 120.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 42,
+          "bpm": 120.0
+        }
+      ],
+      "duration_s": 24.0,
+      "size_bytes": 43041,
+      "has_video": false,
+      "zip": "songs/community-3-v1.zip",
+      "zip_bytes": 24368,
+      "sha256": "966ae57e7310b4125962f8f6c41d3f34080373ddd37802aaa5923825b7f99c5c",
+      "thumb": null,
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 3,
+      "local_id": "test_clicks",
+      "previous_objects": [],
+      "source_sha256": "70b027053cbb0e819f770d55fbda9fb52f066b2d0ae3d471d740aa189d0d60f3"
+    }
+  ]
 }
