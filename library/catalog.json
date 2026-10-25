@@ -2,6 +2,52 @@
   "schema": 1,
   "songs": [
     {
+      "id": "community-8",
+      "version": 1,
+      "title": "brokenHeart resurrection ~estelle~",
+      "artist": "Seo / rilegoat",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "OutFox Serenity; see CREDITS.txt",
+      "license": "Music: CC BY-SA 4.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 160,
+          "bpm": 202.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 208,
+          "bpm": 202.0
+        },
+        {
+          "name": "HARD",
+          "notes": 288,
+          "bpm": 202.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 314,
+          "bpm": 202.0
+        }
+      ],
+      "duration_s": 135.4,
+      "size_bytes": 3539171,
+      "has_video": false,
+      "zip": "songs/community-8-v1.zip",
+      "zip_bytes": 3523225,
+      "sha256": "f239978d9ce87d0fb1d0fcfbd3682089d16df2400b46a56896bfa52147c74e48",
+      "thumb": "thumbs/community-8-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 8,
+      "local_id": "launch_estelle",
+      "previous_objects": [],
+      "source_sha256": "5be336eebb89e16dc9afc2d7d6beea2fc4019c48fa9195d2170f91c53ec421ed"
+    },
+    {
       "id": "community-7",
       "version": 1,
       "title": "Firestarter",
