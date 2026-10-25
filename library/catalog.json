@@ -1198,6 +1198,52 @@
       "source_sha256": "71b56a2343ed9161193d669323998a73f6266393db70d5e5b5915dd0fed08f6d"
     },
     {
+      "id": "community-43",
+      "version": 1,
+      "title": "Tear Rain",
+      "artist": "cYsmix feat. Emmy",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=xkV5qwRevEE",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 235,
+          "bpm": 128.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 339,
+          "bpm": 128.0
+        },
+        {
+          "name": "HARD",
+          "notes": 506,
+          "bpm": 128.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 602,
+          "bpm": 128.0
+        }
+      ],
+      "duration_s": 244.1,
+      "size_bytes": 6167896,
+      "has_video": false,
+      "zip": "songs/community-43-v1.zip",
+      "zip_bytes": 6120419,
+      "sha256": "9b8661b57982f666b31929a51855f90b35c7c8baea4be140a45cb53f927bfd7c",
+      "thumb": "thumbs/community-43-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 43,
+      "local_id": "popular_tear_rain",
+      "previous_objects": [],
+      "source_sha256": "9281f329ab4f87243a4f45fde5e42a540b9990d84b3c2e6a59b5f9e9d7545c66"
+    },
+    {
       "id": "community-12",
       "version": 1,
       "title": "Umi's Secret (Chiptune Mix)",
