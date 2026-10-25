@@ -34,9 +34,10 @@ def shape(hook):
         return "pas une adresse http(s)"
     path = (m.group(3) or "").split("?")[0].strip("/").split("/")
     last = path[-1] if path else ""
+    token_ok = bool(re.fullmatch(r"[\w-]+", last))
     return (f"schéma={m.group(1)} hôte={m.group(2)} segments={len(path)} début={'/'.join(path[:2])} "
             f"identifiant_numérique={path[2].isdigit() if len(path) > 2 else None} longueur_jeton={len(last)} "
-            f"jeton_caractères_valides={bool(re.fullmatch(r'[\w-]+', last))} paramètres={'?' in hook} longueur_totale={len(hook)}")
+            f"jeton_caractères_valides={token_ok} paramètres={'?' in hook} longueur_totale={len(hook)}")
 
 
 def build_payload(entry, config):
