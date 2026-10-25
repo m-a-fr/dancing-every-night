@@ -324,6 +324,52 @@
       "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
     },
     {
+      "id": "community-15",
+      "version": 1,
+      "title": "Some Things Must (OutFox Edit)",
+      "artist": "Sevish",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "OutFox Serenity; see CREDITS.txt",
+      "license": "Music: CC BY 4.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 141,
+          "bpm": 160.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 211,
+          "bpm": 160.0
+        },
+        {
+          "name": "HARD",
+          "notes": 307,
+          "bpm": 160.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 353,
+          "bpm": 160.0
+        }
+      ],
+      "duration_s": 145.5,
+      "size_bytes": 3895919,
+      "has_video": false,
+      "zip": "songs/community-15-v1.zip",
+      "zip_bytes": 3875685,
+      "sha256": "552619c34268eace76c6d7226004b3473fcc6323169cada1cc2bf5f225dd243c",
+      "thumb": "thumbs/community-15-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 15,
+      "local_id": "launch_some_things_must",
+      "previous_objects": [],
+      "source_sha256": "1a56db711b9e5908d59fc8b353f3eefdb56d5a157eede932547b132c6389f356"
+    },
+    {
       "id": "community-13",
       "version": 1,
       "title": "Sweeteners",
