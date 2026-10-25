@@ -24,8 +24,8 @@ play on your Vita or computer in a few minutes. Check a song before sharing it:
 make check MAP=my_song.zip
 ```
 
-You stay responsible for the music you share; the `LICENSE` field is optional, fill it in if you know the rights. The song library, where you
-will be able to submit songs for everyone to download, is coming; until then, share the `.zip` directly.
+You stay responsible for the music you share; the `LICENSE` field is optional, fill it in if you know the rights. To share a song with everyone, export the `.zip` from the editor's *Publish* step and attach it to the
+[submission form](https://github.com/m-a-fr/dancing-every-night/issues/new?template=song-submit.yml).
 
 ## 3. Improve the code
 
@@ -81,9 +81,8 @@ sur ta Vita ou ton ordinateur en quelques minutes. Vérifie une chanson avant de
 make check MAP=ma_chanson.zip
 ```
 
-Tu restes responsable de la musique que tu partages ; le champ `LICENSE` est facultatif, renseigne-le si tu connais les droits. La
-bibliothèque de chansons, où tu pourras proposer tes chansons à tout le monde, arrive bientôt ; en attendant, partage
-directement le `.zip`.
+Tu restes responsable de la musique que tu partages ; le champ `LICENSE` est facultatif, renseigne-le si tu connais les droits. Pour partager une chanson avec tout le monde, exporte le `.zip` depuis l'étape *Publier* de l'éditeur et joins-le au
+[formulaire de proposition](https://github.com/m-a-fr/dancing-every-night/issues/new?template=song-submit.yml).
 
 ## 3. Améliorer le code
 

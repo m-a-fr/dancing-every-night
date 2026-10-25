@@ -442,7 +442,7 @@
     <section class="step" data-step="publish">
       <button class="step-h" type="button" aria-expanded="false"><span class="n"></span><span class="lbl">Publier</span><span class="st"></span></button>
       <div class="step-b" hidden>
-      <p class="lead">Prépare les crédits et les droits pour la future bibliothèque. L’export pour jouer reste disponible sans ces informations.</p>
+      <p class="lead">Ta chanson est finie ? Renseigne l’auteur ci-dessous, exporte le .zip, puis propose-le à la bibliothèque de chansons. L’export pour jouer reste disponible sans ces informations.</p>
       <label class="row">Auteur <input id="mMapper" maxlength="63" placeholder="ton pseudo" title="Qui a créé les difficultés : affiché aux joueurs"></label>
       <label class="row">Licence <input id="mLicense" maxlength="63" placeholder="ex. CC BY 4.0, accord de l'artiste…" title="Facultatif : ce que tu sais des droits sur la musique et les médias (ex. CC BY 4.0, accord de l'artiste)."></label>
       <label class="row">Source <input id="mSource" maxlength="63" placeholder="(optionnel) album, anime…"></label>
@@ -451,6 +451,16 @@
       <ul class="checklist" id="pubCheck"></ul>
       <div class="detect"><button id="pubExport" class="primary" hidden>Exporter le .zip</button></div>
       <p class="file" id="pubHint"></p>
+      <div id="pubSubmit" hidden>
+        <h2>Proposer à la bibliothèque</h2>
+        <ol class="note">
+          <li data-i18n>Exporte le .zip avec le bouton ci-dessus.</li>
+          <li data-i18n>Ouvre le formulaire de proposition (il demande un compte GitHub gratuit) et glisse le .zip dans la case « Your song ».</li>
+          <li data-i18n>La chanson est vérifiée automatiquement, écoutée par une personne, puis mise en ligne dans la bibliothèque. Tu suis l’avancement dans la même page.</li>
+        </ol>
+        <div class="detect"><button type="button" id="pubOpenForm" class="primary">Ouvrir le formulaire de proposition</button></div>
+        <p class="note" data-i18n>Tu peux d’abord parcourir la <a href="songs/" target="_blank" rel="noopener">bibliothèque</a>.</p>
+      </div>
           </div>
     </section>
     </div>
@@ -3389,6 +3399,7 @@ function renderPublish() {
 }
 document.querySelector("aside").addEventListener("input", () => renderPublish());
 mel("pubExport").addEventListener("click", () => mel("btnExportZip").click());
+mel("pubOpenForm").addEventListener("click", () => window.open("https://github.com/m-a-fr/dancing-every-night/issues/new?template=song-submit.yml", "_blank", "noopener"));
 
 // la barre de lecture peut passer sur deux lignes : la timeline suit la place réelle
 new ResizeObserver(() => { resize(); draw(); }).observe(mel("stage"));
@@ -3538,7 +3549,7 @@ async function boot() {
   if (LOCAL) {
     try { await vfsLoad(); await dropOrphanTracks(); }
     catch (e) { setMsg(tr("Stockage du navigateur indisponible : {err}", { err: e.message }), true); }
-    for (const id of ["btnOpenZip", "btnExportZip", "btnRemoveMap", "btnStorage", "fileMenuSep", "pubExport", "btnTestTop"]) mel(id).hidden = false;
+    for (const id of ["btnOpenZip", "btnExportZip", "btnRemoveMap", "btnStorage", "fileMenuSep", "pubExport", "pubSubmit", "btnTestTop"]) mel(id).hidden = false;
     mel("btnSave").hidden = true;   // enregistrement automatique
     // détection du BPM et brouillon automatique : Python (Pyodide) téléchargé au premier clic, pas d'analyse d'office
     mel("nsDetect").title = mel("mDetect").title = tr("Propose un tempo à vérifier à l’oreille. Le premier lancement nécessite une connexion.");
