@@ -35,7 +35,11 @@ int mapimport_scan(MapImport *mi) {
     if (!d) return 0;
     struct dirent *e;
     while ((e = readdir(d)) && mi->count < MAPIMPORT_MAX) {
-        if (e->d_name[0] == '.' || !has_suffix(e->d_name, ".zip") || strlen(e->d_name) >= sizeof mi->zips[0]) continue;
+        if (e->d_name[0] == '.' || strcmp(e->d_name, "failed") == 0 ||
+            strcmp(e->d_name, "__MACOSX") == 0 || strlen(e->d_name) >= sizeof mi->zips[0]) continue;
+        char path[256];
+        snprintf(path, sizeof path, "%s%s", IMPORT_DIR, e->d_name);
+        if (!has_suffix(e->d_name, ".zip") && !files_is_dir(path)) continue;
         snprintf(mi->zips[mi->count++], sizeof mi->zips[0], "%s", e->d_name);
     }
     closedir(d);
@@ -58,8 +62,10 @@ static bool reject(MapImport *mi, const char *zip, const char *reason) {
     snprintf(to, sizeof to, "%s%s", FAILED_DIR, zip);
     snprintf(txt, sizeof txt, "%s%s.txt", FAILED_DIR, zip);
     files_mkdir(FAILED_DIR);
-    files_remove(to);
-    if (!files_rename(from, to)) files_remove(from);   /* jamais retraité en boucle à chaque lancement */
+    if (files_is_dir(to)) files_remove_tree(to);
+    else files_remove(to);
+    /* Conserver la source si la mise en quarantaine échoue. */
+    files_rename(from, to);
     FILE *f = fopen(txt, "w");
     if (f) { fprintf(f, "%s\n", reason); fclose(f); }
     files_remove_tree(STAGING_DIR);
@@ -149,11 +155,96 @@ const char *mapimport_unpack(const char *zip_path, const char *zip_name, const c
     return NULL;
 }
 
+/* Copie plate et bornée en mémoire : mêmes noms et organisation que les ZIP. */
+static const char *import_folder(const char *source, const char *name, const char *dest,
+                                 char *id, size_t id_size, bool wrapper) {
+    DIR *d = opendir(source);
+    if (!d) return "cannot read the song folder";
+    struct dirent *e;
+    char child[256] = "", child_name[96] = "", first_chart[256] = "";
+    int dirs = 0, files = 0;
+    const char *problem = NULL;
+    while ((e = readdir(d))) {
+        if (ignored_entry(e->d_name) || strcmp(e->d_name, "__MACOSX") == 0) continue;
+        char path[256];
+        if (snprintf(path, sizeof path, "%s/%s", source, e->d_name) >= (int)sizeof path) {
+            problem = "file path too long"; break;
+        }
+        if (files_is_dir(path)) {
+            dirs++;
+            snprintf(child, sizeof child, "%s", path);
+            snprintf(child_name, sizeof child_name, "%.*s", (int)sizeof child_name - 1, e->d_name);
+        } else {
+            if (strlen(e->d_name) >= 64 || strpbrk(e->d_name, ":\\")) {
+                problem = "invalid file name in the song folder"; break;
+            }
+            files++;
+            if (!first_chart[0] && has_suffix(e->d_name, ".chart"))
+                snprintf(first_chart, sizeof first_chart, "%s", path);
+        }
+    }
+    closedir(d);
+    if (problem) return problem;
+    if (wrapper && dirs == 1 && files == 0)
+        return import_folder(child, child_name, dest, id, id_size, false);
+    if (dirs) return "sub-folders in the song folder (one song = one folder)";
+    if (!first_chart[0]) return "no .chart file in the song folder";
+    id[0] = '\0';
+    FILE *chart = fopen(first_chart, "rb");
+    if (!chart) return "cannot read the .chart file";
+    char line[1024];
+    size_t read_bytes = 0;
+    while (fgets(line, sizeof line, chart) && (read_bytes += strlen(line)) <= MAX_CHART_BYTES) {
+        char *v = line;
+        while (*v == ' ' || *v == '\t') v++;
+        if (strncmp(v, "ID", 2) || (v[2] != ' ' && v[2] != '\t')) continue;
+        v += 2;
+        while (*v == ' ' || *v == '\t') v++;
+        size_t n = strcspn(v, " \t\r\n");
+        if (n >= id_size) { fclose(chart); return "invalid song ID"; }
+        memcpy(id, v, n); id[n] = '\0'; break;
+    }
+    fclose(chart);
+    if (!id[0]) {
+        if (strlen(name) >= id_size) return "invalid song ID";
+        snprintf(id, id_size, "%s", name);
+    }
+    if (!valid_id(id)) return "invalid song ID (letters, digits, _ and - only)";
+    files_remove_tree(dest);
+    if (!files_mkdir(dest)) return "cannot create the destination folder";
+    d = opendir(source);
+    if (!d) return "cannot read the song folder";
+    while ((e = readdir(d))) {
+        if (ignored_entry(e->d_name) || strcmp(e->d_name, "__MACOSX") == 0) continue;
+        char in[256], out[256];
+        if (snprintf(in, sizeof in, "%s/%s", source, e->d_name) >= (int)sizeof in ||
+            snprintf(out, sizeof out, "%s%s", dest, e->d_name) >= (int)sizeof out) {
+            problem = "file path too long"; break;
+        }
+        FILE *src = fopen(in, "rb"), *dst = src ? fopen(out, "wb") : NULL;
+        if (!src || !dst) problem = "cannot copy the song files";
+        if (src && dst) {
+            char buffer[32768];
+            size_t n;
+            while ((n = fread(buffer, 1, sizeof buffer, src)))
+                if (fwrite(buffer, 1, n, dst) != n) { problem = "cannot write the song files (memory card full?)"; break; }
+            if (ferror(src)) problem = "cannot read the song files";
+        }
+        if (src) fclose(src);
+        if (dst && fclose(dst) != 0) problem = "cannot finish writing the song files";
+        if (problem) break;
+    }
+    closedir(d);
+    return problem;
+}
+
 bool mapimport_run(MapImport *mi, int i) {
     const char *zip = mi->zips[i];
     char zip_path[256], id[CHART_ID_MAX];
     snprintf(zip_path, sizeof zip_path, "%s%s", IMPORT_DIR, zip);
-    const char *problem = mapimport_unpack(zip_path, zip, STAGING_DIR, id, sizeof id);
+    bool folder = files_is_dir(zip_path);
+    const char *problem = folder ? import_folder(zip_path, zip, STAGING_DIR, id, sizeof id, true)
+                                 : mapimport_unpack(zip_path, zip, STAGING_DIR, id, sizeof id);
     if (problem) return reject(mi, zip, problem);
 
     char official[CHART_PATH];
@@ -165,7 +256,8 @@ bool mapimport_run(MapImport *mi, int i) {
     snprintf(dest, sizeof dest, "%s%s", USER_SONGS_DIR, id);
     files_remove_tree(dest);
     if (!files_rename(STAGING_DIR, dest)) return reject(mi, zip, "cannot install the song folder");
-    files_remove(zip_path);
+    if (folder) files_remove_tree(zip_path);
+    else files_remove(zip_path);
     fprintf(stderr, "import: %s -> %s\n", zip, dest);
     mi->imported++;
     return true;

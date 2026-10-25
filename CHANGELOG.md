@@ -40,6 +40,7 @@ First version prepared for public release.
 - Songs install from the LIBRARY with Cross: download with a progress bar (Circle cancels), SHA-256 check against the
   catalogue, then installation. The song appears in the song list right away, and a newer version replaces the old one
   (your scores are kept).
+- Startup imports accept extracted song folders as well as ZIPs, including a single enclosing folder.
 - Approving several songs together keeps every publication queued instead of cancelling earlier pending approvals.
 - Attachment downloads support GitHub authentication without forwarding credentials on redirects.
   Private attachments remain inaccessible with the default Actions token; a manual CC0 fixture test

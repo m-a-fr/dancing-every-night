@@ -34,14 +34,14 @@ Les sauvegardes sont dans `ux0:data/dancingeverynight/`.
 
 ### Installer une chanson
 
-1. Copier le `.zip` de la chanson dans `ux0:data/dancingeverynight/import/` (mode USB ou FTP de VitaShell).
+1. Copier le `.zip` ou le dossier décompressé de la chanson dans `ux0:data/dancingeverynight/import/` (mode USB ou FTP de VitaShell).
    Le dossier est créé au premier lancement du jeu.
-2. Lancer le jeu : le zip est décompressé pendant l'écran de chargement, puis supprimé.
+2. Lancer le jeu : la chanson est installée pendant l'écran de chargement. Le ZIP ou dossier source est ensuite supprimé.
 3. La chanson apparaît dans la liste (et dans son pack, si elle en a un).
 
 Réinstaller une chanson de même ID la remplace et garde tes records. Pour supprimer une chanson, la sélectionner dans
 la liste des chansons et appuyer sur **Triangle** ; on peut aussi supprimer son dossier dans
-`ux0:data/dancingeverynight/songs/`. Un zip impossible à installer est déplacé dans `import/failed/`, avec un
+`ux0:data/dancingeverynight/songs/`. Un ZIP ou dossier impossible à installer est déplacé dans `import/failed/`, avec un
 fichier `.txt` qui explique pourquoi.
 
 **Bugs et idées :** ouvrir une issue sur ce dépôt (des formulaires existent pour un bug, une idée ou signaler une

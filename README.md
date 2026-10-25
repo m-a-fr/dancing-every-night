@@ -34,14 +34,14 @@ Saves are stored in `ux0:data/dancingeverynight/`.
 
 ### Installing a song
 
-1. Copy the song's `.zip` file into `ux0:data/dancingeverynight/import/` (VitaShell USB or FTP mode).
+1. Copy the song's `.zip` file or extracted folder into `ux0:data/dancingeverynight/import/` (VitaShell USB or FTP mode).
    The folder is created the first time you launch the game.
-2. Launch the game: the zip is unpacked during the loading screen, then deleted.
+2. Launch the game: the song is installed during the loading screen, then the source ZIP or folder is deleted.
 3. The song shows up in the song list (and in its pack, if it has one).
 
 Installing a song with the same ID again replaces it and keeps your best scores. To delete a song, select it in the
 song list and press **Triangle**; you can also delete its folder in `ux0:data/dancingeverynight/songs/`.
-A zip that cannot be installed is moved to `import/failed/`, with a `.txt` file explaining why.
+A ZIP or folder that cannot be installed is moved to `import/failed/`, with a `.txt` file explaining why.
 
 **Bugs and ideas:** open an issue on this repository (there are forms for bugs, ideas and reporting a song) and mention
 the version shown at the bottom right of the title screen. See [CONTRIBUTING](CONTRIBUTING.md) for the other ways to help. For a crash, attach the `.psp2dmp` file found in `ux0:data/`.
