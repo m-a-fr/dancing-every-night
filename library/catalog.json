@@ -230,6 +230,42 @@
       "local_id": "launch_phycietiia",
       "previous_objects": [],
       "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
+    },
+    {
+      "id": "community-24",
+      "version": 1,
+      "title": "Test Clicks",
+      "artist": "Dancing Every Night",
+      "pack": "",
+      "mapper": "Library test",
+      "source": "",
+      "license": "CC0 (synthetic test sound)",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 21,
+          "bpm": 120.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 42,
+          "bpm": 120.0
+        }
+      ],
+      "duration_s": 24.0,
+      "size_bytes": 43113,
+      "has_video": false,
+      "zip": "songs/community-24-v1.zip",
+      "zip_bytes": 24424,
+      "sha256": "3208b69ad1b0705829be4d8c5c49f4b52c089634793e00559d7848fb502041bb",
+      "thumb": null,
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 24,
+      "local_id": "test_clicks",
+      "previous_objects": [],
+      "source_sha256": "db142b7dbb31ab314fd463f9ab153a7cc41274a84f449d4a901eb8e6f15f8b8a"
     }
   ]
 }
