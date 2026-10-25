@@ -17,6 +17,7 @@ import library_publish as pub
 import library_fetch as fetch
 import library_ledger as ledger
 import library_submitter as submitter
+import library_site as site
 
 
 class PublicationTest(unittest.TestCase):
@@ -108,6 +109,12 @@ class PublicationTest(unittest.TestCase):
             self.assertFalse(fetch.ALLOWED(urlparse('https://evil.example/' + 'a' * 32 + '.zip')))
         with patch.object(fetch, 'INCOMING', ''):
             self.assertFalse(fetch.ALLOWED(good))
+
+    def test_object_urls_are_joined_with_a_slash(self):
+        self.assertEqual(site.join_url('https://x.r2.dev', 'thumbs/a.jpg'), 'https://x.r2.dev/thumbs/a.jpg')
+        self.assertEqual(site.join_url('/_demo/', 'songs/a.zip'), '/_demo/songs/a.zip')
+        self.assertEqual(site.join_url('https://x.r2.dev', None), '')
+        self.assertEqual(site.thumb_url({'thumb_base': 'https://x.r2.dev'}, {'thumb': 'thumbs/a.jpg'}), 'https://x.r2.dev/thumbs/a.jpg')
 
 
 if __name__ == '__main__':

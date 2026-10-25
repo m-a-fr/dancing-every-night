@@ -77,8 +77,13 @@ def pills(song):
                    f'{E(d["name"])}</li>' for d in song["difficulties"])
 
 
+def join_url(base, key):
+    """Adresse d'un objet R2 : « / » entre la base (config.json, sans « / » final) et la clé (songs/…, thumbs/…)."""
+    return f'{base.rstrip("/")}/{key}' if base and key else ""
+
+
 def thumb_url(cfg, song):
-    return f'{cfg["thumb_base"]}{song["thumb"]}' if song.get("thumb") else ""
+    return join_url(cfg["thumb_base"], song.get("thumb"))
 
 
 def empty_library(cfg):
@@ -179,7 +184,7 @@ def song_page(cfg, s):
     h = HEAD.format(title=f'{E(s["title"])} · Song library · Dancing Every Night', rel=rel, cur_lib="false", desc=E(desc),
                     canonical=f'{cfg["site_url"]}/songs/{s["id"]}/', og_image=E(thumb or f'{cfg["site_url"]}/social.jpg'))
     base = cfg["download_base"]
-    url = f'{base}{s["zip"]}' if base else ""
+    url = join_url(base, s["zip"])
     report = f'{cfg["report_url"]}&song={s["id"]}&title=Report%3A+{s["id"]}'
     h += f'<p class="crumb"><a href="{rel}" data-i18n>← Song library</a></p>\n'
     h += f'<article class="song">\n<div class="hero">\n'
