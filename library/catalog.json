@@ -600,6 +600,52 @@
       "source_sha256": "59b8c4e8fd9a32054556055a1f8abc8e79ddc1dea9b65627c11e48733d1bacea"
     },
     {
+      "id": "community-42",
+      "version": 1,
+      "title": "FREEDOM DiVE",
+      "artist": "xi",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=k-3y2LVF_SE",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 247,
+          "bpm": 111.11
+        },
+        {
+          "name": "NORMAL",
+          "notes": 375,
+          "bpm": 111.11
+        },
+        {
+          "name": "HARD",
+          "notes": 441,
+          "bpm": 111.11
+        },
+        {
+          "name": "EXPERT",
+          "notes": 468,
+          "bpm": 111.11
+        }
+      ],
+      "duration_s": 269.5,
+      "size_bytes": 6371839,
+      "has_video": false,
+      "zip": "songs/community-42-v1.zip",
+      "zip_bytes": 6336282,
+      "sha256": "fa7bde1ce8c7a81b3996edbd4f7f852826fd3e395624af17b353ba737e3330e4",
+      "thumb": "thumbs/community-42-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 42,
+      "local_id": "popular_freedom_dive",
+      "previous_objects": [],
+      "source_sha256": "ca8e289d6f0b6c4720a7ce65f7736595bda16e3f59cb6eb29b0394401204f748"
+    },
+    {
       "id": "community-34",
       "version": 1,
       "title": "Hitorigoto",
