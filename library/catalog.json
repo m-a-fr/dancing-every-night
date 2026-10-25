@@ -968,6 +968,52 @@
       "source_sha256": "6748fa7a36da1c1cfb874c64a81258f9727fb0e7679d0dc16701d561f9004187"
     },
     {
+      "id": "community-38",
+      "version": 1,
+      "title": "Silhouette",
+      "artist": "KANA-BOON",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=dlFA0Zq1k2A",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 293,
+          "bpm": 183.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 394,
+          "bpm": 183.0
+        },
+        {
+          "name": "HARD",
+          "notes": 532,
+          "bpm": 183.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 656,
+          "bpm": 183.0
+        }
+      ],
+      "duration_s": 265.0,
+      "size_bytes": 5781105,
+      "has_video": false,
+      "zip": "songs/community-38-v1.zip",
+      "zip_bytes": 5744419,
+      "sha256": "62b219aad68a316219ae05efffea98ce3c0a4632cbd1001b25b108ce6734005c",
+      "thumb": "thumbs/community-38-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 38,
+      "local_id": "popular_silhouette",
+      "previous_objects": [],
+      "source_sha256": "d5e9e165f802bec290379cc1cb02cfaba048ffbc964729cc58f7be2456d442cc"
+    },
+    {
       "id": "community-15",
       "version": 1,
       "title": "Some Things Must (OutFox Edit)",
