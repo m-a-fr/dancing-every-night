@@ -1,0 +1,16 @@
+# Cloudflare Pages (éditeur en ligne + bibliothèque) : liaisons de functions/api/submit.js, voir library/PUBLISHING.md.
+# Les secrets GITHUB_TOKEN et CHALLENGE_SECRET ne sont pas ici : ils se posent dans Cloudflare (Settings > Variables and secrets).
+name = "dancing-every-night"
+pages_build_output_dir = "build-site"
+compatibility_date = "2026-10-01"
+
+[vars]
+INCOMING_BASE = "https://pub-5652d05b49634cbfb8973f0cffcafaf5.r2.dev"
+
+[[r2_buckets]]
+binding = "INCOMING"
+bucket_name = "dne-incoming"
+
+[[kv_namespaces]]
+binding = "STATE"
+id = "a96629db18d94d1c8096612f82796534"

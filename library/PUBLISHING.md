@@ -66,11 +66,11 @@ Setup (once, in the Cloudflare dashboard and on GitHub):
 
 1. R2 > create the bucket `dne-incoming`; enable public access (r2.dev address) and add an object lifecycle rule that
    deletes objects after 30 days. Put the address in `library/config.json` as `incoming_base` (no trailing `/`).
-2. Workers & Pages > Pages project > Settings > Bindings: R2 bucket `INCOMING` = `dne-incoming`; KV namespace `STATE`
-   (create an empty one).
+2. The bindings (R2 `INCOMING`, KV `STATE`) and `INCOMING_BASE` are declared in `wrangler.toml` at the repository root
+   (done with `wrangler r2 bucket create`, `wrangler kv namespace create`).
 3. GitHub > fine-grained personal access token, repository `dancing-every-night` only, permission *Issues: read and write*.
-4. Pages project > Settings > Variables and secrets (production): `INCOMING_BASE` (same address as `incoming_base`),
-   `GITHUB_TOKEN` (secret), `CHALLENGE_SECRET` (secret, any 32+ random characters).
+4. Pages project > Settings > Variables and secrets (production), as secrets only: `GITHUB_TOKEN`, `CHALLENGE_SECRET`
+   (any 32+ random characters). Renew the token before it expires.
 5. Redeploy. Until all of this exists the editor hides the direct send and only the GitHub form is offered.
 
 Limits: 25 MB per song, 4 songs per hour per connection, 40 per day for everyone (`functions/api/submit.js`). No
