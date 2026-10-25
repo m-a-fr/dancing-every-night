@@ -876,6 +876,52 @@
       "source_sha256": "ca8e289d6f0b6c4720a7ce65f7736595bda16e3f59cb6eb29b0394401204f748"
     },
     {
+      "id": "community-50",
+      "version": 1,
+      "title": "Highscore",
+      "artist": "Panda Eyes & Teminite",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=-TiYnOy0KxY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 228,
+          "bpm": 110.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 364,
+          "bpm": 110.0
+        },
+        {
+          "name": "HARD",
+          "notes": 510,
+          "bpm": 110.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 586,
+          "bpm": 110.0
+        }
+      ],
+      "duration_s": 259.7,
+      "size_bytes": 7206404,
+      "has_video": false,
+      "zip": "songs/community-50-v1.zip",
+      "zip_bytes": 7158372,
+      "sha256": "9c1bcfa0659961b1022ae05af644b98f15c41f1ddb38c111f7e2c7c705a3b561",
+      "thumb": "thumbs/community-50-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 50,
+      "local_id": "popular2_highscore",
+      "previous_objects": [],
+      "source_sha256": "23dfce111664540d533410821f99f02496cdbf80940ba9383d31d0e123bea54c"
+    },
+    {
       "id": "community-34",
       "version": 1,
       "title": "Hitorigoto",
