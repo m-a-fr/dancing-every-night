@@ -12,6 +12,6 @@ strings "$LIB/libcrypto.a" 2>/dev/null | grep -m1 -E '^OpenSSL [0-9]' || true
 # remplace le second par le premier, comme sur la VitaSDK de développement.
 # -Rdd : sans contrôle des dépendances (cpython, boost, libzip… en demandent un, mais le conteneur est jetable et n'en a pas besoin)
 vdpm pacman -- -Rdd --noconfirm openssl-1.1.1 || true
-vdpm install --force openssl || echo "==> vdpm n'a pas pu installer openssl 1.0.2"
+yes | vdpm install --force openssl || echo "==> vdpm n'a pas pu installer openssl 1.0.2"
 strings "$LIB/libcrypto.a" 2>/dev/null | grep -m1 -E '^OpenSSL [0-9]' || true
 echo "==> Bibliothèques réseau après : $(ls "$LIB" | grep -E '^lib(curl|ssl|crypto|zstd|z)\.a$' | tr '\n' ' ')"
