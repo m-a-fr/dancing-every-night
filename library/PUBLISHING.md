@@ -97,12 +97,27 @@ older. Keep the notes to one sentence. Do this only once the release is public (
 
 ## Remove / Retirer
 
-Run **Publish or remove a song** manually. Fill `remove` with the exact published ID and `reason` with
-an explanatory public reason; leave `issue` empty. This deletes all recorded ZIP/thumbnail versions,
-removes the catalogue entry and adds a withdrawal entry in `library/removals.json`.
-The website updates after deployment; already downloaded copies remain on players' devices.
-A removed publication ID stays reserved; a new proposal is required to republish.
-If a network operation fails partway, rerun removal: deleting an already deleted R2 object is harmless.
+A rights holder, the author or you can ask for a removal. It takes two minutes and needs no code.
+
+**Step by step (browser)**
+1. Find the published ID: it is in the song page's address (`…/songs/community-12/` → `community-12`) or in the `#new-songs` message.
+2. GitHub → repository → **Actions** → **Publish or remove a song** → **Run workflow**.
+3. Fill only two fields: `remove` = the exact ID (e.g. `community-12`) and `reason` = a short public reason (e.g. "Removed at the rights holder's request"). Leave `issue` empty. **Run workflow**.
+4. About a minute later the song is gone: ZIP and thumbnail deleted from storage, catalogue entry removed, a line added to `library/removals.json` (the public withdrawal log, with date and reason). The website updates after its next deployment.
+5. In Discord, delete the song's message in `#new-songs` by hand (right-click → Delete). The removal does not touch Discord.
+
+**Same thing from a terminal**
+```
+gh workflow run "Publish or remove a song" --repo m-a-fr/dancing-every-night -f remove=community-12 -f reason="Removed at the rights holder's request"
+```
+
+**Good to know**
+- Already downloaded copies remain on players' devices.
+- A removed ID stays reserved; the author needs a new proposal to republish (a new ID).
+- If a network step fails partway, run the removal again: deleting an already deleted file is harmless.
+- Rights-holder requests arrive through the "Report a song" form (see the site's takedown page); answer them in the issue, then remove.
+
+**Retirer, en bref :** Actions → *Publish or remove a song* → *Run workflow* → `remove` = l'identifiant exact (`community-12`), `reason` = la raison publique, `issue` vide. Puis supprime à la main le message du salon `#new-songs` dans Discord.
 
 ## Verification before enabling real publication
 
