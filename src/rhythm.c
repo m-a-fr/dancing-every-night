@@ -69,7 +69,9 @@
 #define SCRATCH_RING_WIDTH  24.0f   /* épaisseur de la bande à l'arrivée (réduite avec l'anneau au départ) */
 #define SCRATCH_FILL        ((SDL_Color){ 34,  98, 228, 255})
 #define SCRATCH_EDGE        ((SDL_Color){150, 200, 255, 255})
-#define SCRATCH_GROUPS      8       /* motifs « SCRATCH >> » sur le tour */
+#define SCRATCH_GROUPS      8       /* motifs (nom ou consigne, puis chevrons) sur le tour */
+#define SCRATCH_NAME        "SCRATCH"      /* le nom de la note... */
+#define SCRATCH_LABEL       "R  OR  L"     /* ...et ce que le joueur doit faire (une gâchette, ou toucher un stick), en alternance */
 #define SCRATCH_SPIN_SPEED  0.09f   /* rotation du motif, degrés / ms (un tour en 4 s), dans le sens du stick */
 #define NOTE_BUTTON_SPRITE_SCALE 0.68f /* symbole bouton réduit dans le disque, pour ne pas toucher le contour */
 #define NOTE_ARROW_SPRITE_SCALE  0.68f /* flèches au trait : même réduction que les symboles bouton */
@@ -444,9 +446,9 @@ void rhythm_update(RhythmState *rh, const Input *in, float dt) {
         if (note->type == NOTE_SCRATCH) {
             if (nr->judged) continue;
             float delta = rh->song_time_ms - hit_time;
-            /* Kick du stick dans le bon sens, ou L / R (n'importe lequel, n'importe quel sens : le geste du stick
-               reste exigeant sur Vita, comme dans le jeu de référence qui accepte aussi une gâchette) */
-            bool kicked = (note->scratch_ccw ? in->scratch_ccw : in->scratch_cw) || in->pressed[BTN_L] || in->pressed[BTN_R];
+            /* Un léger toucher de l'un des deux sticks, dans n'importe quel sens, ou L / R :
+               le sens de la note ne se vérifie plus (il reste visible sur l'anneau) */
+            bool kicked = in->scratch_cw || in->scratch_ccw || in->pressed[BTN_L] || in->pressed[BTN_R];
 
             if (kicked && fabsf(delta) <= SCRATCH_WINDOW_GOOD_MS) {
                 Judgment j = (fabsf(delta) <= SCRATCH_WINDOW_PERFECT_MS) ? JUDGE_PERFECT : JUDGE_GOOD;
@@ -979,7 +981,7 @@ static void draw_results(const RhythmState *rh, SDL_Renderer *r, const Font *fon
     ui_button_hint_pop(r, font, sprites, x, hy, (const Button[]){BTN_CIRCLE}, 1, "MENU");
 }
 
-/* Bande scratch centrée sur l'ellipse (rx, ry) : bande bleue + liserés clairs + motif « SCRATCH >> » blanc qui
+/* Bande scratch centrée sur l'ellipse (rx, ry) : bande bleue + liserés clairs + motif « SCRATCH >> R OR L >> » blanc qui
    tourne dans le sens à donner au stick. s = taille relative de l'anneau (épaisseur et texte suivent). */
 static void draw_scratch_ring(SDL_Renderer *r, const Font *font, float rx, float ry, float s, float time_ms,
                               bool ccw, Uint8 alpha) {
@@ -992,18 +994,22 @@ static void draw_scratch_ring(SDL_Renderer *r, const Font *font, float rx, float
     shapes_arc_outline(r, CENTER_X, CENTER_Y, rx + t / 2, ry + t / 2, 1.5f, 0.0f, 360.0f, edge);
     shapes_arc_outline(r, CENTER_X, CENTER_Y, rx - t / 2 + 1.5f, ry - t / 2 + 1.5f, 1.5f, 0.0f, 360.0f, edge);
 
-    /* motif : SCRATCH_GROUPS fois « SCRATCH » puis deux chevrons, décalés dans le temps (rotation) */
+    /* motif : SCRATCH_GROUPS fois « SCRATCH » ou « R OR L » (en alternance) puis deux chevrons, décalés dans le temps (rotation) */
     const float group = 360.0f / SCRATCH_GROUPS, spin = time_ms * SCRATCH_SPIN_SPEED * dir;
     const FontFace face = FONT_BODY_BOLD;
     const float text_scale = t * 0.6f / font_cap_height(font, face);   /* capitales = 60 % de la bande */
     const float h = t * 0.62f;                                          /* hauteur d'un chevron */
     const float deg = 180.0f / PI_F;
     bool show_text = s > 0.45f;                                 /* trop petit au départ : chevrons seuls */
-    float text_deg = show_text ? font_angle_on_ellipse(font, face, rx, ry, text_scale, "SCRATCH") : 0.0f;
+    const float name_deg = show_text ? font_angle_on_ellipse(font, face, rx, ry, text_scale, SCRATCH_NAME) : 0.0f;
+    const float label_deg = show_text ? font_angle_on_ellipse(font, face, rx, ry, text_scale, SCRATCH_LABEL) : 0.0f;
     const float chev_step = h * 0.75f / ((rx + ry) * 0.5f) * deg;       /* écart entre les deux chevrons « >> » */
     for (int g = 0; g < SCRATCH_GROUPS; g++) {
         float a0 = g * group + spin;
-        if (show_text) font_draw_on_ellipse(font, r, face, CENTER_X, CENTER_Y, rx, ry, a0, text_scale, white, "SCRATCH");
+        const bool name = g % 2 == 0;   /* « SCRATCH » puis « R OR L », un groupe sur deux */
+        const float text_deg = name ? name_deg : label_deg;
+        if (show_text)
+            font_draw_on_ellipse(font, r, face, CENTER_X, CENTER_Y, rx, ry, a0, text_scale, white, name ? SCRATCH_NAME : SCRATCH_LABEL);
         float mid = a0 + text_deg + (group - text_deg) * 0.5f;   /* « >> » centrés dans la place restante */
         for (int c = 0; c < 2; c++) {
             float a = (mid + (c - 0.5f) * chev_step) / deg;

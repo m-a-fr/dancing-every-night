@@ -24,7 +24,7 @@ Il faut une PS Vita avec un firmware modifié (suivre https://vita.hacks.guide) 
 | Vita | Action |
 |---|---|
 | Triangle, Rond, Croix / Haut, Gauche, Bas | Valider les notes de la cible correspondante |
-| L / R | Notes scratch |
+| L / R, ou un léger toucher d'un stick | Notes scratch (dans n'importe quel sens) |
 | Start | Pause (L/R en pause : calibration audio ±10 ms) |
 | Select + Start | Quitter |
 

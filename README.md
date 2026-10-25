@@ -24,7 +24,7 @@ You need a PS Vita running custom firmware (follow https://vita.hacks.guide) wit
 | Vita | Action |
 |---|---|
 | Triangle, Circle, Cross / Up, Left, Down | Hit the notes of the matching target |
-| L / R | Scratch notes |
+| L / R, or a light touch of either stick | Scratch notes (any direction) |
 | Start | Pause (L/R in pause: audio calibration ±10 ms) |
 | Select + Start | Quit |
 

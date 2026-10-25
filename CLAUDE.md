@@ -76,7 +76,7 @@ Règles d'architecture :
 | Rond | B | K | — |
 | Carré | X | U | changer couleur |
 | Triangle | Y | I | — |
-| L / R | épaules | Q / E | scratch (valide n'importe quelle scratch) ; en pause : calibration audio ±10 ms |
+| L / R | épaules | Q / E | scratch (ou léger toucher d'un stick, dans n'importe quel sens : valide n'importe quelle scratch) ; en pause : calibration audio ±10 ms |
 | Start | START | Entrée | pause |
 | Select | BACK | Retour arrière | Select+Start = quitter |
 | Stick gauche / croix | axes / DPAD | flèches / WASD | déplacement |

@@ -7,6 +7,7 @@ All notable changes to Dancing Every Night. Versions follow `MAJOR.MINOR.PATCH`.
 First version prepared for public release.
 
 ### Gameplay
+- Scratch notes now read "SCRATCH" and "R OR L" in turn on the blue ring, and a light touch of either stick in any direction hits them; L and R still work.
 - The in-game score counter grows past 7 digits (it used to show only the first 7 above 9,999,999).
 - Six lanes on two arcs (triangle, circle, cross / up, left, down), taps, holds, double notes, scratches (L/R or stick flick).
 - Timing judgements, combo, score and ranks; animated results screen.
