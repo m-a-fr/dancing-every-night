@@ -94,6 +94,52 @@
       "source_sha256": "021255b50ef6d61773948cfc0823a6e7116c6ca1ad8db74c72ad2287dc95966d"
     },
     {
+      "id": "community-28",
+      "version": 1,
+      "title": "Bad Apple!! feat. nomico",
+      "artist": "Alstroemeria Records",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=i41KoE0iMYU",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 220,
+          "bpm": 138.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 341,
+          "bpm": 138.0
+        },
+        {
+          "name": "HARD",
+          "notes": 489,
+          "bpm": 138.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 558,
+          "bpm": 138.0
+        }
+      ],
+      "duration_s": 232.1,
+      "size_bytes": 4348670,
+      "has_video": false,
+      "zip": "songs/community-28-v1.zip",
+      "zip_bytes": 4286443,
+      "sha256": "e656828cfc85d25beab405d3e2357b0bdb0054045f15ff1762366536039066b7",
+      "thumb": "thumbs/community-28-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 28,
+      "local_id": "popular_bad_apple",
+      "previous_objects": [],
+      "source_sha256": "95a5be621fc8552efe73c75e73592a6d925fb862f78fef2845fbc94f8d70a2b7"
+    },
+    {
       "id": "community-16",
       "version": 1,
       "title": "Beatucada",
