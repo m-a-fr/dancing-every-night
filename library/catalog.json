@@ -48,6 +48,52 @@
       "source_sha256": "6e2e0ac9b5b327ed95b07f95052fb9292ba84168b050486315de597ee1b5d063"
     },
     {
+      "id": "community-16",
+      "version": 1,
+      "title": "Beatucada",
+      "artist": "Kurio Prokos",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "OutFox Serenity; see CREDITS.txt",
+      "license": "Music: CC BY-SA 4.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 104,
+          "bpm": 122.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 156,
+          "bpm": 122.0
+        },
+        {
+          "name": "HARD",
+          "notes": 226,
+          "bpm": 122.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 275,
+          "bpm": 122.0
+        }
+      ],
+      "duration_s": 108.5,
+      "size_bytes": 2869078,
+      "has_video": false,
+      "zip": "songs/community-16-v1.zip",
+      "zip_bytes": 2858143,
+      "sha256": "5af5002b75c0fea2e57e53f61343d72dc761a595e2cc07726f44b95457af52f0",
+      "thumb": "thumbs/community-16-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 16,
+      "local_id": "launch_beatucada",
+      "previous_objects": [],
+      "source_sha256": "cc9f2e13184adbbe7c8d766c47bd7a4c92966abc145913e404b349b68245f648"
+    },
+    {
       "id": "community-8",
       "version": 1,
       "title": "brokenHeart resurrection ~estelle~",
