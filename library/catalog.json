@@ -186,6 +186,52 @@
       "source_sha256": "cc9f2e13184adbbe7c8d766c47bd7a4c92966abc145913e404b349b68245f648"
     },
     {
+      "id": "community-29",
+      "version": 1,
+      "title": "Black Rover",
+      "artist": "Vickeblanka",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=VSucxMB_Z6k",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 161,
+          "bpm": 102.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 257,
+          "bpm": 102.0
+        },
+        {
+          "name": "HARD",
+          "notes": 374,
+          "bpm": 102.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 468,
+          "bpm": 102.0
+        }
+      ],
+      "duration_s": 209.4,
+      "size_bytes": 4882781,
+      "has_video": false,
+      "zip": "songs/community-29-v1.zip",
+      "zip_bytes": 4857009,
+      "sha256": "738489c59455991da0fe154c00ebb09a64834e503a16dc7729ff831a18249704",
+      "thumb": "thumbs/community-29-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 29,
+      "local_id": "popular_black_rover",
+      "previous_objects": [],
+      "source_sha256": "e4657de2fc1af89f76cbfe8f2a237d95b6c78901191fccc0c860bc1ad8fad08e"
+    },
+    {
       "id": "community-18",
       "version": 2,
       "title": "Bounded Quietude",
