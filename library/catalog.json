@@ -1106,6 +1106,52 @@
       "source_sha256": "fe6dacdae147f2cbd2fa36d927269adb0119dac5793b13de1567a5bd0b839cac"
     },
     {
+      "id": "community-52",
+      "version": 1,
+      "title": "Kimi no Sei (TV Size)",
+      "artist": "the peggies",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=-1N3cm__psQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 97,
+          "bpm": 174.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 133,
+          "bpm": 174.0
+        },
+        {
+          "name": "HARD",
+          "notes": 180,
+          "bpm": 174.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 229,
+          "bpm": 174.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12206449,
+      "has_video": true,
+      "zip": "songs/community-52-v1.zip",
+      "zip_bytes": 12041049,
+      "sha256": "a083955018ea83b0a89e52f64dc5928be26b56dde9f9def525c72d4ba30e286d",
+      "thumb": "thumbs/community-52-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 52,
+      "local_id": "popular2_kimi_no_sei",
+      "previous_objects": [],
+      "source_sha256": "f14b26c25975062e074fe6ee8f53336cece45f4267d4be674c5f7b9202d574f3"
+    },
+    {
       "id": "community-36",
       "version": 1,
       "title": "Marshmary",
