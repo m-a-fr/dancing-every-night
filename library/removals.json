@@ -7,6 +7,13 @@
       "title": "Test Clicks",
       "date": "2026-10-24",
       "reason": "Synthetic publication lifecycle test completed; withdrawing disposable CC0 fixture"
+    },
+    {
+      "id": "community-1",
+      "version": 1,
+      "title": "Test Clicks",
+      "date": "2026-10-25",
+      "reason": "Public attachment and approval lifecycle test completed; remove disposable CC0 fixture"
     }
   ]
 }
