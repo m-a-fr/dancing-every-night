@@ -140,6 +140,52 @@
       "source_sha256": "59b8c4e8fd9a32054556055a1f8abc8e79ddc1dea9b65627c11e48733d1bacea"
     },
     {
+      "id": "community-11",
+      "version": 1,
+      "title": "Into My Dream",
+      "artist": "Lagoona",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "OutFox Serenity; see CREDITS.txt",
+      "license": "Music: CC BY 4.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 134,
+          "bpm": 140.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 207,
+          "bpm": 140.0
+        },
+        {
+          "name": "HARD",
+          "notes": 295,
+          "bpm": 140.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 342,
+          "bpm": 140.0
+        }
+      ],
+      "duration_s": 146.6,
+      "size_bytes": 3828582,
+      "has_video": false,
+      "zip": "songs/community-11-v1.zip",
+      "zip_bytes": 3807777,
+      "sha256": "b751418cfbcc643b5548d4d0ce788516ce1fd8b3b3be8fc98b27ca7ef4bafda7",
+      "thumb": "thumbs/community-11-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 11,
+      "local_id": "launch_into_my_dream",
+      "previous_objects": [],
+      "source_sha256": "45062213b4b2e6641a101d5678f266660338f0ba40c55c9b34371d417fa312b9"
+    },
+    {
       "id": "community-9",
       "version": 1,
       "title": "Neutralize (PTB10 Mix)",
