@@ -10,7 +10,8 @@ echo "==> Bibliothèques réseau avant : $(ls "$LIB" | grep -E '^lib(curl|ssl|cr
 strings "$LIB/libcrypto.a" 2>/dev/null | grep -m1 -E '^OpenSSL [0-9]' || true
 # L'image a libcurl 8.17 (écrite pour OpenSSL 1.0.2) mais OpenSSL 1.1.1 : les deux paquets openssl sont en conflit, on
 # remplace le second par le premier, comme sur la VitaSDK de développement.
-yes | vdpm remove openssl-1.1.1 || true
-yes | vdpm install --force openssl curl zlib zstd || echo "==> vdpm n'a pas pu mettre à jour les bibliothèques"
+# -Rdd : sans contrôle des dépendances (cpython, boost, libzip… en demandent un, mais le conteneur est jetable et n'en a pas besoin)
+vdpm pacman -- -Rdd --noconfirm openssl-1.1.1 || true
+vdpm install --force openssl || echo "==> vdpm n'a pas pu installer openssl 1.0.2"
 strings "$LIB/libcrypto.a" 2>/dev/null | grep -m1 -E '^OpenSSL [0-9]' || true
 echo "==> Bibliothèques réseau après : $(ls "$LIB" | grep -E '^lib(curl|ssl|crypto|zstd|z)\.a$' | tr '\n' ' ')"
