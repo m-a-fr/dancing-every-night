@@ -57,9 +57,10 @@ run_build() {
     echo "==> VitaSDK via Docker (vitasdk/vitasdk)"
     local user=(-u "$(id -u):$(id -g)")
     if [ -n "${VITA_SDL2:-}" ]; then
+      # libcurl / OpenSSL cohérentes avec la VitaSDK de développement : scripts/vita-libs.sh
       # SDL2 de la VitaSDK de développement (rendu GXM) à la place de celle de l'image : voir scripts/vita-sdl2.sh.
       # En root, pour écrire dans la VitaSDK de l'image (conteneur jetable)
-      cmd="bash scripts/vita-sdl2.sh $VITA_SDL2 && $cmd"
+      cmd="bash scripts/vita-libs.sh && bash scripts/vita-sdl2.sh $VITA_SDL2 && $cmd"
       user=()
     fi
     docker run --rm --platform linux/amd64 \
