@@ -444,7 +444,7 @@
       <div class="step-b" hidden>
       <p class="lead">Prépare les crédits et les droits pour la future bibliothèque. L’export pour jouer reste disponible sans ces informations.</p>
       <label class="row">Auteur <input id="mMapper" maxlength="63" placeholder="ton pseudo" title="Qui a créé les difficultés : affiché aux joueurs"></label>
-      <label class="row">Licence <input id="mLicense" maxlength="63" placeholder="ex. CC BY 4.0, accord de l'artiste…" title="Droits sur la musique et les médias : indispensable pour partager la chanson dans la bibliothèque"></label>
+      <label class="row">Licence <input id="mLicense" maxlength="63" placeholder="ex. CC BY 4.0, accord de l'artiste…" title="Facultatif : ce que tu sais des droits sur la musique et les médias (ex. CC BY 4.0, accord de l'artiste)."></label>
       <label class="row">Source <input id="mSource" maxlength="63" placeholder="(optionnel) album, anime…"></label>
       <label class="row">Version <input id="mVersion" type="number" min="1" step="1" title="À augmenter quand tu partages une mise à jour de la chanson"></label>
       <h2>Avant de partager</h2>
@@ -3375,7 +3375,6 @@ function renderPublish() {
     [!!c.audio, "Piste audio (.ogg)"],
     [S.song.diffs.every(d => d.chart.notes.length > 0), "Des notes dans chaque difficulté"],
     [!!c.mapper, "Auteur (ton pseudo)"],
-    [!!c.license, "Licence : droits sur la musique et les médias"],
     [!dirtyCharts().some(d => mapIdOf(d) === id), "Modifications enregistrées"],
   ];
   for (const [ok, label] of items) {
@@ -3406,7 +3405,7 @@ function mapSteps(song) {
       todo: filled ? "remplir les autres difficultés" : "poser les notes" },
     { key: "media", optional: true, done: !!(c.background || c.video), status: "option" },
     { key: "test", optional: !LOCAL, done: LOCAL && !!meta.exported, todo: "essayer la chanson sur la Vita" },
-    { key: "publish", done: !!(c.title && c.audio && c.mapper && c.license) && filled === all, todo: "préparer la publication" },
+    { key: "publish", done: !!(c.title && c.audio && c.mapper) && filled === all, todo: "préparer la publication" },
   ];
 }
 function focusField(panel, id) { showPanel(panel); const el = mel(id); el.focus(); if (el.select) el.select(); }
@@ -3613,7 +3612,6 @@ mel("btnExportZip").addEventListener("click", async () => {
   const c = C();
   if (!c.audio) missing.push(tr("piste audio"));
   if (!c.mapper) missing.push(tr("auteur"));
-  if (!c.license) missing.push(tr("licence"));
   const filename = await askZipName(C().title || id);
   if (!filename) return;
   let bytes;

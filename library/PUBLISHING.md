@@ -44,6 +44,15 @@ with a different ID does not transfer the original records. Do not promise other
 A failed transfer or catalogue push is not a successful publication. Inspect the failed run before retrying.
 Files can have reached R2 before the catalogue commit: inspect and clean any orphan objects if needed.
 
+### Songs without a LICENSE (private register)
+
+LICENSE is optional and never blocks a submission or appears as a warning. When a song is published with an empty
+LICENSE, the publish workflow (step "Maintainer notes") appends one row to `unlicensed.md` in the private repository
+`MODERATION_REPO` (secret `MODERATION_LEDGER_KEY`, a write-only deploy key, both in the `library-production`
+environment). Nothing is printed in the public logs. The note is written at publication, not at check time, because the
+check job handles untrusted zips and holds no secrets. Caveat: the code is public, so the mechanism is visible, and an
+empty `license` in `catalog.json` is technically readable; the site simply hides the field.
+
 ## Remove / Retirer
 
 Run **Publish or remove a song** manually. Fill `remove` with the exact published ID and `reason` with

@@ -107,6 +107,26 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m 'Update the community song library'
           git push origin HEAD:main
+      - name: Maintainer notes
+        # Note privée du mainteneur (jamais dans ce dépôt : les labels, commentaires et journaux d'ici sont publics).
+        # Ne bloque pas la publication : si l'écriture échoue, la chanson est publiée quand même.
+        if: inputs.remove == ''
+        continue-on-error: true
+        env:
+          NOTES_KEY: ${{ secrets.MODERATION_LEDGER_KEY }}
+          NOTES_REPO: ${{ vars.MODERATION_REPO }}
+        run: |
+          [ -f library/dist/ledger.json ] && [ -n "$NOTES_REPO" ] && [ -n "$NOTES_KEY" ] || exit 0
+          install -m 600 /dev/null "$RUNNER_TEMP/notes_key"
+          printf '%s\n' "$NOTES_KEY" > "$RUNNER_TEMP/notes_key"
+          export GIT_SSH_COMMAND="ssh -i $RUNNER_TEMP/notes_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new"
+          git clone --quiet --depth 1 "git@github.com:$NOTES_REPO.git" "$RUNNER_TEMP/notes"
+          python3 tools/library_ledger.py library/dist/ledger.json "$RUNNER_TEMP/notes/unlicensed.md"
+          cd "$RUNNER_TEMP/notes"
+          git add unlicensed.md
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit --quiet -m 'Note'
+          for attempt in 1 2 3; do git push --quiet origin HEAD:main && break || git pull --quiet --rebase origin main; done
+          rm -f "$RUNNER_TEMP/notes_key"
       - name: Notify proposal
         if: inputs.remove == ''
         env:

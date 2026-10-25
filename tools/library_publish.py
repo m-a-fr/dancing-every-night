@@ -14,7 +14,7 @@ def prepare(source, submitter, issue, out):
     rep = cat.check_zip(source)
     if not rep['ok']:
         raise ValueError('The song does not pass the game validator')
-    for field in ('id', 'title', 'mapper', 'license'):
+    for field in ('id', 'title', 'mapper'):   # la licence est facultative
         if not rep[field]:
             raise ValueError(f'Missing {field}')
     songs = cat.load(cat.CATALOG, {'songs': []})['songs']
@@ -56,6 +56,14 @@ def prepare(source, submitter, issue, out):
     entry['previous_objects'] = (old.get('previous_objects', []) + [old['zip']] + ([old['thumb']] if old.get('thumb') else [])) if old else []
     entry['source_sha256'] = hashlib.sha256(Path(source).read_bytes()).hexdigest()
     cat.save(cat.CATALOG, catalog)
+    # Sans licence : une note pour le registre PRIVÉ du mainteneur (tools/library_ledger.py). Rien n'est écrit dans le dépôt
+    # public ni dans le commentaire de l'issue ; le fichier reste dans library/dist/, qui n'est pas suivi par git.
+    note = out / 'ledger.json'
+    note.unlink(missing_ok=True)
+    if not entry.get('license'):
+        note.write_text(json.dumps({'issue': issue, 'id': identity, 'version': entry['version'], 'title': entry['title'],
+                                    'artist': entry['artist'], 'mapper': entry['mapper'], 'submitter': submitter,
+                                    'date': entry['updated']}))
     keys = [entry['zip']] + ([entry['thumb']] if entry.get('thumb') else [])
     (out / 'transfer.json').write_text(json.dumps({'upload': keys, 'delete': []}))
     # Keep the relation explicit. Records are not silently merged for unrelated local IDs.

@@ -83,6 +83,9 @@ First version prepared for public release.
 - GitHub Actions workflow builds the four packages (Windows, macOS, Linux, Vita) by hand or on a version tag, and
   prepares a draft release.
 
+### Licence is optional
+- The LICENSE field is no longer required to share a song (editor checklist, export, library submission). A song published without one is only noted in a private maintainer register.
+
 ### Difficulty order
 - Optional `ORDER <n>` line: the position of the difficulty in its song. Without it, EASY, NORMAL, HARD, EXPERT
   come first ("EASY 2" next to EASY), then other names.

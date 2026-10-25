@@ -10,8 +10,8 @@ body:
         and attach it below. It is checked automatically within a minute (a comment tells you what to fix), then a person listens to it
         before it goes online. English or French are both fine.
 
-        **Before you start:** the song is public and anyone can download it. Only share music and images you have the right to share,
-        and say so honestly in the `LICENSE` field of your song (the editor's *Finish* step).
+        **Before you start:** the song is public and anyone can download it. You stay responsible for the music, images and video
+        you include. The `LICENSE` field of your song (the editor's *Finish* step) is optional: fill it in if you know the rights.
   - type: textarea
     id: zip
     attributes:
@@ -32,7 +32,5 @@ body:
       options:
         - label: I made these difficulties, or their author allows me to share them.
           required: true
-        - label: I have the right to share the music, images and video in this song, or the rights holder allows it. The `LICENSE` field tells the truth.
-          required: true
-        - label: I understand the song will be public, and will be removed if a rights holder asks.
+        - label: I understand that I am responsible for the music, images and video in this song, that it will be public, and that it will be removed if a rights holder asks.
           required: true

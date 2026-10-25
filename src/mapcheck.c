@@ -198,7 +198,6 @@ static void check_folder(Report *r, const char *dir, const char *expected_id) {
         if (!c.title[0]) say(r, "WARN", "%s: missing title (TITLE): the menu will show the file name", f);
         if (!c.difficulty[0]) say(r, "WARN", "%s: missing difficulty name (DIFFICULTY)", f);
         if (!c.mapper[0]) say(r, "WARN", "%s: missing mapper (MAPPER): your name, shown to players", f);
-        if (!c.license[0]) say(r, "WARN", "%s: missing licence (LICENSE): rights on the music, required to share it in the song library", f);
         check_text(r, f, "TITLE", c.title);
         check_text(r, f, "ARTIST", c.artist);
         check_text(r, f, "PACK", c.pack);

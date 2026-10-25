@@ -166,7 +166,7 @@ def list_page(cfg, songs):
 <noscript><p class="note" data-i18n>Filters need JavaScript; the full list is shown above.</p></noscript>
 """
     h += listing if songs else empty_library(cfg)
-    h += f"""<footer><span data-i18n>Songs belong to their authors and are shared under the licence they declare. Something wrong?</span>
+    h += f"""<footer><span data-i18n>Songs belong to their authors. Something wrong?</span>
   <a href="/songs/legal.html" data-i18n>Takedown and content policy</a></footer>
 """
     return h + TAIL.format(rel=rel)
@@ -197,7 +197,7 @@ def song_page(cfg, s):
         h += (f'<tr><th scope="row"><span class="pill {diff_class(d["name"])}"><span class="dot" aria-hidden="true"></span>{E(d["name"])}</span></th>'
               f'<td>{d["notes"]}</td><td>{round(d["bpm"])}</td></tr>\n')
     h += '</tbody></table>\n<h2 data-i18n>Details</h2>\n<dl class="facts">\n'
-    facts = [("Author", s["mapper"]), ("Licence", s["license"]), ("Source", s["source"] or "—"),
+    facts = [("Author", s["mapper"])] + ([("Licence", s["license"])] if s["license"] else []) + [("Source", s["source"] or "—"),
              ("Version", str(s["version"])), ("Length", fmt_time(s["duration_s"])), ("Added", s["added"]), ("Updated", s["updated"])]
     if s["pack"]:
         facts.insert(3, ("Pack", s["pack"]))
@@ -224,7 +224,7 @@ def legal_page(cfg):
     mail = (f'<a href="mailto:{E(contact)}">{E(contact)}</a>' if contact else "the contact address that will be published here before launch")
     h += f"""<p class="crumb"><a href="/songs/" data-i18n>← Song library</a></p>
 <h1 data-i18n>Takedown and content policy</h1>
-<p class="lead" data-i18n>Songs in the library are made and shared by the community. Each song carries the licence its author declared.</p>
+<p class="lead" data-i18n>Songs in the library are made and shared by the community.</p>
 <h2 data-i18n>Rights holders</h2>
 <p data-i18n>If a song uses your work without permission, tell us and we will remove it quickly. Use the report form, or write to the contact address below. Please say who you are, which song (its title and ID) and what you ask for.</p>
 <p><a class="btn primary" href="{report}" data-i18n>Report a song</a></p>
@@ -261,7 +261,7 @@ def demo_catalog(out):
         songs.append({
             "id": sid, "version": rnd.choice([1, 1, 2]), "title": t, "artist": rnd.choice(artists), "pack": rnd.choice(["", "", "Demo pack"]),
             "mapper": rnd.choice(["DemoMapper", "sakura_dev", "Bob"]), "source": rnd.choice(["", "https://example.org/original"]),
-            "license": rnd.choice(["CC BY 4.0", "my own music", "CC BY-NC 4.0"]), "difficulties": diffs,
+            "license": rnd.choice(["CC BY 4.0", "my own music", "", ""]), "difficulties": diffs,
             "duration_s": float(rnd.randint(75, 230)), "size_bytes": 4000000, "has_video": rnd.random() < .4,
             "zip": f"songs/{sid}-v1.zip", "zip_bytes": rnd.randint(2_500_000, 14_000_000), "sha256": "%064x" % rnd.getrandbits(256),
             "thumb": f"thumbs/{sid}.jpg" if i != 5 else None, "added": f"2026-10-{10 + i:02d}", "updated": f"2026-10-{10 + i:02d}",

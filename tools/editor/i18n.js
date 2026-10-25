@@ -50,6 +50,7 @@ function i18nApply(root = document.body) {
 
 /* ---------- Anglais ---------- */
 const EN = {
+  "Facultatif : ce que tu sais des droits sur la musique et les médias (ex. CC BY 4.0, accord de l'artiste).": "Optional: what you know about the rights to the music and media (e.g. CC BY 4.0, the artist's permission).",
   "Préparation automatique de l’aperçu vidéo…": "Preparing the video preview automatically…",
   "Aperçu vidéo prêt.": "Video preview ready.",
   "Aperçu vidéo indisponible : {err}. Clique sur Afficher la vidéo pour réessayer.": "Video preview unavailable: {err}. Click Show video to try again.",

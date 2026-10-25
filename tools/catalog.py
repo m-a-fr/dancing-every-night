@@ -94,7 +94,7 @@ def cmd_add(a):
         print(f"{m['level']:5} {m['text']}")
     if not rep["ok"]:
         sys.exit(f"refusée : {rep['errors']} erreur(s)")
-    for key in ("id", "title", "license", "mapper"):
+    for key in ("id", "title", "mapper"):   # la licence est facultative
         if not rep[key]:
             sys.exit(f"refusée : champ obligatoire vide pour la bibliothèque : {key.upper() if key != 'id' else 'ID'}")
     catalog = load(CATALOG, {"schema": SCHEMA, "songs": []})
@@ -155,7 +155,7 @@ def cmd_check(_a):
         if i in seen:
             errors.append(f"{i}: ID en double")
         seen.add(i)
-        for k in ("id", "version", "title", "mapper", "license", "difficulties", "zip", "sha256", "size_bytes"):
+        for k in ("id", "version", "title", "mapper", "difficulties", "zip", "sha256", "size_bytes"):
             if not s.get(k):
                 errors.append(f"{i}: champ manquant ou vide : {k}")
         if s.get("sha256") and not re.fullmatch(r"[0-9a-f]{64}", s["sha256"]):

@@ -14,6 +14,7 @@ sys.path.insert(0, str(ROOT / 'tools'))
 import catalog as cat
 import library_publish as pub
 import library_fetch as fetch
+import library_ledger as ledger
 
 
 class PublicationTest(unittest.TestCase):
@@ -61,6 +62,33 @@ class PublicationTest(unittest.TestCase):
                 self.assertIn('songs/community-42-v2.zip', transfer['delete'])
                 with self.assertRaises(ValueError):
                     pub.prepare(updated, 'alice', 42, root / 'dist')
+            finally:
+                cat.CATALOG, cat.REMOVALS = original
+
+    def test_unlicensed_song_is_noted_privately(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            original = cat.CATALOG, cat.REMOVALS
+            cat.CATALOG, cat.REMOVALS = root / 'catalog.json', root / 'removals.json'
+            try:
+                fixture = ROOT / 'library/tests/test_clicks.zip'
+                bare = root / 'bare.zip'
+                with zipfile.ZipFile(fixture) as src, zipfile.ZipFile(bare, 'w') as dst:
+                    for name in src.namelist():
+                        data = src.read(name)
+                        if name.endswith('.chart'):
+                            data = b''.join(l for l in data.splitlines(True) if not l.startswith(b'LICENSE'))
+                        dst.writestr(name, data)
+                pub.prepare(bare, 'alice', 7, root / 'dist')
+                self.assertEqual(cat.load(cat.CATALOG, {})['songs'][0]['license'], '')
+                note = root / 'dist/ledger.json'
+                self.assertTrue(note.exists())
+                register = root / 'unlicensed.md'
+                sys.argv = ['library_ledger.py', str(note), str(register)]
+                ledger.main()
+                self.assertIn('| #7 | community-7 |', register.read_text())
+                pub.prepare(fixture, 'alice', 8, root / 'dist')
+                self.assertEqual(cat.load(cat.CATALOG, {})['songs'][-1]['id'], 'community-8')
             finally:
                 cat.CATALOG, cat.REMOVALS = original
 

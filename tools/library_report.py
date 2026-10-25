@@ -4,7 +4,7 @@
     tools/library_report.py chanson.zip [--submitter pseudo] [--status-file fichier]
 
 Utilise le validateur du jeu (vitagame --check-json) puis les règles propres à la bibliothèque : champs obligatoires
-(TITLE, MAPPER, LICENSE), ID qui ne heurte pas une chanson officielle, version supérieure en cas de mise à jour, mise à jour
+(TITLE, MAPPER ; la licence est facultative : jamais signalée comme manquante dans le commentaire public), ID qui ne heurte pas une chanson officielle, version supérieure en cas de mise à jour, mise à jour
 par l'auteur d'origine. Écrit le rapport en Markdown sur stdout et « valid » ou « invalid » dans --status-file.
 Utilisé par .github/workflows/song-validate.yml ; ne modifie rien (la publication est faite par tools/catalog.py).
 """
@@ -43,7 +43,7 @@ def main():
     def warn(t): notes.append(("WARN", t))
 
     if rep["ok"] or rep["id"]:
-        for key, label in (("title", "TITLE"), ("mapper", "MAPPER (the author's name)"), ("license", "LICENSE (the rights on the music and media)")):
+        for key, label in (("title", "TITLE"), ("mapper", "MAPPER (the author's name)")):
             if not rep[key]:
                 err(f"missing {label}: the library needs it on every difficulty")
         catalog = cat.load(cat.CATALOG, {"songs": []})
@@ -69,9 +69,9 @@ def main():
         out += ["| | |", "|---|---|",
                 f"| Song | **{rep['title'] or '?'}** — {rep['artist'] or 'unknown artist'} |",
                 f"| ID | `{rep['id']}` (version {rep['version']}) |",
-                f"| Author | {rep['mapper'] or '—'} |", f"| Licence | {rep['license'] or '—'} |",
+                f"| Author | {rep['mapper'] or '—'} |",
                 f"| Length | {mmss(rep['duration_s'])} |", f"| Size | {rep['size_bytes'] / 1048576:.1f} MB |",
-                f"| Video | {'yes' if rep['has_video'] else 'no'} |", ""]
+                f"| Video | {'yes' if rep['has_video'] else 'no'} |"] + ([f"| Licence | {rep['license']} |"] if rep["license"] else []) + [""]
         diffs = sorted(rep["difficulties"], key=cat.diff_key)
         out += ["| Difficulty | Notes | BPM |", "|---|---|---|"] + [f"| {d['name']} | {d['notes']} | {d['bpm']:.0f} |" for d in diffs] + [""]
     if problems:
