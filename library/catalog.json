@@ -1060,6 +1060,52 @@
       "source_sha256": "45062213b4b2e6641a101d5678f266660338f0ba40c55c9b34371d417fa312b9"
     },
     {
+      "id": "community-51",
+      "version": 1,
+      "title": "Kawaki wo Ameku (TV Size)",
+      "artist": "Minami",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Ua5UARWRYLA",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 77,
+          "bpm": 129.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 127,
+          "bpm": 129.0
+        },
+        {
+          "name": "HARD",
+          "notes": 178,
+          "bpm": 129.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 206,
+          "bpm": 129.0
+        }
+      ],
+      "duration_s": 91.7,
+      "size_bytes": 11183348,
+      "has_video": true,
+      "zip": "songs/community-51-v1.zip",
+      "zip_bytes": 10768513,
+      "sha256": "1f655b82a1858b9bc167ec247b6c0233bd2eb2d5e21c7dffa6151e4aade08fe0",
+      "thumb": "thumbs/community-51-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 51,
+      "local_id": "popular2_kawaki_wo_ameku",
+      "previous_objects": [],
+      "source_sha256": "fe6dacdae147f2cbd2fa36d927269adb0119dac5793b13de1567a5bd0b839cac"
+    },
+    {
       "id": "community-36",
       "version": 1,
       "title": "Marshmary",
