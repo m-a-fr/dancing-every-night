@@ -90,12 +90,11 @@
    l'utilisateur) : deux têtes IDENTIQUES à celles des autres notes (halo, disque sombre, contour vers l'extérieur) mais
    au coloris mélangé du cyan (croix directionnelle) et du magenta (boutons) — comme le vert vient du jaune et du
    bleu, soit un violet-bleu vif — avec le symbole de la touche en blanc, reliées par une barre fine du même coloris,
-   cernée d'encre, qui s'évase en rejoignant le contour de chaque tête. Essai rejeté : bouts pleins sans disque sombre
+   sans contour sombre (retiré le 2026-10-25 : les autres notes n'en ont pas), qui s'évase en rejoignant le contour de chaque tête. Essai rejeté : bouts pleins sans disque sombre
    ni contour, trop différents des autres notes. */
 #define LINK_MIX ((SDL_Color){128, 78, 240, 255})   /* teinte à mi-chemin du cyan (197°) et du magenta (326°) : ~261° */
 #define LINK_HEAD_R            (NOTE_DISC_RADIUS + NOTE_BORDER_WIDTH)   /* rayon d'une tête, contour compris (px à pleine taille) */
 #define LINK_BAR_HALF           6.5f   /* demi-largeur de la barre */
-#define LINK_INK                3.0f   /* épaisseur du contour d'encre de la barre */
 #define LINK_FLARE              9.0f   /* longueur de l'évasement entre la barre et chaque tête */
 /* Retour d'une note réussie « Cascade pop » (plan A + D du 2026-10-19, révisé selon l'utilisateur) :
    - sur la cible, le disque coloré selon le jugement d'avant (inchangé) ;
@@ -1160,7 +1159,7 @@ static void link_bar(SDL_Vertex *v, int *nv, int vmax, int *idx, int *ni, int im
     }
 }
 
-/* Une note liée : la barre (contour d'encre puis remplissage) en un seul lot de géométrie, puis les deux têtes, identiques
+/* Une note liée : la barre (un aplat) en un seul lot de géométrie, puis les deux têtes, identiques
    à celles des autres notes (halo, disque sombre, contour vers l'extérieur) au coloris mélangé, symbole en blanc.
    show[k] = false : cette tête a déjà été frappée ; s'il en reste une, elle reste seule, sans barre, en attendant l'autre. */
 static void draw_link(SDL_Renderer *r, const Sprites *sprites, const Button lanes[2], const float hx[2], const float hy[2],
@@ -1172,7 +1171,6 @@ static void draw_link(SDL_Renderer *r, const Sprites *sprites, const Button lane
         const int vmax = (int)(sizeof v / sizeof v[0]), imax = (int)(sizeof idx / sizeof idx[0]);
         const Uint8 a = (Uint8)(255.0f * alpha);
         const float R = LINK_HEAD_R * size, w = LINK_BAR_HALF * size, f = LINK_FLARE * size;
-        link_bar(v, &nv, vmax, idx, &ni, imax, hx[0], hy[0], hx[1], hy[1], R, w, LINK_INK * size, f, ui_alpha(CH_INK, (Uint8)(a * 0.92f)));
         link_bar(v, &nv, vmax, idx, &ni, imax, hx[0], hy[0], hx[1], hy[1], R, w, 0.0f, f, ui_alpha(LINK_MIX, a));
         if (ni > 0) {
             SDL_SetRenderDrawBlendMode(r, SDL_BLENDMODE_BLEND);

@@ -34,38 +34,45 @@ static void go_menu(Game *g) {
     preview_open(&g->menu.preview);   /* porte aussi les bruitages et la musique de fond du menu */
 }
 
-/* Chargement en deux temps : on lit la carte et l'image de fond tout de suite, puis on affiche
-   quelques images "LOADING" (image de fond visible) avant les chargements lourds (piste audio,
-   index de la vidéo). La vidéo prend ensuite le relais de l'image en fondu, dès qu'elle est prête. */
+/* Chargement par étapes : la fiche de chargement s'affiche dès l'appui, puis chaque image fait une étape bloquante —
+   1. carte et image de fond, 2. piste audio, 3. index de la vidéo (si la chanson en a une). La barre montre les étapes
+   réellement terminées ; l'étape en cours (celle qui bloque l'affichage) est nommée sous la barre. La vidéo prend ensuite
+   le relais de l'image en fondu, dès que sa première image est décodée. */
 static void start_song(Game *g, const char *path, int entry) {
     stop_song(g);
-    rhythm_init(&g->rhythm, path);
-
-    background_load(&g->background, g->renderer, g->rhythm.chart.background_path, g->rhythm.chart.background_dim);
-    g->background.image_fade = 1.0f; /* visible tout de suite pendant le chargement (pas de fondu depuis le noir) */
-
-    g->song_loaded = true;
-    g->loading = 3;
-    g->audio_started = false;
+    snprintf(g->load_path, sizeof g->load_path, "%s", path);
     g->entry = entry;
+    g->load_done = 0;
+    g->load_total = 2;
+    g->loading = 1;
+    g->audio_started = false;
     g->result_recorded = false;
     g->new_best = false;
     g->paused = false;
     g->countdown_ms = 0.0f;
     g->screen = SCREEN_PLAY;
-    menu_suspend(&g->menu);          /* ferme le périphérique du menu ; l'audio de jeu prend le relais */
     sfx_bgm_target(&g->sfx, 0.0f);   /* pas de musique de fond en partie */
 }
 
-static void finish_loading(Game *g) {
-    audio_init(&g->audio, g->rhythm.chart.audio_path);
-    audio_attach_sfx(&g->audio, &g->sfx);   /* sons de frappe et de pause dans le périphérique de jeu */
-    audio_set_calibration(&g->audio, g->settings.audio_offset_ms);
-
-    if (g->rhythm.chart.video_path[0]) {
+static void load_step(Game *g) {
+    const Uint32 t0 = SDL_GetTicks();
+    if (g->load_done == 0) {
+        rhythm_init(&g->rhythm, g->load_path);
+        background_load(&g->background, g->renderer, g->rhythm.chart.background_path, g->rhythm.chart.background_dim);
+        g->background.image_fade = 1.0f; /* visible tout de suite pendant le chargement (pas de fondu depuis le noir) */
+        g->song_loaded = true;
+        menu_suspend(&g->menu);          /* ferme le périphérique du menu ; l'audio de jeu prend le relais */
+        if (g->rhythm.chart.video_path[0]) g->load_total = 3;
+    } else if (g->load_done == 1) {
+        audio_init(&g->audio, g->rhythm.chart.audio_path);
+        audio_attach_sfx(&g->audio, &g->sfx);   /* sons de frappe et de pause dans le périphérique de jeu */
+        audio_set_calibration(&g->audio, g->settings.audio_offset_ms);
+    } else {
         background_load_video(&g->background, g->renderer, g->rhythm.chart.video_path, g->rhythm.chart.video_offset_ms);
         background_seek(&g->background, 0.0f); /* première image dès le départ */
     }
+    fprintf(stderr, "loading: étape %d/%d en %u ms\n", g->load_done + 1, g->load_total, (unsigned)(SDL_GetTicks() - t0));
+    if (++g->load_done >= g->load_total) g->loading = 0;
 }
 
 void game_init(Game *g, SDL_Renderer *r, const char *chart_path) {
@@ -177,7 +184,7 @@ static void play_hit_sounds(Game *g) {
 static void update_play(Game *g, const Input *in, float dt) {
     if (g->loading > 0) {
         background_update(&g->background, dt);
-        if (--g->loading == 0) finish_loading(g);
+        load_step(g);   /* la fiche de cette étape a été affichée à l'image précédente */
         return;
     }
 
@@ -424,7 +431,12 @@ static void draw_loading(const Game *g, SDL_Renderer *r) {
     static const float VX[4] = { 0.0f, 0.40f, 0.62f, 1.0f }, VA[4] = { 0.92f, 0.92f, 0.5f, 0.1f };
     ui_veil_gradient(r, VX, VA, 4);
 
-    const Chart *c = &g->rhythm.chart;
+    /* avant la première étape la carte n'est pas lue : titre, artiste et difficulté viennent de la liste du menu */
+    const MenuEntry *me = g->entry >= 0 && g->entry < g->menu.entry_count ? &g->menu.entries[g->entry] : NULL;
+    const Chart *ch = &g->rhythm.chart;
+    const char *song_title = g->song_loaded ? ch->title : me ? me->title : "";
+    const char *song_artist = g->song_loaded ? ch->artist : me ? me->artist : "";
+    const char *song_diff = g->song_loaded ? ch->difficulty : me ? me->difficulty : "";
     char up[96], num[16], total[16];
     int night = game_night(g);
     if (night > 0) {   /* « NIGHT 02 / 67 », penché */
@@ -445,7 +457,7 @@ static void draw_loading(const Game *g, SDL_Renderer *r) {
     }
 
     /* titre citron cerclé d'encre sur une éclaboussure rose, penché de 6° */
-    ui_upper(c->title[0] ? c->title : "", up, sizeof up);
+    ui_upper(song_title, up, sizeof up);
     float tsc = 76.0f / 66.0f, tw = (float)font_width(&g->font, FONT_POP_XL, up) * tsc;
     if (tw > 560.0f) { tsc *= 560.0f / tw; tw = 560.0f; }
     const float tcy = 206.0f;
@@ -458,29 +470,31 @@ static void draw_loading(const Game *g, SDL_Renderer *r) {
     const float my = 319.0f;
     const FontRot mrot = { -6.0f, 50.0f, my, 0.0f, 0.0f };
     float mx = 50.0f;
-    if (c->artist[0]) {
+    if (song_artist[0]) {
         char fit[96];
-        ui_upper(c->artist, up, sizeof up);
+        ui_upper(song_artist, up, sizeof up);
         ui_fit_text(&g->font, FONT_CARD_NAME, up, 420, fit, sizeof fit);
         const float asc = 26.0f / 28.0f;
         draw_tracked(g, r, FONT_CARD_NAME, mx, my, asc, 0.0f, mrot, CH_WHITE, fit);
         mx += (float)font_width(&g->font, FONT_CARD_NAME, fit) * asc + 12.0f;
     }
-    if (c->difficulty[0]) {
-        ui_upper(c->difficulty, up, sizeof up);
+    if (song_diff[0]) {
+        ui_upper(song_diff, up, sizeof up);
         float pw = (float)font_width(&g->font, FONT_CARD_BOLD, up) + 26.0f;
         ui_round_rect_rot(r, (SDL_FRect){mx, my - 13.0f, pw, 26.0f}, 13.0f, mrot, CH_CYAN);
         draw_tracked(g, r, FONT_CARD_BOLD, mx + 13.0f, my, 1.0f, 0.0f, mrot, CH_INK, up);
     }
 
-    /* barre indicative (le chargement se fait en quelques images) */
+    /* barre : les étapes réellement terminées ; sous la barre, celle qui est en cours (elle bloque l'affichage) */
     const float bx = 44.0f, bw = 380.0f, bh = 14.0f, by = SCREEN_H - 58.0f - bh, tan20 = 0.364f;
-    float p = (4.0f - (float)g->loading) / 4.0f;
+    const float p = (float)g->load_done / (float)g->load_total;
     ui_skew_box(r, (SDL_FRect){bx - 2.0f, by - 2.0f, bw + 4.0f, bh + 4.0f}, (bh + 4.0f) * 0.5f * tan20, ui_alpha(CH_WHITE, 89));
     ui_skew_box(r, (SDL_FRect){bx, by, bw, bh}, bh * 0.5f * tan20, CH_INK);
-    ui_skew_box(r, (SDL_FRect){bx, by, bw * p, bh}, bh * 0.5f * tan20, CH_PINK);
+    if (p > 0.0f) ui_skew_box(r, (SDL_FRect){bx, by, bw * p, bh}, bh * 0.5f * tan20, CH_PINK);
     const FontRot flat = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
     draw_tracked(g, r, FONT_POP, bx, by - 22.0f, 18.0f / 38.0f, 4.0f, flat, CH_WHITE, "LOADING");
+    const char *step = g->load_done == 0 ? "READING THE SONG" : g->load_done == 1 ? "LOADING THE MUSIC" : "LOADING THE VIDEO";
+    draw_tracked(g, r, FONT_LABEL, bx, by + bh + 18.0f, 1.0f, 2.0f, flat, ui_alpha(CH_WHITE, 200), step);
 }
 
 /* Choix en cascade (pause, menu principal, options) : le courant glisse vers la droite, grossit et passe en citron

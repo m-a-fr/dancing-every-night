@@ -34,7 +34,9 @@ typedef struct {
     Audio       audio;
     Background  background;
     bool        song_loaded;
-    int         loading;          /* > 0 : chargement en cours (nombre d'images restant à afficher avant la fin) */
+    int         loading;          /* > 0 : chargement en cours (une étape par image, voir start_song) */
+    char        load_path[CHART_PATH];   /* carte à charger */
+    int         load_done, load_total;   /* étapes terminées / à faire (la vidéo ajoute une étape) */
     bool        audio_started;
     int         entry;            /* index dans menu.entries, -1 si carte hors menu */
     bool        result_recorded;  /* score de fin déjà enregistré */

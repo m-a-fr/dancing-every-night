@@ -14,6 +14,8 @@ First version prepared for public release.
 - Audio offset calibration (tap-along) in the options.
 
 ### Interface
+- The loading screen is honest: it appears the moment you press, and its bar shows the steps really done (song, music, video) with the current one named.
+- Linked notes: the bar between the two heads no longer has a black outline.
 - Boot splash, animated title screen, main menu, options.
 - Song select with packs, difficulties and best scores.
 - Menu music and sound effects.
