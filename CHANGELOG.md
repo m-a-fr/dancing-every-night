@@ -2,7 +2,7 @@
 
 All notable changes to Dancing Every Night. Versions follow `MAJOR.MINOR.PATCH`.
 
-## [0.9.0] — unreleased
+## [0.9.0] — 2026-10-25
 
 First version prepared for public release.
 
