@@ -145,7 +145,8 @@ jobs:
           entry = next(s for s in json.load(open('library/catalog.json'))['songs'] if s.get('issue') == int(os.environ['NUMBER']))
           print('Published: ' + config['site_url'].rstrip('/') + '/songs/' + entry['id'] + '/')
           print('\nThe site will update after its next successful deployment.')
-          print('\nPublication ID: `' + entry['id'] + '`. Submit future versions in this same proposal.')
+          sent_from_editor = '<!-- editor-submission v1 -->' in json.load(open('proposal.json')).get('body', '')
+          print('\nPublication ID: `' + entry['id'] + '`. ' + ('To publish a new version, send it again from the editor: a maintainer will replace this one.' if sent_from_editor else 'Submit future versions in this same proposal.'))
           print('\nLocal records remain attached to the original local ID; automatic record migration is not available yet.')
           PY
           gh issue comment "$NUMBER" --body-file published.md
