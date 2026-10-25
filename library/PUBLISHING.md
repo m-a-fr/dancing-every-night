@@ -99,3 +99,22 @@ Run `40139937848` successfully published `community-2` using the committed fixtu
 The anonymous R2 download passed the game's validator (two difficulties), and its SHA-256
 matched the committed catalogue. The earlier attachment checks correctly reported a
 private-download failure; the fixture trial does not resolve that separate limitation.
+
+
+### Public repository migration (2026-10-25)
+
+The source is published at `m-a-fr/dancing-every-night` from a new root commit.
+The former repository remains private at `m-a-fr/dancing-every-night-private`;
+do not push its history or the local `private-history` branch into the public repository.
+Official song audio stays in the separate private audio repository.
+
+Public proposal #1 used a new real GitHub attachment: anonymous download returned HTTP 200.
+Validation run `40172935142` returned **Ready for review** and `check-passed`.
+Applying `approved` triggered publication run `40173189473` (no fixture bypass):
+it fetched the attachment, verified the digest, rewrote the publication ID to `community-1`,
+uploaded to R2 and updated the catalogue. The public ZIP matched the catalogue SHA-256
+and passed the game validator with two difficulties. This resolves the earlier private-attachment
+limitation for new proposals submitted to the public repository; old private attachments remain private.
+
+The new repository has its own R2 credentials in the main-only environment and a dedicated
+read-only key for the private official-audio repository. Never copy credentials into this document.
