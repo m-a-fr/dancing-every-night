@@ -27,6 +27,18 @@ def join_url(base, key):
     return f'{base.rstrip("/")}/{key}' if base and key else ""
 
 
+def shape(hook):
+    """Description de la FORME d'une adresse refusée (jamais son contenu : les journaux d'Actions sont publics)."""
+    m = re.match(r"^(https?)://([^/]+)(/.*)?$", hook)
+    if not m:
+        return "pas une adresse http(s)"
+    path = (m.group(3) or "").split("?")[0].strip("/").split("/")
+    last = path[-1] if path else ""
+    return (f"schéma={m.group(1)} hôte={m.group(2)} segments={len(path)} début={'/'.join(path[:2])} "
+            f"identifiant_numérique={path[2].isdigit() if len(path) > 2 else None} longueur_jeton={len(last)} "
+            f"jeton_caractères_valides={bool(re.fullmatch(r'[\w-]+', last))} paramètres={'?' in hook} longueur_totale={len(hook)}")
+
+
 def build_payload(entry, config):
     diffs = [d["name"] for d in entry.get("difficulties", [])]
     seconds = int(round(entry.get("duration_s", 0)))
@@ -56,7 +68,7 @@ def main():
         print("pas de webhook Discord configuré : rien annoncé")
         return
     if not HOOK.match(hook):
-        print("adresse de webhook Discord refusée (format inattendu) : rien annoncé")
+        print("adresse de webhook Discord refusée (format inattendu) : rien annoncé -- " + shape(hook))
         return
     number = int(os.environ["NUMBER"])
     config = json.loads((ROOT / "library/config.json").read_text(encoding="utf-8"))
