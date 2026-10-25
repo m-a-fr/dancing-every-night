@@ -1244,6 +1244,52 @@
       "source_sha256": "c8b80811e37868d3e1549ac1803d509ed800ce96083f5cdd7e21e26058994899"
     },
     {
+      "id": "community-54",
+      "version": 1,
+      "title": "My Love",
+      "artist": "Kuba Oms",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=V3OPDTwH9os",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 220,
+          "bpm": 128.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 327,
+          "bpm": 128.0
+        },
+        {
+          "name": "HARD",
+          "notes": 483,
+          "bpm": 128.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 581,
+          "bpm": 128.0
+        }
+      ],
+      "duration_s": 228.4,
+      "size_bytes": 5060704,
+      "has_video": false,
+      "zip": "songs/community-54-v1.zip",
+      "zip_bytes": 5033300,
+      "sha256": "852541f0c0b298a638647882134fb238aefb92c858451076f391bb950e003d49",
+      "thumb": "thumbs/community-54-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 54,
+      "local_id": "popular2_my_love",
+      "previous_objects": [],
+      "source_sha256": "51bc10f45f6460c4f8be0149d5b6563163a53353cedd578d0559331042f43600"
+    },
+    {
       "id": "community-9",
       "version": 1,
       "title": "Neutralize (PTB10 Mix)",
