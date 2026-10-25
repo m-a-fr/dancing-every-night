@@ -1150,6 +1150,52 @@
       "local_id": "launch_umis_secret",
       "previous_objects": [],
       "source_sha256": "a0b8ec19dca6dfbe6dd2edbfe80aed9e8d3267820396e9c85a6d4d1eb6490329"
+    },
+    {
+      "id": "community-39",
+      "version": 1,
+      "title": "Zenzenzense (movie ver.)",
+      "artist": "RADWIMPS",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=PDSkFeMVNFs",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 306,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 422,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 574,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 701,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 292.3,
+      "size_bytes": 6761595,
+      "has_video": false,
+      "zip": "songs/community-39-v1.zip",
+      "zip_bytes": 6723554,
+      "sha256": "4a0458de93f8a6a6a6eaa8a6c498c0b4fc1ffc3e1a3c687048222d1289cdd44f",
+      "thumb": "thumbs/community-39-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 39,
+      "local_id": "popular_zenzenzense",
+      "previous_objects": [],
+      "source_sha256": "5d9f46073723c358fe5991ffc3ea8677b23fa5344877a085fb9b17bda4bb0c68"
     }
   ]
 }
