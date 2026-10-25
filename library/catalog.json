@@ -140,6 +140,52 @@
       "source_sha256": "5be336eebb89e16dc9afc2d7d6beea2fc4019c48fa9195d2170f91c53ec421ed"
     },
     {
+      "id": "community-17",
+      "version": 1,
+      "title": "chop chop",
+      "artist": "Rilliam",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "OutFox Serenity; see CREDITS.txt",
+      "license": "Music: CC BY-SA 3.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 137,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 219,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 345,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 371,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 149.6,
+      "size_bytes": 3965767,
+      "has_video": false,
+      "zip": "songs/community-17-v1.zip",
+      "zip_bytes": 3945493,
+      "sha256": "5ba0ed4dfc33aec1f0151c1bb1fb1ede338f0b74f96c24579a172884c4da0765",
+      "thumb": "thumbs/community-17-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 17,
+      "local_id": "launch_chop_chop",
+      "previous_objects": [],
+      "source_sha256": "369d1c60d24e4af3321897d3ed6f19640f50787d70519431b2410316d993a26f"
+    },
+    {
       "id": "community-7",
       "version": 1,
       "title": "Firestarter",
