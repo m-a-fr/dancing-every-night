@@ -1,10 +1,10 @@
 {
-  "version": "0.9.0",
+  "version": "1.0.0",
   "date": "2026-10-25",
-  "url": "https://github.com/m-a-fr/dancing-every-night/releases/tag/v0.9.0",
-  "notes_en": "First public version.",
-  "notes_fr": "Première version publique.",
-  "vpk_url": "https://github.com/m-a-fr/dancing-every-night/releases/download/v0.9.0/DancingEveryNight-0.9.0.vpk",
-  "sha256": "0fb10fc36b17f613b66fe56ed8ab41a3ba19cd966460632799f690952a03d592",
-  "size": 18520389
+  "url": "https://github.com/m-a-fr/dancing-every-night/releases/tag/v1.0.0",
+  "notes_en": "The song library is in the game: browse and install community songs from the new LIBRARY menu.",
+  "notes_fr": "La bibliothèque de chansons arrive dans le jeu : parcours et installe les chansons de la communauté depuis LIBRARY.",
+  "vpk_url": "https://github.com/m-a-fr/dancing-every-night/releases/download/v1.0.0/DancingEveryNight-1.0.0.vpk",
+  "sha256": "901d2cbdd7371431534384e0bef36c8dfbd902dbcdd3f6825324d99b9a7a5b2f",
+  "size": 19993424
 }
