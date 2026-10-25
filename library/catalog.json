@@ -1566,6 +1566,52 @@
       "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
     },
     {
+      "id": "community-57",
+      "version": 1,
+      "title": "Rainbow Tylenol",
+      "artist": "Kitsune²",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=5K7Frc2lTI8",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 102,
+          "bpm": 135.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 156,
+          "bpm": 135.0
+        },
+        {
+          "name": "HARD",
+          "notes": 238,
+          "bpm": 135.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 273,
+          "bpm": 135.0
+        }
+      ],
+      "duration_s": 118.1,
+      "size_bytes": 2361446,
+      "has_video": false,
+      "zip": "songs/community-57-v1.zip",
+      "zip_bytes": 2300295,
+      "sha256": "4510fdf166676146b6c0c0382d800c838e114bed4209e02396a327ded763cdc4",
+      "thumb": "thumbs/community-57-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 57,
+      "local_id": "popular2_rainbow_tylenol",
+      "previous_objects": [],
+      "source_sha256": "8241dd38858567adc10178a01f975c83763516f3031e2834c4e944e4ffe8926c"
+    },
+    {
       "id": "community-37",
       "version": 1,
       "title": "Shinzou wo Sasageyo! (TV Size)",
