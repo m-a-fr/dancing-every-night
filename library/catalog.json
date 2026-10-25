@@ -184,6 +184,52 @@
       "local_id": "launch_neutralize",
       "previous_objects": [],
       "source_sha256": "014e703fcedf382f785ad958fd6b5cb6a4ece16b77b2ab50c1aefcf38a04f1b2"
+    },
+    {
+      "id": "community-10",
+      "version": 1,
+      "title": "Phycietiia",
+      "artist": "rN & SiLiS",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "OutFox Serenity; see CREDITS.txt",
+      "license": "Music: CC BY-SA 4.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 130,
+          "bpm": 180.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 171,
+          "bpm": 180.0
+        },
+        {
+          "name": "HARD",
+          "notes": 252,
+          "bpm": 180.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 296,
+          "bpm": 180.0
+        }
+      ],
+      "duration_s": 137.3,
+      "size_bytes": 3344415,
+      "has_video": false,
+      "zip": "songs/community-10-v1.zip",
+      "zip_bytes": 3327674,
+      "sha256": "5f61fd0c5dde8b02fd245124b284130de8a9ac50802d85107454318096af5a8f",
+      "thumb": "thumbs/community-10-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 10,
+      "local_id": "launch_phycietiia",
+      "previous_objects": [],
+      "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
     }
   ]
 }
