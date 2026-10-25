@@ -1934,6 +1934,52 @@
       "source_sha256": "a0b8ec19dca6dfbe6dd2edbfe80aed9e8d3267820396e9c85a6d4d1eb6490329"
     },
     {
+      "id": "community-59",
+      "version": 1,
+      "title": "Unity",
+      "artist": "TheFatRat",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=n8X9_MgEdCg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 189,
+          "bpm": 105.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 308,
+          "bpm": 105.0
+        },
+        {
+          "name": "HARD",
+          "notes": 445,
+          "bpm": 105.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 524,
+          "bpm": 105.0
+        }
+      ],
+      "duration_s": 249.0,
+      "size_bytes": 5634287,
+      "has_video": false,
+      "zip": "songs/community-59-v1.zip",
+      "zip_bytes": 5559431,
+      "sha256": "82e707c4eff4d54b91a2798033a0f6e62780dd11b40ea10458b610139ed4860c",
+      "thumb": "thumbs/community-59-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 59,
+      "local_id": "popular2_unity",
+      "previous_objects": [],
+      "source_sha256": "de7832381be64d1d7ee9c7211af3ce8e2c58b959d90967a4aba2b642985b59d3"
+    },
+    {
       "id": "community-40",
       "version": 1,
       "title": "Yoru ni Kakeru",
