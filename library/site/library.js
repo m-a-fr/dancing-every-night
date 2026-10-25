@@ -37,6 +37,7 @@ const FR = {
   "Songs in the library are made and shared by the community.": "Les chansons de la bibliothèque sont faites et partagées par la communauté.",
   "Rights holders": "Ayants droit",
   "If a song uses your work without permission, tell us and we will remove it quickly. Use the report form, or write to the contact address below. Please say who you are, which song (its title and ID) and what you ask for.": "Si une chanson utilise ton travail sans autorisation, dis-le-nous et nous la retirerons vite. Utilise le formulaire de signalement, ou écris à l'adresse de contact ci-dessous. Précise qui tu es, quelle chanson (son titre et son ID) et ce que tu demandes.",
+  "If a song uses your work without permission, tell us and we will remove it quickly. Use the report form. Please say who you are, which song (its title and ID) and what you ask for.": "Si une chanson utilise ton travail sans autorisation, dis-le-nous et nous la retirerons vite. Utilise le formulaire de signalement. Précise qui tu es, quelle chanson (son titre et son ID) et ce que tu demandes.",
   "Report a song": "Signaler une chanson", "Contact:": "Contact :", "What happens": "Que se passe-t-il",
   "The song is taken off the library and its file is deleted from our storage.": "La chanson est retirée de la bibliothèque et son fichier est supprimé de notre stockage.",
   "The removal is written in a public log, with its date and reason.": "Le retrait est inscrit dans un journal public, avec sa date et son motif.",

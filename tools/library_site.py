@@ -221,15 +221,16 @@ def legal_page(cfg):
                     canonical=f'{cfg["site_url"]}/songs/legal.html', og_image=f'{cfg["site_url"]}/social.jpg')
     report = E(cfg["report_url"])
     contact = cfg.get("takedown_contact", "")
-    mail = (f'<a href="mailto:{E(contact)}">{E(contact)}</a>' if contact else "the contact address that will be published here before launch")
+    mail = f'<p><span data-i18n>Contact:</span> <a href="mailto:{E(contact)}">{E(contact)}</a></p>\n' if contact else ""
+    ask = ("If a song uses your work without permission, tell us and we will remove it quickly. Use the report form, or write to the contact address below. Please say who you are, which song (its title and ID) and what you ask for."
+           if contact else "If a song uses your work without permission, tell us and we will remove it quickly. Use the report form. Please say who you are, which song (its title and ID) and what you ask for.")
     h += f"""<p class="crumb"><a href="/songs/" data-i18n>← Song library</a></p>
 <h1 data-i18n>Takedown and content policy</h1>
 <p class="lead" data-i18n>Songs in the library are made and shared by the community.</p>
 <h2 data-i18n>Rights holders</h2>
-<p data-i18n>If a song uses your work without permission, tell us and we will remove it quickly. Use the report form, or write to the contact address below. Please say who you are, which song (its title and ID) and what you ask for.</p>
+<p data-i18n>{ask}</p>
 <p><a class="btn primary" href="{report}" data-i18n>Report a song</a></p>
-<p><span data-i18n>Contact:</span> {mail}</p>
-<h2 data-i18n>What happens</h2>
+{mail}<h2 data-i18n>What happens</h2>
 <ul>
   <li data-i18n>The song is taken off the library and its file is deleted from our storage.</li>
   <li data-i18n>The removal is written in a public log, with its date and reason.</li>
