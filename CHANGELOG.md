@@ -2,12 +2,44 @@
 
 All notable changes to Dancing Every Night. Versions follow `MAJOR.MINOR.PATCH`.
 
+## [1.0.0] — 2026-10-25
+
+The song library comes into the game.
+
+### Community songs
+- New LIBRARY screen in the main menu: browse the whole online catalogue in a dense list with a detail panel
+  (cover picture, difficulties, notes, size), filter (all / not installed / installed / updates) and sort (newest / title / artist).
+  Each song shows whether it is already in your library: a check for an installed song, an arrow when a newer
+  version exists. The catalogue is read each time the screen opens; without a connection there is none ("connection required").
+- Songs install from the LIBRARY with Cross: download with a progress bar (Circle cancels), SHA-256 check against the
+  catalogue, then installation. The song appears in the song list right away, and a newer version replaces the old one
+  (your scores are kept).
+- The LIBRARY also works on Windows (WinHTTP), macOS (system libcurl) and Linux (libcurl loaded at run time: without it the
+  game still starts and the LIBRARY says it needs libcurl). A build without network shows "not available in this version".
+- Startup imports accept extracted song folders as well as ZIPs, including a single enclosing folder.
+- The editor's Publish step can send the finished song straight to the library, with no GitHub account and no zip to
+  download and upload again.
+- Maintainers: approving several songs together keeps every publication queued, each newly published song is announced
+  on Discord, and removing a song has a step-by-step guide.
+
+### Gameplay
+- Scratch notes now read "SCRATCH" and "R OR L" in turn on the blue ring, and a light touch of either stick in any
+  direction hits them; L and R still work.
+- Linked notes: the bar between the two heads no longer has a black outline.
+
+### Interface
+- The loading screen is honest: it appears the moment you press, and its bar shows the steps really done (song, music,
+  video) with the current one named.
+- The main menu announces a newer game version when one exists (the game reads `latest.json` from the website at
+  start-up). Switch it off in OPTIONS > UPDATE CHECK. Nothing is downloaded or installed.
+- The website has a home page and a common menu: game download, song library, song editor and creator guide. The editor
+  moved to `/editor/` (your songs are kept).
+
 ## [0.9.0] — 2026-10-25
 
 First version prepared for public release.
 
 ### Gameplay
-- Scratch notes now read "SCRATCH" and "R OR L" in turn on the blue ring, and a light touch of either stick in any direction hits them; L and R still work.
 - The in-game score counter grows past 7 digits (it used to show only the first 7 above 9,999,999).
 - Six lanes on two arcs (triangle, circle, cross / up, left, down), taps, holds, double notes, scratches (L/R or stick flick).
 - Timing judgements, combo, score and ranks; animated results screen.
@@ -15,8 +47,6 @@ First version prepared for public release.
 - Audio offset calibration (tap-along) in the options.
 
 ### Interface
-- The loading screen is honest: it appears the moment you press, and its bar shows the steps really done (song, music, video) with the current one named.
-- Linked notes: the bar between the two heads no longer has a black outline.
 - Boot splash, animated title screen, main menu, options.
 - Song select with packs, difficulties and best scores.
 - Menu music and sound effects.
@@ -36,17 +66,6 @@ First version prepared for public release.
   paths are replaced with instructions about editing, playback and sharing.
 
 ### Community songs
-- New LIBRARY screen in the main menu: browse the whole online catalogue in a dense list with a detail panel
-  (cover picture, difficulties, notes, size), filter (all / not installed / installed / updates) and sort (newest / title / artist).
-  Each song shows whether it is already in your library: a check for an installed song, an arrow when a newer
-  version exists. The catalogue is read each time the screen opens; without a connection there is none ("connection required").
-- Songs install from the LIBRARY with Cross: download with a progress bar (Circle cancels), SHA-256 check against the
-  catalogue, then installation. The song appears in the song list right away, and a newer version replaces the old one
-  (your scores are kept).
-- The LIBRARY also works on Windows (WinHTTP), macOS (system libcurl) and Linux (libcurl loaded at run time: without it the
-  game still starts and the LIBRARY says it needs libcurl). A build without network shows "not available in this version".
-- Startup imports accept extracted song folders as well as ZIPs, including a single enclosing folder.
-- Approving several songs together keeps every publication queued instead of cancelling earlier pending approvals.
 - Attachment downloads support GitHub authentication without forwarding credentials on redirects.
   Private attachments remain inaccessible with the default Actions token; a manual CC0 fixture test
   checks publication independently.
@@ -96,15 +115,6 @@ First version prepared for public release.
   and the song `import/` folder live in `~/Library/Application Support/Dancing Every Night/`.
 - GitHub Actions workflow builds the four packages (Windows, macOS, Linux, Vita) by hand or on a version tag, and
   prepares a draft release.
-
-### Update notice
-- On the Vita, the main menu announces a newer version when one exists (the game reads `latest.json` from the website at start-up). Switch it off in OPTIONS > UPDATE CHECK. Nothing is downloaded or installed yet.
-
-### Website
-- The website has a home page and a common menu: game download, song library, song editor and creator guide. The editor moved to `/editor/` (your songs are kept).
-
-### Send a song from the editor
-- The editor's Publish step can send the finished song straight to the library, with no GitHub account and no zip to download and upload again.
 
 ### Licence is optional
 - The LICENSE field is no longer required to share a song (editor checklist, export, library submission). A song published without one is only noted in a private maintainer register.

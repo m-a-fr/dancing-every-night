@@ -1,5 +1,5 @@
 # Builds distribuables : Windows, macOS, Linux (scripts/build-pc.sh) et PS Vita (make release).
-# Lancement à la main (onglet Actions > Builds > Run workflow) ou en poussant un tag de version (v0.9.0) :
+# Lancement à la main (onglet Actions > Builds > Run workflow) ou en poussant un tag de version (v1.0.0) :
 # un tag publie aussi les 4 fichiers dans une GitHub Release en brouillon, à relire avant de la publier.
 # Pas de build à chaque push : les minutes macOS comptent 10 fois tant que le dépôt est privé.
 name: Builds

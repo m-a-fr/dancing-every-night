@@ -8,8 +8,8 @@ arcs de cibles ; il faut appuyer sur le bon bouton en rythme, garder son combo e
 L'objectif : une communauté à la osu!. Le jeu est livré avec une ou deux chansons originales, et les
 joueurs créent, partagent et téléchargent les suivantes.
 
-> **État : 0.9.0, première version publique.** Le jeu est jouable, avec 3 chansons officielles, et les chansons de la
-> communauté s'installent. Un store de chansons dans le jeu est prévu pour la 1.0.
+> **État : 1.0.0.** Le jeu est jouable, avec 3 chansons officielles, et la **bibliothèque de chansons** dans le jeu
+> permet de parcourir et d'installer les chansons de la communauté depuis la console.
 
 **Communauté :** [Discord](https://discord.gg/vTJDvgJe74) · [Bibliothèque de chansons](https://dancing-every-night.pages.dev/songs/) · [Éditeur en ligne](https://dancing-every-night.pages.dev/editor/)
 

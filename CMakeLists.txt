@@ -32,7 +32,7 @@ add_compile_definitions(MINIZ_NO_ARCHIVE_WRITING_APIS MINIZ_NO_TIME MINIZ_NO_ZLI
 # TITLEID = 4 lettres majuscules + 5 chiffres, unique ; le changer impose de réinstaller le .vpk.
 # ---------------------------------------------------------------------------
 set(GAME_NAME      "Dancing Every Night")
-set(GAME_VERSION   "0.9.0")
+set(GAME_VERSION   "1.0.0")
 set(GAME_SAVE_SLUG "dancingeverynight")
 set(VITA_TITLEID   "DNEN00001")
 
