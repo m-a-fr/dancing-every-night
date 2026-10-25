@@ -186,6 +186,52 @@
       "source_sha256": "5be336eebb89e16dc9afc2d7d6beea2fc4019c48fa9195d2170f91c53ec421ed"
     },
     {
+      "id": "community-19",
+      "version": 1,
+      "title": "Chibi Ninja",
+      "artist": "Eric Skiff",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "https://ericskiff.com/music/",
+      "license": "Music: CC BY 4.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 110,
+          "bpm": 161.74
+        },
+        {
+          "name": "NORMAL",
+          "notes": 161,
+          "bpm": 161.74
+        },
+        {
+          "name": "HARD",
+          "notes": 270,
+          "bpm": 161.74
+        },
+        {
+          "name": "EXPERT",
+          "notes": 316,
+          "bpm": 161.74
+        }
+      ],
+      "duration_s": 123.3,
+      "size_bytes": 3336875,
+      "has_video": false,
+      "zip": "songs/community-19-v1.zip",
+      "zip_bytes": 3298525,
+      "sha256": "3a7956b185c9e7e85d64e47c04ce70f2efed58b7ac48e81e1813de4db7e6acea",
+      "thumb": "thumbs/community-19-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 19,
+      "local_id": "launch_chibi_ninja",
+      "previous_objects": [],
+      "source_sha256": "6a85766c025733e206a44fd880729565375f363c07b05589a9422727d995b0b6"
+    },
+    {
       "id": "community-17",
       "version": 1,
       "title": "chop chop",
