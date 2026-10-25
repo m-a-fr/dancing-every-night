@@ -646,6 +646,52 @@
       "source_sha256": "e0d163861e02b81fdfef1c4beddf5bcee0735687634e9f08cfe9855b2de66752"
     },
     {
+      "id": "community-48",
+      "version": 1,
+      "title": "COLORS (TV Size)",
+      "artist": "FLOW",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=G8CFuZ9MseQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 82,
+          "bpm": 136.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 132,
+          "bpm": 136.0
+        },
+        {
+          "name": "HARD",
+          "notes": 195,
+          "bpm": 136.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 227,
+          "bpm": 136.0
+        }
+      ],
+      "duration_s": 89.7,
+      "size_bytes": 11684153,
+      "has_video": true,
+      "zip": "songs/community-48-v1.zip",
+      "zip_bytes": 11390136,
+      "sha256": "f27cf1beee931f524c1bc77421fcfaba930c08e2dcf7c45e4c3df794f8fba0e7",
+      "thumb": "thumbs/community-48-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 48,
+      "local_id": "popular2_colors",
+      "previous_objects": [],
+      "source_sha256": "686ddd70a7747eb3b69ba99c8a05c7d3660433a6bfb542e8629bcb3bad0372ac"
+    },
+    {
       "id": "community-21",
       "version": 1,
       "title": "Digital Native",
