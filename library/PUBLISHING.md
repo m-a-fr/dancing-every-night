@@ -118,3 +118,10 @@ limitation for new proposals submitted to the public repository; old private att
 
 The new repository has its own R2 credentials in the main-only environment and a dedicated
 read-only key for the private official-audio repository. Never copy credentials into this document.
+
+
+The public trial was withdrawn successfully by run `40173453361`: the R2 ZIP returned
+HTTP 404, the catalogue is empty again and proposal #1 is closed with label `removed`.
+Cloudflare Pages was reconnected to the new public repository using the existing project,
+so its address stays unchanged. The GitHub App is now selected for the new public repository
+only, rather than the private archive. Reconnection defaults the watched paths to `*`.
