@@ -126,9 +126,11 @@ jobs:
     permissions:
       contents: write
     steps:
+      - uses: actions/checkout@v4   # pour RELEASE_NOTES.md
       - uses: actions/download-artifact@v4
         with: { path: dist, merge-multiple: true }
       - uses: softprops/action-gh-release@v2
         with:
           draft: true
+          body_path: RELEASE_NOTES.md   # texte de la release : à relire dans le brouillon avant de le publier
           files: dist/*
