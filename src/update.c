@@ -7,9 +7,8 @@
 #ifdef __vita__
 #include <psp2/net/net.h>
 #include <psp2/net/netctl.h>
-#include <psp2/net/http.h>
-#include <psp2/libssl.h>
 #include <psp2/sysmodule.h>
+#include <curl/curl.h>
 #endif
 
 int update_version_compare(const char *a, const char *b) {
@@ -73,60 +72,90 @@ static void finish(Update *u, const char *json, const char *current) {
 }
 
 #ifdef __vita__
-#define NET_POOL   (1 * 1024 * 1024)
-#define HTTP_POOL  (256 * 1024)
-#define SSL_POOL   (300 * 1024)
-#define BODY_MAX   4096
-#define TIMEOUT_US (6 * 1000 * 1000)
+#include <stdarg.h>
+#include "files.h"
+/* Journal de la vérification (SAVE_DIR update_log.txt, réécrit à chaque démarrage) : ce que le réseau a répondu, pour
+   comprendre une annonce qui n'apparaît pas. Aucune donnée personnelle. */
+static void ulog(const char *fmt, ...) {
+    static bool first = true;
+    files_mkdir(SAVE_DIR);
+    FILE *f = fopen(SAVE_DIR "update_log.txt", first ? "w" : "a");
+    first = false;
+    if (!f) return;
+    va_list ap;
+    va_start(ap, fmt);
+    vfprintf(f, fmt, ap);
+    va_end(ap);
+    fputc('\n', f);
+    fclose(f);
+}
 
-/* Une requête GET ; renvoie la taille lue (0 = échec). cert_ok = false : la vérification du certificat est coupée (le
-   magasin de certificats de la Vita, de 2013, ne connaît pas toutes les autorités actuelles). Servi seulement pour lire
-   un numéro de version : rien de ce qui arrive n'est exécuté, ni écrit sur la console. */
+#define NET_POOL   (1 * 1024 * 1024)
+#define BODY_MAX   4096
+#define CA_BUNDLE  ASSET_PATH("ui/cacert.pem")   /* Mozilla, curl.se/ca : la Vita ne connaît pas les autorités actuelles */
+
+typedef struct { char *buf; int cap, len; } Sink;
+
+static size_t sink_write(void *data, size_t size, size_t n, void *user) {
+    Sink *k = user;
+    size_t bytes = size * n, room = (size_t)(k->cap - 1 - k->len);
+    if (bytes > room) bytes = room;   /* fiche trop longue : on garde le début, la lecture JSON échouera proprement */
+    memcpy(k->buf + k->len, data, bytes);
+    k->len += (int)bytes;
+    return size * n;
+}
+
+/* Une requête GET en HTTPS (libcurl + OpenSSL : la couche HTTPS de la Vita ne sait pas négocier le TLS actuel) ; renvoie
+   la taille lue (0 = échec). verify = false : certificat non contrôlé (horloge de la console fausse, par exemple). Servi
+   seulement pour lire un numéro de version : rien de ce qui arrive n'est exécuté, ni écrit sur la console. */
 static int http_get(const char *url, char *buf, int cap, bool verify) {
-    int len = 0, tmpl = -1, conn = -1, req = -1;
-    if (!verify) sceHttpsDisableOption(SCE_HTTPS_FLAG_SERVER_VERIFY | SCE_HTTPS_FLAG_CN_CHECK | SCE_HTTPS_FLAG_NOT_BEFORE_CHECK |
-                                       SCE_HTTPS_FLAG_NOT_AFTER_CHECK | SCE_HTTPS_FLAG_KNOWN_CA_CHECK);
-    else sceHttpsEnableOption(SCE_HTTPS_FLAG_SERVER_VERIFY | SCE_HTTPS_FLAG_CN_CHECK | SCE_HTTPS_FLAG_NOT_BEFORE_CHECK |
-                              SCE_HTTPS_FLAG_NOT_AFTER_CHECK | SCE_HTTPS_FLAG_KNOWN_CA_CHECK);
-    tmpl = sceHttpCreateTemplate(GAME_NAME "/" GAME_VERSION, SCE_HTTP_VERSION_1_1, 1);
-    if (tmpl < 0) goto done;
-    sceHttpSetResolveTimeOut(tmpl, TIMEOUT_US);
-    sceHttpSetConnectTimeOut(tmpl, TIMEOUT_US);
-    sceHttpSetSendTimeOut(tmpl, TIMEOUT_US);
-    sceHttpSetRecvTimeOut(tmpl, TIMEOUT_US);
-    conn = sceHttpCreateConnectionWithURL(tmpl, url, 0);
-    if (conn < 0) goto done;
-    req = sceHttpCreateRequestWithURL(conn, SCE_HTTP_METHOD_GET, url, 0);
-    if (req < 0) goto done;
-    if (sceHttpSendRequest(req, NULL, 0) < 0) goto done;
-    int status = 0;
-    if (sceHttpGetStatusCode(req, &status) < 0 || status != 200) goto done;
-    for (;;) {
-        int n = sceHttpReadData(req, buf + len, (unsigned)(cap - 1 - len));
-        if (n <= 0) break;
-        len += n;
-        if (len >= cap - 1) break;
-    }
-done:
-    if (req >= 0) sceHttpDeleteRequest(req);
-    if (conn >= 0) sceHttpDeleteConnection(conn);
-    if (tmpl >= 0) sceHttpDeleteTemplate(tmpl);
-    buf[len] = '\0';
-    return len;
+    Sink k = { buf, cap, 0 };
+    buf[0] = '\0';
+    ulog("GET %s (verify=%d)", url, verify);
+    CURL *c = curl_easy_init();
+    if (!c) { ulog("  curl_easy_init failed"); return 0; }
+    char err[CURL_ERROR_SIZE] = "";
+    curl_easy_setopt(c, CURLOPT_URL, url);
+    curl_easy_setopt(c, CURLOPT_USERAGENT, GAME_NAME "/" GAME_VERSION);
+    curl_easy_setopt(c, CURLOPT_PROTOCOLS, CURLPROTO_HTTPS);
+    curl_easy_setopt(c, CURLOPT_REDIR_PROTOCOLS, CURLPROTO_HTTPS);
+    curl_easy_setopt(c, CURLOPT_FOLLOWLOCATION, 1L);
+    curl_easy_setopt(c, CURLOPT_MAXREDIRS, 3L);
+    curl_easy_setopt(c, CURLOPT_CONNECTTIMEOUT, 8L);
+    curl_easy_setopt(c, CURLOPT_TIMEOUT, 15L);
+    curl_easy_setopt(c, CURLOPT_NOSIGNAL, 1L);
+    curl_easy_setopt(c, CURLOPT_FAILONERROR, 1L);
+    curl_easy_setopt(c, CURLOPT_CAINFO, CA_BUNDLE);
+    curl_easy_setopt(c, CURLOPT_SSL_VERIFYPEER, verify ? 1L : 0L);
+    curl_easy_setopt(c, CURLOPT_SSL_VERIFYHOST, verify ? 2L : 0L);
+    curl_easy_setopt(c, CURLOPT_ERRORBUFFER, err);
+    curl_easy_setopt(c, CURLOPT_WRITEFUNCTION, sink_write);
+    curl_easy_setopt(c, CURLOPT_WRITEDATA, &k);
+    CURLcode rc = curl_easy_perform(c);
+    long status = 0;
+    curl_easy_getinfo(c, CURLINFO_RESPONSE_CODE, &status);
+    ulog("  curl: %d (%s) http %ld, %d bytes", (int)rc, err[0] ? err : curl_easy_strerror(rc), status, k.len);
+    curl_easy_cleanup(c);
+    buf[k.len] = '\0';
+    return rc == CURLE_OK ? k.len : 0;
 }
 
 static bool net_up(void) {
     static bool done, ok;
     if (done) return ok;
     done = true;
-    if (sceSysmoduleLoadModule(SCE_SYSMODULE_NET) < 0 || sceSysmoduleLoadModule(SCE_SYSMODULE_HTTPS) < 0) return false;
+    int m = sceSysmoduleLoadModule(SCE_SYSMODULE_NET);
+    ulog("sysmodule net=%08x", m);
+    if (m < 0) return false;
     static char pool[NET_POOL] __attribute__((aligned(16)));
     SceNetInitParam p = { pool, sizeof pool, 0 };
     int r = sceNetInit(&p);
+    ulog("netinit=%08x", r);
     if (r < 0 && r != (int)0x80410202) return false;   /* déjà initialisé : pas une erreur */
-    sceNetCtlInit();
-    if (sceHttpInit(HTTP_POOL) < 0 || sceSslInit(SSL_POOL) < 0) return false;
-    return ok = true;
+    int c = sceNetCtlInit();
+    CURLcode g = curl_global_init(CURL_GLOBAL_DEFAULT);
+    ulog("netctl=%08x curl_global_init=%d", c, (int)g);
+    return ok = g == CURLE_OK;
 }
 
 static int check_thread(void *data) {
@@ -134,10 +163,15 @@ static int check_thread(void *data) {
     int state = 0;
     char *body = malloc(BODY_MAX);
     bool got = false;
-    if (body && net_up() && sceNetCtlInetGetState(&state) >= 0 && state == SCE_NETCTL_STATE_CONNECTED) {
-        got = http_get(UPDATE_URL, body, BODY_MAX, true) > 0 || http_get(UPDATE_URL, body, BODY_MAX, false) > 0;
+    ulog("update check, game %s", GAME_VERSION);
+    if (body && net_up()) {
+        int cs = sceNetCtlInetGetState(&state);
+        ulog("inet state: ret=%08x state=%d (3 = connected)", cs, state);
+        if (cs >= 0 && state == SCE_NETCTL_STATE_CONNECTED)
+            got = http_get(UPDATE_URL, body, BODY_MAX, true) > 0 || http_get(UPDATE_URL, body, BODY_MAX, false) > 0;
     }
     finish(u, got ? body : NULL, GAME_VERSION);
+    ulog("result: %s", got ? (update_state(u) == UPDATE_AVAILABLE ? "newer version found" : "up to date") : "failed");
     free(body);
     return 0;
 }
