@@ -692,6 +692,52 @@
       "source_sha256": "686ddd70a7747eb3b69ba99c8a05c7d3660433a6bfb542e8629bcb3bad0372ac"
     },
     {
+      "id": "community-49",
+      "version": 1,
+      "title": "crystallized",
+      "artist": "Camellia",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=dkYHgxfQZBA",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 267,
+          "bpm": 174.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 365,
+          "bpm": 174.0
+        },
+        {
+          "name": "HARD",
+          "notes": 502,
+          "bpm": 174.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 600,
+          "bpm": 174.0
+        }
+      ],
+      "duration_s": 277.0,
+      "size_bytes": 6510098,
+      "has_video": false,
+      "zip": "songs/community-49-v1.zip",
+      "zip_bytes": 6468170,
+      "sha256": "c493484e6a1b8746cc932c3c0f663faf9addc70b8531b2f5ddd1e2ef5e88dc15",
+      "thumb": "thumbs/community-49-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 49,
+      "local_id": "popular2_crystallized",
+      "previous_objects": [],
+      "source_sha256": "e9c54a02815c9da0a73a34b8bae7b2beed35cf856409b8796ecd477af6924366"
+    },
+    {
       "id": "community-21",
       "version": 1,
       "title": "Digital Native",
