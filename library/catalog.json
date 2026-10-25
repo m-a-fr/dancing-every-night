@@ -232,6 +232,52 @@
       "source_sha256": "014e703fcedf382f785ad958fd6b5cb6a4ece16b77b2ab50c1aefcf38a04f1b2"
     },
     {
+      "id": "community-14",
+      "version": 1,
+      "title": "Nexen II (Phase Two)",
+      "artist": "Jack5",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "OutFox Serenity; see CREDITS.txt",
+      "license": "Music: CC BY (author permission; see CREDITS.txt); artwork: CC",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 208,
+          "bpm": 140.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 273,
+          "bpm": 140.0
+        },
+        {
+          "name": "HARD",
+          "notes": 384,
+          "bpm": 140.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 475,
+          "bpm": 140.0
+        }
+      ],
+      "duration_s": 233.7,
+      "size_bytes": 5483929,
+      "has_video": false,
+      "zip": "songs/community-14-v1.zip",
+      "zip_bytes": 5434377,
+      "sha256": "e33a3551e8a29849fecffaa076aabb5cd5a86c9a40d9e283d6acefb6c5eb5010",
+      "thumb": "thumbs/community-14-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 14,
+      "local_id": "launch_nexen_ii",
+      "previous_objects": [],
+      "source_sha256": "8dc0a0c4dff37b81e3bf377618f49244447973975f183d6c6265c03695a29017"
+    },
+    {
       "id": "community-10",
       "version": 1,
       "title": "Phycietiia",
