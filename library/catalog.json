@@ -1474,6 +1474,52 @@
       "source_sha256": "b4c326d3f31df7b307384676183f6ecd1f632b99b1769c553163e0bd4b1e2126"
     },
     {
+      "id": "community-56",
+      "version": 1,
+      "title": "only my railgun (TV Size)",
+      "artist": "fripSide",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=JAByz7HWSYs",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 89,
+          "bpm": 143.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 142,
+          "bpm": 143.0
+        },
+        {
+          "name": "HARD",
+          "notes": 197,
+          "bpm": 143.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 233,
+          "bpm": 143.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12118074,
+      "has_video": true,
+      "zip": "songs/community-56-v1.zip",
+      "zip_bytes": 11884050,
+      "sha256": "d780bb6b8068c4e9f2dfbda7959782f4237c347bd7f542bb1b2a20fb670af550",
+      "thumb": "thumbs/community-56-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 56,
+      "local_id": "popular2_only_my_railgun",
+      "previous_objects": [],
+      "source_sha256": "0a33c4f66a53a13a128e6a8328ac3af8b4a58671024db819221dc2fcc461b015"
+    },
+    {
       "id": "community-10",
       "version": 1,
       "title": "Phycietiia",
