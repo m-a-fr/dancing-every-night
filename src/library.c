@@ -291,12 +291,14 @@ static int fetch_thread(void *data) {
     if (local) json = read_local(local);
 #endif
     if (!json) {
-        if (!net_online()) { SDL_AtomicSet(&l->status, LIBST_OFFLINE); return 0; }
+        if (!net_online()) { net_log("library: offline"); SDL_AtomicSet(&l->status, LIBST_OFFLINE); return 0; }
         int len = 0;
         json = net_get(LIBRARY_URL, LIB_JSON_MAX, &len);
     }
     LibSong *songs = json ? calloc(LIB_MAX_SONGS, sizeof *songs) : NULL;
     int n = songs ? library_parse(json, songs, LIB_MAX_SONGS, l->base, sizeof l->base) : 0;
+    net_log("library: catalogue %s, %d bytes, %d songs read (%d bytes per song slot, table %s)", json ? "received" : "NOT received",
+            json ? (int)strlen(json) : 0, n, (int)sizeof *songs, songs ? "allocated" : "NOT allocated");
     free(json);
     if (n <= 0) {
         free(songs);

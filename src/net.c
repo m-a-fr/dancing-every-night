@@ -9,13 +9,35 @@
 #  define NET_CURL 1
 #  include <curl/curl.h>
 #endif
+#ifdef __vita__
+#  define NLOG(...) net_log(__VA_ARGS__)
+#else
+#  define NLOG(...) ((void)0)
+#endif
 
 #ifdef __vita__
+#include <stdarg.h>
 #include <psp2/net/net.h>
 #include <psp2/net/netctl.h>
 #include <psp2/sysmodule.h>
 
 #define NET_POOL  (1 * 1024 * 1024)
+
+/* Journal du réseau de la bibliothèque (SAVE_DIR net_log.txt, réécrit à chaque lancement) : ce que la console a répondu,
+   pour comprendre un écran « connexion requise » ou un téléchargement qui échoue. Aucune donnée personnelle. */
+void net_log(const char *fmt, ...) {
+    static bool first = true;
+    files_mkdir(SAVE_DIR);
+    FILE *f = fopen(SAVE_DIR "net_log.txt", first ? "w" : "a");
+    first = false;
+    if (!f) return;
+    va_list ap;
+    va_start(ap, fmt);
+    vfprintf(f, fmt, ap);
+    va_end(ap);
+    fputc('\n', f);
+    fclose(f);
+}
 #define CA_BUNDLE ASSET_PATH("ui/cacert.pem")   /* Mozilla, curl.se/ca : la Vita ne connaît pas les autorités actuelles */
 
 /* Initialise la couche réseau une fois (update.c peut l'avoir fait avant : « déjà initialisé » n'est pas une erreur) */
@@ -23,20 +45,32 @@ static bool net_up(void) {
     static bool done, ok;
     if (done) return ok;
     done = true;
-    if (sceSysmoduleLoadModule(SCE_SYSMODULE_NET) < 0) return false;
+    int m = sceSysmoduleLoadModule(SCE_SYSMODULE_NET);
+    net_log("sysmodule net=%08x", m);
+    if (m < 0) return false;
     static char pool[NET_POOL] __attribute__((aligned(16)));
     SceNetInitParam p = { pool, sizeof pool, 0 };
     int r = sceNetInit(&p);
-    if (r < 0 && r != (int)0x80410202) return false;
-    sceNetCtlInit();
-    return ok = curl_global_init(CURL_GLOBAL_DEFAULT) == CURLE_OK;
+    net_log("netinit=%08x", r);
+    /* update.c l'a déjà démarrée au lancement : « déjà initialisé » (0x80410202) ou « occupé » (0x80410110), pas une panne */
+    if (r < 0 && r != (int)0x80410202 && r != (int)0x80410110) return false;
+    int cc = sceNetCtlInit();
+    CURLcode g = curl_global_init(CURL_GLOBAL_DEFAULT);
+    net_log("netctl=%08x curl_global_init=%d", cc, (int)g);
+    return ok = g == CURLE_OK;
 }
 
 bool net_online(void) {
     int state = 0;
-    return net_up() && sceNetCtlInetGetState(&state) >= 0 && state == SCE_NETCTL_STATE_CONNECTED;
+    bool up = net_up();
+    int cs = up ? sceNetCtlInetGetState(&state) : -1;
+    static int last = -2;
+    if (last != (up ? state : -1)) { last = up ? state : -1; net_log("online? up=%d inet ret=%08x state=%d (3 = connected)", up, cs, state); }
+    return up && cs >= 0 && state == SCE_NETCTL_STATE_CONNECTED;
 }
 #else
+void net_log(const char *fmt, ...) { (void)fmt; }
+
 bool net_online(void) {
 #ifdef NET_CURL
     return true;
@@ -89,7 +123,13 @@ static char *get_once(const char *url, int max_bytes, int *len, bool verify) {
 #endif
     curl_easy_setopt(c, CURLOPT_WRITEFUNCTION, sink_write);
     curl_easy_setopt(c, CURLOPT_WRITEDATA, &k);
+    char err[CURL_ERROR_SIZE] = "";
+    curl_easy_setopt(c, CURLOPT_ERRORBUFFER, err);
     CURLcode rc = curl_easy_perform(c);
+    long status = 0;
+    curl_easy_getinfo(c, CURLINFO_RESPONSE_CODE, &status);
+    NLOG("GET verify=%d: curl %d (%s) http %ld, %d bytes%s", verify, (int)rc, err[0] ? err : curl_easy_strerror(rc), status, k.len,
+         k.overflow ? ", too big" : "");
     curl_easy_cleanup(c);
     if (rc != CURLE_OK || k.overflow || !k.buf) { free(k.buf); return NULL; }
     k.buf[k.len] = '\0';
@@ -152,7 +192,13 @@ static bool download_once(const char *url, const char *path, int max_bytes, NetP
     curl_easy_setopt(c, CURLOPT_NOPROGRESS, 0L);
     curl_easy_setopt(c, CURLOPT_XFERINFOFUNCTION, file_progress);
     curl_easy_setopt(c, CURLOPT_XFERINFODATA, p);
+    char err[CURL_ERROR_SIZE] = "";
+    curl_easy_setopt(c, CURLOPT_ERRORBUFFER, err);
     CURLcode rc = curl_easy_perform(c);
+    long status = 0;
+    curl_easy_getinfo(c, CURLINFO_RESPONSE_CODE, &status);
+    NLOG("download verify=%d: curl %d (%s) http %ld, %ld bytes%s", verify, (int)rc, err[0] ? err : curl_easy_strerror(rc), status,
+         (long)k.len, k.overflow ? ", too big" : "");
     curl_easy_cleanup(c);
     bool ok = fclose(k.f) == 0 && rc == CURLE_OK && !k.overflow;
     if (!ok) files_remove(path);

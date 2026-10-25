@@ -7,6 +7,9 @@
    quand CMake l'a trouvée (HAVE_CURL), sinon rien (les paquets distribués n'embarquent pas libcurl).
    Les fonctions bloquent : à appeler depuis un fil d'exécution, jamais depuis la boucle de jeu. */
 
+/* Journal du réseau (Vita : SAVE_DIR net_log.txt, réécrit à chaque lancement ; ailleurs : rien) */
+void net_log(const char *fmt, ...);
+
 /* Vrai si une requête peut aboutir : Vita connectée au Wi-Fi, ou desktop avec libcurl */
 bool net_online(void);
 
