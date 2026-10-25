@@ -1290,6 +1290,52 @@
       "source_sha256": "51bc10f45f6460c4f8be0149d5b6563163a53353cedd578d0559331042f43600"
     },
     {
+      "id": "community-55",
+      "version": 1,
+      "title": "Nekozilla",
+      "artist": "Different Heaven",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=6FNHe3kf8_s",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 159,
+          "bpm": 128.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 224,
+          "bpm": 128.0
+        },
+        {
+          "name": "HARD",
+          "notes": 317,
+          "bpm": 128.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 376,
+          "bpm": 128.0
+        }
+      ],
+      "duration_s": 166.0,
+      "size_bytes": 4117403,
+      "has_video": false,
+      "zip": "songs/community-55-v1.zip",
+      "zip_bytes": 4093097,
+      "sha256": "7857cc2a1621dce7db1beee5921b9bda76919bbadb16bb61a1b644b1ce6b2c54",
+      "thumb": "thumbs/community-55-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 55,
+      "local_id": "popular2_nekozilla",
+      "previous_objects": [],
+      "source_sha256": "cc45950884c007c78fc1c847109d5de25666921c6f90006eec4cd5fc0a96a260"
+    },
+    {
       "id": "community-9",
       "version": 1,
       "title": "Neutralize (PTB10 Mix)",
