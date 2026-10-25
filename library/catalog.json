@@ -276,6 +276,52 @@
       "local_id": "launch_phycietiia",
       "previous_objects": [],
       "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
+    },
+    {
+      "id": "community-12",
+      "version": 1,
+      "title": "Umi's Secret (Chiptune Mix)",
+      "artist": "Pekoneko",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "OutFox Serenity; see CREDITS.txt",
+      "license": "Music: CC BY-SA 3.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 78,
+          "bpm": 140.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 110,
+          "bpm": 140.0
+        },
+        {
+          "name": "HARD",
+          "notes": 162,
+          "bpm": 140.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 203,
+          "bpm": 140.0
+        }
+      ],
+      "duration_s": 84.2,
+      "size_bytes": 2922651,
+      "has_video": false,
+      "zip": "songs/community-12-v1.zip",
+      "zip_bytes": 2904626,
+      "sha256": "6ebacb9a7491fa8d9044f6bfe34b7e9238e049be537ead5d6522713696f151ff",
+      "thumb": "thumbs/community-12-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 12,
+      "local_id": "launch_umis_secret",
+      "previous_objects": [],
+      "source_sha256": "a0b8ec19dca6dfbe6dd2edbfe80aed9e8d3267820396e9c85a6d4d1eb6490329"
     }
   ]
 }
