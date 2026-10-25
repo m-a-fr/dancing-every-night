@@ -692,6 +692,52 @@
       "source_sha256": "45062213b4b2e6641a101d5678f266660338f0ba40c55c9b34371d417fa312b9"
     },
     {
+      "id": "community-36",
+      "version": 1,
+      "title": "Marshmary",
+      "artist": "MIMI feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=qtuX4cHk-vE",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 230,
+          "bpm": 182.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 308,
+          "bpm": 182.0
+        },
+        {
+          "name": "HARD",
+          "notes": 451,
+          "bpm": 182.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 549,
+          "bpm": 182.0
+        }
+      ],
+      "duration_s": 212.1,
+      "size_bytes": 5124954,
+      "has_video": false,
+      "zip": "songs/community-36-v1.zip",
+      "zip_bytes": 5090967,
+      "sha256": "4b4323b212466ea09e895dd91d154aed74a4c55b53fccc91f3a11005b2dc1eae",
+      "thumb": "thumbs/community-36-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 36,
+      "local_id": "popular_marshmary",
+      "previous_objects": [],
+      "source_sha256": "c8b80811e37868d3e1549ac1803d509ed800ce96083f5cdd7e21e26058994899"
+    },
+    {
       "id": "community-9",
       "version": 1,
       "title": "Neutralize (PTB10 Mix)",
