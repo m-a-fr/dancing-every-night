@@ -48,6 +48,52 @@
       "source_sha256": "6e2e0ac9b5b327ed95b07f95052fb9292ba84168b050486315de597ee1b5d063"
     },
     {
+      "id": "community-20",
+      "version": 1,
+      "title": "Arpanauts",
+      "artist": "Eric Skiff",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "https://ericskiff.com/music/",
+      "license": "Music: CC BY 4.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 161,
+          "bpm": 120.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 257,
+          "bpm": 120.0
+        },
+        {
+          "name": "HARD",
+          "notes": 398,
+          "bpm": 120.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 464,
+          "bpm": 120.0
+        }
+      ],
+      "duration_s": 196.7,
+      "size_bytes": 5150434,
+      "has_video": false,
+      "zip": "songs/community-20-v1.zip",
+      "zip_bytes": 5007014,
+      "sha256": "a5debc52d101f4cc9e6875ba50eb2398d8f1cf8407b4f90aff1d5a13fab7ca21",
+      "thumb": "thumbs/community-20-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 20,
+      "local_id": "launch_arpanauts",
+      "previous_objects": [],
+      "source_sha256": "021255b50ef6d61773948cfc0823a6e7116c6ca1ad8db74c72ad2287dc95966d"
+    },
+    {
       "id": "community-16",
       "version": 1,
       "title": "Beatucada",
