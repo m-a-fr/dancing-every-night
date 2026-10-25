@@ -2,6 +2,52 @@
   "schema": 1,
   "songs": [
     {
+      "id": "community-22",
+      "version": 1,
+      "title": "A Night of Dizzy Spells",
+      "artist": "Eric Skiff",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "https://ericskiff.com/music/",
+      "license": "Music: CC BY 4.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 92,
+          "bpm": 100.94
+        },
+        {
+          "name": "NORMAL",
+          "notes": 155,
+          "bpm": 100.94
+        },
+        {
+          "name": "HARD",
+          "notes": 219,
+          "bpm": 100.94
+        },
+        {
+          "name": "EXPERT",
+          "notes": 273,
+          "bpm": 100.94
+        }
+      ],
+      "duration_s": 114.2,
+      "size_bytes": 3292866,
+      "has_video": false,
+      "zip": "songs/community-22-v1.zip",
+      "zip_bytes": 3254477,
+      "sha256": "c3e5daf74025029c7643adbb4a1002d11c8e48d7bdf93863ecea8bd3ad8f46e6",
+      "thumb": "thumbs/community-22-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 22,
+      "local_id": "launch_dizzy_spells",
+      "previous_objects": [],
+      "source_sha256": "6e2e0ac9b5b327ed95b07f95052fb9292ba84168b050486315de597ee1b5d063"
+    },
+    {
       "id": "community-8",
       "version": 1,
       "title": "brokenHeart resurrection ~estelle~",
