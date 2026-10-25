@@ -1152,6 +1152,52 @@
       "source_sha256": "a0b8ec19dca6dfbe6dd2edbfe80aed9e8d3267820396e9c85a6d4d1eb6490329"
     },
     {
+      "id": "community-40",
+      "version": 1,
+      "title": "Yoru ni Kakeru",
+      "artist": "YOASOBI",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=by4SYYWlhEs",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 268,
+          "bpm": 130.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 390,
+          "bpm": 130.0
+        },
+        {
+          "name": "HARD",
+          "notes": 580,
+          "bpm": 130.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 684,
+          "bpm": 130.0
+        }
+      ],
+      "duration_s": 261.0,
+      "size_bytes": 6676912,
+      "has_video": false,
+      "zip": "songs/community-40-v1.zip",
+      "zip_bytes": 6629420,
+      "sha256": "e94b2454a33d5f1839d8dca60decf308d199351138f45b9c470b859fe46aa599",
+      "thumb": "thumbs/community-40-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 40,
+      "local_id": "popular_yoru_ni_kakeru",
+      "previous_objects": [],
+      "source_sha256": "62e1421b3d4ab67538f02a51b4a0cdd298be940d608c4ccd56d53f85140b216b"
+    },
+    {
       "id": "community-39",
       "version": 1,
       "title": "Zenzenzense (movie ver.)",
