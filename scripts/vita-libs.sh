@@ -8,8 +8,9 @@ set -uo pipefail
 LIB="$VITASDK/arm-vita-eabi/lib"
 echo "==> Bibliothèques réseau avant : $(ls "$LIB" | grep -E '^lib(curl|ssl|crypto|zstd|z)\.a$' | tr '\n' ' ')"
 strings "$LIB/libcrypto.a" 2>/dev/null | grep -m1 -E '^OpenSSL [0-9]' || true
-if vdpm install --force openssl curl zlib zstd; then :
-elif vdpm openssl curl zlib zstd; then :   # ancienne syntaxe de vdpm
-else echo "==> vdpm n'a pas pu mettre à jour les bibliothèques"; fi
+# L'image a libcurl 8.17 (écrite pour OpenSSL 1.0.2) mais OpenSSL 1.1.1 : les deux paquets openssl sont en conflit, on
+# remplace le second par le premier, comme sur la VitaSDK de développement.
+yes | vdpm remove openssl-1.1.1 || true
+yes | vdpm install --force openssl curl zlib zstd || echo "==> vdpm n'a pas pu mettre à jour les bibliothèques"
 strings "$LIB/libcrypto.a" 2>/dev/null | grep -m1 -E '^OpenSSL [0-9]' || true
 echo "==> Bibliothèques réseau après : $(ls "$LIB" | grep -E '^lib(curl|ssl|crypto|zstd|z)\.a$' | tr '\n' ' ')"
