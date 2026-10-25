@@ -83,6 +83,9 @@ First version prepared for public release.
 - GitHub Actions workflow builds the four packages (Windows, macOS, Linux, Vita) by hand or on a version tag, and
   prepares a draft release.
 
+### Website
+- The website has a home page and a common menu: game download, song library, song editor and creator guide. The editor moved to `/editor/` (your songs are kept).
+
 ### Send a song from the editor
 - The editor's Publish step can send the finished song straight to the library, with no GitHub account and no zip to download and upload again.
 

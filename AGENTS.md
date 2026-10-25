@@ -25,7 +25,7 @@ reçue dans le code par les macros `GAME_NAME`, `GAME_VERSION`, `GAME_SAVE_SLUG`
 | Envoyer et relancer sur la console | `make deploy` (nécessite `VITA_IP` dans `.env`) |
 | Première install du .vpk | `make install-vpk` puis installer via VitaShell |
 | Vérifier une map (zip ou dossier) | `make check MAP=...` |
-| Éditeur en ligne (sans serveur), essai local | `make editor-site` → http://localhost:8766 ; publié sur https://dancing-every-night.pages.dev (Cloudflare Pages, à chaque push sur `main`) |
+| Éditeur en ligne (sans serveur), essai local | `make editor-site` → http://localhost:8766 (accueil ; éditeur sur /editor/, bibliothèque sur /songs/) ; publié sur https://dancing-every-night.pages.dev (Cloudflare Pages, à chaque push sur `main`) |
 | Nouveau morceau (lien YouTube ou fichier) | `make song SRC=... TITLE=... ARTIST=... [PACK=...] [NOVIDEO=1 IMAGE=...]` (vidéo gardée par défaut) |
 | Nettoyer | `make clean` |
 

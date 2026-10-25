@@ -16,7 +16,13 @@ main { max-width: 1120px; }
 .top { flex-wrap: wrap; }
 .top .nav[aria-current="page"] { border-color: var(--lemon); }
 .top .lang { min-width: 48px; }
-@media (max-width: 640px) { .top a.btn:not(.primary) { display: inline-flex; } .top .nav { padding: 6px 10px; } }
+@media (max-width: 640px) {
+  .top { position: static; gap: 8px; }
+  .top .brand { width: 100%; }
+  .top a.btn:not(.primary) { display: inline-flex; }
+  .top a.btn, .top .btn { min-height: 36px; padding: 4px 10px; font-size: 12px; }
+  .top .spacer { display: none; }
+}
 
 /* Recherche et filtres */
 .how { background: var(--panel); border: 1px solid var(--line-soft); border-radius: 10px; padding: 4px 16px; margin: 12px 0; }
@@ -88,3 +94,19 @@ main { max-width: 1120px; }
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
   .card:hover, .card:focus-within { transform: none; }
 }
+
+/* Accueil du site (/) */
+.home-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 480px); gap: 32px; align-items: center; margin: 8px 0 32px; }
+.home-hero h1 { margin: 0 0 12px; font-size: clamp(34px, 6vw, 56px); line-height: 1.05; }
+.home-hero .lead { font-size: 19px; }
+.home-hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 8px; }
+.home-hero .shot { width: 100%; height: auto; border: 1px solid var(--line-soft); border-radius: 12px; box-shadow: 6px 6px 0 var(--pink); }
+@media (max-width: 760px) { .home-hero { grid-template-columns: 1fr; } }
+.steps { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; padding: 0; margin: 0 0 32px; }
+.steps li { background: var(--panel); border: 1px solid var(--line-soft); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 4px; }
+.steps b { font: 400 22px var(--display); color: var(--lemon); letter-spacing: .3px; }
+.doors { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; padding: 0; margin: 0 0 24px; }
+.doors li { background: var(--panel); border: 1px solid var(--line-soft); border-radius: 12px; padding: 18px; }
+.doors h2 { margin: 0 0 6px; font: 400 26px var(--display); text-transform: none; }
+.doors p { margin: 0 0 14px; color: var(--muted); }
+.doors .btn { margin: 0 8px 8px 0; }

@@ -9,6 +9,16 @@ const LANG = (() => {
 
 /* Texte anglais (clé) -> français */
 const FR = {
+  "Song editor": "Éditeur de chansons", "Download the game": "Télécharger le jeu", "Browse songs": "Parcourir les chansons", "Make a song": "Créer une chanson",
+  "A community rhythm game for the PS Vita": "Un jeu de rythme communautaire pour la PS Vita",
+  "Hit the notes on six lanes, chase the S rank, and play songs made by other players. Free and open source.": "Frappe les notes sur six voies, vise le rang S, et joue des chansons faites par d'autres joueurs. Gratuit et open source.",
+  "Also for Windows, macOS and Linux. The Vita needs custom firmware and VitaShell.": "Existe aussi pour Windows, macOS et Linux. La Vita demande un firmware modifié et VitaShell.",
+  "1. Install": "1. Installer", "Download the game and install the .vpk with VitaShell.": "Télécharge le jeu et installe le .vpk avec VitaShell.",
+  "2. Get songs": "2. Trouver des chansons", "Pick songs in the library, copy each .zip to the import folder of your Vita, and play.": "Choisis des chansons dans la bibliothèque, copie chaque .zip dans le dossier d'import de ta Vita, et joue.",
+  "3. Make yours": "3. Créer les tiennes", "Turn any music into a song in your browser, then share it with everyone.": "Transforme n'importe quelle musique en chanson dans ton navigateur, puis partage-la avec tout le monde.",
+  "Play": "Jouer", "Taps, holds, double notes and scratches. Three original songs to start with, and a score to beat.": "Notes simples, tenues, doubles et scratchs. Trois chansons originales pour commencer, et un score à battre.",
+  "Detects the tempo, drafts the notes for you, and works in your browser: nothing to install, no account to send your song.": "Détecte le tempo, propose un premier brouillon des notes, et fonctionne dans ton navigateur : rien à installer, pas de compte pour envoyer ta chanson.",
+  "Free software (GNU GPL v3).": "Logiciel libre (GNU GPL v3).",
   "Song library": "Bibliothèque de chansons", "Creator guide": "Guide du créateur", "Open the editor": "Ouvrir l'éditeur",
   "Songs made by the community. Download a .zip, copy it to your Vita, and play.": "Des chansons faites par la communauté. Télécharge un .zip, copie-le sur ta Vita, et joue.",
   "How to install a song": "Comment installer une chanson",
@@ -16,7 +26,7 @@ const FR = {
   "Copy it into <code>ux0:data/dancingeverynight/import/</code> on your Vita (VitaShell, USB or FTP mode).": "Copie-le dans <code>ux0:data/dancingeverynight/import/</code> sur ta Vita (VitaShell, mode USB ou FTP).",
   "Launch the game: it installs the song while loading, and it shows up in the list.": "Lance le jeu : il installe la chanson pendant le chargement, et elle apparaît dans la liste.",
   "On a computer, use the <code>import/</code> folder of the game's save folder instead.": "Sur ordinateur, utilise plutôt le dossier <code>import/</code> du dossier de sauvegarde du jeu.",
-  "Want to share a song? Make it with the <a href=\"/\">online editor</a>, then <a href=\"{submit}\">submit it here</a>. It is checked, and published once approved. Songs can be up to 25 MB.": "Envie de partager une chanson ? Fais-la avec l'<a href=\"/\">éditeur en ligne</a>, puis <a href=\"{submit}\">propose-la ici</a>. Elle est vérifiée, puis publiée une fois approuvée. Une chanson peut faire jusqu'à 25 Mo.",
+  "Want to share a song? Make it with the <a href=\"/editor/\">online editor</a>, then <a href=\"{submit}\">submit it here</a>. It is checked, and published once approved. Songs can be up to 25 MB.": "Envie de partager une chanson ? Fais-la avec l'<a href=\"/\">éditeur en ligne</a>, puis <a href=\"{submit}\">propose-la ici</a>. Elle est vérifiée, puis publiée une fois approuvée. Une chanson peut faire jusqu'à 25 Mo.",
   "The library is empty for now": "La bibliothèque est vide pour le moment",
   "Songs made by the community will appear here once they are approved. Be the first to share one!": "Les chansons de la communauté apparaîtront ici une fois approuvées. Sois le premier à en partager une !",
   "Read the creator guide": "Lire le guide du créateur",

@@ -11,7 +11,7 @@ create, share and download new ones.
 > **Status: 0.9.0, first public version.** The game is playable, with 3 official songs, and community songs can be
 > installed. An in-game song store is planned for 1.0.
 
-**Community:** [Discord](https://discord.gg/vTJDvgJe74) · [Song library](https://dancing-every-night.pages.dev/songs/) · [Online editor](https://dancing-every-night.pages.dev)
+**Community:** [Discord](https://discord.gg/vTJDvgJe74) · [Song library](https://dancing-every-night.pages.dev/songs/) · [Online editor](https://dancing-every-night.pages.dev/editor/)
 
 ## For players
 
@@ -61,7 +61,7 @@ on macOS.
 
 ## For song creators
 
-**Online editor: <https://dancing-every-night.pages.dev>**. Nothing to install: create a song from a music file, detect the tempo, place
+**Online editor: <https://dancing-every-night.pages.dev/editor/>**. Nothing to install: create a song from a music file, detect the tempo, place
 the notes (or start from an automatic draft) and export the `.zip` for the console. Start with the
 [creator guide](https://dancing-every-night.pages.dev/guide.html).
 

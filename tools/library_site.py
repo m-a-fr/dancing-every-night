@@ -38,14 +38,16 @@ HEAD = """<!DOCTYPE html>
 <body>
 <nav class="top">
   <a class="brand" href="/">Dancing Every Night</a>
-  <a class="btn nav" href="{rel}" aria-current="{cur_lib}" data-i18n>Song library</a>
+  <a class="btn nav" href="/songs/" aria-current="{cur_lib}" data-i18n>Song library</a>
+  <a class="btn nav" href="/editor/" data-i18n>Song editor</a>
   <a class="btn nav" href="/guide.html" data-i18n>Creator guide</a>
   <span class="spacer"></span>
   <button type="button" class="btn lang" id="lang" aria-label="Français / English"></button>
-  <a class="btn primary" href="/" data-i18n>Open the editor</a>
+  <a class="btn primary" href="https://github.com/m-a-fr/dancing-every-night/releases/latest" data-i18n>Download the game</a>
 </nav>
 <main>
 """
+DISCORD = "https://discord.gg/vTJDvgJe74"
 TAIL = """</main>
 <script src="{rel}library.js"></script>
 </body>
@@ -115,7 +117,7 @@ def list_page(cfg, songs):
   </ol>
   <p data-i18n>On a computer, use the <code>import/</code> folder of the game's save folder instead.</p>
 </details>
-<p class="note" data-i18n>Want to share a song? Make it with the <a href="/">online editor</a>, then <a href="{submit}">submit it here</a>. It is checked, and published once approved. Songs can be up to 25 MB.</p>
+<p class="note" data-i18n>Want to share a song? Make it with the <a href="/editor/">online editor</a>, then <a href="{submit}">submit it here</a>. It is checked, and published once approved. Songs can be up to 25 MB.</p>
 """
     listing = f"""<section class="tools" aria-label="Search and filters">
   <div class="search">
@@ -172,7 +174,7 @@ def list_page(cfg, songs):
 """
     h += listing if songs else empty_library(cfg)
     h += f"""<footer><span data-i18n>Songs belong to their authors. Something wrong?</span>
-  <a href="/songs/legal.html" data-i18n>Takedown and content policy</a> · <a href="https://discord.gg/vTJDvgJe74">Discord</a></footer>
+  <a href="/songs/legal.html" data-i18n>Takedown and content policy</a> · <a href="{DISCORD}">Discord</a></footer>
 """
     return h + TAIL.format(rel=rel)
 
@@ -216,6 +218,45 @@ def song_page(cfg, s):
     h += (f'<details class="hash"><summary data-i18n>Check the file (SHA-256)</summary>'
           f'<p><code>{s["sha256"]}</code></p></details>\n')
     h += (f'<p class="actions"><a class="btn" href="{E(report)}" rel="nofollow" data-i18n>Report this song</a></p>\n</article>\n')
+    return h + TAIL.format(rel=rel)
+
+
+def home_page(cfg, songs):
+    """Accueil du site (/) : ce qu'est le jeu et les trois portes d'entrée (jouer, chansons, créer)."""
+    rel = "songs/"
+    site = cfg["site_url"]
+    h = HEAD.format(title="Dancing Every Night · a community rhythm game for PS Vita", rel=rel, cur_lib="false",
+                    desc="A free, open-source rhythm game for the PS Vita. Play community songs or make your own with the online editor.",
+                    canonical=f"{site}/", og_image=f"{site}/social.jpg")
+    releases = "https://github.com/m-a-fr/dancing-every-night/releases/latest"
+    h += f"""<section class="home-hero">
+  <div>
+    <h1 data-i18n>A community rhythm game for the PS Vita</h1>
+    <p class="lead" data-i18n>Hit the notes on six lanes, chase the S rank, and play songs made by other players. Free and open source.</p>
+    <p class="cta"><a class="btn primary big" href="{releases}" data-i18n>Download the game</a>
+       <a class="btn big" href="/songs/" data-i18n>Browse songs</a>
+       <a class="btn big" href="/editor/" data-i18n>Make a song</a></p>
+    <p class="note" data-i18n>Also for Windows, macOS and Linux. The Vita needs custom firmware and VitaShell.</p>
+  </div>
+  <img class="shot" src="/social.jpg" alt="" width="1200" height="630" decoding="async">
+</section>
+<ol class="steps">
+  <li><b data-i18n>1. Install</b><span data-i18n>Download the game and install the .vpk with VitaShell.</span></li>
+  <li><b data-i18n>2. Get songs</b><span data-i18n>Pick songs in the library, copy each .zip to the import folder of your Vita, and play.</span></li>
+  <li><b data-i18n>3. Make yours</b><span data-i18n>Turn any music into a song in your browser, then share it with everyone.</span></li>
+</ol>
+<ul class="doors">
+  <li><h2 data-i18n>Play</h2><p data-i18n>Taps, holds, double notes and scratches. Three original songs to start with, and a score to beat.</p>
+      <a class="btn" href="{releases}" data-i18n>Download the game</a></li>
+  <li><h2 data-i18n>Song library</h2><p data-i18n>Songs made by the community. Download a .zip, copy it to your Vita, and play.</p>
+      <a class="btn" href="/songs/" data-i18n>Browse songs</a></li>
+  <li><h2 data-i18n>Song editor</h2><p data-i18n>Detects the tempo, drafts the notes for you, and works in your browser: nothing to install, no account to send your song.</p>
+      <a class="btn" href="/editor/" data-i18n>Open the editor</a> <a class="btn" href="/guide.html" data-i18n>Creator guide</a></li>
+</ul>
+<footer><a href="https://github.com/m-a-fr/dancing-every-night">GitHub</a> · <a href="{DISCORD}">Discord</a> ·
+  <a href="/songs/legal.html" data-i18n>Takedown and content policy</a> ·
+  <span data-i18n>Free software (GNU GPL v3).</span></footer>
+"""
     return h + TAIL.format(rel=rel)
 
 
@@ -315,6 +356,7 @@ def main():
     (site / "catalog.json").write_text(json.dumps({"schema": 1, "download_base": cfg["download_base"], "songs": songs}, ensure_ascii=False) + "\n", encoding="utf-8")
     (songs_dir / "index.html").write_text(list_page(cfg, songs), encoding="utf-8")
     (songs_dir / "legal.html").write_text(legal_page(cfg), encoding="utf-8")
+    (site / "index.html").write_text(home_page(cfg, songs), encoding="utf-8")
     for s in songs:
         (songs_dir / s["id"]).mkdir()
         (songs_dir / s["id"] / "index.html").write_text(song_page(cfg, s), encoding="utf-8")

@@ -16,7 +16,7 @@ English and French are both fine, everywhere.
 
 ## 2. Make songs
 
-You do not need to code. The [online song editor](https://dancing-every-night.pages.dev) and its
+You do not need to code. The [online song editor](https://dancing-every-night.pages.dev/editor/) and its
 [creator guide](https://dancing-every-night.pages.dev/guide.html) take you from a piece of music to a song you can
 play on your Vita or computer in a few minutes. Check a song before sharing it:
 
@@ -73,7 +73,7 @@ Français et anglais sont acceptés partout.
 
 ## 2. Créer des chansons
 
-Pas besoin de coder. L'[éditeur de chansons en ligne](https://dancing-every-night.pages.dev) et son
+Pas besoin de coder. L'[éditeur de chansons en ligne](https://dancing-every-night.pages.dev/editor/) et son
 [guide du créateur](https://dancing-every-night.pages.dev/guide.fr.html) t'amènent d'une musique à une chanson jouable
 sur ta Vita ou ton ordinateur en quelques minutes. Vérifie une chanson avant de la partager :
 

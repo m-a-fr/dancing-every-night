@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for sharing! Make your song with the [online editor](https://dancing-every-night.pages.dev), export the `.zip`,
+        Thank you for sharing! Make your song with the [online editor](https://dancing-every-night.pages.dev/editor/), export the `.zip`,
         and attach it below. It is checked automatically within a minute (a comment tells you what to fix), then a person listens to it
         before it goes online. English or French are both fine.
 

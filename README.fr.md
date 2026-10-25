@@ -11,7 +11,7 @@ joueurs créent, partagent et téléchargent les suivantes.
 > **État : 0.9.0, première version publique.** Le jeu est jouable, avec 3 chansons officielles, et les chansons de la
 > communauté s'installent. Un store de chansons dans le jeu est prévu pour la 1.0.
 
-**Communauté :** [Discord](https://discord.gg/vTJDvgJe74) · [Bibliothèque de chansons](https://dancing-every-night.pages.dev/songs/) · [Éditeur en ligne](https://dancing-every-night.pages.dev)
+**Communauté :** [Discord](https://discord.gg/vTJDvgJe74) · [Bibliothèque de chansons](https://dancing-every-night.pages.dev/songs/) · [Éditeur en ligne](https://dancing-every-night.pages.dev/editor/)
 
 ## Pour les joueurs
 
@@ -63,7 +63,7 @@ Retour arrière (Select) ; une manette marche aussi. Les chansons s'installent d
 
 ## Pour créer des chansons
 
-**Éditeur en ligne : <https://dancing-every-night.pages.dev>**. Rien à installer : crée une chanson à partir d'une musique, détecte le tempo,
+**Éditeur en ligne : <https://dancing-every-night.pages.dev/editor/>**. Rien à installer : crée une chanson à partir d'une musique, détecte le tempo,
 pose les notes (ou pars d'un brouillon automatique) et exporte le `.zip` pour la console. Commence par le
 [guide du créateur](https://dancing-every-night.pages.dev/guide.fr.html).
 

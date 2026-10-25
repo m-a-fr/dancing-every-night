@@ -53,6 +53,9 @@
     -webkit-text-stroke: 1.5px var(--ink); paint-order: stroke fill; text-shadow: 2px 2px 0 var(--pink);
     background: transparent; border-color: transparent; padding: 0 6px; }
   #btnHome:hover { background: transparent; }
+  .sitelinks { display: flex; gap: 14px; font: 800 13px var(--label); }
+  .sitelinks a { color: var(--muted); text-decoration: none; padding: 6px 2px; }
+  .sitelinks a:hover { color: var(--lemon); }
   #btnHome:hover { border-color: var(--line); }
   .save-state { display: inline-flex; align-items: center; gap: 6px; font: 800 12px var(--label); letter-spacing: .3px; white-space: nowrap; color: var(--muted); padding: 4px 8px; border-radius: var(--radius); }
   .save-state.saved { color: var(--ok); }
@@ -315,6 +318,7 @@
 <div id="app">
   <header>
     <h1><button id="btnHome" title="Accueil : tes chansons, créer, ouvrir">ÉDITEUR</button></h1>
+    <nav class="sitelinks" id="siteLinks" aria-label="Site" hidden><a href="/">Site</a><a href="/songs/">Bibliothèque</a><a class="guide-link" href="/guide.fr.html">Guide</a></nav>
     <select id="songSelect" aria-label="Chanson"></select>
     <span class="spacer"></span>
     <span id="dirty" class="save-state" role="status" aria-live="polite"></span>
@@ -462,7 +466,7 @@
         </div>
         <p class="note" data-i18n>Tu préfères ton compte GitHub ? Exporte le .zip, ouvre le formulaire (compte gratuit) et glisse le fichier dans la case « Your song ».</p>
         <div class="detect"><button type="button" id="pubOpenForm">Ouvrir le formulaire GitHub</button></div>
-        <p class="note" data-i18n>Tu peux d’abord parcourir la <a href="songs/" target="_blank" rel="noopener">bibliothèque</a>.</p>
+        <p class="note" data-i18n>Tu peux d’abord parcourir la <a href="/songs/" target="_blank" rel="noopener">bibliothèque</a>.</p>
       </div>
           </div>
     </section>
@@ -700,7 +704,7 @@ let newCalibration = null, songCalibration = null;
 i18nApply();   // interface statique en anglais si besoin (i18n.js), avant que le code n'écrive ses propres textes
 mel("btnLang").textContent = LANG === "fr" ? "EN" : "FR";
 mel("btnLang").addEventListener("click", () => setLang(LANG === "fr" ? "en" : "fr"));
-document.querySelectorAll(".guide-link").forEach(a => { a.href = LANG === "fr" ? "guide.fr.html" : "guide.html"; });
+document.querySelectorAll(".guide-link").forEach(a => { a.href = LANG === "fr" ? "/guide.fr.html" : "/guide.html"; });
 /* Icônes SVG (trait, couleur du texte) à la place des caractères ▶ ⏮ ✓ */
 const ICON = {
   play: `<svg class="i" viewBox="0 0 24 24" aria-hidden="true" style="fill:currentColor"><path d="M7 5v14l11-7z"/></svg>`,
@@ -3441,7 +3445,7 @@ mel("pubExport").addEventListener("click", () => mel("btnExportZip").click());
 var directReady = null;
 async function detectDirect() {
   if (directReady === null) {
-    try { directReady = LOCAL && (await fetch("api/submit", { cache: "no-store" })).ok; } catch (_) { directReady = false; }
+    try { directReady = LOCAL && (await fetch("/api/submit", { cache: "no-store" })).ok; } catch (_) { directReady = false; }
   }
   mel("pubDirect").hidden = !directReady;
 }
@@ -3474,7 +3478,7 @@ async function sendToLibrary() {
     const zip = await buildMapZip(id, zipNameForTitle(c.title || id));
     if (zip.length > LIBRARY_MAX_MB * 1048576) throw new Error(tr("La chanson fait plus de 25 Mo ({mb} Mo). Baisse le débit de la vidéo et réessaie.", { mb: (zip.length / 1048576).toFixed(1) }));
     say(tr("Vérification anti-spam…"));
-    const ch = await (await fetch("api/submit", { cache: "no-store" })).json();
+    const ch = await (await fetch("/api/submit", { cache: "no-store" })).json();
     const answer = await solveChallenge(ch.token, ch.bits);
     say(tr("Envoi ({mb} Mo)…", { mb: (zip.length / 1048576).toFixed(1) }));
     const form = new FormData();
@@ -3483,7 +3487,7 @@ async function sendToLibrary() {
     form.set("challenge", ch.token); form.set("answer", answer);
     const prev = (metaGet(id) || {}).submittedIssue;
     if (prev) form.set("previous_issue", String(prev));
-    const res = await fetch("api/submit", { method: "POST", body: form });
+    const res = await fetch("/api/submit", { method: "POST", body: form });
     const out = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(out.error || tr("Envoi impossible ({code}).", { code: res.status }));
     await metaSet(id, { submittedIssue: out.issue });
@@ -3646,7 +3650,7 @@ async function boot() {
   if (LOCAL) {
     try { await vfsLoad(); await dropOrphanTracks(); }
     catch (e) { setMsg(tr("Stockage du navigateur indisponible : {err}", { err: e.message }), true); }
-    for (const id of ["btnOpenZip", "btnExportZip", "btnRemoveMap", "btnStorage", "fileMenuSep", "pubExport", "pubSubmit", "btnTestTop"]) mel(id).hidden = false;
+    for (const id of ["btnOpenZip", "btnExportZip", "btnRemoveMap", "btnStorage", "fileMenuSep", "pubExport", "pubSubmit", "btnTestTop", "siteLinks"]) mel(id).hidden = false;
     mel("btnSave").hidden = true;   // enregistrement automatique
     // détection du BPM et brouillon automatique : Python (Pyodide) téléchargé au premier clic, pas d'analyse d'office
     mel("nsDetect").title = mel("mDetect").title = tr("Propose un tempo à vérifier à l’oreille. Le premier lancement nécessite une connexion.");
