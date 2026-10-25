@@ -18,6 +18,7 @@ import library_fetch as fetch
 import library_ledger as ledger
 import library_submitter as submitter
 import library_site as site
+import library_discord as discord
 
 
 class PublicationTest(unittest.TestCase):
@@ -115,6 +116,25 @@ class PublicationTest(unittest.TestCase):
         self.assertEqual(site.join_url('/_demo/', 'songs/a.zip'), '/_demo/songs/a.zip')
         self.assertEqual(site.join_url('https://x.r2.dev', None), '')
         self.assertEqual(site.thumb_url({'thumb_base': 'https://x.r2.dev'}, {'thumb': 'thumbs/a.jpg'}), 'https://x.r2.dev/thumbs/a.jpg')
+
+    def test_discord_announcement_is_safe(self):
+        entry = {'id': 'community-9', 'version': 1, 'title': '@everyone **big** [x](https://evil.example)', 'artist': 'A_B',
+                 'mapper': '@here', 'difficulties': [{'name': 'EASY'}, {'name': 'EXPERT'}], 'duration_s': 125.4, 'thumb': 'thumbs/community-9-v1.jpg'}
+        config = {'site_url': 'https://site.example/', 'download_base': 'https://r2.example'}
+        payload = discord.build_payload(entry, config)
+        self.assertEqual(payload['allowed_mentions'], {'parse': []})
+        embed = payload['embeds'][0]
+        self.assertEqual(embed['url'], 'https://site.example/songs/community-9/')
+        self.assertEqual(embed['image']['url'], 'https://r2.example/thumbs/community-9-v1.jpg')
+        text = embed['title'] + embed['description']
+        self.assertNotIn('@everyone', text); self.assertNotIn('@here', text); self.assertNotIn('](', text)
+        self.assertIn('EASY · EXPERT · 2:05', embed['description'])
+        self.assertIn('New song', payload['content'])
+        entry['version'] = 2
+        self.assertIn('updated', discord.build_payload(entry, config)['content'])
+        self.assertTrue(discord.HOOK.match('https://discord.com/api/webhooks/123456/abc-DEF_9'))
+        self.assertFalse(discord.HOOK.match('https://evil.example/api/webhooks/1/x'))
+        self.assertFalse(discord.HOOK.match('https://discord.com/api/webhooks/1/x?wait=true'))
 
 
 if __name__ == '__main__':

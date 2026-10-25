@@ -26,6 +26,12 @@ Cloudflare Pages must build catalogue changes pushed by the GitHub Actions bot; 
 
 ## Publish / Publier
 
+Publications share one concurrency group to serialize catalogue updates. Keep `queue: max` with
+`cancel-in-progress: false` in `library-publish.yml`: GitHub's default queue only retains one pending run
+and silently replaces earlier pending runs when several songs are approved together. The expanded queue
+retains up to 100 pending runs. To recover approvals cancelled under the old configuration, dispatch the
+publication workflow for each still-approved, unpublished proposal after the corrected workflow is on `main`.
+
 1. The contributor attaches the ZIP to the song proposal, or to a comment on that same proposal.
 2. Wait for the automatic **Ready for review** report containing the source SHA-256.
 3. Listen to and test that exact version, review credits and permission to redistribute all media.

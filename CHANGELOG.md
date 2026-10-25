@@ -33,6 +33,7 @@ First version prepared for public release.
   paths are replaced with instructions about editing, playback and sharing.
 
 ### Community songs
+- Approving several songs together keeps every publication queued instead of cancelling earlier pending approvals.
 - Attachment downloads support GitHub authentication without forwarding credentials on redirects.
   Private attachments remain inaccessible with the default Actions token; a manual CC0 fixture test
   checks publication independently.

@@ -27,6 +27,7 @@ permissions:
 concurrency:
   group: library-publication
   cancel-in-progress: false
+  queue: max
 jobs:
   publish:
     if: >-
@@ -133,6 +134,14 @@ jobs:
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit --quiet -m 'Note'
           for attempt in 1 2 3; do git push --quiet origin HEAD:main && break || git pull --quiet --rebase origin main; done
           rm -f "$RUNNER_TEMP/notes_key"
+      - name: Announce on Discord
+        # Message dans le salon dédié aux nouvelles chansons (webhook = secret de l'environnement). Ne bloque jamais la publication.
+        if: inputs.remove == ''
+        continue-on-error: true
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          NUMBER: ${{ inputs.issue || github.event.issue.number }}
+        run: python3 tools/library_discord.py
       - name: Notify proposal
         if: inputs.remove == ''
         env:
