@@ -324,6 +324,52 @@
       "source_sha256": "369d1c60d24e4af3321897d3ed6f19640f50787d70519431b2410316d993a26f"
     },
     {
+      "id": "community-21",
+      "version": 1,
+      "title": "Digital Native",
+      "artist": "Eric Skiff",
+      "pack": "Arcade Selection",
+      "mapper": "DocteurBob",
+      "source": "https://ericskiff.com/music/",
+      "license": "Music: CC BY 4.0; artwork: CC BY-NC-ND 4.0",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 158,
+          "bpm": 120.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 242,
+          "bpm": 120.0
+        },
+        {
+          "name": "HARD",
+          "notes": 371,
+          "bpm": 120.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 441,
+          "bpm": 120.0
+        }
+      ],
+      "duration_s": 196.8,
+      "size_bytes": 4858903,
+      "has_video": false,
+      "zip": "songs/community-21-v1.zip",
+      "zip_bytes": 4698991,
+      "sha256": "a5bed89ec7ba29516214646dd6f3f96c8a5b9cc66cd35d3220f75b18d1ae4e00",
+      "thumb": "thumbs/community-21-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "m-a-fr",
+      "issue": 21,
+      "local_id": "launch_digital_native",
+      "previous_objects": [],
+      "source_sha256": "a03254ea52b70b07c1d6cb68534f6d20270a51394f5836bd43d71f442d9e0049"
+    },
+    {
       "id": "community-7",
       "version": 1,
       "title": "Firestarter",
