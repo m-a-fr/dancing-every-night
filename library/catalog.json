@@ -554,6 +554,52 @@
       "source_sha256": "369d1c60d24e4af3321897d3ed6f19640f50787d70519431b2410316d993a26f"
     },
     {
+      "id": "community-46",
+      "version": 1,
+      "title": "Classic Pursuit",
+      "artist": "cYsmix",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=CUxAx0EWQek",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 142,
+          "bpm": 140.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 216,
+          "bpm": 140.0
+        },
+        {
+          "name": "HARD",
+          "notes": 295,
+          "bpm": 140.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 348,
+          "bpm": 140.0
+        }
+      ],
+      "duration_s": 153.0,
+      "size_bytes": 3677931,
+      "has_video": false,
+      "zip": "songs/community-46-v1.zip",
+      "zip_bytes": 3656201,
+      "sha256": "94d322b61eaa9d82b0c0a3f9416a897f358a8788384f45d4495b89b34226c882",
+      "thumb": "thumbs/community-46-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 46,
+      "local_id": "popular2_classic_pursuit",
+      "previous_objects": [],
+      "source_sha256": "c96630d2c1bc42e4372b4d0169502a5427249d5f55fcdb39f5b88c75350d1b9a"
+    },
+    {
       "id": "community-21",
       "version": 1,
       "title": "Digital Native",
