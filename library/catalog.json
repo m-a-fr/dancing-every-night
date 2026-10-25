@@ -1,4 +1,51 @@
 {
   "schema": 1,
-  "songs": []
+  "songs": [
+    {
+      "id": "community-7",
+      "version": 1,
+      "title": "Firestarter",
+      "artist": "KDA",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "Musique de KDA, tous droits réservés",
+      "license": "Titre commercial, accord non demandé",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 228,
+          "bpm": 131.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 302,
+          "bpm": 131.0
+        },
+        {
+          "name": "HARD",
+          "notes": 434,
+          "bpm": 131.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 522,
+          "bpm": 131.0
+        }
+      ],
+      "duration_s": 206.5,
+      "size_bytes": 4589537,
+      "has_video": false,
+      "zip": "songs/community-7-v1.zip",
+      "zip_bytes": 4565480,
+      "sha256": "52c76b43da366966e8fd0968d3a75780c588aa52b4aeb568c5eac08a168739a4",
+      "thumb": "thumbs/community-7-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 7,
+      "local_id": "ytdown_com_youtube_media_mmw_ppwhkfg_k_ddfc0732",
+      "previous_objects": [],
+      "source_sha256": "59b8c4e8fd9a32054556055a1f8abc8e79ddc1dea9b65627c11e48733d1bacea"
+    }
+  ]
 }
