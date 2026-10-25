@@ -42,6 +42,13 @@
       "title": "Test Clicks",
       "date": "2026-10-25",
       "reason": "Discord announcement test; remove disposable CC0 fixture"
+    },
+    {
+      "id": "community-25",
+      "version": 1,
+      "title": "Test Clicks",
+      "date": "2026-10-25",
+      "reason": "Discord announcement test; remove disposable CC0 fixture"
     }
   ]
 }
