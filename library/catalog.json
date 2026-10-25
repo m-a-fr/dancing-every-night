@@ -600,6 +600,52 @@
       "source_sha256": "c96630d2c1bc42e4372b4d0169502a5427249d5f55fcdb39f5b88c75350d1b9a"
     },
     {
+      "id": "community-47",
+      "version": 1,
+      "title": "Cold Green Eyes feat. Roos Denayer",
+      "artist": "Station Earth",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=PtD6N9TDFAk",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 201,
+          "bpm": 174.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 282,
+          "bpm": 174.0
+        },
+        {
+          "name": "HARD",
+          "notes": 378,
+          "bpm": 174.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 478,
+          "bpm": 174.0
+        }
+      ],
+      "duration_s": 198.8,
+      "size_bytes": 4435189,
+      "has_video": false,
+      "zip": "songs/community-47-v1.zip",
+      "zip_bytes": 4414624,
+      "sha256": "4072c3d33affcc3d52011184b753584fc54e3db8990e96a285d73ad1b856fe9a",
+      "thumb": "thumbs/community-47-v1.jpg",
+      "added": "2026-10-25",
+      "updated": "2026-10-25",
+      "submitter": "DocteurBob",
+      "issue": 47,
+      "local_id": "popular2_cold_green_eyes",
+      "previous_objects": [],
+      "source_sha256": "e0d163861e02b81fdfef1c4beddf5bcee0735687634e9f08cfe9855b2de66752"
+    },
+    {
       "id": "community-21",
       "version": 1,
       "title": "Digital Native",
