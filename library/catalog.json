@@ -2486,6 +2486,52 @@
       "source_sha256": "0a33c4f66a53a13a128e6a8328ac3af8b4a58671024db819221dc2fcc461b015"
     },
     {
+      "id": "community-81",
+      "version": 1,
+      "title": "Overdrive (PV Edit)",
+      "artist": "IOSYS",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=D1HAsA0_tBQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 156,
+          "bpm": 200.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 207,
+          "bpm": 200.0
+        },
+        {
+          "name": "HARD",
+          "notes": 276,
+          "bpm": 200.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 347,
+          "bpm": 200.0
+        }
+      ],
+      "duration_s": 136.6,
+      "size_bytes": 17949823,
+      "has_video": true,
+      "zip": "songs/community-81-v1.zip",
+      "zip_bytes": 17356769,
+      "sha256": "b6cb6842768430e014ec60671fb478e27fc9b527f2a77ccf2f8725930bab3aba",
+      "thumb": "thumbs/community-81-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 81,
+      "local_id": "popular3_overdrive",
+      "previous_objects": [],
+      "source_sha256": "e9a16533fecb98b70007f20122af21780e6937f9030eb617df4755b4a459c7dd"
+    },
+    {
       "id": "community-10",
       "version": 1,
       "title": "Phycietiia",
