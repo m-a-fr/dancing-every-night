@@ -150,6 +150,32 @@ They live in a private repository read by the CI. Without them the game runs nor
 (a metronome plays), and `make check` reports the missing `audio.ogg`. Release builds (`make release`, `make pc`)
 pick the files up from `assets/songs/<ID>/audio.ogg` when you have them (`scripts/official-audio.sh`).
 
+## Use of AI
+
+I want to be clear about where AI was used in this project, and what I think about it.
+
+**What was made with AI**
+
+| Area | What | How |
+|---|---|---|
+| Code | The game (C11 + SDL2), the Python tools (automatic draft, editor, library scripts), the online editor, the CI, the tests, the documentation and its translations | Written with [Claude Code](https://claude.com/claude-code) (Anthropic). I set the design and the goals, play-test on a real Vita, review and decide; the model writes most of the code. |
+| Visual identity | The logo, the hostess (mascot) and the title screen layers, plus the images derived from them: boot splash, LiveArea and icon | Generated with AI image tools (ChatGPT), then selected and edited by hand (the stained-glass look is applied by a script). |
+| Charts | The difficulties of the official songs | Start from an automatic draft (`tools/mapper.py`: a signal-analysis algorithm I wrote with Claude, not a generative model), then played, corrected and tuned by me. |
+
+**What was not made with AI**: the music (the three official songs are by their artists and used under their label's
+terms; the menu music is by Juhani Junkala), the fonts, the button icons, and the interface sounds (synthesized by a
+script, no generative audio). Community songs carry their own rights, declared by their authors.
+
+**What I think**
+
+- **Graphics: a stopgap.** This is a volunteer project with no budget. AI let the game have a coherent look rather
+  than none, but it is not where I want it to stay. I would much rather work with artists, and I will replace these
+  visuals as soon as I can collaborate with some. If you draw, animate or design interfaces and the project speaks to you,
+  come and talk on [Discord](https://discord.gg/vTJDvgJe74).
+- **Engineering: assumed.** AI is how I build this game today, and I do not hide it. It is what lets one person ship
+  a Vita game with a song editor and an online library. It does not remove responsibility: I choose what the game
+  should be, I test it on the console, and bugs are mine to fix.
+
 ## Licence
 
 - Code: [GNU GPL v3](LICENSE).
