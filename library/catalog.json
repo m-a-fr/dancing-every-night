@@ -2532,6 +2532,52 @@
       "source_sha256": "e9a16533fecb98b70007f20122af21780e6937f9030eb617df4755b4a459c7dd"
     },
     {
+      "id": "community-82",
+      "version": 1,
+      "title": "Override",
+      "artist": "Yoshida Yasei feat. Kasane Teto",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=LLjfal8jCYI",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 111,
+          "bpm": 102.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 195,
+          "bpm": 102.0
+        },
+        {
+          "name": "HARD",
+          "notes": 293,
+          "bpm": 102.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 354,
+          "bpm": 102.0
+        }
+      ],
+      "duration_s": 138.5,
+      "size_bytes": 18999172,
+      "has_video": true,
+      "zip": "songs/community-82-v1.zip",
+      "zip_bytes": 18643004,
+      "sha256": "beba865011808d37a56c6cc9204397e8c926c0fe20a25b2e5a0338dc59ae58bc",
+      "thumb": "thumbs/community-82-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 82,
+      "local_id": "popular3_override",
+      "previous_objects": [],
+      "source_sha256": "34b784114782a69de2a9be73b7573a77c3f4394e684fe7d20c4b49fcb012e013"
+    },
+    {
       "id": "community-10",
       "version": 1,
       "title": "Phycietiia",
