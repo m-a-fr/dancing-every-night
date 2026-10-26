@@ -1888,6 +1888,52 @@
       "source_sha256": "3f5cbf653ce1ba682340390b8a5b472af0f85d9582d70d06f23e78b3f015d3ab"
     },
     {
+      "id": "community-75",
+      "version": 1,
+      "title": "Machine Love",
+      "artist": "Jamie Paige feat. Kasane Teto",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=sqK-jh4TDXo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 223,
+          "bpm": 175.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 296,
+          "bpm": 175.0
+        },
+        {
+          "name": "HARD",
+          "notes": 417,
+          "bpm": 175.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 526,
+          "bpm": 175.0
+        }
+      ],
+      "duration_s": 215.8,
+      "size_bytes": 5190770,
+      "has_video": false,
+      "zip": "songs/community-75-v1.zip",
+      "zip_bytes": 5145112,
+      "sha256": "5e9b2f316c0ef973e2a34775991e7d64afde50204a02a15e8348c3f5a8025e08",
+      "thumb": "thumbs/community-75-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 75,
+      "local_id": "popular3_machine_love",
+      "previous_objects": [],
+      "source_sha256": "3d8904e114925a3133ff27d82311f1dae009763091f25ef5682368fa504de201"
+    },
+    {
       "id": "community-36",
       "version": 1,
       "title": "Marshmary",
