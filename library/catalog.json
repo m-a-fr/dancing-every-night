@@ -1152,6 +1152,52 @@
       "source_sha256": "ca8e289d6f0b6c4720a7ce65f7736595bda16e3f59cb6eb29b0394401204f748"
     },
     {
+      "id": "community-66",
+      "version": 1,
+      "title": "Help me, ERINNNNNN!!",
+      "artist": "COOL&CREATE",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=X8z23t428kU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 353,
+          "bpm": 185.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 453,
+          "bpm": 185.0
+        },
+        {
+          "name": "HARD",
+          "notes": 649,
+          "bpm": 185.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 788,
+          "bpm": 185.0
+        }
+      ],
+      "duration_s": 310.7,
+      "size_bytes": 7371398,
+      "has_video": false,
+      "zip": "songs/community-66-v1.zip",
+      "zip_bytes": 7335393,
+      "sha256": "bc8ccb7831d7588929c87be6a0ebf34ae30096423b7c626bbea5804b7a470eaf",
+      "thumb": "thumbs/community-66-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 66,
+      "local_id": "popular3_erin",
+      "previous_objects": [],
+      "source_sha256": "c5c72b1a06700c779c006557126199db2a52e4ecea701927b0f7550f5589ea9e"
+    },
+    {
       "id": "community-50",
       "version": 1,
       "title": "Highscore",
