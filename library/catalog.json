@@ -508,6 +508,52 @@
       "source_sha256": "5be336eebb89e16dc9afc2d7d6beea2fc4019c48fa9195d2170f91c53ec421ed"
     },
     {
+      "id": "community-61",
+      "version": 1,
+      "title": "BUTCHER VANITY",
+      "artist": "FLAVOR FOLEY feat. Yi Xi",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=vjBFftpQxxM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 183,
+          "bpm": 142.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 285,
+          "bpm": 142.0
+        },
+        {
+          "name": "HARD",
+          "notes": 414,
+          "bpm": 142.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 479,
+          "bpm": 142.0
+        }
+      ],
+      "duration_s": 185.6,
+      "size_bytes": 24588473,
+      "has_video": true,
+      "zip": "songs/community-61-v1.zip",
+      "zip_bytes": 23840530,
+      "sha256": "e0d8a04c201bf28dcf458d475cbccaa53644d4dca2474bc929291463db855b03",
+      "thumb": "thumbs/community-61-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 61,
+      "local_id": "popular3_butcher_vanity",
+      "previous_objects": [],
+      "source_sha256": "96f108a1e41906fe7bbb54de07d943e9cb8dc024fd4b6ee2d1476169d71644ab"
+    },
+    {
       "id": "community-19",
       "version": 1,
       "title": "Chibi Ninja",
