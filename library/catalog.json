@@ -2394,6 +2394,52 @@
       "source_sha256": "6dc2ab4c369160be00fb172fb251ab7a637b58c4eea9e3c31459e8574857bb53"
     },
     {
+      "id": "community-80",
+      "version": 1,
+      "title": "Okuu's Nuclear Fusion Dojo",
+      "artist": "IOSYS",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=tp1_V6LrWOs",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 228,
+          "bpm": 175.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 322,
+          "bpm": 175.0
+        },
+        {
+          "name": "HARD",
+          "notes": 455,
+          "bpm": 175.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 555,
+          "bpm": 175.0
+        }
+      ],
+      "duration_s": 218.1,
+      "size_bytes": 5322002,
+      "has_video": false,
+      "zip": "songs/community-80-v1.zip",
+      "zip_bytes": 5289090,
+      "sha256": "f8732837589ed0a7f7239d5297495fb0f89f14b691a2444e329f1fcb1d8d0b53",
+      "thumb": "thumbs/community-80-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 80,
+      "local_id": "popular3_okuu",
+      "previous_objects": [],
+      "source_sha256": "b24f02fa122894049257d00c03e930ccd2b1c04bcf823cf815a13d34926c8038"
+    },
+    {
       "id": "community-56",
       "version": 1,
       "title": "only my railgun (TV Size)",
