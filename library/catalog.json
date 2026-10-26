@@ -3038,6 +3038,52 @@
       "source_sha256": "9281f329ab4f87243a4f45fde5e42a540b9990d84b3c2e6a59b5f9e9d7545c66"
     },
     {
+      "id": "community-86",
+      "version": 1,
+      "title": "Telecaster B-Boy",
+      "artist": "Three feat. Kagamine Len",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=i-DZukWFR64",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 182,
+          "bpm": 182.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 254,
+          "bpm": 182.0
+        },
+        {
+          "name": "HARD",
+          "notes": 352,
+          "bpm": 182.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 432,
+          "bpm": 182.0
+        }
+      ],
+      "duration_s": 164.5,
+      "size_bytes": 22446448,
+      "has_video": true,
+      "zip": "songs/community-86-v1.zip",
+      "zip_bytes": 21707160,
+      "sha256": "525d341bb1c3094b21ca2ba7f76751133a1822a402a7fe8bde8c7f9e5924431e",
+      "thumb": "thumbs/community-86-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 86,
+      "local_id": "popular3_telecaster",
+      "previous_objects": [],
+      "source_sha256": "60ff3ab5f9f06ca605557ad1b2022222a7eb497b01e4990143508fad2484b792"
+    },
+    {
       "id": "community-58",
       "version": 1,
       "title": "Tower of Heaven (You Are Slaves)",
