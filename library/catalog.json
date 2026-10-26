@@ -1428,6 +1428,52 @@
       "source_sha256": "c932a32f9784a09d97549c00e2afa9b5d7910d819c6daf60060aa7d42dd86aca"
     },
     {
+      "id": "community-69",
+      "version": 1,
+      "title": "Internet Survivor",
+      "artist": "COOL&CREATE / Ayaponzu* feat. beatMARIO",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=G6N943NlCbw",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 256,
+          "bpm": 172.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 361,
+          "bpm": 172.0
+        },
+        {
+          "name": "HARD",
+          "notes": 521,
+          "bpm": 172.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 617,
+          "bpm": 172.0
+        }
+      ],
+      "duration_s": 242.0,
+      "size_bytes": 5773853,
+      "has_video": false,
+      "zip": "songs/community-69-v1.zip",
+      "zip_bytes": 5744081,
+      "sha256": "73218378394de57d997417c4b5ad2129575b18f56c3fb3b6a0a28bf80a4f6c46",
+      "thumb": "thumbs/community-69-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 69,
+      "local_id": "popular3_internet_survivor",
+      "previous_objects": [],
+      "source_sha256": "4bb717c4f209d26f0805a8afb31420c9757aff13a1bbe24a79e9c372d4a09e28"
+    },
+    {
       "id": "community-11",
       "version": 1,
       "title": "Into My Dream",
