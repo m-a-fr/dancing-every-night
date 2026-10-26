@@ -876,6 +876,52 @@
       "source_sha256": "354ebdc9fc082428feb4f56ee0998c8614c19b7cad02cd92426e2b012a99f9ab"
     },
     {
+      "id": "community-64",
+      "version": 1,
+      "title": "crossing field (TV Size)",
+      "artist": "LiSA",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Y4kfe8R1Iqs",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 103,
+          "bpm": 179.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 142,
+          "bpm": 179.0
+        },
+        {
+          "name": "HARD",
+          "notes": 194,
+          "bpm": 179.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 239,
+          "bpm": 179.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 11975853,
+      "has_video": true,
+      "zip": "songs/community-64-v1.zip",
+      "zip_bytes": 11800501,
+      "sha256": "e88b5786f8c169b3b01c19301c91c0c9a8ec9acc2b2edfe0bf12a8879a01e872",
+      "thumb": "thumbs/community-64-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 64,
+      "local_id": "popular3_crossing_field",
+      "previous_objects": [],
+      "source_sha256": "8f8eb6494623b7d57fb45850d18b803ba3fdd9abaf7c264f13104fac176cc945"
+    },
+    {
       "id": "community-49",
       "version": 1,
       "title": "crystallized",
