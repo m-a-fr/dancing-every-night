@@ -1842,6 +1842,52 @@
       "source_sha256": "0b8a7bd3eab11bd25c808784c5ac6bc7b0486ec592d71132cc7e972712126b31"
     },
     {
+      "id": "community-74",
+      "version": 1,
+      "title": "Lost One's Weeping",
+      "artist": "Neru feat. Kagamine Rin",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=8oBV3jPTW4s",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 221,
+          "bpm": 162.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 332,
+          "bpm": 162.0
+        },
+        {
+          "name": "HARD",
+          "notes": 483,
+          "bpm": 162.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 565,
+          "bpm": 162.0
+        }
+      ],
+      "duration_s": 217.8,
+      "size_bytes": 5180469,
+      "has_video": false,
+      "zip": "songs/community-74-v1.zip",
+      "zip_bytes": 5150116,
+      "sha256": "6acde8841844276ea91293c575b2d5f1d84283d360f5cfc6f3d2e5d7530a1848",
+      "thumb": "thumbs/community-74-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 74,
+      "local_id": "popular3_lost_one",
+      "previous_objects": [],
+      "source_sha256": "3f5cbf653ce1ba682340390b8a5b472af0f85d9582d70d06f23e78b3f015d3ab"
+    },
+    {
       "id": "community-36",
       "version": 1,
       "title": "Marshmary",
