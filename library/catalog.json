@@ -1152,6 +1152,52 @@
       "source_sha256": "ca8e289d6f0b6c4720a7ce65f7736595bda16e3f59cb6eb29b0394401204f748"
     },
     {
+      "id": "community-67",
+      "version": 1,
+      "title": "HANIPAGANDA",
+      "artist": "Akatsuki Records",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=r3j1IhPRFs0",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 225,
+          "bpm": 181.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 306,
+          "bpm": 181.0
+        },
+        {
+          "name": "HARD",
+          "notes": 401,
+          "bpm": 181.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 473,
+          "bpm": 181.0
+        }
+      ],
+      "duration_s": 204.0,
+      "size_bytes": 4610797,
+      "has_video": false,
+      "zip": "songs/community-67-v1.zip",
+      "zip_bytes": 4579413,
+      "sha256": "2df0a91f6e4f9b2982f9f13b404e6bd55c33c9e9d25e057d0f9ad73bb5a5938e",
+      "thumb": "thumbs/community-67-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 67,
+      "local_id": "popular3_hanipaganda",
+      "previous_objects": [],
+      "source_sha256": "1647b5ca271d0f34bbae9f9e6b116af8bde68f336a133534ca10170b7d037f44"
+    },
+    {
       "id": "community-66",
       "version": 1,
       "title": "Help me, ERINNNNNN!!",
