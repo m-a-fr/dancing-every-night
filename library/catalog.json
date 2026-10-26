@@ -2026,6 +2026,52 @@
       "source_sha256": "c8b80811e37868d3e1549ac1803d509ed800ce96083f5cdd7e21e26058994899"
     },
     {
+      "id": "community-77",
+      "version": 1,
+      "title": "Mesmerizer",
+      "artist": "32ki feat. Hatsune Miku & Kasane Teto",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=19y8YTbvri8",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 180,
+          "bpm": 185.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 244,
+          "bpm": 185.0
+        },
+        {
+          "name": "HARD",
+          "notes": 338,
+          "bpm": 185.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 412,
+          "bpm": 185.0
+        }
+      ],
+      "duration_s": 157.0,
+      "size_bytes": 21985320,
+      "has_video": true,
+      "zip": "songs/community-77-v1.zip",
+      "zip_bytes": 21570688,
+      "sha256": "0748a67c0f1b61a16e493ed9343f28551c7ee23dd21dce67593fda52f3638c9f",
+      "thumb": "thumbs/community-77-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 77,
+      "local_id": "popular3_mesmerizer",
+      "previous_objects": [],
+      "source_sha256": "85bb04b0e80efe1d73daabb734d77d4bdfe1d9ad385501599e957b22897a89cb"
+    },
+    {
       "id": "community-54",
       "version": 1,
       "title": "My Love",
