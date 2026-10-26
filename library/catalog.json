@@ -1290,6 +1290,52 @@
       "source_sha256": "23dfce111664540d533410821f99f02496cdbf80940ba9383d31d0e123bea54c"
     },
     {
+      "id": "community-68",
+      "version": 1,
+      "title": "Hikaru Nara (TV Size)",
+      "artist": "Goose house",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=leWDAEaWJwU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 88,
+          "bpm": 160.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 125,
+          "bpm": 160.0
+        },
+        {
+          "name": "HARD",
+          "notes": 191,
+          "bpm": 160.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 224,
+          "bpm": 160.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12152727,
+      "has_video": true,
+      "zip": "songs/community-68-v1.zip",
+      "zip_bytes": 12010111,
+      "sha256": "7fec33ce43119841a94ba699eebed34dc9f0191a3430c0ee17d99a74e1b2c6d9",
+      "thumb": "thumbs/community-68-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 68,
+      "local_id": "popular3_hikaru_nara",
+      "previous_objects": [],
+      "source_sha256": "fd6d7285e9280aba1292fe57a5ba9714398c9c2bbaf77e59e2cc65b10d9ed6c9"
+    },
+    {
       "id": "community-34",
       "version": 1,
       "title": "Hitorigoto",
