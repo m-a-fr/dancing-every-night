@@ -1704,6 +1704,52 @@
       "source_sha256": "8009d9ef7d4a7ba80b0cfbf75ca5778600aa18b4dba9189fcc2066656fd6b1be"
     },
     {
+      "id": "community-72",
+      "version": 1,
+      "title": "Konton Boogie",
+      "artist": "jon-YAKITORY feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=1Swg-aBO9eY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 170,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 226,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 317,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 394,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 154.7,
+      "size_bytes": 20300674,
+      "has_video": true,
+      "zip": "songs/community-72-v1.zip",
+      "zip_bytes": 19924934,
+      "sha256": "a88907c37286645793aa71f22194e87d1b4ee95ef2ea832a56a7952f34f8991e",
+      "thumb": "thumbs/community-72-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 72,
+      "local_id": "popular3_konton_boogie",
+      "previous_objects": [],
+      "source_sha256": "28cb76d41e6bf5646a0fee82b788199df5e91393c5d06d2e3605c920062b3f98"
+    },
+    {
       "id": "community-53",
       "version": 1,
       "title": "Kyouran Hey Kids!! (TV Size)",
