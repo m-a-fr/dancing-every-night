@@ -3084,6 +3084,52 @@
       "source_sha256": "60ff3ab5f9f06ca605557ad1b2022222a7eb497b01e4990143508fad2484b792"
     },
     {
+      "id": "community-87",
+      "version": 1,
+      "title": "THE HERO!! (TV Size)",
+      "artist": "JAM Project",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=atxYe-nOa9w",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 93,
+          "bpm": 130.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 134,
+          "bpm": 130.0
+        },
+        {
+          "name": "HARD",
+          "notes": 196,
+          "bpm": 130.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 229,
+          "bpm": 130.0
+        }
+      ],
+      "duration_s": 89.8,
+      "size_bytes": 12361775,
+      "has_video": true,
+      "zip": "songs/community-87-v1.zip",
+      "zip_bytes": 12073636,
+      "sha256": "fd9552a83229b7969953873e110e998f9a9382acee7e484d37493fc726703499",
+      "thumb": "thumbs/community-87-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 87,
+      "local_id": "popular3_the_hero",
+      "previous_objects": [],
+      "source_sha256": "19eed6d58bb051848d1c2cac45f6a25cc7c82d9c510c578df7b4a3061fa2c71f"
+    },
+    {
       "id": "community-58",
       "version": 1,
       "title": "Tower of Heaven (You Are Slaves)",
