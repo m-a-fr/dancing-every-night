@@ -3314,6 +3314,52 @@
       "source_sha256": "9c42bff918132afd31bff1d0031d4e795aae08ff08f3ca0b8408e17cb52ade97"
     },
     {
+      "id": "community-89",
+      "version": 1,
+      "title": "Who Killed U.N.Owen",
+      "artist": "Liz Triangle",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=wEwnEeq23SY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 262,
+          "bpm": 185.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 363,
+          "bpm": 185.0
+        },
+        {
+          "name": "HARD",
+          "notes": 504,
+          "bpm": 185.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 627,
+          "bpm": 185.0
+        }
+      ],
+      "duration_s": 331.1,
+      "size_bytes": 7247507,
+      "has_video": false,
+      "zip": "songs/community-89-v1.zip",
+      "zip_bytes": 7209543,
+      "sha256": "fdd0f70a203c52b42827ebf5723cb51e4c20bef1a3af44bff40e83426ce39d79",
+      "thumb": "thumbs/community-89-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 89,
+      "local_id": "popular3_who_killed",
+      "previous_objects": [],
+      "source_sha256": "f4b02782a4f3f6c68b6681e5cbd555f81fa0f92f809fb39d9a3576da3d69114d"
+    },
+    {
       "id": "community-40",
       "version": 1,
       "title": "Yoru ni Kakeru",
