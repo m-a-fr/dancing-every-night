@@ -1934,6 +1934,52 @@
       "source_sha256": "3d8904e114925a3133ff27d82311f1dae009763091f25ef5682368fa504de201"
     },
     {
+      "id": "community-76",
+      "version": 1,
+      "title": "Marisa Stole the Precious Thing (PV Edit)",
+      "artist": "IOSYS",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=shmAGOTo824",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 133,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 188,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 272,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 322,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 121.5,
+      "size_bytes": 16991544,
+      "has_video": true,
+      "zip": "songs/community-76-v1.zip",
+      "zip_bytes": 16662162,
+      "sha256": "2c5228e55d01a890ccdc8da643fa75c66dbd3986d5fe7a08bd47c1fc686aeef7",
+      "thumb": "thumbs/community-76-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 76,
+      "local_id": "popular3_marisa",
+      "previous_objects": [],
+      "source_sha256": "19ae879d42909eb1b6949eabad19293ec5968fa77055b2094e1abcfa9c5812c7"
+    },
+    {
       "id": "community-36",
       "version": 1,
       "title": "Marshmary",
