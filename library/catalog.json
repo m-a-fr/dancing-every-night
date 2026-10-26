@@ -1658,6 +1658,52 @@
       "source_sha256": "f14b26c25975062e074fe6ee8f53336cece45f4267d4be674c5f7b9202d574f3"
     },
     {
+      "id": "community-71",
+      "version": 1,
+      "title": "KING",
+      "artist": "Kanaria feat. GUMI",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=cm-l2h6GB8Q",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 136,
+          "bpm": 166.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 201,
+          "bpm": 166.0
+        },
+        {
+          "name": "HARD",
+          "notes": 330,
+          "bpm": 166.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 379,
+          "bpm": 166.0
+        }
+      ],
+      "duration_s": 134.9,
+      "size_bytes": 15334951,
+      "has_video": true,
+      "zip": "songs/community-71-v1.zip",
+      "zip_bytes": 14631538,
+      "sha256": "e0b598a4edbefdaa35908f6695e59befe104ca0f97e4b489516ef20c4e42295d",
+      "thumb": "thumbs/community-71-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 71,
+      "local_id": "popular3_king",
+      "previous_objects": [],
+      "source_sha256": "8009d9ef7d4a7ba80b0cfbf75ca5778600aa18b4dba9189fcc2066656fd6b1be"
+    },
+    {
       "id": "community-53",
       "version": 1,
       "title": "Kyouran Hey Kids!! (TV Size)",
