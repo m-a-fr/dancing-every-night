@@ -2762,6 +2762,52 @@
       "source_sha256": "4ea5f2b41446011efa7f4519e2551744e9e37e611ac0341bdd56355be2b67adc"
     },
     {
+      "id": "community-85",
+      "version": 1,
+      "title": "Scream out!",
+      "artist": "A-One",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Gh60uDHysEM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 271,
+          "bpm": 165.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 366,
+          "bpm": 165.0
+        },
+        {
+          "name": "HARD",
+          "notes": 603,
+          "bpm": 165.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 690,
+          "bpm": 165.0
+        }
+      ],
+      "duration_s": 262.1,
+      "size_bytes": 6008600,
+      "has_video": false,
+      "zip": "songs/community-85-v1.zip",
+      "zip_bytes": 5977762,
+      "sha256": "829271266ae96946858aceafe54e464516541dcbee86facc195d9acdc4770a9d",
+      "thumb": "thumbs/community-85-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 85,
+      "local_id": "popular3_scream_out",
+      "previous_objects": [],
+      "source_sha256": "a46d546fe60ede4651833bb44107c6d40d42312060131d5b9f1b9e02aacfaab0"
+    },
+    {
       "id": "community-37",
       "version": 1,
       "title": "Shinzou wo Sasageyo! (TV Size)",
