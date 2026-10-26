@@ -48,6 +48,52 @@
       "source_sha256": "6e2e0ac9b5b327ed95b07f95052fb9292ba84168b050486315de597ee1b5d063"
     },
     {
+      "id": "community-60",
+      "version": 1,
+      "title": "again (TV Size)",
+      "artist": "YUI",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=a-Jr5JW-EMQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 80,
+          "bpm": 140.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 121,
+          "bpm": 140.0
+        },
+        {
+          "name": "HARD",
+          "notes": 170,
+          "bpm": 140.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 205,
+          "bpm": 140.0
+        }
+      ],
+      "duration_s": 91.5,
+      "size_bytes": 12170509,
+      "has_video": true,
+      "zip": "songs/community-60-v1.zip",
+      "zip_bytes": 12004695,
+      "sha256": "04fa7680bb0b0d1c9d0a4268c7fc592f96b5829233f19155ef13505568649c97",
+      "thumb": "thumbs/community-60-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 60,
+      "local_id": "popular3_again",
+      "previous_objects": [],
+      "source_sha256": "1fa56849d8ecb4a5aa64b5658504eb7634ccc416611ec5bade1aab76db45913f"
+    },
+    {
       "id": "community-27",
       "version": 1,
       "title": "Ai no Sukima",
