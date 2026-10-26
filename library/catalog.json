@@ -2118,6 +2118,52 @@
       "source_sha256": "51bc10f45f6460c4f8be0149d5b6563163a53353cedd578d0559331042f43600"
     },
     {
+      "id": "community-78",
+      "version": 1,
+      "title": "Necromantic",
+      "artist": "Akatsuki Records",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=RtTYQuO1j6w",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 246,
+          "bpm": 144.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 398,
+          "bpm": 144.0
+        },
+        {
+          "name": "HARD",
+          "notes": 607,
+          "bpm": 144.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 712,
+          "bpm": 144.0
+        }
+      ],
+      "duration_s": 275.0,
+      "size_bytes": 5828525,
+      "has_video": false,
+      "zip": "songs/community-78-v1.zip",
+      "zip_bytes": 5793699,
+      "sha256": "e673569e3b07e90ea5c410acdc3016b994f31032d3cfcad28c01e57ff8c86b76",
+      "thumb": "thumbs/community-78-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 78,
+      "local_id": "popular3_necromantic",
+      "previous_objects": [],
+      "source_sha256": "a960d617e8ba97f25ffca40f220012771184f81f6631ec59ca1f178dc61ef194"
+    },
+    {
       "id": "community-55",
       "version": 1,
       "title": "Nekozilla",
