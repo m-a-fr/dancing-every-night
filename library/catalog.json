@@ -2,6 +2,52 @@
   "schema": 1,
   "songs": [
     {
+      "id": "community-65",
+      "version": 1,
+      "title": "A Cruel Angel's Thesis (TV Size)",
+      "artist": "Yoko Takahashi",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=nU21rCWkuJw",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 86,
+          "bpm": 128.66
+        },
+        {
+          "name": "NORMAL",
+          "notes": 122,
+          "bpm": 128.66
+        },
+        {
+          "name": "HARD",
+          "notes": 181,
+          "bpm": 128.66
+        },
+        {
+          "name": "EXPERT",
+          "notes": 212,
+          "bpm": 128.66
+        }
+      ],
+      "duration_s": 91.4,
+      "size_bytes": 12426161,
+      "has_video": true,
+      "zip": "songs/community-65-v1.zip",
+      "zip_bytes": 12176780,
+      "sha256": "d30fa67f174892501283d7f27a866692b0cb861f56cd7eb2775473c19fb4a07b",
+      "thumb": "thumbs/community-65-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 65,
+      "local_id": "popular3_cruel_angel",
+      "previous_objects": [],
+      "source_sha256": "f818f734fc3a24778747dec433d93c93e0bdad04fb84176b6362297dad16493f"
+    },
+    {
       "id": "community-22",
       "version": 1,
       "title": "A Night of Dizzy Spells",
