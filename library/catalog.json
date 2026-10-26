@@ -646,6 +646,52 @@
       "source_sha256": "369d1c60d24e4af3321897d3ed6f19640f50787d70519431b2410316d993a26f"
     },
     {
+      "id": "community-62",
+      "version": 1,
+      "title": "Cirno's Perfect Math Class (PV Edit)",
+      "artist": "IOSYS",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=V_bQNPG2OyE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 124,
+          "bpm": 175.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 182,
+          "bpm": 175.0
+        },
+        {
+          "name": "HARD",
+          "notes": 250,
+          "bpm": 175.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 297,
+          "bpm": 175.0
+        }
+      ],
+      "duration_s": 127.7,
+      "size_bytes": 17710393,
+      "has_video": true,
+      "zip": "songs/community-62-v1.zip",
+      "zip_bytes": 17344642,
+      "sha256": "47d2f35b1518dea0b61354fbf7474408d80f0f6e2abea8be7af805d0e43cba77",
+      "thumb": "thumbs/community-62-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 62,
+      "local_id": "popular3_cirno",
+      "previous_objects": [],
+      "source_sha256": "ce424b3f4c1e5a9fb2fe065f6bcf5eae77fc6e79b76bb03eb194fe285cfb19b5"
+    },
+    {
       "id": "community-46",
       "version": 1,
       "title": "Classic Pursuit",
