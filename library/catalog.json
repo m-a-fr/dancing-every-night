@@ -2670,6 +2670,52 @@
       "source_sha256": "8241dd38858567adc10178a01f975c83763516f3031e2834c4e944e4ffe8926c"
     },
     {
+      "id": "community-83",
+      "version": 1,
+      "title": "Renai Circulation (TV Size)",
+      "artist": "Kana Hanazawa",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=jQ6gPyYNgPo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 80,
+          "bpm": 120.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 130,
+          "bpm": 120.0
+        },
+        {
+          "name": "HARD",
+          "notes": 200,
+          "bpm": 120.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 229,
+          "bpm": 120.0
+        }
+      ],
+      "duration_s": 91.5,
+      "size_bytes": 12322138,
+      "has_video": true,
+      "zip": "songs/community-83-v1.zip",
+      "zip_bytes": 11985027,
+      "sha256": "11d785af8cffc27e06be1e24f4a9d8ef23cf52dfafdb683e4dbbb62d5aacaec3",
+      "thumb": "thumbs/community-83-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 83,
+      "local_id": "popular3_renai",
+      "previous_objects": [],
+      "source_sha256": "4ea5f2b41446011efa7f4519e2551744e9e37e611ac0341bdd56355be2b67adc"
+    },
+    {
       "id": "community-37",
       "version": 1,
       "title": "Shinzou wo Sasageyo! (TV Size)",
