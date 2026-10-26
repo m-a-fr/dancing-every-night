@@ -830,6 +830,52 @@
       "source_sha256": "686ddd70a7747eb3b69ba99c8a05c7d3660433a6bfb542e8629bcb3bad0372ac"
     },
     {
+      "id": "community-63",
+      "version": 1,
+      "title": "Connect (TV Size)",
+      "artist": "ClariS",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=OrgpX-_bFqM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 86,
+          "bpm": 175.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 131,
+          "bpm": 175.0
+        },
+        {
+          "name": "HARD",
+          "notes": 185,
+          "bpm": 175.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 232,
+          "bpm": 175.0
+        }
+      ],
+      "duration_s": 89.8,
+      "size_bytes": 12199782,
+      "has_video": true,
+      "zip": "songs/community-63-v1.zip",
+      "zip_bytes": 11958689,
+      "sha256": "9dcb634e31ee3069c36b2a7740b5c5b73ddadacf985a2b4af9f8b934ed008432",
+      "thumb": "thumbs/community-63-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 63,
+      "local_id": "popular3_connect",
+      "previous_objects": [],
+      "source_sha256": "354ebdc9fc082428feb4f56ee0998c8614c19b7cad02cd92426e2b012a99f9ab"
+    },
+    {
       "id": "community-49",
       "version": 1,
       "title": "crystallized",
