@@ -1520,6 +1520,52 @@
       "source_sha256": "45062213b4b2e6641a101d5678f266660338f0ba40c55c9b34371d417fa312b9"
     },
     {
+      "id": "community-70",
+      "version": 1,
+      "title": "Kaikai Kitan (TV Size)",
+      "artist": "Eve",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=v8bZVdTgXoY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 96,
+          "bpm": 185.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 144,
+          "bpm": 185.0
+        },
+        {
+          "name": "HARD",
+          "notes": 191,
+          "bpm": 185.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 239,
+          "bpm": 185.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12092529,
+      "has_video": true,
+      "zip": "songs/community-70-v1.zip",
+      "zip_bytes": 11901948,
+      "sha256": "da4c61acbfde0f27d7ce9bf20fa1156194787829298d22b770e73086375dd7d3",
+      "thumb": "thumbs/community-70-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 70,
+      "local_id": "popular3_kaikai_kitan",
+      "previous_objects": [],
+      "source_sha256": "43857522dc3c532c477634e2872e6671d666469167196e33a8f1420f32cbb1c8"
+    },
+    {
       "id": "community-51",
       "version": 1,
       "title": "Kawaki wo Ameku (TV Size)",
