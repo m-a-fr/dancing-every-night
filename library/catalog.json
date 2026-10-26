@@ -2348,6 +2348,52 @@
       "source_sha256": "b4c326d3f31df7b307384676183f6ecd1f632b99b1769c553163e0bd4b1e2126"
     },
     {
+      "id": "community-79",
+      "version": 1,
+      "title": "oath sign (TV Size)",
+      "artist": "LiSA",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=aK2-jBqwEWU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 84,
+          "bpm": 152.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 122,
+          "bpm": 152.0
+        },
+        {
+          "name": "HARD",
+          "notes": 187,
+          "bpm": 152.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 224,
+          "bpm": 152.0
+        }
+      ],
+      "duration_s": 90.5,
+      "size_bytes": 10988315,
+      "has_video": true,
+      "zip": "songs/community-79-v1.zip",
+      "zip_bytes": 10748377,
+      "sha256": "cbe3bd007e674d6b2d45d657791c56897ecdff69c8e794ae33d6abdcd29715c9",
+      "thumb": "thumbs/community-79-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 79,
+      "local_id": "popular3_oath_sign",
+      "previous_objects": [],
+      "source_sha256": "6dc2ab4c369160be00fb172fb251ab7a637b58c4eea9e3c31459e8574857bb53"
+    },
+    {
       "id": "community-56",
       "version": 1,
       "title": "only my railgun (TV Size)",
