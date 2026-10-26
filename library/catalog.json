@@ -508,6 +508,52 @@
       "source_sha256": "98ab3d562facc812b784685518ba2d6db13646392bae92e4e4362ebcbd0cecea"
     },
     {
+      "id": "community-84",
+      "version": 1,
+      "title": "BRING IT ON",
+      "artist": "Giga feat. Kagamine Rin & Len",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=oEkGC2HV7rc",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 240,
+          "bpm": 160.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 337,
+          "bpm": 160.0
+        },
+        {
+          "name": "HARD",
+          "notes": 508,
+          "bpm": 160.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 605,
+          "bpm": 160.0
+        }
+      ],
+      "duration_s": 235.1,
+      "size_bytes": 6078179,
+      "has_video": false,
+      "zip": "songs/community-84-v1.zip",
+      "zip_bytes": 6046642,
+      "sha256": "eba15c585c6487f67c3477598fe2d8858930001d44967b5b6b373dbd0ec49e3a",
+      "thumb": "thumbs/community-84-v1.jpg",
+      "added": "2026-10-26",
+      "updated": "2026-10-26",
+      "submitter": "DocteurBob",
+      "issue": 84,
+      "local_id": "popular3_rettou_joutou",
+      "previous_objects": [],
+      "source_sha256": "0a26f3fe4a897470c51c1742455714038b822a9baf2174b51c246d5f82dd8f0f"
+    },
+    {
       "id": "community-8",
       "version": 1,
       "title": "brokenHeart resurrection ~estelle~",
