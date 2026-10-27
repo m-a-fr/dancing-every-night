@@ -2118,6 +2118,52 @@
       "source_sha256": "59b8c4e8fd9a32054556055a1f8abc8e79ddc1dea9b65627c11e48733d1bacea"
     },
     {
+      "id": "community-132",
+      "version": 1,
+      "title": "FLY HIGH!! (TV Size)",
+      "artist": "BURNOUT SYNDROMES",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=HM-kb0O2B6A",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 107,
+          "bpm": 189.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 150,
+          "bpm": 189.0
+        },
+        {
+          "name": "HARD",
+          "notes": 201,
+          "bpm": 189.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 246,
+          "bpm": 189.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12367063,
+      "has_video": true,
+      "zip": "songs/community-132-v1.zip",
+      "zip_bytes": 12135406,
+      "sha256": "ee7a4fc40b271ffca0224d0a978d54af7bd449b096e5630b24114f874a1d3f06",
+      "thumb": "thumbs/community-132-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 132,
+      "local_id": "popular5_fly_high",
+      "previous_objects": [],
+      "source_sha256": "432cf96f2dfcf64613268a47d02ef7c8df1ea40bc72a18ea9fa617a95b14aedf"
+    },
+    {
       "id": "community-42",
       "version": 1,
       "title": "FREEDOM DiVE",
