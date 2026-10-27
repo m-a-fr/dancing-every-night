@@ -3084,6 +3084,52 @@
       "source_sha256": "4ea5f2b41446011efa7f4519e2551744e9e37e611ac0341bdd56355be2b67adc"
     },
     {
+      "id": "community-98",
+      "version": 1,
+      "title": "Rising Hope (TV Size)",
+      "artist": "LiSA",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=hRxZ2qfF1Dg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 105,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 140,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 196,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 242,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12246214,
+      "has_video": true,
+      "zip": "songs/community-98-v1.zip",
+      "zip_bytes": 12090865,
+      "sha256": "47a40469020aec7b25199071e432a5b40147c6b36ef42bfafa413fa3e4e57c62",
+      "thumb": "thumbs/community-98-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 98,
+      "local_id": "popular4_rising_hope",
+      "previous_objects": [],
+      "source_sha256": "7a79f417b2a140835212eb43c350f86a602c5bb615962dc6b8754be9bfe71010"
+    },
+    {
       "id": "community-85",
       "version": 1,
       "title": "Scream out!",
