@@ -1382,6 +1382,52 @@
       "source_sha256": "e9c54a02815c9da0a73a34b8bae7b2beed35cf856409b8796ecd477af6924366"
     },
     {
+      "id": "community-109",
+      "version": 1,
+      "title": "Cthugha",
+      "artist": "USAO",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=_tX1lqcVnno",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 139,
+          "bpm": 106.5
+        },
+        {
+          "name": "NORMAL",
+          "notes": 196,
+          "bpm": 106.5
+        },
+        {
+          "name": "HARD",
+          "notes": 270,
+          "bpm": 106.5
+        },
+        {
+          "name": "EXPERT",
+          "notes": 295,
+          "bpm": 106.5
+        }
+      ],
+      "duration_s": 155.1,
+      "size_bytes": 21427776,
+      "has_video": true,
+      "zip": "songs/community-109-v1.zip",
+      "zip_bytes": 21094112,
+      "sha256": "ae35adc8fb5bf9b275373bf3037c945a0dfcf09fec928098bd3155cb4f9ae352",
+      "thumb": "thumbs/community-109-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 109,
+      "local_id": "popular4_cthugha",
+      "previous_objects": [],
+      "source_sha256": "7f0957d46b94446f882c7d878144bd5b371e3fd8066d81b663568798f542abe6"
+    },
+    {
       "id": "community-21",
       "version": 1,
       "title": "Digital Native",
