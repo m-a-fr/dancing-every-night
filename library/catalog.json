@@ -4924,6 +4924,52 @@
       "source_sha256": "4ea5f2b41446011efa7f4519e2551744e9e37e611ac0341bdd56355be2b67adc"
     },
     {
+      "id": "community-144",
+      "version": 1,
+      "title": "resonance (TV Size)",
+      "artist": "T.M.Revolution",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=zzJ8U8OtEsE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 88,
+          "bpm": 165.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 130,
+          "bpm": 165.0
+        },
+        {
+          "name": "HARD",
+          "notes": 208,
+          "bpm": 165.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 247,
+          "bpm": 165.0
+        }
+      ],
+      "duration_s": 88.4,
+      "size_bytes": 12151759,
+      "has_video": true,
+      "zip": "songs/community-144-v1.zip",
+      "zip_bytes": 11924664,
+      "sha256": "66f314bb0b8fe91712faa054bf5ba44898615b87e862a4e7205dc499d802972f",
+      "thumb": "thumbs/community-144-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 144,
+      "local_id": "popular5_resonance",
+      "previous_objects": [],
+      "source_sha256": "e8f807ad98358f6a07d810b9ebbe9cb5230418e0ec90ef601485a11cff0302cb"
+    },
+    {
       "id": "community-98",
       "version": 1,
       "title": "Rising Hope (TV Size)",
