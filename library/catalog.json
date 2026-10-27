@@ -4188,6 +4188,52 @@
       "source_sha256": "8dc0a0c4dff37b81e3bf377618f49244447973975f183d6c6265c03695a29017"
     },
     {
+      "id": "community-142",
+      "version": 1,
+      "title": "Nhelv",
+      "artist": "Silentroom",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=XtXRvEsWzQo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 159,
+          "bpm": 174.59
+        },
+        {
+          "name": "NORMAL",
+          "notes": 226,
+          "bpm": 174.59
+        },
+        {
+          "name": "HARD",
+          "notes": 322,
+          "bpm": 174.59
+        },
+        {
+          "name": "EXPERT",
+          "notes": 403,
+          "bpm": 174.59
+        }
+      ],
+      "duration_s": 162.6,
+      "size_bytes": 21652486,
+      "has_video": true,
+      "zip": "songs/community-142-v1.zip",
+      "zip_bytes": 21037529,
+      "sha256": "b2266ef42ac0e2a01c81474f9f64b0e247ff80bacedb1aec23911c8bbe2fba3b",
+      "thumb": "thumbs/community-142-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 142,
+      "local_id": "popular5_nhelv",
+      "previous_objects": [],
+      "source_sha256": "72ec42b53b6fde1027ecf8d6989e8ece570b912ac28bc358fbe2d1b137e5a96c"
+    },
+    {
       "id": "community-41",
       "version": 1,
       "title": "No title",
