@@ -3866,6 +3866,52 @@
       "source_sha256": "d5182c27d9baa9df5832b2cd54a84b012038fb32c98b1889fa376930fa557ddb"
     },
     {
+      "id": "community-141",
+      "version": 1,
+      "title": "MUKANJYO (TV Size)",
+      "artist": "Survive Said The Prophet",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=l5wAdQ-UkWY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 101,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 136,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 183,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 234,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 11992323,
+      "has_video": true,
+      "zip": "songs/community-141-v1.zip",
+      "zip_bytes": 11851174,
+      "sha256": "5c95ddcabbea51717eecf82a5d3fbf9d56371ea054afebd5e23db1d33315b1ad",
+      "thumb": "thumbs/community-141-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 141,
+      "local_id": "popular5_mukanjyo",
+      "previous_objects": [],
+      "source_sha256": "4e9a0a00efe7856869cb220bcad8bde6c9f65fec4c6b165de5a2c1916c226b6c"
+    },
+    {
       "id": "community-119",
       "version": 1,
       "title": "My Dearest (TV Size)",
