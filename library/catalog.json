@@ -2992,6 +2992,52 @@
       "source_sha256": "de7c49bc2b0595334464ac785bf3160cead89d70e99db6f9f620b0ac05017765"
     },
     {
+      "id": "community-97",
+      "version": 1,
+      "title": "Redo (TV Size)",
+      "artist": "Konomi Suzuki",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=0Vwwr3VGsYg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 106,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 139,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 186,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 233,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12142134,
+      "has_video": true,
+      "zip": "songs/community-97-v1.zip",
+      "zip_bytes": 11905786,
+      "sha256": "b011a8674c22f61c117b47fbcb217434d59b2f29590f6490ca82dda18bedfed6",
+      "thumb": "thumbs/community-97-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 97,
+      "local_id": "popular4_redo",
+      "previous_objects": [],
+      "source_sha256": "d822a70c100cc3978f5806bc1bf23b87959f5c6ca7fb83e8632359a2dc787742"
+    },
+    {
       "id": "community-83",
       "version": 1,
       "title": "Renai Circulation (TV Size)",
