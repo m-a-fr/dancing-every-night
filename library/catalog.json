@@ -416,6 +416,52 @@
       "source_sha256": "021255b50ef6d61773948cfc0823a6e7116c6ca1ad8db74c72ad2287dc95966d"
     },
     {
+      "id": "community-120",
+      "version": 1,
+      "title": "Ascension to Heaven",
+      "artist": "xi",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=wlYGZx0R8KE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 186,
+          "bpm": 200.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 223,
+          "bpm": 200.0
+        },
+        {
+          "name": "HARD",
+          "notes": 273,
+          "bpm": 200.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 314,
+          "bpm": 200.0
+        }
+      ],
+      "duration_s": 168.1,
+      "size_bytes": 22606192,
+      "has_video": true,
+      "zip": "songs/community-120-v1.zip",
+      "zip_bytes": 21984347,
+      "sha256": "0ead64f79913422934031e9b2e248684c3f614f3f2bc40dc219f49753a506d00",
+      "thumb": "thumbs/community-120-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 120,
+      "local_id": "popular5_ascension",
+      "previous_objects": [],
+      "source_sha256": "2ec340450c33f1bd5dea341e2acb04b0388887da016f074e02de7eea0943030d"
+    },
+    {
       "id": "community-28",
       "version": 1,
       "title": "Bad Apple!! feat. nomico",
