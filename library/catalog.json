@@ -1658,6 +1658,52 @@
       "source_sha256": "c9cc40eb221c6faae477009962552586430c03025fea900e655a189dae69f6fd"
     },
     {
+      "id": "community-113",
+      "version": 1,
+      "title": "Halcyon (Game Edit)",
+      "artist": "xi",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=J4fFW7R1OmI",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 183,
+          "bpm": 191.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 221,
+          "bpm": 191.0
+        },
+        {
+          "name": "HARD",
+          "notes": 319,
+          "bpm": 191.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 390,
+          "bpm": 191.0
+        }
+      ],
+      "duration_s": 161.1,
+      "size_bytes": 10489210,
+      "has_video": true,
+      "zip": "songs/community-113-v1.zip",
+      "zip_bytes": 10061436,
+      "sha256": "4dbcbcccd6f9e60b2552a13af555fad7a54f3820c587a70dc7830edad54cb1d6",
+      "thumb": "thumbs/community-113-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 113,
+      "local_id": "popular4_halcyon",
+      "previous_objects": [],
+      "source_sha256": "ec77e06b10255703c177613df3a5d2a35fec239a30d9e1c7a2f0829e1060458b"
+    },
+    {
       "id": "community-67",
       "version": 1,
       "title": "HANIPAGANDA",
