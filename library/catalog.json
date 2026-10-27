@@ -3590,6 +3590,52 @@
       "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
     },
     {
+      "id": "community-44",
+      "version": 1,
+      "title": "quaver",
+      "artist": "dj TAKA",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=SbjznE5XFdU",
+      "license": "Rights reserved; local preparation only",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 246,
+          "bpm": 186.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 311,
+          "bpm": 186.0
+        },
+        {
+          "name": "HARD",
+          "notes": 409,
+          "bpm": 186.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 488,
+          "bpm": 186.0
+        }
+      ],
+      "duration_s": 212.6,
+      "size_bytes": 5269494,
+      "has_video": false,
+      "zip": "songs/community-44-v1.zip",
+      "zip_bytes": 5238387,
+      "sha256": "027cd213172fb1a97137b8817fb46520e42d0c3d3054f2e85776212b08c7dc4e",
+      "thumb": "thumbs/community-44-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 44,
+      "local_id": "popular_quaver",
+      "previous_objects": [],
+      "source_sha256": "1012e1bbad997752a8e6abd09915b1c915f830973ab010dc502430147c98ed1a"
+    },
+    {
       "id": "community-57",
       "version": 1,
       "title": "Rainbow Tylenol",
