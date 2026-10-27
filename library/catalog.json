@@ -5384,6 +5384,52 @@
       "source_sha256": "48e466cba7981e433590656187278499003282af9d026bc7307b4d7ddd25eb90"
     },
     {
+      "id": "community-148",
+      "version": 1,
+      "title": "Target ~Akai Shougeki~ (TV Size)",
+      "artist": "Koji Wada",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=hpIanHhm-ac",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 87,
+          "bpm": 160.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 125,
+          "bpm": 160.0
+        },
+        {
+          "name": "HARD",
+          "notes": 189,
+          "bpm": 160.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 225,
+          "bpm": 160.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12370968,
+      "has_video": true,
+      "zip": "songs/community-148-v1.zip",
+      "zip_bytes": 12171437,
+      "sha256": "5ddd09aaaf5521a5072f67ff148d595c6dbc1ac47c54b17327fa152476d74953",
+      "thumb": "thumbs/community-148-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 148,
+      "local_id": "popular5_target",
+      "previous_objects": [],
+      "source_sha256": "89cbc2f58450c67291607ed7d720a63ee69d7e7f499e91f0698295c2e7856c12"
+    },
+    {
       "id": "community-43",
       "version": 1,
       "title": "Tear Rain",
