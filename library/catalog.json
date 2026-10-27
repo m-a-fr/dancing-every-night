@@ -2026,6 +2026,52 @@
       "source_sha256": "fdecb2cf274fe09bf12dc7e2a5435d970c68c33f705b417c94df2077e82ccedf"
     },
     {
+      "id": "community-115",
+      "version": 1,
+      "title": "Inferno (TV Size)",
+      "artist": "Mrs. GREEN APPLE",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=JBqxVX_LXvk",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 100,
+          "bpm": 185.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 132,
+          "bpm": 185.0
+        },
+        {
+          "name": "HARD",
+          "notes": 188,
+          "bpm": 185.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 231,
+          "bpm": 185.0
+        }
+      ],
+      "duration_s": 89.6,
+      "size_bytes": 12178077,
+      "has_video": true,
+      "zip": "songs/community-115-v1.zip",
+      "zip_bytes": 11968959,
+      "sha256": "4879ae8e1b6ea72f57672ce3f9e36f18d71f8b85a8efe0e2aa3133a31ae7ded8",
+      "thumb": "thumbs/community-115-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 115,
+      "local_id": "popular4_inferno",
+      "previous_objects": [],
+      "source_sha256": "d998f9b2b630e209e114f833465fded373da6834592a03b5f44c70aa045d29c0"
+    },
+    {
       "id": "community-69",
       "version": 1,
       "title": "Internet Survivor",
