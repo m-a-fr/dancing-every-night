@@ -2716,6 +2716,52 @@
       "source_sha256": "fd6d7285e9280aba1292fe57a5ba9714398c9c2bbaf77e59e2cc65b10d9ed6c9"
     },
     {
+      "id": "community-137",
+      "version": 1,
+      "title": "Hishoku no Sora (TV Size)",
+      "artist": "Mami Kawada",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=FcPyXp5_8fk",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 90,
+          "bpm": 169.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 138,
+          "bpm": 169.0
+        },
+        {
+          "name": "HARD",
+          "notes": 208,
+          "bpm": 169.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 230,
+          "bpm": 169.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12346700,
+      "has_video": true,
+      "zip": "songs/community-137-v1.zip",
+      "zip_bytes": 12191858,
+      "sha256": "7902d3bd3f5e0a70df4af7993332b984ded3b0bcc3650fbc51f754e0a8f18748",
+      "thumb": "thumbs/community-137-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 137,
+      "local_id": "popular5_hishoku",
+      "previous_objects": [],
+      "source_sha256": "537bdb44c54aa2400b863c1c2cad1694c6e6ee5ecd0860fa159488244c850190"
+    },
+    {
       "id": "community-34",
       "version": 1,
       "title": "Hitorigoto",
