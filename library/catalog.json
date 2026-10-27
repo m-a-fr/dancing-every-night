@@ -3774,6 +3774,52 @@
       "source_sha256": "9c42bff918132afd31bff1d0031d4e795aae08ff08f3ca0b8408e17cb52ade97"
     },
     {
+      "id": "community-101",
+      "version": 1,
+      "title": "VORACITY (TV Size)",
+      "artist": "MYTH & ROID",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=njBp4VBFMBU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 78,
+          "bpm": 100.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 115,
+          "bpm": 100.0
+        },
+        {
+          "name": "HARD",
+          "notes": 164,
+          "bpm": 100.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 195,
+          "bpm": 100.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 11636098,
+      "has_video": true,
+      "zip": "songs/community-101-v1.zip",
+      "zip_bytes": 11375618,
+      "sha256": "e3edc361c45d759074d14c1f589507dcead95730115925088ffcc7edc02e75ed",
+      "thumb": "thumbs/community-101-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 101,
+      "local_id": "popular4_voracity",
+      "previous_objects": [],
+      "source_sha256": "35d73de0b3816ad1a5a476fde3aee87fa0adb98924cb221d6c52cab29c6700a0"
+    },
+    {
       "id": "community-89",
       "version": 1,
       "title": "Who Killed U.N.Owen",
