@@ -2900,6 +2900,52 @@
       "source_sha256": "fdecb2cf274fe09bf12dc7e2a5435d970c68c33f705b417c94df2077e82ccedf"
     },
     {
+      "id": "community-138",
+      "version": 1,
+      "title": "Imagination (TV Size)",
+      "artist": "SPYAIR",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=YeKP2klzOm4",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 78,
+          "bpm": 102.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 124,
+          "bpm": 102.0
+        },
+        {
+          "name": "HARD",
+          "notes": 165,
+          "bpm": 102.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 200,
+          "bpm": 102.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12149283,
+      "has_video": true,
+      "zip": "songs/community-138-v1.zip",
+      "zip_bytes": 11939662,
+      "sha256": "dad67fa223fb84f962fddd26a310172cf12c9a071fea5e8717ca941f1a74de4b",
+      "thumb": "thumbs/community-138-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 138,
+      "local_id": "popular5_imagination",
+      "previous_objects": [],
+      "source_sha256": "95c076964527c81f7f6ac5d7021a223cd77ea0613fa3f78ab794213987fe0447"
+    },
+    {
       "id": "community-115",
       "version": 1,
       "title": "Inferno (TV Size)",
