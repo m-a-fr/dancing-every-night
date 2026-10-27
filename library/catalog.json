@@ -2854,6 +2854,52 @@
       "source_sha256": "5a88b0e2a9fa6636021f62cdb51ca6266390c7dccebc8b982e771cf53056e4d4"
     },
     {
+      "id": "community-119",
+      "version": 1,
+      "title": "My Dearest (TV Size)",
+      "artist": "supercell",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=W10RXr9c44Y",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 88,
+          "bpm": 167.79
+        },
+        {
+          "name": "NORMAL",
+          "notes": 117,
+          "bpm": 167.79
+        },
+        {
+          "name": "HARD",
+          "notes": 178,
+          "bpm": 167.79
+        },
+        {
+          "name": "EXPERT",
+          "notes": 203,
+          "bpm": 167.79
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12188826,
+      "has_video": true,
+      "zip": "songs/community-119-v1.zip",
+      "zip_bytes": 12035907,
+      "sha256": "e58c2b61393dafac740d823a431e689a9e2e49cba9a006192a3e2abe0797edd1",
+      "thumb": "thumbs/community-119-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 119,
+      "local_id": "popular4_my_dearest",
+      "previous_objects": [],
+      "source_sha256": "a67e3819bed2b36530d3459ddfa31111de8907f2685a94aaabd54fb5ab4e0485"
+    },
+    {
       "id": "community-54",
       "version": 1,
       "title": "My Love",
