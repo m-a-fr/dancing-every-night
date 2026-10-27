@@ -2946,6 +2946,52 @@
       "source_sha256": "8241dd38858567adc10178a01f975c83763516f3031e2834c4e944e4ffe8926c"
     },
     {
+      "id": "community-96",
+      "version": 1,
+      "title": "Realize (TV Size)",
+      "artist": "Konomi Suzuki",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=V7ZEEymq0DQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 72,
+          "bpm": 103.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 121,
+          "bpm": 103.0
+        },
+        {
+          "name": "HARD",
+          "notes": 175,
+          "bpm": 103.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 219,
+          "bpm": 103.0
+        }
+      ],
+      "duration_s": 90.2,
+      "size_bytes": 12297293,
+      "has_video": true,
+      "zip": "songs/community-96-v1.zip",
+      "zip_bytes": 12003195,
+      "sha256": "4058a08c2e046924baf8c1e90f37abf3253d3029beb9b8b14edf802506335c48",
+      "thumb": "thumbs/community-96-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 96,
+      "local_id": "popular4_realize",
+      "previous_objects": [],
+      "source_sha256": "de7c49bc2b0595334464ac785bf3160cead89d70e99db6f9f620b0ac05017765"
+    },
+    {
       "id": "community-83",
       "version": 1,
       "title": "Renai Circulation (TV Size)",
