@@ -1980,6 +1980,52 @@
       "source_sha256": "c932a32f9784a09d97549c00e2afa9b5d7910d819c6daf60060aa7d42dd86aca"
     },
     {
+      "id": "community-114",
+      "version": 1,
+      "title": "IGNITE (TV Size)",
+      "artist": "Eir Aoi",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=vfYJz6P8Eoo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 95,
+          "bpm": 171.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 129,
+          "bpm": 171.0
+        },
+        {
+          "name": "HARD",
+          "notes": 203,
+          "bpm": 171.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 236,
+          "bpm": 171.0
+        }
+      ],
+      "duration_s": 89.3,
+      "size_bytes": 11829333,
+      "has_video": true,
+      "zip": "songs/community-114-v1.zip",
+      "zip_bytes": 11638232,
+      "sha256": "b553cf1790d3d3d53d3d0b1e965b402509130feef88a79def44b8a3549b72809",
+      "thumb": "thumbs/community-114-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 114,
+      "local_id": "popular4_ignite",
+      "previous_objects": [],
+      "source_sha256": "fdecb2cf274fe09bf12dc7e2a5435d970c68c33f705b417c94df2077e82ccedf"
+    },
+    {
       "id": "community-69",
       "version": 1,
       "title": "Internet Survivor",
