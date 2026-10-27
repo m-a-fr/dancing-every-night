@@ -1842,6 +1842,52 @@
       "source_sha256": "608f1b9f88cd2d447170c4bbc7cdb9da45b5f33d6da6a49e9d83409626621854"
     },
     {
+      "id": "community-128",
+      "version": 1,
+      "title": "Deal with the devil (TV Size)",
+      "artist": "Tia",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=UNAP32b9ZWM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 98,
+          "bpm": 142.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 153,
+          "bpm": 142.0
+        },
+        {
+          "name": "HARD",
+          "notes": 217,
+          "bpm": 142.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 267,
+          "bpm": 142.0
+        }
+      ],
+      "duration_s": 109.2,
+      "size_bytes": 14159715,
+      "has_video": true,
+      "zip": "songs/community-128-v1.zip",
+      "zip_bytes": 14010211,
+      "sha256": "410c5d6b169ce615b5305f8ab04611ca8d73ca683dd067690bbeadca5bb98c7f",
+      "thumb": "thumbs/community-128-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 128,
+      "local_id": "popular5_deal",
+      "previous_objects": [],
+      "source_sha256": "1cefa83decadeb99d83b01c794cfa40d785e937a30e99723d2dfaa81d4873f76"
+    },
+    {
       "id": "community-21",
       "version": 1,
       "title": "Digital Native",
