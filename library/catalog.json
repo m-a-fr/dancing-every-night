@@ -5982,6 +5982,52 @@
       "source_sha256": "f4b02782a4f3f6c68b6681e5cbd555f81fa0f92f809fb39d9a3576da3d69114d"
     },
     {
+      "id": "community-149",
+      "version": 1,
+      "title": "WORLD END (TV Size)",
+      "artist": "FLOW",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=yySkwG-reF4",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 91,
+          "bpm": 177.84
+        },
+        {
+          "name": "NORMAL",
+          "notes": 134,
+          "bpm": 177.84
+        },
+        {
+          "name": "HARD",
+          "notes": 196,
+          "bpm": 177.84
+        },
+        {
+          "name": "EXPERT",
+          "notes": 231,
+          "bpm": 177.84
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 11720934,
+      "has_video": true,
+      "zip": "songs/community-149-v1.zip",
+      "zip_bytes": 11444470,
+      "sha256": "4b74adb47ed95c04bbbbd8335b99b2ca63a223fae9518d4d089739e0aa31c3d2",
+      "thumb": "thumbs/community-149-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 149,
+      "local_id": "popular5_world_end",
+      "previous_objects": [],
+      "source_sha256": "7a3615f5e24892cc7cc70e65d628b5ccb8cc4997a3e421476ef84fedd0f24908"
+    },
+    {
       "id": "community-40",
       "version": 1,
       "title": "Yoru ni Kakeru",
