@@ -922,6 +922,52 @@
       "source_sha256": "98ab3d562facc812b784685518ba2d6db13646392bae92e4e4362ebcbd0cecea"
     },
     {
+      "id": "community-124",
+      "version": 1,
+      "title": "Brain Power (Game Edit)",
+      "artist": "NOMA",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=dTGEw_x8d10",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 114,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 149,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 246,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 281,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 118.1,
+      "size_bytes": 5320840,
+      "has_video": true,
+      "zip": "songs/community-124-v1.zip",
+      "zip_bytes": 3278200,
+      "sha256": "6abaa17ecde313295b5ad6cd2c94bc69751b6d6c84bafdfd07c7cc8bd5590cfa",
+      "thumb": "thumbs/community-124-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 124,
+      "local_id": "popular5_brain_power",
+      "previous_objects": [],
+      "source_sha256": "3f32c155791d1a2607c3445b2e1ea605401048c6ef6f2d971dfa4d5032258d0e"
+    },
+    {
       "id": "community-106",
       "version": 1,
       "title": "Bravely You (TV Size)",
