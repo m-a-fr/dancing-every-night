@@ -2578,6 +2578,52 @@
       "source_sha256": "c5c72b1a06700c779c006557126199db2a52e4ecea701927b0f7550f5589ea9e"
     },
     {
+      "id": "community-136",
+      "version": 1,
+      "title": "Hero's Come Back!! (TV Size)",
+      "artist": "nobodyknows+",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=EBNl8bwdVcA",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 80,
+          "bpm": 104.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 132,
+          "bpm": 104.0
+        },
+        {
+          "name": "HARD",
+          "notes": 200,
+          "bpm": 104.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 237,
+          "bpm": 104.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 11735786,
+      "has_video": true,
+      "zip": "songs/community-136-v1.zip",
+      "zip_bytes": 11420963,
+      "sha256": "acbf9bb7306814c13c4670c149653c59c1571f2887c9cd6bc39c774e98e479f9",
+      "thumb": "thumbs/community-136-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 136,
+      "local_id": "popular5_heroes",
+      "previous_objects": [],
+      "source_sha256": "cf9bf8916a6641b72e7400ff8d57098b84b472dde4706b4f98c7a1251991dc17"
+    },
+    {
       "id": "community-50",
       "version": 1,
       "title": "Highscore",
