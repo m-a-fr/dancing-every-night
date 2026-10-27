@@ -508,6 +508,52 @@
       "source_sha256": "627c80ea99006c448ff989e88c691590e50256e86d84953d5b2485759718b225"
     },
     {
+      "id": "community-122",
+      "version": 1,
+      "title": "B.B.K.K.B.K.K.",
+      "artist": "nora2r",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=XHtQO0aLEKI",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 123,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 170,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 282,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 318,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 135.1,
+      "size_bytes": 17030223,
+      "has_video": true,
+      "zip": "songs/community-122-v1.zip",
+      "zip_bytes": 15626432,
+      "sha256": "22797965da037109172e55e663eaa9ac96b455f05d423a7fe1a8bf888291a598",
+      "thumb": "thumbs/community-122-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 122,
+      "local_id": "popular5_bbkk",
+      "previous_objects": [],
+      "source_sha256": "de4cee3681d0e733ee7ac2b75f0f973b4911e62d83f8142d8d767948add33318"
+    },
+    {
       "id": "community-28",
       "version": 1,
       "title": "Bad Apple!! feat. nomico",
