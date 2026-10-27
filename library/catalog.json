@@ -738,6 +738,52 @@
       "source_sha256": "98ab3d562facc812b784685518ba2d6db13646392bae92e4e4362ebcbd0cecea"
     },
     {
+      "id": "community-106",
+      "version": 1,
+      "title": "Bravely You (TV Size)",
+      "artist": "Lia",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=ECJGoRVArKU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 89,
+          "bpm": 150.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 132,
+          "bpm": 150.0
+        },
+        {
+          "name": "HARD",
+          "notes": 204,
+          "bpm": 150.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 236,
+          "bpm": 150.0
+        }
+      ],
+      "duration_s": 89.7,
+      "size_bytes": 11973225,
+      "has_video": true,
+      "zip": "songs/community-106-v1.zip",
+      "zip_bytes": 11824732,
+      "sha256": "65bf75249a3a2c5a9f0501e9c9be701f5e8232532122dd49cee35ba3726239b2",
+      "thumb": "thumbs/community-106-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 106,
+      "local_id": "popular4_bravely_you",
+      "previous_objects": [],
+      "source_sha256": "367de7aec7e85377bdcbba4d8b64dab1ec1f8aaf15f0f2f7fe10f946b5449899"
+    },
+    {
       "id": "community-84",
       "version": 1,
       "title": "BRING IT ON",
