@@ -140,6 +140,52 @@
       "source_sha256": "6e2e0ac9b5b327ed95b07f95052fb9292ba84168b050486315de597ee1b5d063"
     },
     {
+      "id": "community-91",
+      "version": 1,
+      "title": "ADAMAS (TV Size)",
+      "artist": "LiSA",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=3hdJ8PKNXrc",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 108,
+          "bpm": 191.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 144,
+          "bpm": 191.0
+        },
+        {
+          "name": "HARD",
+          "notes": 190,
+          "bpm": 191.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 234,
+          "bpm": 191.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12339968,
+      "has_video": true,
+      "zip": "songs/community-91-v1.zip",
+      "zip_bytes": 12194295,
+      "sha256": "e0dbe4e8321708e475572ca3fc85ac308ba129680b467c711b52aa9fce0431e7",
+      "thumb": "thumbs/community-91-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 91,
+      "local_id": "popular4_adamas",
+      "previous_objects": [],
+      "source_sha256": "afda44bc291301f3474cb916e4ee2f943391ffb0e63c61ab4fad48aebbbd3a1d"
+    },
+    {
       "id": "community-60",
       "version": 1,
       "title": "again (TV Size)",
