@@ -462,6 +462,52 @@
       "source_sha256": "2ec340450c33f1bd5dea341e2acb04b0388887da016f074e02de7eea0943030d"
     },
     {
+      "id": "community-121",
+      "version": 1,
+      "title": "AXION",
+      "artist": "Sakuzyo",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=DA3hOQ7d8qU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 118,
+          "bpm": 160.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 172,
+          "bpm": 160.0
+        },
+        {
+          "name": "HARD",
+          "notes": 247,
+          "bpm": 160.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 289,
+          "bpm": 160.0
+        }
+      ],
+      "duration_s": 132.7,
+      "size_bytes": 16961759,
+      "has_video": true,
+      "zip": "songs/community-121-v1.zip",
+      "zip_bytes": 16512329,
+      "sha256": "e05c6bac6416c6cbd18e35b96f694816b23d69d69a6add1b09ebc54865425b83",
+      "thumb": "thumbs/community-121-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 121,
+      "local_id": "popular5_axion",
+      "previous_objects": [],
+      "source_sha256": "627c80ea99006c448ff989e88c691590e50256e86d84953d5b2485759718b225"
+    },
+    {
       "id": "community-28",
       "version": 1,
       "title": "Bad Apple!! feat. nomico",
