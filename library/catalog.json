@@ -2210,6 +2210,52 @@
       "source_sha256": "ca8e289d6f0b6c4720a7ce65f7736595bda16e3f59cb6eb29b0394401204f748"
     },
     {
+      "id": "community-133",
+      "version": 1,
+      "title": "GO!!! (TV Size)",
+      "artist": "FLOW",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=GBE1VkrL8b0",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 86,
+          "bpm": 133.85
+        },
+        {
+          "name": "NORMAL",
+          "notes": 139,
+          "bpm": 133.85
+        },
+        {
+          "name": "HARD",
+          "notes": 203,
+          "bpm": 133.85
+        },
+        {
+          "name": "EXPERT",
+          "notes": 237,
+          "bpm": 133.85
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12001269,
+      "has_video": true,
+      "zip": "songs/community-133-v1.zip",
+      "zip_bytes": 11745451,
+      "sha256": "581255fafe0d9f5113ff31e9c58f35f49c1ca790b552c38206d4435bf1613e94",
+      "thumb": "thumbs/community-133-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 133,
+      "local_id": "popular5_go",
+      "previous_objects": [],
+      "source_sha256": "92cf624911628ba7d4ad8634cee58b7e9f4d5e0f1dcbf6ed3795a33d2a72234b"
+    },
+    {
       "id": "community-111",
       "version": 1,
       "title": "Guren no Yumiya (TV Size)",
