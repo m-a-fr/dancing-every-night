@@ -508,6 +508,52 @@
       "source_sha256": "cc9f2e13184adbbe7c8d766c47bd7a4c92966abc145913e404b349b68245f648"
     },
     {
+      "id": "community-105",
+      "version": 1,
+      "title": "Black Catcher (TV Size)",
+      "artist": "Vickeblanka",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=XMeQeIG_rQg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 72,
+          "bpm": 100.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 121,
+          "bpm": 100.0
+        },
+        {
+          "name": "HARD",
+          "notes": 174,
+          "bpm": 100.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 219,
+          "bpm": 100.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 11735726,
+      "has_video": true,
+      "zip": "songs/community-105-v1.zip",
+      "zip_bytes": 11468807,
+      "sha256": "b48bdb12747780338ff1e7315ba3e4d6ef6c20c141feb6164ff79c47c6f9fc3e",
+      "thumb": "thumbs/community-105-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 105,
+      "local_id": "popular4_black_catcher",
+      "previous_objects": [],
+      "source_sha256": "a08f5bc3bd81da5cb1087920169fc9c957791a11b40a0a8fe212993e3949bbc7"
+    },
+    {
       "id": "community-29",
       "version": 1,
       "title": "Black Rover",
