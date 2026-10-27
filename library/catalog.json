@@ -1566,6 +1566,52 @@
       "source_sha256": "ca8e289d6f0b6c4720a7ce65f7736595bda16e3f59cb6eb29b0394401204f748"
     },
     {
+      "id": "community-111",
+      "version": 1,
+      "title": "Guren no Yumiya (TV Size)",
+      "artist": "Linked Horizon",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=AW5_k_Cf4wM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 104,
+          "bpm": 180.67
+        },
+        {
+          "name": "NORMAL",
+          "notes": 139,
+          "bpm": 180.67
+        },
+        {
+          "name": "HARD",
+          "notes": 196,
+          "bpm": 180.67
+        },
+        {
+          "name": "EXPERT",
+          "notes": 251,
+          "bpm": 180.67
+        }
+      ],
+      "duration_s": 92.0,
+      "size_bytes": 12494968,
+      "has_video": true,
+      "zip": "songs/community-111-v1.zip",
+      "zip_bytes": 12316624,
+      "sha256": "48d22ba9b269a933edef84eee6044700e2921b355e4c5bba0935d0db200fdf46",
+      "thumb": "thumbs/community-111-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 111,
+      "local_id": "popular4_guren",
+      "previous_objects": [],
+      "source_sha256": "645d3900c4b72b56da6de04fe7833bb0aec0c58df7bbe846df6693befd476eb5"
+    },
+    {
       "id": "community-67",
       "version": 1,
       "title": "HANIPAGANDA",
