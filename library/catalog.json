@@ -922,6 +922,52 @@
       "source_sha256": "96f108a1e41906fe7bbb54de07d943e9cb8dc024fd4b6ee2d1476169d71644ab"
     },
     {
+      "id": "community-107",
+      "version": 1,
+      "title": "Calamity Fortune",
+      "artist": "LeaF",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=L_iSDqqhsBg",
+      "license": "Music: LeaF free-content terms (short version); artwork: origin",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 107,
+          "bpm": 100.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 178,
+          "bpm": 100.0
+        },
+        {
+          "name": "HARD",
+          "notes": 241,
+          "bpm": 100.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 280,
+          "bpm": 100.0
+        }
+      ],
+      "duration_s": 135.2,
+      "size_bytes": 3295003,
+      "has_video": false,
+      "zip": "songs/community-107-v1.zip",
+      "zip_bytes": 3275876,
+      "sha256": "3deac1bad417176fbafa5eec1c90931fa7116df65213074d31082c6f3866e61b",
+      "thumb": "thumbs/community-107-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 107,
+      "local_id": "popular4_calamity_fortune",
+      "previous_objects": [],
+      "source_sha256": "65e2f950e0bd88a308beb4b170f1e09c3c130bf94e68a80701d509efa485a6a3"
+    },
+    {
       "id": "community-19",
       "version": 1,
       "title": "Chibi Ninja",
