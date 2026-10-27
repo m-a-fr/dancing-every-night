@@ -3498,6 +3498,52 @@
       "source_sha256": "19eed6d58bb051848d1c2cac45f6a25cc7c82d9c510c578df7b4a3061fa2c71f"
     },
     {
+      "id": "community-99",
+      "version": 1,
+      "title": "This game (TV Size)",
+      "artist": "Konomi Suzuki",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=1R56KxjDMkw",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 85,
+          "bpm": 147.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 131,
+          "bpm": 147.0
+        },
+        {
+          "name": "HARD",
+          "notes": 190,
+          "bpm": 147.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 228,
+          "bpm": 147.0
+        }
+      ],
+      "duration_s": 90.3,
+      "size_bytes": 12006392,
+      "has_video": true,
+      "zip": "songs/community-99-v1.zip",
+      "zip_bytes": 11855898,
+      "sha256": "4a5a1323cf82722783aacf63c7bdd287192e3e7fd211e9a87367905906967a05",
+      "thumb": "thumbs/community-99-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 99,
+      "local_id": "popular4_this_game",
+      "previous_objects": [],
+      "source_sha256": "be6ee0e879b8b62f87f05c292543e40232b4cd067d448586d63e0cb665df2075"
+    },
+    {
       "id": "community-58",
       "version": 1,
       "title": "Tower of Heaven (You Are Slaves)",
