@@ -48,6 +48,52 @@
       "source_sha256": "a68840b5be9ba5059dbed721ec08eef60433bd220c6757c32e1af1a405688b71"
     },
     {
+      "id": "community-104",
+      "version": 1,
+      "title": "99.9 (TV Size)",
+      "artist": "MOB CHOIR feat. sajou no hana",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Q7vz84o_2_c",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 92,
+          "bpm": 168.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 127,
+          "bpm": 168.0
+        },
+        {
+          "name": "HARD",
+          "notes": 198,
+          "bpm": 168.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 230,
+          "bpm": 168.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12222738,
+      "has_video": true,
+      "zip": "songs/community-104-v1.zip",
+      "zip_bytes": 11960971,
+      "sha256": "057b63c07a847ab70def4165f7f8f2a7243c912473387cc28c0ace05b7de2fe8",
+      "thumb": "thumbs/community-104-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 104,
+      "local_id": "popular4_99_9",
+      "previous_objects": [],
+      "source_sha256": "b51e5f10ad59148bf5fa4af2af7a4c78d93e7049d6c622ba0f16a795bce716ac"
+    },
+    {
       "id": "community-65",
       "version": 1,
       "title": "A Cruel Angel's Thesis (TV Size)",
