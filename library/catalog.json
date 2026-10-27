@@ -1244,6 +1244,52 @@
       "source_sha256": "65e2f950e0bd88a308beb4b170f1e09c3c130bf94e68a80701d509efa485a6a3"
     },
     {
+      "id": "community-126",
+      "version": 1,
+      "title": "CHA-LA HEAD-CHA-LA (TV Size)",
+      "artist": "Hironobu Kageyama",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=qQmTdijhjD4",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 106,
+          "bpm": 154.09
+        },
+        {
+          "name": "NORMAL",
+          "notes": 152,
+          "bpm": 154.09
+        },
+        {
+          "name": "HARD",
+          "notes": 240,
+          "bpm": 154.09
+        },
+        {
+          "name": "EXPERT",
+          "notes": 290,
+          "bpm": 154.09
+        }
+      ],
+      "duration_s": 119.1,
+      "size_bytes": 15480779,
+      "has_video": true,
+      "zip": "songs/community-126-v1.zip",
+      "zip_bytes": 15170483,
+      "sha256": "2ef2ad6665eee85dfbd4a04e361638ba33bb7e42106710b2ab12a469f2d7a18d",
+      "thumb": "thumbs/community-126-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 126,
+      "local_id": "popular5_chala",
+      "previous_objects": [],
+      "source_sha256": "dfaf956c32201e8df8ba8331b3db6386c702ac9c1188fae3ea64cc6d40370a6e"
+    },
+    {
       "id": "community-19",
       "version": 1,
       "title": "Chibi Ninja",
