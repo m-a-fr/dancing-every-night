@@ -2762,6 +2762,52 @@
       "source_sha256": "34b784114782a69de2a9be73b7573a77c3f4394e684fe7d20c4b49fcb012e013"
     },
     {
+      "id": "community-94",
+      "version": 1,
+      "title": "Paradisus-Paradoxum (TV Size)",
+      "artist": "MYTH & ROID",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=iu_0kOfMGD0",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 76,
+          "bpm": 100.52
+        },
+        {
+          "name": "NORMAL",
+          "notes": 125,
+          "bpm": 100.52
+        },
+        {
+          "name": "HARD",
+          "notes": 177,
+          "bpm": 100.52
+        },
+        {
+          "name": "EXPERT",
+          "notes": 199,
+          "bpm": 100.52
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12219073,
+      "has_video": true,
+      "zip": "songs/community-94-v1.zip",
+      "zip_bytes": 12036506,
+      "sha256": "e2656f1abb4aaed53f17362fa43220d4494d1abca11db969ec05909223e98198",
+      "thumb": "thumbs/community-94-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 94,
+      "local_id": "popular4_paradisus",
+      "previous_objects": [],
+      "source_sha256": "a1353930fabaa42a87e54ec3bccdb574cda488447745217ca8dc8bd4080c3a10"
+    },
+    {
       "id": "community-10",
       "version": 1,
       "title": "Phycietiia",
