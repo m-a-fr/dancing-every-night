@@ -3958,6 +3958,52 @@
       "source_sha256": "62e1421b3d4ab67538f02a51b4a0cdd298be940d608c4ccd56d53f85140b216b"
     },
     {
+      "id": "community-103",
+      "version": 1,
+      "title": "Zankyou Sanka (TV Size)",
+      "artist": "Aimer",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=st4wcpjZeQQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 94,
+          "bpm": 171.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 140,
+          "bpm": 171.0
+        },
+        {
+          "name": "HARD",
+          "notes": 209,
+          "bpm": 171.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 238,
+          "bpm": 171.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12465240,
+      "has_video": true,
+      "zip": "songs/community-103-v1.zip",
+      "zip_bytes": 12322015,
+      "sha256": "8d295dc6894c2f6a438e35274e7147c26f6888bfe38094572a3c6a3c46b96933",
+      "thumb": "thumbs/community-103-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 103,
+      "local_id": "popular4_zankyou_sanka",
+      "previous_objects": [],
+      "source_sha256": "81729086f7cdc338483fc94c750b28b590042574a86d7b737312ebf2cadb43dc"
+    },
+    {
       "id": "community-39",
       "version": 1,
       "title": "Zenzenzense (movie ver.)",
