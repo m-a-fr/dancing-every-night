@@ -3820,6 +3820,52 @@
       "source_sha256": "5a88b0e2a9fa6636021f62cdb51ca6266390c7dccebc8b982e771cf53056e4d4"
     },
     {
+      "id": "community-140",
+      "version": 1,
+      "title": "Moonlight Densetsu (TV Size)",
+      "artist": "DALI",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=LGQCPOMcYJQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 86,
+          "bpm": 139.66
+        },
+        {
+          "name": "NORMAL",
+          "notes": 133,
+          "bpm": 139.66
+        },
+        {
+          "name": "HARD",
+          "notes": 186,
+          "bpm": 139.66
+        },
+        {
+          "name": "EXPERT",
+          "notes": 228,
+          "bpm": 139.66
+        }
+      ],
+      "duration_s": 93.3,
+      "size_bytes": 12253074,
+      "has_video": true,
+      "zip": "songs/community-140-v1.zip",
+      "zip_bytes": 12057949,
+      "sha256": "d3abd530cd703510f8ff37841007417fa1c8331890688728afe2e855ccc5bb5e",
+      "thumb": "thumbs/community-140-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 140,
+      "local_id": "popular5_moonlight",
+      "previous_objects": [],
+      "source_sha256": "d5182c27d9baa9df5832b2cd54a84b012038fb32c98b1889fa376930fa557ddb"
+    },
+    {
       "id": "community-119",
       "version": 1,
       "title": "My Dearest (TV Size)",
