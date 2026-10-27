@@ -1152,6 +1152,52 @@
       "source_sha256": "96f108a1e41906fe7bbb54de07d943e9cb8dc024fd4b6ee2d1476169d71644ab"
     },
     {
+      "id": "community-125",
+      "version": 1,
+      "title": "Butter-Fly (TV Size)",
+      "artist": "Koji Wada",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=32JTFI0alPk",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 98,
+          "bpm": 165.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 138,
+          "bpm": 165.0
+        },
+        {
+          "name": "HARD",
+          "notes": 217,
+          "bpm": 165.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 246,
+          "bpm": 165.0
+        }
+      ],
+      "duration_s": 95.1,
+      "size_bytes": 12887074,
+      "has_video": true,
+      "zip": "songs/community-125-v1.zip",
+      "zip_bytes": 12707856,
+      "sha256": "3e592f211b24570430f0bcee75fbb8bfc2618dea2046be26d966834a5f371bbc",
+      "thumb": "thumbs/community-125-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 125,
+      "local_id": "popular5_butterfly",
+      "previous_objects": [],
+      "source_sha256": "15bdebfc01fb8c43acb36de04952578c95457c287430474565c91bbb5196ab7d"
+    },
+    {
       "id": "community-107",
       "version": 1,
       "title": "Calamity Fortune",
