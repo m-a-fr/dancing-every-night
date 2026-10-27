@@ -2026,6 +2026,52 @@
       "source_sha256": "da15d46d28cb22a5c4f6b7c64846652e4ad06b089dd3b772253d331ef45f7f7e"
     },
     {
+      "id": "community-131",
+      "version": 1,
+      "title": "End Time",
+      "artist": "Cres.",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=5ObyIJ7HlxM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 139,
+          "bpm": 180.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 189,
+          "bpm": 180.0
+        },
+        {
+          "name": "HARD",
+          "notes": 242,
+          "bpm": 180.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 300,
+          "bpm": 180.0
+        }
+      ],
+      "duration_s": 133.2,
+      "size_bytes": 15586921,
+      "has_video": true,
+      "zip": "songs/community-131-v1.zip",
+      "zip_bytes": 15400376,
+      "sha256": "b71daed123de8921b29fccbd315e4adb71ee653217d9729e79c746b1eb75d29b",
+      "thumb": "thumbs/community-131-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 131,
+      "local_id": "popular5_end_time",
+      "previous_objects": [],
+      "source_sha256": "de104442fe0425809a9d884e44077b696b1cae166abdb6100b81616a1758de9d"
+    },
+    {
       "id": "community-7",
       "version": 1,
       "title": "Firestarter",
