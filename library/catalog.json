@@ -1934,6 +1934,52 @@
       "source_sha256": "a03254ea52b70b07c1d6cb68534f6d20270a51394f5836bd43d71f442d9e0049"
     },
     {
+      "id": "community-129",
+      "version": 1,
+      "title": "Diver (TV Size)",
+      "artist": "NICO Touches the Walls",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=P1yJ51DH-18",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 89,
+          "bpm": 149.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 136,
+          "bpm": 149.0
+        },
+        {
+          "name": "HARD",
+          "notes": 200,
+          "bpm": 149.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 233,
+          "bpm": 149.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12435967,
+      "has_video": true,
+      "zip": "songs/community-129-v1.zip",
+      "zip_bytes": 12190762,
+      "sha256": "9a749bb42f182721e64fa987c828abe8324a7b548fe4c6f36715ed192595ef2a",
+      "thumb": "thumbs/community-129-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 129,
+      "local_id": "popular5_diver",
+      "previous_objects": [],
+      "source_sha256": "da15d46d28cb22a5c4f6b7c64846652e4ad06b089dd3b772253d331ef45f7f7e"
+    },
+    {
       "id": "community-7",
       "version": 1,
       "title": "Firestarter",
