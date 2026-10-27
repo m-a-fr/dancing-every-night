@@ -1198,6 +1198,52 @@
       "source_sha256": "686ddd70a7747eb3b69ba99c8a05c7d3660433a6bfb542e8629bcb3bad0372ac"
     },
     {
+      "id": "community-108",
+      "version": 1,
+      "title": "conflict",
+      "artist": "siromaru + cranky",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=e8HRTlkGD4Q",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 149,
+          "bpm": 160.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 216,
+          "bpm": 160.0
+        },
+        {
+          "name": "HARD",
+          "notes": 316,
+          "bpm": 160.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 363,
+          "bpm": 160.0
+        }
+      ],
+      "duration_s": 151.7,
+      "size_bytes": 19835314,
+      "has_video": true,
+      "zip": "songs/community-108-v1.zip",
+      "zip_bytes": 19476243,
+      "sha256": "fdc29b4e518e5cf359f85cfefce0d7098981b9313c6fe60f2cdbea934d661228",
+      "thumb": "thumbs/community-108-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 108,
+      "local_id": "popular4_conflict",
+      "previous_objects": [],
+      "source_sha256": "3512b71b54016b38785041f1422793edc2c4669b971638803e0769b2e9178cc4"
+    },
+    {
       "id": "community-63",
       "version": 1,
       "title": "Connect (TV Size)",
