@@ -5338,6 +5338,52 @@
       "source_sha256": "71b56a2343ed9161193d669323998a73f6266393db70d5e5b5915dd0fed08f6d"
     },
     {
+      "id": "community-147",
+      "version": 1,
+      "title": "Tank! (TV Size)",
+      "artist": "SEATBELTS",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=9Go4J1RaeuM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 82,
+          "bpm": 140.67
+        },
+        {
+          "name": "NORMAL",
+          "notes": 130,
+          "bpm": 140.67
+        },
+        {
+          "name": "HARD",
+          "notes": 187,
+          "bpm": 140.67
+        },
+        {
+          "name": "EXPERT",
+          "notes": 216,
+          "bpm": 140.67
+        }
+      ],
+      "duration_s": 91.2,
+      "size_bytes": 12362728,
+      "has_video": true,
+      "zip": "songs/community-147-v1.zip",
+      "zip_bytes": 11899074,
+      "sha256": "1dbcb681088f86e039cabc863906debcddee73c824e25c16921e7fa247b12b2f",
+      "thumb": "thumbs/community-147-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 147,
+      "local_id": "popular5_tank",
+      "previous_objects": [],
+      "source_sha256": "48e466cba7981e433590656187278499003282af9d026bc7307b4d7ddd25eb90"
+    },
+    {
       "id": "community-43",
       "version": 1,
       "title": "Tear Rain",
