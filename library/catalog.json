@@ -2302,6 +2302,52 @@
       "source_sha256": "fe6dacdae147f2cbd2fa36d927269adb0119dac5793b13de1567a5bd0b839cac"
     },
     {
+      "id": "community-117",
+      "version": 1,
+      "title": "KICK BACK (TV Size)",
+      "artist": "Kenshi Yonezu",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=dFlDRhvM4L0",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 76,
+          "bpm": 102.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 127,
+          "bpm": 102.0
+        },
+        {
+          "name": "HARD",
+          "notes": 172,
+          "bpm": 102.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 207,
+          "bpm": 102.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12078497,
+      "has_video": true,
+      "zip": "songs/community-117-v1.zip",
+      "zip_bytes": 11893770,
+      "sha256": "1a71df0b1e72fc8c74ab6b2ba67664d4ad4614f9c9c06614187f4cc55dc51a90",
+      "thumb": "thumbs/community-117-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 117,
+      "local_id": "popular4_kick_back",
+      "previous_objects": [],
+      "source_sha256": "2cd3374312c86188fe23b4462991082c921479cf281cc4c33af7a17695d76316"
+    },
+    {
       "id": "community-52",
       "version": 1,
       "title": "Kimi no Sei (TV Size)",
