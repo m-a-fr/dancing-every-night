@@ -2808,6 +2808,52 @@
       "source_sha256": "a1353930fabaa42a87e54ec3bccdb574cda488447745217ca8dc8bd4080c3a10"
     },
     {
+      "id": "community-95",
+      "version": 1,
+      "title": "Peace Sign (TV Size)",
+      "artist": "Kenshi Yonezu",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=iQGAPewPH1s",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 73,
+          "bpm": 100.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 118,
+          "bpm": 100.0
+        },
+        {
+          "name": "HARD",
+          "notes": 168,
+          "bpm": 100.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 218,
+          "bpm": 100.0
+        }
+      ],
+      "duration_s": 92.0,
+      "size_bytes": 12341328,
+      "has_video": true,
+      "zip": "songs/community-95-v1.zip",
+      "zip_bytes": 12128652,
+      "sha256": "373c88c76ed8bfc05f8ebfad51bf1727d305a067731b96497559e273a4c97bb2",
+      "thumb": "thumbs/community-95-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 95,
+      "local_id": "popular4_peace_sign",
+      "previous_objects": [],
+      "source_sha256": "f85b0ad7b647c880a3e5909443f7743dc9bd17effcedee507a53f4f97d1331c0"
+    },
+    {
       "id": "community-10",
       "version": 1,
       "title": "Phycietiia",
