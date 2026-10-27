@@ -3544,6 +3544,52 @@
       "source_sha256": "be6ee0e879b8b62f87f05c292543e40232b4cd067d448586d63e0cb665df2075"
     },
     {
+      "id": "community-100",
+      "version": 1,
+      "title": "Touch off (TV Size)",
+      "artist": "UVERworld",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=iIH38n1o6Kg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 102,
+          "bpm": 200.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 135,
+          "bpm": 200.0
+        },
+        {
+          "name": "HARD",
+          "notes": 185,
+          "bpm": 200.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 237,
+          "bpm": 200.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12108014,
+      "has_video": true,
+      "zip": "songs/community-100-v1.zip",
+      "zip_bytes": 11757244,
+      "sha256": "189dd692935b1df5d5c2bd2302033960ace6b660d3002142130f93868970697a",
+      "thumb": "thumbs/community-100-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 100,
+      "local_id": "popular4_touch_off",
+      "previous_objects": [],
+      "source_sha256": "9b3e3b8af44d9d14d256126834de8ef4eb1077618f8bce38c831563e120bfef4"
+    },
+    {
       "id": "community-58",
       "version": 1,
       "title": "Tower of Heaven (You Are Slaves)",
