@@ -1612,6 +1612,52 @@
       "source_sha256": "645d3900c4b72b56da6de04fe7833bb0aec0c58df7bbe846df6693befd476eb5"
     },
     {
+      "id": "community-112",
+      "version": 1,
+      "title": "Gurenge (TV Size)",
+      "artist": "LiSA",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=pmanD_s7G3U",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 77,
+          "bpm": 135.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 119,
+          "bpm": 135.0
+        },
+        {
+          "name": "HARD",
+          "notes": 178,
+          "bpm": 135.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 210,
+          "bpm": 135.0
+        }
+      ],
+      "duration_s": 89.3,
+      "size_bytes": 11963011,
+      "has_video": true,
+      "zip": "songs/community-112-v1.zip",
+      "zip_bytes": 11765896,
+      "sha256": "742a592bf9c34cc2fc8e5f521a4cbe92ac66270691885e79d15d93f3e97924a3",
+      "thumb": "thumbs/community-112-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 112,
+      "local_id": "popular4_gurenge",
+      "previous_objects": [],
+      "source_sha256": "c9cc40eb221c6faae477009962552586430c03025fea900e655a189dae69f6fd"
+    },
+    {
       "id": "community-67",
       "version": 1,
       "title": "HANIPAGANDA",
