@@ -3820,6 +3820,52 @@
       "source_sha256": "35d73de0b3816ad1a5a476fde3aee87fa0adb98924cb221d6c52cab29c6700a0"
     },
     {
+      "id": "community-102",
+      "version": 1,
+      "title": "We Are! (TV Size)",
+      "artist": "Hiroshi Kitadani",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=YoeP9w5UIlg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 111,
+          "bpm": 168.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 158,
+          "bpm": 168.0
+        },
+        {
+          "name": "HARD",
+          "notes": 257,
+          "bpm": 168.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 290,
+          "bpm": 168.0
+        }
+      ],
+      "duration_s": 110.0,
+      "size_bytes": 15058276,
+      "has_video": true,
+      "zip": "songs/community-102-v1.zip",
+      "zip_bytes": 14789743,
+      "sha256": "96337f197baf40a866f6dc0f370a27e5afdd271df9cbbe8061960c563c6ba366",
+      "thumb": "thumbs/community-102-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 102,
+      "local_id": "popular4_we_are",
+      "previous_objects": [],
+      "source_sha256": "1ed41a444f5d7b60c80289fd6f856ade95c490af74516f0d56fbde2bf636bc41"
+    },
+    {
       "id": "community-89",
       "version": 1,
       "title": "Who Killed U.N.Owen",
