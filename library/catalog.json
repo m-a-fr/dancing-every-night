@@ -4602,6 +4602,52 @@
       "source_sha256": "f85b0ad7b647c880a3e5909443f7743dc9bd17effcedee507a53f4f97d1331c0"
     },
     {
+      "id": "community-143",
+      "version": 1,
+      "title": "Pegasus Fantasy (TV Size)",
+      "artist": "MAKE-UP",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Bu533OKYHyc",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 79,
+          "bpm": 163.27
+        },
+        {
+          "name": "NORMAL",
+          "notes": 126,
+          "bpm": 163.27
+        },
+        {
+          "name": "HARD",
+          "notes": 187,
+          "bpm": 163.27
+        },
+        {
+          "name": "EXPERT",
+          "notes": 217,
+          "bpm": 163.27
+        }
+      ],
+      "duration_s": 85.7,
+      "size_bytes": 10851535,
+      "has_video": true,
+      "zip": "songs/community-143-v1.zip",
+      "zip_bytes": 10616764,
+      "sha256": "b6747b92a8b26fe75a104d67584523fbdabe05d80feb3dad3ea74f5b041f9eb6",
+      "thumb": "thumbs/community-143-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 143,
+      "local_id": "popular5_pegasus",
+      "previous_objects": [],
+      "source_sha256": "248076bd9f69ef6743582d21b0012494ffaae9f6d49a21a72a096d6bc7b70799"
+    },
+    {
       "id": "community-10",
       "version": 1,
       "title": "Phycietiia",
