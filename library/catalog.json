@@ -1796,6 +1796,52 @@
       "source_sha256": "7f0957d46b94446f882c7d878144bd5b371e3fd8066d81b663568798f542abe6"
     },
     {
+      "id": "community-127",
+      "version": 1,
+      "title": "database (TV Size)",
+      "artist": "MAN WITH A MISSION feat. TAKUMA",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=CZ73Qv-RQNg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 96,
+          "bpm": 177.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 126,
+          "bpm": 177.0
+        },
+        {
+          "name": "HARD",
+          "notes": 192,
+          "bpm": 177.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 231,
+          "bpm": 177.0
+        }
+      ],
+      "duration_s": 88.5,
+      "size_bytes": 12012308,
+      "has_video": true,
+      "zip": "songs/community-127-v1.zip",
+      "zip_bytes": 11862416,
+      "sha256": "e459896d44b3568c41eff0299bde0199d3ef00b7758be83697ca92caacc03a50",
+      "thumb": "thumbs/community-127-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 127,
+      "local_id": "popular5_database",
+      "previous_objects": [],
+      "source_sha256": "608f1b9f88cd2d447170c4bbc7cdb9da45b5f33d6da6a49e9d83409626621854"
+    },
+    {
       "id": "community-21",
       "version": 1,
       "title": "Digital Native",
