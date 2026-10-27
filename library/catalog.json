@@ -3130,6 +3130,52 @@
       "source_sha256": "45062213b4b2e6641a101d5678f266660338f0ba40c55c9b34371d417fa312b9"
     },
     {
+      "id": "community-139",
+      "version": 1,
+      "title": "JOINT (TV Size)",
+      "artist": "Mami Kawada",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=VSOnIahWAs4",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 90,
+          "bpm": 180.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 135,
+          "bpm": 180.0
+        },
+        {
+          "name": "HARD",
+          "notes": 198,
+          "bpm": 180.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 245,
+          "bpm": 180.0
+        }
+      ],
+      "duration_s": 95.5,
+      "size_bytes": 12782236,
+      "has_video": true,
+      "zip": "songs/community-139-v1.zip",
+      "zip_bytes": 12605661,
+      "sha256": "04aed4fb340a4735946c7c6a4d03688a97a11423a29004245c6371986b3e2203",
+      "thumb": "thumbs/community-139-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 139,
+      "local_id": "popular5_joint",
+      "previous_objects": [],
+      "source_sha256": "62099715c433c406502c122d5d294c8efb4a2d6e2f11134141d9cda49612e445"
+    },
+    {
       "id": "community-70",
       "version": 1,
       "title": "Kaikai Kitan (TV Size)",
