@@ -2808,6 +2808,52 @@
       "source_sha256": "4754802f9fde8b959197ae27501d0de375a00d5445187dc356b395fda20e750f"
     },
     {
+      "id": "community-146",
+      "version": 1,
+      "title": "Hohoemi no Bakudan (TV Size)",
+      "artist": "Matsuko Mawatari",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=eHf0-CHdQCo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 87,
+          "bpm": 128.57
+        },
+        {
+          "name": "NORMAL",
+          "notes": 127,
+          "bpm": 128.57
+        },
+        {
+          "name": "HARD",
+          "notes": 178,
+          "bpm": 128.57
+        },
+        {
+          "name": "EXPERT",
+          "notes": 212,
+          "bpm": 128.57
+        }
+      ],
+      "duration_s": 97.1,
+      "size_bytes": 12086276,
+      "has_video": true,
+      "zip": "songs/community-146-v1.zip",
+      "zip_bytes": 11848295,
+      "sha256": "1bc24d397c4be5ba35ee61a54f78aad0beab775d8008b3b3e9cd9a09faa56631",
+      "thumb": "thumbs/community-146-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 146,
+      "local_id": "popular5_smile_bomb",
+      "previous_objects": [],
+      "source_sha256": "cc51acdc868d57175874d231f67457d6fac0d08cc01b77bd17e4090a22ccc94b"
+    },
+    {
       "id": "community-35",
       "version": 1,
       "title": "Idol",
