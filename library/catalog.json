@@ -784,6 +784,52 @@
       "source_sha256": "0f157382b962180413ebee2cf919324a9e41c8f57bc6daaacbe3b15e6009e085"
     },
     {
+      "id": "community-123",
+      "version": 1,
+      "title": "Blue Bird (TV Size)",
+      "artist": "Ikimonogakari",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=2upuBiEiXDk",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 84,
+          "bpm": 152.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 124,
+          "bpm": 152.0
+        },
+        {
+          "name": "HARD",
+          "notes": 188,
+          "bpm": 152.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 217,
+          "bpm": 152.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 11966990,
+      "has_video": true,
+      "zip": "songs/community-123-v1.zip",
+      "zip_bytes": 11735318,
+      "sha256": "68fc1681b6048883e19ffc6315911756ed95ddbf35cb240a5b1e3fcfc25d64dc",
+      "thumb": "thumbs/community-123-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 123,
+      "local_id": "popular5_blue_bird",
+      "previous_objects": [],
+      "source_sha256": "f06bc89477e21161fbef9b194999a08a375c422e88e207ebe2e3a1bb48b9723d"
+    },
+    {
       "id": "community-30",
       "version": 1,
       "title": "Blue Zenith",
