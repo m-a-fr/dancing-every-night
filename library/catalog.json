@@ -2808,6 +2808,52 @@
       "source_sha256": "85bb04b0e80efe1d73daabb734d77d4bdfe1d9ad385501599e957b22897a89cb"
     },
     {
+      "id": "community-118",
+      "version": 1,
+      "title": "Mixed Nuts (TV Size)",
+      "artist": "Official HIGE DANdism",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=U_rWZK_8vUY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 88,
+          "bpm": 150.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 138,
+          "bpm": 150.0
+        },
+        {
+          "name": "HARD",
+          "notes": 199,
+          "bpm": 150.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 241,
+          "bpm": 150.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12380179,
+      "has_video": true,
+      "zip": "songs/community-118-v1.zip",
+      "zip_bytes": 12108649,
+      "sha256": "d3d0e6e901e1dbdb7fa36eae09bb1365d496a1ff2cc9c7056d85bf3c2bcecae3",
+      "thumb": "thumbs/community-118-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 118,
+      "local_id": "popular4_mixed_nuts",
+      "previous_objects": [],
+      "source_sha256": "5a88b0e2a9fa6636021f62cdb51ca6266390c7dccebc8b982e771cf53056e4d4"
+    },
+    {
       "id": "community-54",
       "version": 1,
       "title": "My Love",
