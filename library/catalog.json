@@ -2,6 +2,52 @@
   "schema": 1,
   "songs": [
     {
+      "id": "community-90",
+      "version": 1,
+      "title": "99 (TV Size)",
+      "artist": "MOB CHOIR",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Bw-5Lka7gPE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 105,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 143,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 171,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 214,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12258543,
+      "has_video": true,
+      "zip": "songs/community-90-v1.zip",
+      "zip_bytes": 12060090,
+      "sha256": "52721b2d57f6609d303e2a9c7c842e0bcbb7cc29f664a597c6a7f2fd83416c98",
+      "thumb": "thumbs/community-90-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 90,
+      "local_id": "popular4_99",
+      "previous_objects": [],
+      "source_sha256": "a68840b5be9ba5059dbed721ec08eef60433bd220c6757c32e1af1a405688b71"
+    },
+    {
       "id": "community-65",
       "version": 1,
       "title": "A Cruel Angel's Thesis (TV Size)",
