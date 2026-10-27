@@ -2348,6 +2348,52 @@
       "source_sha256": "c9cc40eb221c6faae477009962552586430c03025fea900e655a189dae69f6fd"
     },
     {
+      "id": "community-134",
+      "version": 1,
+      "title": "Hacking to the Gate (TV Size)",
+      "artist": "Kanako Ito",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=zvNPFusZnOk",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 95,
+          "bpm": 161.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 139,
+          "bpm": 161.0
+        },
+        {
+          "name": "HARD",
+          "notes": 213,
+          "bpm": 161.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 242,
+          "bpm": 161.0
+        }
+      ],
+      "duration_s": 99.1,
+      "size_bytes": 12813969,
+      "has_video": true,
+      "zip": "songs/community-134-v1.zip",
+      "zip_bytes": 12548406,
+      "sha256": "c3c434aa9034287e2e822dbe802136a8eb05c7336ba0d551536953d653c8716d",
+      "thumb": "thumbs/community-134-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 134,
+      "local_id": "popular5_hacking",
+      "previous_objects": [],
+      "source_sha256": "3d299722882d6a99772a6564d7621f1271d2d7458aa101418502748d2ab6011e"
+    },
+    {
       "id": "community-113",
       "version": 1,
       "title": "Halcyon (Game Edit)",
