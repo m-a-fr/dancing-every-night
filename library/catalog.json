@@ -5108,6 +5108,52 @@
       "source_sha256": "6748fa7a36da1c1cfb874c64a81258f9727fb0e7679d0dc16701d561f9004187"
     },
     {
+      "id": "community-145",
+      "version": 1,
+      "title": "Sign (TV Size)",
+      "artist": "FLOW",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=97dkzVU4p-M",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 93,
+          "bpm": 178.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 137,
+          "bpm": 178.0
+        },
+        {
+          "name": "HARD",
+          "notes": 191,
+          "bpm": 178.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 233,
+          "bpm": 178.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 11625595,
+      "has_video": true,
+      "zip": "songs/community-145-v1.zip",
+      "zip_bytes": 11414262,
+      "sha256": "83c9436da65799e3b4e121d058c40ebbb6337e7e6d15402428a5dbefe9d8a193",
+      "thumb": "thumbs/community-145-v1.jpg",
+      "added": "2026-10-27",
+      "updated": "2026-10-27",
+      "submitter": "DocteurBob",
+      "issue": 145,
+      "local_id": "popular5_sign",
+      "previous_objects": [],
+      "source_sha256": "36455fca79dbe77336b31b73cd7c68dd2f164f5d4cc23fc878d649b7eddc3c6d"
+    },
+    {
       "id": "community-38",
       "version": 1,
       "title": "Silhouette",
