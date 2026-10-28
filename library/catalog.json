@@ -4510,6 +4510,52 @@
       "source_sha256": "0a33c4f66a53a13a128e6a8328ac3af8b4a58671024db819221dc2fcc461b015"
     },
     {
+      "id": "community-93",
+      "version": 1,
+      "title": "Oshama Scramble!",
+      "artist": "t+pazolite",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=f3MDGKw0wdg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 147,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 190,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 250,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 304,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 122.1,
+      "size_bytes": 16454568,
+      "has_video": true,
+      "zip": "songs/community-93-v1.zip",
+      "zip_bytes": 16153078,
+      "sha256": "ed02f54ab337d6864211d00c040c454862cac0f156f4465ba9c2cd4dfa31743a",
+      "thumb": "thumbs/community-93-v1.jpg",
+      "added": "2026-10-28",
+      "updated": "2026-10-28",
+      "submitter": "DocteurBob",
+      "issue": 93,
+      "local_id": "popular4_oshama",
+      "previous_objects": [],
+      "source_sha256": "c940d658ac96b83c93e6692ce5ff29ef725102625640cf711dafcd275bb46f9e"
+    },
+    {
       "id": "community-81",
       "version": 1,
       "title": "Overdrive (PV Edit)",
