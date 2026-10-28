@@ -2210,6 +2210,52 @@
       "source_sha256": "ca8e289d6f0b6c4720a7ce65f7736595bda16e3f59cb6eb29b0394401204f748"
     },
     {
+      "id": "community-110",
+      "version": 1,
+      "title": "GHOST",
+      "artist": "Camellia",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=OjbjZcBctuM",
+      "license": "Camellia custom-chart terms; developer use not cleared",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 412,
+          "bpm": 220.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 500,
+          "bpm": 220.0
+        },
+        {
+          "name": "HARD",
+          "notes": 628,
+          "bpm": 220.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 738,
+          "bpm": 220.0
+        }
+      ],
+      "duration_s": 349.7,
+      "size_bytes": 8989069,
+      "has_video": false,
+      "zip": "songs/community-110-v1.zip",
+      "zip_bytes": 8932517,
+      "sha256": "b1106ac2b59021e1dd1c6c0abd6b93ed66d6bd23c680b27985ae87d918149473",
+      "thumb": "thumbs/community-110-v1.jpg",
+      "added": "2026-10-28",
+      "updated": "2026-10-28",
+      "submitter": "DocteurBob",
+      "issue": 110,
+      "local_id": "popular4_ghost",
+      "previous_objects": [],
+      "source_sha256": "73f367e2f576d728005697e40d49cc5a0d890ec9f1375ed75a7008d0f4cf3d51"
+    },
+    {
       "id": "community-133",
       "version": 1,
       "title": "GO!!! (TV Size)",
