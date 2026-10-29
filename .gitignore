@@ -50,3 +50,6 @@ tools/comfy_gen.py
 # Copies datées des conditions d'utilisation des morceaux (pages des labels) : preuves locales, pas à publier
 art/licences/
 .wrangler/
+
+# voix synthétiques de l'hôtesse (audio : dépôt privé uniquement)
+art/voix/

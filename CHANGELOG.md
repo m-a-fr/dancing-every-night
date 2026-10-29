@@ -2,6 +2,15 @@
 
 All notable changes to Dancing Every Night. Versions follow `MAJOR.MINOR.PATCH`.
 
+## [Unreleased]
+
+### The hostess
+- The hostess now appears on the results screen (a different picture for each rank: S, A, B, C/D), on the loading screen
+  and on the pause screen. The title screen keeps only the logo.
+- She speaks: a line at the title screen and one for each rank. Her voice is synthesized (see the credits).
+- Replace her pictures or voices with your own: put files in a `custom/` folder next to your saves (`ux0:data/dancingeverynight/custom/`
+  on the Vita), using the same path as under `assets/`. See the README for the list.
+
 ## [1.0.0] — 2026-10-25
 
 The song library comes into the game.

@@ -6,6 +6,7 @@
 #include "sdl.h"
 #include "font.h"
 #include "sprites.h"
+#include "hostess.h"
 #include "background.h"
 
 /* Silence avant t=0 pour laisser les premières notes arriver depuis le centre */
@@ -82,6 +83,10 @@ void rhythm_sync_time(RhythmState *rh, float target_ms);
    new_best : cette partie vient de l'établir. Affichés sur l'écran de résultats. */
 /* night : numéro du morceau dans la liste du menu (bandeau « NIGHT nn »), 0 = inconnu */
 void rhythm_draw(const RhythmState *rh, SDL_Renderer *r, const Font *font, const Sprites *sprites, const Background *bg,
-                 int best_score, bool new_best, int night);
+                 const Hostess *host, int best_score, bool new_best, int night);
+/* Rang de la partie finie : 0 = S, 1 = A, 2 = B, 3 = C, 4 = D (précision des jugements, comme l'écran de résultats) */
+int rhythm_rank(const RhythmState *rh);
+/* Instant (ms depuis la fin de la partie) où le tampon du rang tombe sur l'écran de résultats */
+#define RESULTS_RANK_MS 1750.0f
 
 #endif

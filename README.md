@@ -64,6 +64,22 @@ on macOS.
 ## For song creators
 
 **Online editor: <https://dancing-every-night.pages.dev/editor/>**. Nothing to install: create a song from a music file, detect the tempo, place
+### Replacing the hostess pictures and voices
+
+Everything the hostess shows or says is a plain file you can swap. Put your own copy in a `custom/` folder inside
+`save/` (on the Vita: `ux0:data/dancingeverynight/custom/`), with the same path it has under `assets/`; the game reads
+`custom/` first, so nothing in the game itself changes and removing your file brings the original back.
+
+| File in `custom/` | What it is |
+|---|---|
+| `ui/hostess/rank_s.png`, `rank_a.png`, `rank_b.png`, `rank_cd.png` | The hostess on the results screen for each rank (C and D share one) |
+| `ui/hostess/loading.png`, `pause.png` | The hostess on the loading and pause screens |
+| `audio/sfx/voice_*.wav` | Her voice: `voice_title`, `voice_rank_s`, `voice_rank_a`, `voice_rank_b`, `voice_rank_cd` (heard at the title and on the results) |
+
+Pictures: PNG with a transparent background, at most 2048 px on a side; they are drawn anchored to the bottom of the
+screen, so crop them there. Sounds: WAV, 16-bit, mono, 44100 Hz (`ffmpeg -i in.wav -ar 44100 -ac 1 -sample_fmt s16 out.wav`).
+Every other interface sound in `audio/sfx/` can be replaced the same way.
+
 the notes (or start from an automatic draft) and export the `.zip` for the console. Start with the
 [creator guide](https://dancing-every-night.pages.dev/guide.html).
 
@@ -163,8 +179,10 @@ I want to be clear about where AI was used in this project, and what I think abo
 | Charts | The difficulties of the official songs | Start from an automatic draft (`tools/mapper.py`: a signal-analysis algorithm I wrote with Claude, not a generative model), then played, corrected and tuned by me. |
 
 **What was not made with AI**: the music (the three official songs are by their artists and used under their label's
+| Hostess pictures | The six poses of the hostess (results, loading, pause) | Generated with AI image tools (ChatGPT), then selected and edited by hand. |
+| Hostess voice | The title and results lines | Synthesized with [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) (Apache-2.0): an invented voice, no real person cloned. I chose the voice and the takes by ear and trimmed them. |
 terms; the menu music is by Juhani Junkala), the fonts, the button icons, and the interface sounds (synthesized by a
-script, no generative audio). Community songs carry their own rights, declared by their authors.
+script; only the hostess's voice is generative audio). Community songs carry their own rights, declared by their authors.
 
 **What I think**
 
