@@ -6,6 +6,9 @@ Code: GNU GPL v3. Visual identity: CC BY-NC-ND 4.0 (see `LICENSE-ASSETS.md` in t
 ## Audio
 
 - Interface sound effects (`audio/sfx/`): synthesized by `tools/gen_sfx.py`, CC0.
+- Hostess voice (`audio/sfx/voice_*.wav`): synthesized with Qwen3-TTS (Alibaba Qwen team, Apache-2.0) from a text
+  description of the voice; no real person's voice was cloned or used.
+- Hostess pictures (`ui/hostess/`): generated with AI image tools, then selected and edited by hand.
 - Menu music (`audio/bgm/menu.ogg`): "Stage Select" by Juhani Junkala, from the pack
   "4 Chiptunes (Adventure)", CC0 (no attribution required, credited as a courtesy).
   https://opengameart.org/content/4-chiptunes-adventure — https://juhanijunkala.com/

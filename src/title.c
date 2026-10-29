@@ -52,8 +52,6 @@ bool title_init(Title *t, SDL_Renderer *r) {
     t->near     = load_png(r, ASSET_PATH("ui/title/near.png"));
     t->dots     = load_png(r, ASSET_PATH("ui/title/dots.png"));
     t->vignette = load_png(r, ASSET_PATH("ui/title/vignette.png"));
-    t->ball     = load_png(r, ASSET_PATH("ui/title/ball.png"));
-    t->girl     = load_png(r, ASSET_PATH("ui/title/girl.png"));
     t->logo     = load_png(r, ASSET_PATH("ui/title/logo.png"));
     t->tri      = load_png(r, ASSET_PATH("ui/title/tri.png"));
     t->beam     = load_png(r, ASSET_PATH("ui/title/beam.png"));
@@ -62,7 +60,7 @@ bool title_init(Title *t, SDL_Renderer *r) {
 }
 
 void title_shutdown(Title *t) {
-    SDL_Texture **all[] = { &t->facets, &t->far, &t->near, &t->dots, &t->vignette, &t->ball, &t->girl, &t->logo,
+    SDL_Texture **all[] = { &t->facets, &t->far, &t->near, &t->dots, &t->vignette, &t->logo,
                             &t->tri, &t->beam, &t->spark };
     for (size_t i = 0; i < sizeof all / sizeof all[0]; i++)
         if (*all[i]) { SDL_DestroyTexture(*all[i]); *all[i] = NULL; }
@@ -91,14 +89,6 @@ static void draw_strip(SDL_Renderer *r, SDL_Texture *tx, float y, float off, Uin
         SDL_FRect d = { x, y, w, h };
         SDL_RenderCopyExF(r, tx, NULL, &d, 0.0, NULL, (i & 1) ? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE);
     }
-}
-
-/* Calque du logo mis à l'échelle s autour de (cx, cy) */
-static void draw_scaled(SDL_Renderer *r, SDL_Texture *tx, float x, float y, float cx, float cy, float s) {
-    if (!tx) return;
-    float w = (float)tex_w(tx), h = (float)tex_h(tx);
-    SDL_FRect d = { cx + (x - cx) * s, cy + (y - cy) * s, w * s, h * s };
-    SDL_RenderCopyF(r, tx, NULL, &d);
 }
 
 void title_draw(const Title *t, SDL_Renderer *r, const Font *font, const Sprites *sprites, float time, bool prompt) {
@@ -157,13 +147,11 @@ void title_draw(const Title *t, SDL_Renderer *r, const Font *font, const Sprites
         }
     }
 
-    /* 8. Logo : boule et hôtesse battent d'un bloc, le bandeau-titre ajoute un peu */
+    /* 8. Logo : le bandeau-titre bat, centré sur l'écran */
     float s = 1.0f + acc * 0.018f;
-    draw_scaled(r, t->ball, 280.0f, 8.0f, LOGO_CX, LOGO_CY, s);
-    draw_scaled(r, t->girl, 270.0f, 4.0f, LOGO_CX, LOGO_CY, s);
     if (t->logo) {
         float w = (float)tex_w(t->logo), h = (float)tex_h(t->logo), ls = s * (1.0f + acc * 0.014f);
-        float x = 245.0f, y = 232.0f, ox = x + w * 0.5f, oy = y + h * 0.55f;   /* son propre centre de battement */
+        float x = ((float)SCREEN_W - w) * 0.5f, y = ((float)SCREEN_H - h) * 0.5f, ox = x + w * 0.5f, oy = y + h * 0.55f;   /* son propre centre de battement */
         float gx = LOGO_CX + (ox - LOGO_CX) * s, gy = LOGO_CY + (oy - LOGO_CY) * s;
         SDL_FRect d = { gx - w * 0.5f * ls, gy - h * 0.55f * ls, w * ls, h * ls };
         SDL_RenderCopyF(r, t->logo, NULL, &d);

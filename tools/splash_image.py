@@ -47,9 +47,8 @@ def main():
     c.alpha_composite(layer("dots.png"), (0, DOTS_Y))
     strip(c, tint(layer("near.png"), NEAR_BRIGHT), NEAR_Y)
     c.alpha_composite(layer("vignette.png").resize((W, H), Image.BILINEAR))
-    c.alpha_composite(layer("ball.png"), (280, 8))
-    c.alpha_composite(layer("girl.png"), (270, 4))
-    c.alpha_composite(layer("logo.png"), (245, 232))
+    logo = layer("logo.png")
+    c.alpha_composite(logo, ((W - logo.width) // 2, (H - logo.height) // 2))
     out = ROOT / "assets/ui/splash.jpg"
     c.convert("RGB").save(out, quality=88, optimize=True)
     print(f"{out.relative_to(ROOT)} ({out.stat().st_size // 1024} Ko)")

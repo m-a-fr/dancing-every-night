@@ -90,6 +90,8 @@ Convention occidentale : Croix = valider, Rond = annuler.
 ## Fichiers et chemins
 
 - Lecture d'assets : macro `ASSET_PATH("fichier.png")` (→ `app0:assets/` sur Vita).
+- Assets remplaçables par le joueur : `asset_resolve("ui/hostess/rank_s.png", ...)` (`files.h`) lit `SAVE_DIR "custom/"` avant `assets/` ;
+  images de l'hôtesse (`src/hostess.c`, `assets/ui/hostess/`) et bruitages/voix (`assets/audio/sfx/*.wav`, dont `voice_*`) passent par là.
 - Sauvegardes : `SAVE_DIR` (→ `ux0:data/dancingeverynight/`). Créer le dossier au besoin
   (`sceIoMkdir` sur Vita, `mkdir` sur desktop).
 - `app0:` est en lecture seule.

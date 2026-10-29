@@ -6,14 +6,17 @@
 struct stb_vorbis;
 
 /* Bruitages d'interface, sons de frappe et musique de fond (BGM) des menus.
-   Les WAV (16 bits mono 44100 Hz, tools/gen_sfx.py) sont chargés une fois dans sfx_init. */
+   Les WAV (16 bits mono 44100 Hz, tools/gen_sfx.py) sont chargés une fois dans sfx_init ; ceux du joueur dans
+   custom/audio/sfx/ (CUSTOM_DIR) passent avant ceux du jeu. Les voix de l'hôtesse (voice_*) sont des bruitages comme les autres. */
 
 #define SFX_LIST(X) \
     X(CURSOR, "cursor") X(CONFIRM, "confirm") X(CANCEL, "cancel") X(TAB, "tab") X(DIFFICULTY, "difficulty") \
     X(START, "start") X(PAUSE_OPEN, "pause_open") X(PAUSE_CLOSE, "pause_close") X(TICK, "tick") X(TICK_GO, "tick_go") \
     X(SCORE_TICK, "score_tick") X(RANK_S, "rank_s") X(RANK_A, "rank_a") X(RANK_B, "rank_b") X(RANK_C, "rank_c") \
     X(RANK_D, "rank_d") X(NEW_RECORD, "new_record") X(FULL_COMBO, "full_combo") X(ALL_PERFECT, "all_perfect") \
-    X(BOOT, "boot") X(QUIT, "quit") X(PERFECT, "perfect") X(GOOD, "good") X(MISS, "miss") X(SCRATCH, "scratch")
+    X(BOOT, "boot") X(QUIT, "quit") X(PERFECT, "perfect") X(GOOD, "good") X(MISS, "miss") X(SCRATCH, "scratch") \
+    X(VOICE_TITLE, "voice_title") X(VOICE_RANK_S, "voice_rank_s") X(VOICE_RANK_A, "voice_rank_a") \
+    X(VOICE_RANK_B, "voice_rank_b") X(VOICE_RANK_CD, "voice_rank_cd")
 
 typedef enum {
 #define X(id, name) SFX_##id,

@@ -1,4 +1,5 @@
 #include "files.h"
+#include "config.h"
 #include <dirent.h>
 #include <stdio.h>
 #include <string.h>
@@ -146,4 +147,11 @@ bool files_remove_tree(const char *dir) {
     }
     closedir(d);
     return remove_dir(base) || !files_is_dir(base);
+}
+
+const char *asset_resolve(const char *rel, char *buf, size_t size) {
+    snprintf(buf, size, CUSTOM_DIR "%s", rel);
+    long long bytes, mtime;
+    if (!files_stat(buf, &bytes, &mtime)) snprintf(buf, size, ASSET_DIR "%s", rel);
+    return buf;
 }

@@ -9,7 +9,7 @@ Sorties dans assets/ui/title/ (tailles d'affichage, 1 texel = 1 px écran) :
   near.png    demi-bande de la ville proche, idem
   dots.png    bande de trame rose 972x200, motif de 12 px (défile par pas de 12 px)
   vignette.png  voile radial, petite image agrandie (dégradé doux)
-  ball.png / girl.png / logo.png   les trois couches du logo
+  logo.png   le bandeau-titre du logo
   tri.png     triangle blanc (scintillement des facettes, en additif)
   beam.png    faisceau lumineux (tourne autour de son sommet)
   spark.png   étoile à quatre branches blanche (teintée en or par le jeu)
@@ -120,8 +120,6 @@ def main():
         "near.png": fit(city("ville_proche_propre.webp"), width=1300),
         "dots.png": dots(),
         "vignette.png": vignette(),
-        "ball.png": fit(Image.open(SRC / "logo_boule.png").convert("RGBA"), width=440),
-        "girl.png": fit(Image.open(SRC / "logo_hotesse.png").convert("RGBA"), height=420),
         "logo.png": fit(Image.open(SRC / "logo_titre.png").convert("RGBA"), width=470),
         "tri.png": tri(),
         "beam.png": beam(),

@@ -10,6 +10,7 @@
 #include "background.h"
 #include "menu.h"
 #include "title.h"
+#include "hostess.h"
 #include "sfx.h"
 #include "settings.h"
 #include "update.h"
@@ -26,6 +27,7 @@ typedef struct {
     Screen      screen;
     Menu        menu;
     Title       title;            /* écran d'accueil */
+    Hostess     host;             /* images de l'hôtesse (résultats, chargement, pause) */
     Sfx         sfx;              /* bruitages et musique des menus (périphérique fermé pendant une chanson) */
     Font        font;
     Sprites     sprites;
@@ -40,6 +42,8 @@ typedef struct {
     bool        audio_started;
     int         entry;            /* index dans menu.entries, -1 si carte hors menu */
     bool        result_recorded;  /* score de fin déjà enregistré */
+    bool        results_voice;    /* voix du rang déjà jouée */
+    bool        title_voice;      /* voix de l'écran d'accueil déjà jouée */
     bool        new_best;
     bool        paused;
     int         pause_sel;        /* option du menu pause : PAUSE_RESUME / RESTART / MENU */

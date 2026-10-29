@@ -1,5 +1,6 @@
 #include "sfx.h"
 #include "config.h"
+#include "files.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -70,8 +71,9 @@ void sfx_init(Sfx *s) {
     s->bgm_target = 1.0f;
     for (int v = 0; v < SFX_VOICES; v++) s->voices[v].id = -1;
     for (int i = 0; i < SFX_COUNT; i++) {
-        char path[192];
-        snprintf(path, sizeof path, "%saudio/sfx/%s.wav", ASSET_DIR, SFX_NAMES[i]);
+        char rel[64], path[192];
+        snprintf(rel, sizeof rel, "audio/sfx/%s.wav", SFX_NAMES[i]);
+        asset_resolve(rel, path, sizeof path);   /* custom/ du joueur d'abord */
         SDL_AudioSpec spec;
         Uint8 *buf = NULL;
         Uint32 bytes = 0;
