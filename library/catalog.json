@@ -5982,6 +5982,52 @@
       "source_sha256": "19eed6d58bb051848d1c2cac45f6a25cc7c82d9c510c578df7b4a3061fa2c71f"
     },
     {
+      "id": "community-160",
+      "version": 1,
+      "title": "The Rumbling (TV Size)",
+      "artist": "SiM",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=2S4qGKmzBJE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 88,
+          "bpm": 145.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 140,
+          "bpm": 145.0
+        },
+        {
+          "name": "HARD",
+          "notes": 191,
+          "bpm": 145.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 216,
+          "bpm": 145.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12493395,
+      "has_video": true,
+      "zip": "songs/community-160-v1.zip",
+      "zip_bytes": 12265366,
+      "sha256": "765c94a13dc7ec9b1e44d240ebdf47c7f0fbf20d5bcfbccb97c86980d33f9fed",
+      "thumb": "thumbs/community-160-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 160,
+      "local_id": "popular7_rumbling",
+      "previous_objects": [],
+      "source_sha256": "a700ac2a2ef71b1a823048d83c4f239eb4d4da02c05e748b4016f427d2e8e91b"
+    },
+    {
       "id": "community-99",
       "version": 1,
       "title": "This game (TV Size)",
