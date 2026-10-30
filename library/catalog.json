@@ -922,6 +922,52 @@
       "source_sha256": "5f17d19f77d5faa9c2410f5484f2b467bb63c54346585bc6cd4023c3a5c407b8"
     },
     {
+      "id": "community-169",
+      "version": 1,
+      "title": "BLOODY STREAM (TV Size)",
+      "artist": "Coda",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=e0yrZXSXTSg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 102,
+          "bpm": 132.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 137,
+          "bpm": 132.0
+        },
+        {
+          "name": "HARD",
+          "notes": 199,
+          "bpm": 132.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 231,
+          "bpm": 132.0
+        }
+      ],
+      "duration_s": 91.9,
+      "size_bytes": 12193530,
+      "has_video": true,
+      "zip": "songs/community-169-v1.zip",
+      "zip_bytes": 12059630,
+      "sha256": "c41b83c01828bd2ae0ba28c33dc7fe2c24254ea701a34e1ee56d67472e9eba03",
+      "thumb": "thumbs/community-169-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 169,
+      "local_id": "popular7_bloody",
+      "previous_objects": [],
+      "source_sha256": "5570e1e05c81c5958e3acacf6d46a51d8b97e7d611dd2d68c15a002dfeaf7856"
+    },
+    {
       "id": "community-123",
       "version": 1,
       "title": "Blue Bird (TV Size)",
