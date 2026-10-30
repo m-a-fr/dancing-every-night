@@ -5384,6 +5384,52 @@
       "source_sha256": "1012e1bbad997752a8e6abd09915b1c915f830973ab010dc502430147c98ed1a"
     },
     {
+      "id": "community-172",
+      "version": 1,
+      "title": "Rabbit Hole",
+      "artist": "DECO*27 feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=eSW2LVbPThw",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 172,
+          "bpm": 173.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 247,
+          "bpm": 173.0
+        },
+        {
+          "name": "HARD",
+          "notes": 351,
+          "bpm": 173.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 421,
+          "bpm": 173.0
+        }
+      ],
+      "duration_s": 162.1,
+      "size_bytes": 22020470,
+      "has_video": true,
+      "zip": "songs/community-172-v1.zip",
+      "zip_bytes": 21664654,
+      "sha256": "682e57464c906f5e603f03bb1963e24f2f9dade40dd0c3d96c147eef1def2426",
+      "thumb": "thumbs/community-172-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 172,
+      "local_id": "popular7_rabbit",
+      "previous_objects": [],
+      "source_sha256": "b27451d079d955c7350cefeee78f4fe7473e82da9d775c45fbca904114e98888"
+    },
+    {
       "id": "community-57",
       "version": 1,
       "title": "Rainbow Tylenol",
