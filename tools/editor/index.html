@@ -405,7 +405,7 @@
       <video id="vidPreview" muted playsinline preload="auto" hidden></video>
       <div class="detect"><button id="vidPick" title="La vidéo est préparée pour la Vita ; la musique reste celle de la chanson.">Choisir une vidéo…</button><button id="vidReencode" title="Prépare à nouveau la vidéo avec la qualité choisie.">Réencoder</button><button id="vidClear">Retirer</button></div>
       <div class="detect"><select id="vidFps" title="Images par seconde de la vidéo du jeu (plus = plus fluide, plus de calcul sur la Vita)"><option value="15">15 ips</option><option value="24" selected>24 ips</option><option value="30">30 ips</option></select>
-        <select id="vidKbps" title="Débit : la taille du fichier est proportionnelle (débit x durée)"><option value="500">Légère · ~3,7 Mo/min</option><option value="900" selected>Normale · ~6,7 Mo/min</option><option value="1200">Haute · ~9 Mo/min</option></select></div>
+        <select id="vidKbps" title="Débit : la taille du fichier est proportionnelle (débit x durée)"><option value="500">Légère · ~3,7 Mo/min</option><option value="720" selected>Normale · ~5,4 Mo/min</option><option value="1000">Haute · ~7,5 Mo/min</option></select></div>
       <label class="row">Décalage vidéo <input id="vidOffset" type="number" step="10" value="0" title="Position de la piste audio à laquelle la vidéo commence (> 0 : la vidéo démarre plus tard)"></label>
       <div class="detect"><button id="vidShow" hidden title="Prépare un aperçu de la vidéo dans cet éditeur (environ une minute).">Afficher la vidéo</button><button id="vidTest">▶ Tester la synchro</button></div>
       <div class="status" id="mediaMsg"></div>
@@ -2261,7 +2261,7 @@ function ffmpegConvert(file, args, outName, onStatus, job = {}) {
   const run = ffQueue.then(async () => {
     if (job.cancelled) throw new Error(CANCELLED);
     ffCurrent = job;
-    try { return await ffmpegRun(file, args, outName, onStatus); }
+    try { return await ffmpegRun(file, args, outName, onStatus, job.inArgs || []); }
     catch (e) { throw job.cancelled ? new Error(CANCELLED) : e; }
     finally { ffCurrent = null; }
   });
@@ -2272,7 +2272,7 @@ function ffmpegCancel(job) {
   job.cancelled = true;
   if (ffCurrent === job && ffmpegReady) { const r = ffmpegReady; ffmpegReady = null; r.then(ff => ff.terminate()).catch(() => {}); }
 }
-async function ffmpegRun(file, args, outName, onStatus) {
+async function ffmpegRun(file, args, outName, onStatus, inArgs = []) {
   const ff = await getFFmpeg(t => onStatus(t, -1));
   const inName = "in" + ((file.name.match(/\.[A-Za-z0-9]+$/) || [""])[0]).toLowerCase();
   await ff.writeFile(inName, new Uint8Array(await file.arrayBuffer()));
@@ -2284,7 +2284,7 @@ async function ffmpegRun(file, args, outName, onStatus) {
   ff.on("log", onLog);
   onStatus(tr("Conversion de {name}…", { name: file.name }), 0);
   try {
-    const code = await ff.exec(["-i", inName, ...args, outName]);
+    const code = await ff.exec([...inArgs, "-i", inName, ...args, outName]);
     if (code !== 0 && logs.some(l => /\bav1\b.*(hardware|pixel format)/i.test(l)))   // vidéos YouTube récentes
       throw new Error(tr("{name} : vidéo en AV1, un format que le convertisseur du navigateur ne sait pas lire. Convertis-la d'abord en MP4 (H.264), ou garde seulement une image de fond.", { name: file.name }));
     if (code !== 0) throw new Error(tr("{name} : format non reconnu, conversion impossible", { name: file.name }));
@@ -2298,10 +2298,11 @@ async function ffmpegRun(file, args, outName, onStatus) {
 }
 // = to_ogg de tools/song_import.py : stéréo 44,1 kHz, Vorbis qualité 0,6
 const OGG_ARGS = ["-vn", "-ac", "2", "-ar", "44100", "-c:a", "libvorbis", "-q:a", "6"];
-// = convert_video de tools/media.py : 480x272 recadré, 24 i/s, MPEG-1 900 kb/s, sans son
-const MPG_ARGS = ["-an", "-vf", "fps=24,scale=480:272:force_original_aspect_ratio=increase,crop=480:272",
-  "-c:v", "mpeg1video", "-b:v", "900k", "-maxrate", "1800k", "-bufsize", "3M", "-g", "24", "-bf", "0",
-  "-mbd", "rd", "-trellis", "1", "-cmp", "2", "-subcmp", "2", "-mbcmp", "2", "-muxrate", "20M", "-f", "mpeg"];
+// = convert_video de tools/media.py : 480x272 recadré, 24 i/s, H.264 Baseline 720 kb/s, sans son (préréglage moins lent qu'en ligne de
+// commande : le moteur du navigateur est plus lent)
+const H264_ARGS = ["-an", "-vf", "fps=24,scale=480:272:force_original_aspect_ratio=increase,crop=480:272",
+  "-c:v", "libx264", "-profile:v", "baseline", "-level", "3.0", "-preset", "medium", "-b:v", "720k", "-maxrate", "1440k", "-bufsize", "3M",
+  "-x264-params", "keyint=24:min-keyint=24:scenecut=0:bframes=0:ref=3:repeat-headers=1:slices=1", "-f", "h264"];
 const mediaJobs = new Map();
 async function withMediaJob(id, work) {
   mediaJobs.set(id, (mediaJobs.get(id) || 0) + 1);
@@ -2313,7 +2314,7 @@ const videoSources = new Map();   // ID de chanson -> URL de la vidéo d'origine
 
 /* Étape 1 de l'assistant : la musique par glisser-déposer ou sélecteur de fichier */
 const VIDEO_FILE = /\.(mp4|m4v|mov|mkv|webm|avi|wmv|flv|mpe?g)$/i;
-const MPEG_FILE = /\.mpe?g$/i;
+const MPEG_FILE = /\.(mpe?g|h264)$/i;   // déjà dans un format du jeu : gardée telle quelle
 let pendingSong = null;   // en ligne : { path, video: File|null } — musique en mémoire jusqu'à « Créer la chanson »
 let musicJob = null;      // conversion de la musique en cours (annulée si l'assistant se ferme)
 function forgetPendingSong() {
@@ -2786,7 +2787,7 @@ mel("vidPick").addEventListener("click", async () => {
   const file = await pickFile("vidFile");
   if (file) importVideoFile(file);
 });
-// Vidéo de fond de la chanson courante. En ligne : convertie ici en MPEG-1 (sauf un .mpg, gardé tel quel), l'original
+// Vidéo de fond de la chanson courante. En ligne : convertie ici en H.264 Baseline (sauf un .h264 ou .mpg, gardé tel quel), l'original
 // servant d'aperçu pour la séance. La chanson est fixée au départ : la conversion est longue, on a pu en changer.
 function importVideoFile(file, song = S.song, id = mapIdOf(S.cur)) {
   return withMediaJob(id, () => importVideoFileWork(file, song, id));
@@ -2799,10 +2800,10 @@ async function importVideoFileWork(file, song, id) {
     if (!MPEG_FILE.test(file.name)) { videoSources.set(id, URL.createObjectURL(file)); if (S.cur && mapIdOf(S.cur) === id) fillMedia(); }   // aperçu et test de synchro avec l'original
     if (!MPEG_FILE.test(file.name)) {
       mel("vidPick").disabled = true;
-      try { file = await ffmpegConvert(file, MPG_ARGS, "video.mpg", t => setMediaMsg(t)); }
+      try { file = await ffmpegConvert(file, H264_ARGS, "video.h264", t => setMediaMsg(t)); }
       catch (e) { setMediaMsg(e.message, true); mel("vidPick").disabled = false; return; }
       mel("vidPick").disabled = false;
-      url = `/api/video?name=${encodeURIComponent(id)}&ext=mpg`;
+      url = `/api/video?name=${encodeURIComponent(id)}&ext=h264`;
     }
   }
   return convertVideo(url, file, tr("Conversion de {name} ({mb} Mo)", { name: file.name, mb: Math.round(file.size / 1048576) }), song);
@@ -2855,7 +2856,7 @@ async function backgroundFromVideoWork(file, song, id) {
   } catch (e) { setMediaMsg(e.message, true); }
   await importVideoFile(file, song, id);
 }
-// En ligne, le navigateur ne lit pas le MPEG-1 : copie H.264 légère, pour cette séance (aperçu et test de synchro)
+// En ligne, le navigateur ne lit ni le MPEG-1 ni le H.264 brut : copie MP4 légère, pour cette séance (aperçu et test de synchro)
 const PREVIEW_ARGS = ["-an", "-c:v", "libx264", "-preset", "ultrafast", "-crf", "30", "-pix_fmt", "yuv420p", "-movflags", "+faststart"];
 function clearVideoPreview(id) {
   videoPreviewJobs.delete(id);
@@ -2874,7 +2875,9 @@ function ensureVideoPreview(id, path, retry = false) {
   status(tr("Préparation automatique de l’aperçu vidéo…"));
   job.promise = (async () => {
     try {
-      const mp4 = await ffmpegConvert(new File([blob], "video.mpg"), PREVIEW_ARGS, "preview.mp4", status);
+      const raw = /\.h264$/i.test(path), info = raw ? await h264Info(blob) : null;   // H.264 brut : sa cadence est à donner à ffmpeg
+      const mp4 = await ffmpegConvert(new File([blob], raw ? "video.h264" : "video.mpg"), PREVIEW_ARGS, "preview.mp4", status,
+                                      raw ? { inArgs: ["-framerate", String(info?.fps || 24)] } : {});
       // A ZIP or video may have been replaced while the converter was running.
       if (videoPreviewJobs.get(id) !== job || VFS.get(path) !== blob) return;
       videoSources.set(id, URL.createObjectURL(new Blob([mp4], { type: "video/mp4" })));
@@ -2897,7 +2900,7 @@ mel("vidReencode").addEventListener("click", () => convertVideo(`/api/video/reen
 const videoQuery = () => `name=${encodeURIComponent(mediaBase())}&fps=${mel("vidFps").value}&kbps=${mel("vidKbps").value}`;
 async function convertVideo(url, body, what, song = S.song) {
   mel("vidPick").disabled = mel("vidReencode").disabled = true;
-  setMediaMsg(tr("{what} en MPEG-1 {fps} ips, {kbps} kb/s… cela peut prendre une minute ou deux.", { what, fps: mel("vidFps").value, kbps: mel("vidKbps").value }));
+  setMediaMsg(tr("{what} en H.264 {fps} ips, {kbps} kb/s… cela peut prendre une minute ou deux.", { what, fps: mel("vidFps").value, kbps: mel("vidKbps").value }));
   try {
     const r = await api(url, { method: "PUT", body });
     mediaStamp = Date.now();
@@ -2908,7 +2911,7 @@ async function convertVideo(url, body, what, song = S.song) {
 }
 /* « Retirer » un fond ou une vidéo ne touchait que la référence dans les difficultés : le fichier restait dans la chanson, donc
    dans le .zip exporté et dans sa taille. On supprime les images et vidéos que plus aucune difficulté n'utilise. */
-var MEDIA_EXT = /\.(mpg|mpeg|mp4|jpe?g|png|webp)$/i;
+var MEDIA_EXT = /\.(mpg|mpeg|h264|mp4|jpe?g|png|webp)$/i;
 var prunedOnce = new Set();
 async function pruneUnreferenced(id) {
   if (!LOCAL || mediaJobs.has(id)) return false;
@@ -3657,7 +3660,7 @@ async function boot() {
     mel("fileName").hidden = mel("ndFileNote").hidden = true;   // chemins de fichiers : utiles en mode développeur seulement
     for (const id of ["vidReencode", "vidFps", "vidKbps"]) mel(id).hidden = true;   // pas d'encodage ici
     mel("vidPick").title = tr("Choisis une vidéo : elle sera préparée pour la Vita.");
-    mel("vidFile").accept = "video/*,.mpg,.mpeg,.mkv";
+    mel("vidFile").accept = "video/*,.mpg,.mpeg,.h264,.mkv";
     mel("audioFile").accept = "audio/*,video/*,.ogg,.mkv";
     mel("nsDropTitle").textContent = tr("Glisse ta musique ou ton clip vidéo ici");
     mel("nsDropHint").textContent = tr("ou clique pour choisir un fichier : audio ou vidéo, tous les formats courants (mp3, mp4, wav…)");

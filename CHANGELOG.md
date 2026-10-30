@@ -4,6 +4,11 @@ All notable changes to Dancing Every Night. Versions follow `MAJOR.MINOR.PATCH`.
 
 ## [Unreleased]
 
+### Background videos
+- New songs use H.264 (Baseline profile, `video.h264`) instead of MPEG-1: about 20 % smaller files at the same picture quality,
+  decoded by the Vita's hardware video decoder (almost no CPU) and by a built-in software decoder on PC. Songs already
+  published with an `.mpg` video keep working. The editor, `make song` and `make check` handle both formats.
+
 ### The hostess
 - The hostess now appears on the results screen (a different picture for each rank: S, A, B, C/D), on the loading screen
   and on the pause screen. The title screen keeps only the logo.

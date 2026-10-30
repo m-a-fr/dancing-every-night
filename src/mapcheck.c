@@ -1,6 +1,7 @@
 #include "mapcheck.h"
 #include "chart.h"
 #include "files.h"
+#include "h264idx.h"
 #include "mapimport.h"
 #include "sdl.h"
 #include "third_party/pl_mpeg.h"
@@ -139,12 +140,49 @@ static void check_image(Report *r, const char *dir, const char *name) {
         say(r, "OK", "%s: %dx%d image%s", name, w, h, (w != 960 || h != 544) ? " (cropped to fill 960x544)" : "");
 }
 
+/* Vidéo H.264 (.h264) : flux brut Baseline, voir h264idx.h et tools/media.py */
+static void check_h264(Report *r, const char *path, const char *name) {
+    FILE *f = fopen(path, "rb");
+    long n = 0;
+    uint8_t *data = NULL;
+    if (f) {
+        fseek(f, 0, SEEK_END);
+        n = ftell(f);
+        fseek(f, 0, SEEK_SET);
+        if (n > 0 && n <= 64 * 1024 * 1024 && (data = malloc((size_t)n)) && fread(data, 1, (size_t)n, f) != (size_t)n) { free(data); data = NULL; }
+        fclose(f);
+    }
+    H264Index ix;
+    if (!data || !h264_index_build(data, (size_t)n, &ix)) {
+        free(data);
+        say(r, "ERROR", "%s: not a readable H.264 stream (Baseline, one slice per frame, headers before each keyframe)", name);
+        return;
+    }
+    free(data);
+    if (ix.profile != 66) {
+        say(r, "ERROR", "%s: H.264 profile %d; only Baseline (66) is supported (encode with tools/media.py)", name, ix.profile);
+    } else {
+        say(r, "OK", "%s: H.264 Baseline video, %dx%d, %.0f fps, %.0f s", name, ix.width, ix.height, ix.fps,
+            ix.fps > 0.0 ? ix.count / ix.fps : 0.0);
+        if (ix.width * ix.height > VIDEO_MAX_PIXELS || ix.fps > VIDEO_MAX_FPS + 0.5)
+            say(r, "WARN", "%s: may stutter on the Vita (480x272 at 24 fps is recommended)", name);
+        int gap = 0, last = 0;
+        for (int i = 1; i < ix.count; i++) if (ix.au[i].key) { if (i - last > gap) gap = i - last; last = i; }
+        if (ix.count - last > gap) gap = ix.count - last;
+        if (ix.fps > 0.0 && gap / ix.fps > 2.0)
+            say(r, "WARN", "%s: keyframes are %.1f s apart; the game seeks from keyframes, one per second is recommended", name, gap / ix.fps);
+    }
+    h264_index_free(&ix);
+}
+
 static void check_video(Report *r, const char *dir, const char *name) {
     char path[CHART_PATH];
     snprintf(path, sizeof path, "%s%s", dir, name);
+    size_t nl = strlen(name);
+    if (nl > 5 && strcmp(name + nl - 5, ".h264") == 0) { check_h264(r, path, name); return; }
     plm_t *plm = plm_create_with_filename(path);
     if (!plm || !plm_probe(plm, 5000 * 1024) || plm_get_num_video_streams(plm) == 0) {
-        say(r, "ERROR", "%s: not a readable MPEG-1 video (.mpg); other codecs are not supported", name);
+        say(r, "ERROR", "%s: not a readable video (.mpg MPEG-1 or .h264 Baseline); other codecs are not supported", name);
         if (plm) plm_destroy(plm);
         return;
     }

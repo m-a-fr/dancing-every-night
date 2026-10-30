@@ -191,6 +191,51 @@ async function mpegInfo(blob) {
   return null;
 }
 
+/* Flux H.264 brut (.h264) : premier SPS -> profil, taille, cadence (même lecture que parse_sps de src/h264idx.c) */
+async function h264Info(blob) {
+  const b = await headBytes(blob, 4096);
+  let i = -1;
+  for (let k = 0; k + 4 < b.length; k++) if (b[k] === 0 && b[k + 1] === 0 && b[k + 2] === 1 && (b[k + 3] & 31) === 7) { i = k + 4; break; }
+  if (i < 0) return null;
+  const r = [];   // le SPS sans ses octets d'échappement (00 00 03), jusqu'au code de début suivant
+  for (let k = i; k < b.length && r.length < 512; k++) {
+    if (k + 2 < b.length && b[k] === 0 && b[k + 1] === 0 && b[k + 2] <= 1) break;
+    if (k >= i + 2 && b[k] === 3 && b[k - 1] === 0 && b[k - 2] === 0) continue;
+    r.push(b[k]);
+  }
+  let pos = 0, bad = false;
+  const bit = () => { if (pos >= r.length * 8) { bad = true; return 0; } const v = (r[pos >> 3] >> (7 - (pos & 7))) & 1; pos++; return v; };
+  const bits = n => { let v = 0; while (n-- > 0) v = v * 2 + bit(); return v; };
+  const ue = () => { let z = 0; while (!bit() && !bad && z < 32) z++; return z >= 32 ? (bad = true, 0) : 2 ** z - 1 + bits(z); };
+  const profile = bits(8); bits(16); ue();
+  if ([100, 110, 122, 244, 44, 83, 86, 118, 128, 138, 139, 134, 135].includes(profile)) {
+    if (ue() === 3) bit();
+    ue(); ue(); bit();
+    if (bit()) return null;   // matrices de quantification : non gérées
+  }
+  ue();
+  const poc = ue();
+  if (poc === 0) ue();
+  else if (poc === 1) { bit(); ue(); ue(); const n = ue(); if (n > 255) return null; for (let k = 0; k < n; k++) ue(); }
+  ue(); bit();
+  const wMbs = ue() + 1, hMap = ue() + 1, frameMbsOnly = bit();
+  if (!frameMbsOnly) bit();
+  bit();
+  let cl = 0, cr = 0, ct = 0, cb = 0;
+  if (bit()) { cl = ue(); cr = ue(); ct = ue(); cb = ue(); }
+  if (bad) return null;
+  const width = wMbs * 16 - (cl + cr) * 2, height = hMap * (frameMbsOnly ? 1 : 2) * 16 - (ct + cb) * 2 * (frameMbsOnly ? 1 : 2);
+  let fps = 0;
+  if (bit()) {   // paramètres VUI
+    if (bit() && bits(8) === 255) bits(32);
+    if (bit()) bit();
+    if (bit()) { bits(4); if (bit()) bits(24); }
+    if (bit()) { ue(); ue(); }
+    if (bit()) { const units = bits(32), scale = bits(32); if (!bad && units > 0 && scale > 0) fps = scale / (2 * units); }
+  }
+  return bad ? null : { profile, width, height, fps };
+}
+
 /* Image de fond : recadrée « cover » et réduite à 960x544 en JPEG, comme tools/media.py */
 async function convertImage(blob) {
   const bmp = await createImageBitmap(blob);
@@ -239,9 +284,17 @@ async function localApi(url, opts = {}) {
   if (u.pathname === "/api/video" && method === "PUT") {
     const id = q.get("name") || "", blob = await bodyBlob(opts);
     if (!ID_RE.test(id)) throw new Error("nom invalide");
+    const h264 = await h264Info(blob);
+    if (h264) {
+      if (h264.profile !== 66) throw new Error(tr("vidéo H.264 non prise en charge : seul le profil Baseline est lu par le jeu"));
+      await vfsPut(`songs/${id}/video.h264`, blob);
+      if (VFS.has(`songs/${id}/video.mpg`)) await vfsDelete(`songs/${id}/video.mpg`);   // ancienne version MPEG-1 de la même chanson
+      return { ok: true, video: `songs/${id}/video.h264`, bytes: blob.size, width: h264.width, height: h264.height, fps: h264.fps };
+    }
     const info = await mpegInfo(blob);
-    if (!info) throw new Error(tr("vidéo non prise en charge : fournis une vidéo MPEG-1 (.mpg), le seul format que le jeu lit"));
+    if (!info) throw new Error(tr("vidéo non prise en charge : fournis une vidéo H.264 Baseline (.h264) ou MPEG-1 (.mpg), les seuls formats que le jeu lit"));
     await vfsPut(`songs/${id}/video.mpg`, blob);
+    if (VFS.has(`songs/${id}/video.h264`)) await vfsDelete(`songs/${id}/video.h264`);
     return { ok: true, video: `songs/${id}/video.mpg`, bytes: blob.size, ...info };
   }
   if (u.pathname === "/api/analyze") return mapperCall("analyze", q.get("audio"), {}, opts.onStatus);
