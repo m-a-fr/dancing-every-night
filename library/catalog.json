@@ -2624,6 +2624,52 @@
       "source_sha256": "92cf624911628ba7d4ad8634cee58b7e9f4d5e0f1dcbf6ed3795a33d2a72234b"
     },
     {
+      "id": "community-174",
+      "version": 1,
+      "title": "Goodbye Sengen",
+      "artist": "Chinozo feat. flower",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=dHXC_ahjtEE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 174,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 250,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 390,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 442,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 176.5,
+      "size_bytes": 13103814,
+      "has_video": true,
+      "zip": "songs/community-174-v1.zip",
+      "zip_bytes": 12045311,
+      "sha256": "7a6fa2adbd9c2c7d2efee9eab43431dd7297cab5aeaff49c02d48d9dfe339148",
+      "thumb": "thumbs/community-174-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 174,
+      "local_id": "popular7_goodbye",
+      "previous_objects": [],
+      "source_sha256": "a2862a266d4c59e0bd95f94e456960d163e3383850e6eff0a6b6896640d24fdc"
+    },
+    {
       "id": "community-170",
       "version": 1,
       "title": "Great Days (TV Size)",
