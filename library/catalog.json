@@ -2348,6 +2348,52 @@
       "source_sha256": "da15d46d28cb22a5c4f6b7c64846652e4ad06b089dd3b772253d331ef45f7f7e"
     },
     {
+      "id": "community-175",
+      "version": 1,
+      "title": "DOKUZU",
+      "artist": "Nakiso feat. Kaai Yuki",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=5XehRIb81k8",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 105,
+          "bpm": 115.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 152,
+          "bpm": 115.0
+        },
+        {
+          "name": "HARD",
+          "notes": 246,
+          "bpm": 115.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 274,
+          "bpm": 115.0
+        }
+      ],
+      "duration_s": 118.7,
+      "size_bytes": 11038498,
+      "has_video": true,
+      "zip": "songs/community-175-v1.zip",
+      "zip_bytes": 10696306,
+      "sha256": "e4d99c1ae5d63786d541c467beda54f68f3026c64f718fc281a3670a3fae4c1f",
+      "thumb": "thumbs/community-175-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 175,
+      "local_id": "popular7_dokuzu",
+      "previous_objects": [],
+      "source_sha256": "3af5aeb6325360a38fab650f8a9d0201e9c4056dcdba1af7224698aa8d63f35c"
+    },
+    {
       "id": "community-131",
       "version": 1,
       "title": "End Time",
