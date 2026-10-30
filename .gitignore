@@ -57,3 +57,9 @@ art/voix/
 # Dossiers de travail locaux : essais de décodage H.264 (dev/h264test), wireframes générés
 dev/h264test/
 art/wireframes/
+
+# Travail de génération (images, voix de l'hôtesse, épreuves du logo) : reste local, le dépôt ne garde que les fichiers finaux
+tools/tts/
+art/hostess/
+art/logo/epreuve_*
+tools/wireframes/
