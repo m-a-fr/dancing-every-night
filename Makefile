@@ -46,7 +46,7 @@ map:
 #   NOVIDEO=1 : image fixe au lieu d'une vidéo (IMAGE= sinon une image du clip) ; avec IMAGE= sur un lien YouTube, seul l'audio est téléchargé
 song:
 	tools/.venv/bin/python tools/song_import.py "$(SRC)" $(if $(TITLE),--title "$(TITLE)") $(if $(ARTIST),--artist "$(ARTIST)") \
-		$(if $(PACK),--pack "$(PACK)") $(if $(NAME),--name $(NAME)) $(if $(IMAGE),--image "$(IMAGE)") $(if $(AUDIO),--audio "$(AUDIO)") $(if $(METER),--meter $(METER)) $(if $(NOVIDEO),--no-video) $(if $(FORCE),--force)
+		$(if $(PACK),--pack "$(PACK)") $(if $(NAME),--name $(NAME)) $(if $(IMAGE),--image "$(IMAGE)") $(if $(AUDIO),--audio "$(AUDIO)") $(if $(METER),--meter $(METER)) $(foreach A,$(APPROACH),--approach "$(A)") $(if $(NOVIDEO),--no-video) $(if $(FORCE),--force)
 
 # Éditeur graphique de cartes (navigateur) : http://localhost:8765
 editor:

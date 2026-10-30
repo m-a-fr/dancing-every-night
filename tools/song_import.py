@@ -178,6 +178,8 @@ def main():
     ap.add_argument("--no-video", action="store_true", help="ne pas garder la vidéo (image fixe seulement)")
     ap.add_argument("--bpm", type=float); ap.add_argument("--offset-ms", type=int)
     ap.add_argument("--meter", type=int, choices=[3, 4], help="temps par mesure (sinon détecté)")
+    ap.add_argument("--approach", type=mapper.parse_approach, action="append", default=[], metavar="DIFFICULTÉ=MS",
+                    help="trajet choisi pour une difficulté ; répétable, défaut inchangé à 1500 ms")
     ap.add_argument("--force", action="store_true", help="écraser un morceau du même nom")
     args = ap.parse_args()
 
@@ -237,7 +239,7 @@ def main():
     step("Analyse et cartes")
     margs = argparse.Namespace(audio=str(ogg), name=name, title=title, artist=artist, pack=pack, bpm=args.bpm,
                                offset_ms=args.offset_ms, background=bg_rel, video=video_rel,
-                               video_offset_ms=video_off, force=args.force, meter=args.meter)
+                               video_offset_ms=video_off, force=args.force, meter=args.meter, approach=args.approach)
     mapper.run(margs)
     print(f"\nTerminé. Lance « make run » puis choisis « {title} » dans le menu.")
     work.cleanup()

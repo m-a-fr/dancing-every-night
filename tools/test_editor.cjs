@@ -36,6 +36,28 @@ vm.runInContext(`
   vfsPut = async (p,b) => VFS.set(p,b);
 `, context);
 async function run() {
+  // Imported per-difficulty travel times must survive editing and ZIP serialization.
+  const chartContext = vm.createContext({ tr: context.tr });
+  const headerKeys = html.match(/const HEADER_KEYS = (\[[^;]+);/)[1];
+  vm.runInContext(`
+    const HEADER_KEYS = ${headerKeys};
+    const LANES = ["UP", "LEFT", "DOWN", "TRIANGLE", "CIRCLE", "CROSS"];
+    const DEFAULT_DIM = 30, BEAT_DECIMALS = 4;
+    const isLeft = lane => LANES.indexOf(lane) < 3;
+    ${fn('emptyChart')}
+    ${fn('parseChart')}
+    function fmt(x) { return String(parseFloat(x.toFixed(BEAT_DECIMALS))); }
+    ${fn('sortNotes')}
+    ${fn('serializeChart')}
+    const easy = parseChart('DIFFICULTY EASY\\nAPPROACH_MS 1700\\nBPM 120\\n0 CROSS TAP\\n').chart;
+    const expert = parseChart('DIFFICULTY EXPERT\\nAPPROACH_MS 1250\\nBPM 120\\n0 CROSS TAP\\n').chart;
+    if (parseChart(serializeChart(easy)).chart.approach !== 1700) throw Error('EASY travel time lost');
+    if (parseChart(serializeChart(expert)).chart.approach !== 1250) throw Error('EXPERT travel time lost');
+    easy.approach = 0;
+    if (serializeChart(easy).includes('APPROACH_MS') || expert.approach !== 1250) throw Error('Reset crossed difficulties');
+    if (parseChart('BPM 120').chart.approach !== 0) throw Error('Legacy default changed');
+    if (parseChart('APPROACH_MS 9000').chart.approach !== 5000) throw Error('Travel clamp');
+  `, chartContext);
   vm.runInContext(`
     const a = { name:'first/normal', chart:{title:'Same title', background:'old.jpg'} };
     const b = { name:'second/easy', chart:{title:'Same title', background:'other.jpg'} };

@@ -31,7 +31,7 @@ a = json.loads(ARGS)
 if a["op"] == "analyze":
     out = mapper.analysis_summary(y, SR)
 else:
-    notes, warnings = mapper.draft_notes(y, SR, a["level"].upper(), a["name"], a["bpm"], a["offset"], a["holds"])
+    notes, warnings = mapper.draft_notes(y, SR, a["level"].upper(), a["name"], a["bpm"], a["offset"], a["holds"], approach_ms=a.get("approach", 1500))
     out = {"notes": notes, "warnings": warnings}
 json.dumps(out, ensure_ascii=False)
 `;

@@ -475,8 +475,9 @@
       <label class="row">Nom <input id="mDiff" maxlength="23"></label>
       <div class="row">Position <span style="display: flex; gap: 6px"><button type="button" id="btnDiffUp" aria-label="Monter" title="Monter : placer cette difficulté avant la précédente (dans l'éditeur et dans le jeu)">↑</button>
         <button type="button" id="btnDiffDown" aria-label="Descendre" title="Descendre : placer cette difficulté après la suivante (dans l'éditeur et dans le jeu)">↓</button></span></div>
-      <label class="row">Vitesse des notes <input id="mApproach" type="number" step="50" min="500" max="5000" placeholder="défaut (1500 ms)" title="Temps de trajet d'une note, de son apparition à sa cible. Vide = défaut du jeu, 1500 ms quelle que soit la difficulté."></label>
+      <label class="row">Temps de trajet (ms) <input id="mApproach" type="number" step="50" min="500" max="5000" placeholder="défaut (1500 ms)" title="Réglage propre à cette difficulté. Plus court = plus rapide. Vide = 1500 ms."></label>
       <div class="file" id="mApproachHint"></div>
+      <button type="button" id="mApproachReset">Rétablir 1500 ms</button>
       <div class="file" id="fileName"></div>
       <div class="detect" style="margin-left: 0"><button type="button" id="btnRevertDiff"></button>
         <button type="button" id="btnDeleteDiff" class="danger">Supprimer…</button></div>
@@ -810,6 +811,7 @@ function parseChart(text) {
         case "ORDER": c.order = Math.max(0, parseInt(v, 10) || 0); break; // rang dans la chanson, 0 = ordre par défaut
         case "BPM": c.bpm = parseFloat(v) || 120; break;
         case "OFFSET_MS": c.offset = parseInt(v, 10) || 0; break;
+        case "APPROACH_MS": c.approach = Number(v) > 0 ? Math.min(5000, Math.max(500, Math.round(Number(v)))) : 0; break;
         case "AUDIO": c.audio = v.split(/\s+/)[0]; break;
         case "BACKGROUND": c.background = v.split(/\s+/)[0]; break;
         case "BACKGROUND_DIM": c.backgroundDim = Math.min(100, Math.max(0, parseInt(v, 10) || 0)); break;
@@ -2151,9 +2153,9 @@ function levelFor(diff) {  // densité proposée d'après le nom de difficulté 
   const d = (diff || "").toUpperCase().split(/\s+/)[0];
   return { EASY: "easy", HARD: "hard", EXPERT: "expert" }[d] || "normal";
 }
-async function generateNotes(audio, level, bpm, offset, holds, onStatus) {
+async function generateNotes(audio, level, bpm, offset, holds, onStatus, approach = DEFAULT_APPROACH_MS) {
   if (!audio || !/^songs\/[A-Za-z0-9_-]+\/[A-Za-z0-9_-]+\.ogg$/.test(audio)) throw new Error(tr("la chanson n'a pas de piste .ogg"));
-  const q = new URLSearchParams({ audio, level, bpm, offset, holds: holds ? "1" : "0" });
+  const q = new URLSearchParams({ audio, level, bpm, offset, holds: holds ? "1" : "0", approach });
   const r = await api(`/api/generate?${q}`, { onStatus });
   const { chart, warnings } = parseChart(`BPM ${bpm}\n${r.notes}`);
   if (warnings.length) console.warn("brouillon :", warnings);
@@ -2665,18 +2667,23 @@ function fillApproach() {
   document.getElementById("mApproach").value = c.approach > 0 ? c.approach : "";
   document.getElementById("mApproach").placeholder = tr("défaut {def}", { def });
   const beats = eff / (60000 / (c.bpm || 120));
-  document.getElementById("mApproachHint").textContent = LOCAL
+  document.getElementById("mApproachReset").disabled = !S.cur || !c.approach;
+  document.getElementById("mApproachHint").textContent = tr("Cette difficulté uniquement. Plus court = plus rapide.") + " " + (LOCAL
     ? (c.approach > 0 ? tr("Une note met {eff} ms à arriver (vide = vitesse normale du jeu, {def} ms)", { eff, def })
                       : tr("Vitesse normale du jeu : une note met {def} ms à arriver", { def }))
     : tr(c.approach > 0 ? "personnalisé : {eff} ms ≈ {beats} temps à {bpm} BPM" : "défaut du jeu : {eff} ms ≈ {beats} temps à {bpm} BPM",
-         { eff, beats: beats.toFixed(1), bpm: fmt(c.bpm || 120) });
+         { eff, beats: beats.toFixed(1), bpm: fmt(c.bpm || 120) }));
 }
 document.getElementById("mApproach").addEventListener("input", e => {
   const raw = e.target.value.trim();
   const v = raw === "" ? 0 : Math.min(5000, Math.max(500, parseInt(raw, 10) || 0));
   if (C().approach === v) return;
   C().approach = v; markDirty();
-  fillApproachHintOnly();
+  fillApproachHintOnly(); draw();
+});
+document.getElementById("mApproachReset").addEventListener("click", () => {
+  if (!S.cur || !C().approach) return;
+  C().approach = 0; markDirty(); fillApproach(); draw();
 });
 function fillApproachHintOnly() { const keep = document.getElementById("mApproach").value; fillApproach(); document.getElementById("mApproach").value = keep; }
 /* BPM/OFFSET différents entre les difficultés d'un même morceau (fichiers édités à la main) */

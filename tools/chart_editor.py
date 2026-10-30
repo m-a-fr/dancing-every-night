@@ -356,6 +356,7 @@ class Handler(SimpleHTTPRequestHandler):
         level = q.get("level", ["normal"])[0]
         try:
             bpm, offset = float(q.get("bpm", [""])[0]), int(q.get("offset", [""])[0])
+            approach = max(500, min(5000, int(q.get("approach", ["1500"])[0])))
         except ValueError:
             return self.send_json({"error": "BPM ou OFFSET_MS invalide"}, 400)
         if not SONG_PATH.match(name) or not (SONGS / name).is_file():
@@ -366,7 +367,7 @@ class Handler(SimpleHTTPRequestHandler):
             return self.send_json({"error": "génération indisponible : crée l'environnement Python avec "
                                    "python3 -m venv tools/.venv && tools/.venv/bin/pip install -r tools/requirements.txt"}, 500)
         cmd = [str(VENV_PY), str(ROOT / "tools" / "mapper.py"), str(SONGS / name), "--stdout", level.upper(),
-               "--bpm", str(bpm), "--offset-ms", str(offset)]
+               "--bpm", str(bpm), "--offset-ms", str(offset), "--approach-ms", str(approach)]
         if q.get("holds", ["1"])[0] == "0":
             cmd.append("--no-holds")
         try:
