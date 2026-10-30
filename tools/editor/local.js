@@ -303,6 +303,7 @@ async function localApi(url, opts = {}) {
     return mapperCall("generate", audio, {
       level: q.get("level"), name: audio.split("/")[1] || "", bpm: parseFloat(q.get("bpm")),
       offset: parseInt(q.get("offset"), 10), holds: q.get("holds") !== "0",
+      approach: Math.min(5000, Math.max(500, Number(q.get("approach")) || 1500)),
     }, opts.onStatus);
   }
   throw new Error(tr("action indisponible dans la version en ligne"));

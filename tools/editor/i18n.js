@@ -621,4 +621,9 @@ const EN = {
   "Choisir la musique ou un clip vidéo": "Choose the music or a video clip",
   "{name} : vidéo en AV1, un format que le convertisseur du navigateur ne sait pas lire. Convertis-la d'abord en MP4 (H.264), ou garde seulement une image de fond.": "{name}: AV1 video, a format the browser's converter can't read. Convert it to MP4 (H.264) first, or keep only a background image.",
   "{name} : image du clip illisible par ce navigateur": "{name}: this browser can't read a frame of the clip",
+  "Temps de trajet (ms)": "Travel time (ms)",
+  "Réglage propre à cette difficulté. Plus court = plus rapide. Vide = 1500 ms.": "Only affects this difficulty. Shorter = faster. Empty = 1500 ms.",
+  "Cette difficulté uniquement. Plus court = plus rapide.": "Only this difficulty. Shorter = faster.",
+  "Rétablir 1500 ms": "Reset to 1500 ms",
+
 };

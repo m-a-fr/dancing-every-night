@@ -57,7 +57,7 @@ ONSET_BIAS_S = 0.006  # les attaques détectées arrivent ~6 ms après l'attaque
 # arrondi à 50 ms, plancher 1100 ms. Écrit dans la carte (APPROACH_MS) seulement s'il diffère du défaut du jeu.
 # APPROACH_MODE : "tempo" = cette formule ; "fixed" = 1500 ms pour tous les morceaux (comme le jeu de référence, où la vitesse ne
 # dépend pas de la difficulté — HARD et niveau maximal mesurés à ~294 px/s, vidéos art/refs/). Essai "fixed" du 2026-10-12.
-APPROACH_MODE = "fixed"
+APPROACH_MODE = "fixed"  # défaut ; un choix d'auteur par difficulté peut le remplacer
 REF_BPM, REF_APPROACH_MS, MIN_APPROACH_MS, GAME_DEFAULT_APPROACH_MS = 119.0, 1500, 1100, 1500
 # Même lane : une note parcourt ~300 px et mesure ~54 px près de la cible -> il faut ~18 % du trajet entre deux
 # notes d'une même lane pour qu'elles ne se chevauchent pas.
@@ -610,7 +610,8 @@ class Arranger:
         """items : notes (b, lane, typ, extra) de la mesure, seq : (main, pos) voulus. Respecte : tenue en cours,
         écart d'une même main (boutons différents), écart d'une note répétée, limite visuelle d'une même lane."""
         same_b = self.cfg["same"]
-        jack_b = max(JACK_MS[self.name] / 1000.0 / self.L, same_lane_beats(self.song.bpm))
+        jack_b = max(JACK_MS[self.name] / 1000.0 / self.L,
+                     same_lane_beats(self.song.bpm, self.cfg.get("approach_ms")))
         out = []
         for (b, lane, typ, extra), (hnd, pos) in zip(items, seq):
             def ok(hh, pp):
@@ -645,10 +646,11 @@ class Arranger:
                 h = "L" if lane in LEFT else "R"
                 self.last[h] = (b + (extra if typ == "HOLD" else 0.0), POS_OF[lane])
         holds_busy = {}
-        out, prev_seq, phrase_i = [], None, 0
+        out, prev_seq, prev_sig, prev_bs = [], None, None, None
         bar_starts = sorted({bar0 + M * math.floor((n[0] - bar0) / M) for n in sec})
         for k, bs in enumerate(bar_starts):
             be = bs + M
+            phrase_i = int(round((bs - bar0) / M))
             items = [n for n in sec if bs <= n[0] < be]
             playable = [n for n in items if n[2] in ("TAP", "HOLD")]
             for n in items:                                 # doubles / scratchs : gardés, mettent à jour les mains
@@ -658,7 +660,7 @@ class Arranger:
                 out += items; continue
             sig = tuple(round((n[0] - bs) * 4) for n in playable) + tuple(n[2] for n in playable)
             # la musique se répète ? (même rythme et même harmonie qu'une mesure déjà arrangée)
-            rep = next((m for m in reversed(self.memory) if m[0] == sig and self.bar_sim(bs, m[1]) >= 0.92), None)
+            rep = next((m for m in self.memory if m[0] == sig and self.bar_sim(bs, m[1]) >= 0.92), None)
             n = len(playable)
             if rep:
                 rep[3] += 1
@@ -666,7 +668,8 @@ class Arranger:
                 seq = vary(rep[2], how) if how else list(rep[2])     # répétition, et variation de temps en temps
                 feel = "repeat" if not how else "variation"
                 self.forms["répétition" if not how else "variation"] += 1
-            elif phrase_i % 2 == 1 and prev_seq and len(prev_seq) == n and self.rng.random() < 0.55:
+            elif (phrase_i % 2 == 1 and prev_seq and sig == prev_sig
+                  and prev_bs == bs - M and self.rng.random() < 0.55):
                 seq = vary(prev_seq, self.rng.choice(["hands", "hands", "both"]))   # réponse en miroir
                 feel = "answer"
                 self.forms["réponse en miroir"] += 1
@@ -686,9 +689,11 @@ class Arranger:
                 self.alt_bars += 1
             placed = self.realize(playable, seq, holds_busy)
             out += placed + [x for x in items if x[2] not in ("TAP", "HOLD")]
-            self.memory.append([sig, bs, seq, 1])
-            prev_seq = seq
-            phrase_i += 1
+            # Une reprise conserve son noyau initial : ne pas mémoriser sa variation
+            # comme un nouveau modèle, et compter réellement ses occurrences.
+            if not rep:
+                self.memory.append([sig, bs, list(seq), 1])
+            prev_seq, prev_sig, prev_bs = seq, sig, bs
         notes[:] = sorted(rest + out, key=lambda x: (x[0], x[1]))
 
 
@@ -714,6 +719,8 @@ class Composer:
 
     def cfg(self, name):
         c = dict(DIFF[name])
+        c["approach_ms"] = (getattr(self, "approach_by_difficulty", {}).get(name)
+                            or getattr(self, "approach_override", None) or approach_ms_for(self.song.bpm))
         c["dens"] = [x * self.dens_scale for x in c["dens"]]
         if self.fast:
             c["dbl"] *= 2
@@ -999,7 +1006,7 @@ class Composer:
                 self.limit_holds(notes, cfg, start, end)
             self.add_scratches(notes, name, start, end, inten)
         notes = self.compose_ending(notes, name, cfg, pl)
-        return fix(notes, self.song.bpm), comments
+        return fix(notes, self.song.bpm, cfg["approach_ms"]), comments
 
     def ending_kind(self):
         """Comment la musique se termine : 'stop' (forte jusqu'au bout puis silence), 'ring' (frappe finale qui
@@ -1144,7 +1151,7 @@ class Placer:
 
     def __init__(self, song, cfg, seed, name="NORMAL"):
         self.song, self.cfg = song, cfg
-        self.same_lane = same_lane_beats(song.bpm)
+        self.same_lane = same_lane_beats(song.bpm, cfg.get("approach_ms"))
         self.pos = {"L": 1, "R": 1}
         self.dir = {"L": 1, "R": -1}
         self.runs = {"L": 0, "R": 0}
@@ -1334,14 +1341,14 @@ def placement_stats(notes, cfg, bpm):
     return ch / max(cnt, 1), bad / max(cnt, 1)
 
 
-def same_lane_beats(bpm):
+def same_lane_beats(bpm, approach_ms=None):
     """Écart minimal (en temps) entre deux notes d'une même lane : une croche, et au moins 18 % du trajet."""
-    return max(0.5, SAME_LANE_FRACTION * approach_ms_for(bpm) / 1000.0 * bpm / 60.0)
+    return max(0.5, SAME_LANE_FRACTION * (approach_ms or approach_ms_for(bpm)) / 1000.0 * bpm / 60.0)
 
 
-def fix(notes, bpm):
+def fix(notes, bpm, approach_ms=None):
     """Retire les conflits : même lane pendant une tenue ou trop rapprochée, plus d'une note à la fois."""
-    gap = same_lane_beats(bpm)
+    gap = same_lane_beats(bpm, approach_ms)
     notes.sort(key=lambda n: (n[0], n[1]))
     out, busy, last = [], {}, {}
     for b, lane, typ, extra in notes:
@@ -1370,6 +1377,18 @@ def fmt(x):
     return f"{x:.3f}".rstrip("0").rstrip(".")
 
 
+def parse_approach(value):
+    """Un trajet est une décision d'auteur, pas une échelle automatique de niveaux."""
+    try:
+        level, ms = value.upper().split("=")
+        ms = int(ms)
+        if level not in DIFF or not 500 <= ms <= 5000:
+            raise ValueError
+        return level, ms
+    except ValueError:
+        raise argparse.ArgumentTypeError("attendu EASY|NORMAL|HARD|EXPERT=500..5000") from None
+
+
 def chart_text(meta, diff, notes, comments, bpm, offset_ms):
     h = [f"# Carte générée par tools/mapper.py (make song). Relire, jouer, corriger."
          + (f" Mesure à {meta['meter']} temps." if meta.get("meter", 4) != 4 else ""),
@@ -1377,8 +1396,9 @@ def chart_text(meta, diff, notes, comments, bpm, offset_ms):
     if meta.get("artist"): h.append(f"ARTIST {meta['artist']}")
     if meta.get("pack"): h.append(f"PACK {meta['pack']}")
     h += [f"DIFFICULTY {diff}", f"BPM {fmt(bpm)}", f"OFFSET_MS {offset_ms}", f"AUDIO {meta['audio']}"]
-    if approach_ms_for(bpm) != GAME_DEFAULT_APPROACH_MS:
-        h.append(f"APPROACH_MS {approach_ms_for(bpm)}")
+    approach = meta.get("approach_ms", approach_ms_for(bpm))
+    if approach != GAME_DEFAULT_APPROACH_MS:
+        h.append(f"APPROACH_MS {approach}")
     if meta.get("background"): h.append(f"BACKGROUND {meta['background']}")
     if meta.get("video"):
         h.append(f"VIDEO {meta['video']}")
@@ -1452,6 +1472,10 @@ def main():
     ap.add_argument("--pack", default="", help="pack du morceau (optionnel : vue par pack du menu)")
     ap.add_argument("--bpm", type=float)
     ap.add_argument("--offset-ms", type=int)
+    ap.add_argument("--approach-ms", type=int, choices=range(500, 5001), metavar="MS",
+                    help="trajet explicite (500–5000 ms ; défaut 1500), y compris avec --stdout")
+    ap.add_argument("--approach", type=parse_approach, action="append", default=[], metavar="DIFFICULTÉ=MS",
+                    help="choix d'auteur pour une difficulté, répétable ; aucune progression imposée")
     ap.add_argument("--background", default="", help="fichier du dossier de la map, ex. background.jpg")
     ap.add_argument("--video", default="", help="fichier du dossier de la map, ex. video.mpg")
     ap.add_argument("--video-offset-ms", type=int, default=0)
@@ -1486,12 +1510,14 @@ def analysis_summary(y, sr, bpm=None, offset_ms=None, meter=None, log=print):
             "downbeat_ms": int(round(offset_ms + song.bar0 * L)), "warnings": warnings}
 
 
-def draft_notes(y, sr, level, name, bpm=None, offset_ms=None, holds=True, meter=None, log=print):
+def draft_notes(y, sr, level, name, bpm=None, offset_ms=None, holds=True, meter=None, log=print,
+                approach_ms=GAME_DEFAULT_APPROACH_MS):
     """Notes d'une seule difficulté (sections en commentaires), sans l'en-tête ; et les points à vérifier."""
     song, bpm, offset_ms, warnings = analyze((y, sr), bpm, offset_ms, log, meter)
     sections, first, last = find_sections(song)
     comp = Composer(song, sections, first, last)
     comp.song_name = name                       # personnalité propre à la chanson
+    comp.approach_override = max(500, min(5000, int(approach_ms)))
     notes, comments = comp.compose_checked(level)
     if not holds:
         notes = [(b, lane, "TAP", 0.0) if typ == "HOLD" else (b, lane, typ, extra) for b, lane, typ, extra in notes]
@@ -1512,7 +1538,8 @@ def print_notes(args):
     log = lambda *a: print(*a, file=sys.stderr)
     y, sr = load_mono(args.audio)
     name = args.name or Path(args.audio).resolve().parent.name
-    text, warnings = draft_notes(y, sr, args.stdout, name, args.bpm, args.offset_ms, not args.no_holds, args.meter, log)
+    text, warnings = draft_notes(y, sr, args.stdout, name, args.bpm, args.offset_ms, not args.no_holds, args.meter, log,
+                                approach_ms=args.approach_ms or GAME_DEFAULT_APPROACH_MS)
     print(text)
     for w in warnings:
         log("à vérifier : " + w)
@@ -1532,6 +1559,8 @@ def run(args, log=print):
     sections, first, last = find_sections(song)
     comp = Composer(song, sections, first, last)
     comp.song_name = args.name
+    comp.approach_override = getattr(args, "approach_ms", None)
+    comp.approach_by_difficulty = dict(getattr(args, "approach", []) or [])
     meta = dict(id=args.name, title=args.title, artist=args.artist, pack=getattr(args, "pack", "") or "", audio=rel_audio,
                 background=args.background,
                 video=args.video, video_offset_ms=args.video_offset_ms, meter=song.meter)
@@ -1544,7 +1573,7 @@ def run(args, log=print):
               f"BPM {fmt(bpm)}, OFFSET_MS {offset_ms}, mesure à {song.meter} temps, premier temps de mesure : temps {song.bar0}, "
               f"musique du temps {first} au temps {last}"
               + (" (tempo rapide : densité réduite)" if comp.dens_scale < 1 else "")
-              + f", trajet des notes {approach_ms_for(bpm)} ms",
+              + ", trajet par défaut 1500 ms sauf choix d'auteur explicite",
               report_char, "", "Sections (temps) :"]
     for s in sections:
         extra = f", reprise de {s[0] - s[5]}-{s[1] - s[5]} (décalage {s[5]})" if s[3] == "copy" else f", focus {s[3]}"
@@ -1552,8 +1581,8 @@ def run(args, log=print):
     report.append("")
     for d in DIFF:
         notes, comments = comp.compose_checked(d)
-        outs[d].write_text(chart_text(meta, d, notes, comments, bpm, offset_ms), encoding="utf-8")
-        report.append(f"  {d:6s} {stats(notes)}  -> {outs[d].relative_to(ROOT) if outs[d].is_relative_to(ROOT) else outs[d]}")
+        outs[d].write_text(chart_text(dict(meta, approach_ms=comp.cfg(d)["approach_ms"]), d, notes, comments, bpm, offset_ms), encoding="utf-8")
+        report.append(f"  {d:6s} {stats(notes)}, trajet {comp.cfg(d)['approach_ms']} ms  -> {outs[d].relative_to(ROOT) if outs[d].is_relative_to(ROOT) else outs[d]}")
         arr = comp.arrangers.get(d)
         if arr:
             report.append("         personnalité : " + ", ".join(FEELS[k] for k in arr.favorites[:3]))
