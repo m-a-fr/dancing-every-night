@@ -4602,6 +4602,52 @@
       "source_sha256": "c940d658ac96b83c93e6692ce5ff29ef725102625640cf711dafcd275bb46f9e"
     },
     {
+      "id": "community-151",
+      "version": 1,
+      "title": "Otonoke (TV Size)",
+      "artist": "Creepy Nuts",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Nw_XzGZ35As",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 101,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 139,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 224,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 255,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12478660,
+      "has_video": true,
+      "zip": "songs/community-151-v1.zip",
+      "zip_bytes": 12231648,
+      "sha256": "af1d5dcac9dbd40fef27e1303112a031b8993b17d815a3da2e35b03b2b53b212",
+      "thumb": "thumbs/community-151-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 151,
+      "local_id": "popular7_otonoke",
+      "previous_objects": [],
+      "source_sha256": "7dd056335c510fe1db0efe48ec3cbb346376e4b06254afe0eca8cce23f695cb6"
+    },
+    {
       "id": "community-81",
       "version": 1,
       "title": "Overdrive (PV Edit)",
