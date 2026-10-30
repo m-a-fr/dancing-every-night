@@ -6626,6 +6626,52 @@
       "source_sha256": "9c42bff918132afd31bff1d0031d4e795aae08ff08f3ca0b8408e17cb52ade97"
     },
     {
+      "id": "community-168",
+      "version": 1,
+      "title": "Uragirimono no Requiem (TV Size)",
+      "artist": "Daisuke Hasegawa",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=kbjr3JIuOtY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 94,
+          "bpm": 168.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 134,
+          "bpm": 168.0
+        },
+        {
+          "name": "HARD",
+          "notes": 188,
+          "bpm": 168.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 224,
+          "bpm": 168.0
+        }
+      ],
+      "duration_s": 94.1,
+      "size_bytes": 12514634,
+      "has_video": true,
+      "zip": "songs/community-168-v1.zip",
+      "zip_bytes": 12344613,
+      "sha256": "2af0297a838bb80cd090d7a6df86717c65df7b065f81da7483d9142758c111fe",
+      "thumb": "thumbs/community-168-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 168,
+      "local_id": "popular7_gurenge2",
+      "previous_objects": [],
+      "source_sha256": "49caf90e8f8f7e439a949270ba47ec20196ad0d135b65c4ef012760f1401bcda"
+    },
+    {
       "id": "community-156",
       "version": 1,
       "title": "VIVID VICE (TV Size)",
