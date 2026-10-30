@@ -6534,6 +6534,52 @@
       "source_sha256": "a700ac2a2ef71b1a823048d83c4f239eb4d4da02c05e748b4016f427d2e8e91b"
     },
     {
+      "id": "community-173",
+      "version": 1,
+      "title": "The Vampire",
+      "artist": "DECO*27 feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=e1xCOsgWG0M",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 189,
+          "bpm": 164.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 276,
+          "bpm": 164.0
+        },
+        {
+          "name": "HARD",
+          "notes": 401,
+          "bpm": 164.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 473,
+          "bpm": 164.0
+        }
+      ],
+      "duration_s": 180.0,
+      "size_bytes": 24786813,
+      "has_video": true,
+      "zip": "songs/community-173-v1.zip",
+      "zip_bytes": 24211709,
+      "sha256": "fd02c0c69bb2d6c00f7ae8cedf7ffe150af59aaeb30f1c13c7348ef7e95459b9",
+      "thumb": "thumbs/community-173-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 173,
+      "local_id": "popular7_vampire",
+      "previous_objects": [],
+      "source_sha256": "23385a0ebd217127ab8cc7a5bd270d0ed50847caf8f379c2c11bd64b959c4ec3"
+    },
+    {
       "id": "community-99",
       "version": 1,
       "title": "This game (TV Size)",
