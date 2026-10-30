@@ -2578,6 +2578,52 @@
       "source_sha256": "ca8e289d6f0b6c4720a7ce65f7736595bda16e3f59cb6eb29b0394401204f748"
     },
     {
+      "id": "community-177",
+      "version": 1,
+      "title": "Garakuta Doll Play",
+      "artist": "t+pazolite",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=GDIC4O8po-U",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 188,
+          "bpm": 256.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 231,
+          "bpm": 256.0
+        },
+        {
+          "name": "HARD",
+          "notes": 255,
+          "bpm": 256.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 295,
+          "bpm": 256.0
+        }
+      ],
+      "duration_s": 129.3,
+      "size_bytes": 3038444,
+      "has_video": false,
+      "zip": "songs/community-177-v1.zip",
+      "zip_bytes": 3017880,
+      "sha256": "64a7f9a40e0a95c471f9408f4b496defe1141d7117d555214ddcc57c2baf8bba",
+      "thumb": "thumbs/community-177-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 177,
+      "local_id": "popular7_garakuta",
+      "previous_objects": [],
+      "source_sha256": "d465f8cdb57e77babae824c6958299dd74060c1fbe86bf8e9e485c16be55f25c"
+    },
+    {
       "id": "community-110",
       "version": 1,
       "title": "GHOST",
