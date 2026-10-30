@@ -5522,6 +5522,52 @@
       "source_sha256": "1a56db711b9e5908d59fc8b353f3eefdb56d5a157eede932547b132c6389f356"
     },
     {
+      "id": "community-154",
+      "version": 1,
+      "title": "SPECIALZ (TV Size)",
+      "artist": "King Gnu",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=5yb2N3pnztU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 85,
+          "bpm": 117.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 130,
+          "bpm": 117.0
+        },
+        {
+          "name": "HARD",
+          "notes": 187,
+          "bpm": 117.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 215,
+          "bpm": 117.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12013491,
+      "has_video": true,
+      "zip": "songs/community-154-v1.zip",
+      "zip_bytes": 11833430,
+      "sha256": "f41293e69a8b4ea3a3989a056c8d9c04417cf9593b5b206add101be34ab3df38",
+      "thumb": "thumbs/community-154-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 154,
+      "local_id": "popular7_specialz",
+      "previous_objects": [],
+      "source_sha256": "48bcfc8fbd2a18d07771f0d549137d99ada37fd26ec608d78137ba5d0e9c4b68"
+    },
+    {
       "id": "community-13",
       "version": 1,
       "title": "Sweeteners",
