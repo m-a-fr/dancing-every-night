@@ -5752,6 +5752,52 @@
       "source_sha256": "1a56db711b9e5908d59fc8b353f3eefdb56d5a157eede932547b132c6389f356"
     },
     {
+      "id": "community-163",
+      "version": 1,
+      "title": "Sorairo Days (TV Size)",
+      "artist": "Shoko Nakagawa",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=vH0GSgotke0",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 97,
+          "bpm": 174.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 138,
+          "bpm": 174.0
+        },
+        {
+          "name": "HARD",
+          "notes": 186,
+          "bpm": 174.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 227,
+          "bpm": 174.0
+        }
+      ],
+      "duration_s": 91.1,
+      "size_bytes": 11694759,
+      "has_video": true,
+      "zip": "songs/community-163-v1.zip",
+      "zip_bytes": 11549736,
+      "sha256": "c3787608a06371d8eaa784639d2ee2028956a868daf3e344ca16eb552624eb04",
+      "thumb": "thumbs/community-163-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 163,
+      "local_id": "popular7_sorairo",
+      "previous_objects": [],
+      "source_sha256": "5cc4f6207319803724a25495d917aaa242a376002f2765b32bc9b0b6d3218803"
+    },
+    {
       "id": "community-154",
       "version": 1,
       "title": "SPECIALZ (TV Size)",
