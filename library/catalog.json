@@ -5568,6 +5568,52 @@
       "source_sha256": "6748fa7a36da1c1cfb874c64a81258f9727fb0e7679d0dc16701d561f9004187"
     },
     {
+      "id": "community-162",
+      "version": 1,
+      "title": "Shoukei to Shikabane no Michi (TV Size)",
+      "artist": "Linked Horizon",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=5IdD-y4KKVA",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 90,
+          "bpm": 178.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 125,
+          "bpm": 178.0
+        },
+        {
+          "name": "HARD",
+          "notes": 174,
+          "bpm": 178.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 216,
+          "bpm": 178.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12207619,
+      "has_video": true,
+      "zip": "songs/community-162-v1.zip",
+      "zip_bytes": 12102822,
+      "sha256": "2ec54092913620010179cd408a22144d36db85f81a95979482da0f8b3f3f8678",
+      "thumb": "thumbs/community-162-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 162,
+      "local_id": "popular7_shoukei",
+      "previous_objects": [],
+      "source_sha256": "6b1a0ad4ed79e60e9c31eafa7b918e294f0286d484f5f53a08990b818fd946d3"
+    },
+    {
       "id": "community-145",
       "version": 1,
       "title": "Sign (TV Size)",
