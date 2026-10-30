@@ -2854,6 +2854,52 @@
       "source_sha256": "1d9cfd7dff4e2dcb2eb38091eb318e1a1e69bbc2876a8c9f6c8b56dbb5d21214"
     },
     {
+      "id": "community-179",
+      "version": 1,
+      "title": "Grievous Lady",
+      "artist": "Team Grimoire vs Laur",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Eax2zhVA0Zo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 165,
+          "bpm": 210.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 192,
+          "bpm": 210.0
+        },
+        {
+          "name": "HARD",
+          "notes": 283,
+          "bpm": 210.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 320,
+          "bpm": 210.0
+        }
+      ],
+      "duration_s": 141.3,
+      "size_bytes": 3668647,
+      "has_video": false,
+      "zip": "songs/community-179-v1.zip",
+      "zip_bytes": 3644702,
+      "sha256": "c4222a097e0db596629380be6f70a4079ead39173eba76ccfbd8e59006af5944",
+      "thumb": "thumbs/community-179-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 179,
+      "local_id": "popular7_grievous",
+      "previous_objects": [],
+      "source_sha256": "b18d8f092ffe5a8580d86bbb1b53f24e98a62008ee3c67984584ba65799a2884"
+    },
+    {
       "id": "community-111",
       "version": 1,
       "title": "Guren no Yumiya (TV Size)",
