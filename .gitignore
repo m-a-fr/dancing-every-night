@@ -53,3 +53,7 @@ art/licences/
 
 # voix synthétiques de l'hôtesse (audio : dépôt privé uniquement)
 art/voix/
+
+# Dossiers de travail locaux : essais de décodage H.264 (dev/h264test), wireframes générés
+dev/h264test/
+art/wireframes/
