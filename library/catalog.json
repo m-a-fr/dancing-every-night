@@ -3222,6 +3222,52 @@
       "source_sha256": "cc51acdc868d57175874d231f67457d6fac0d08cc01b77bd17e4090a22ccc94b"
     },
     {
+      "id": "community-167",
+      "version": 1,
+      "title": "ideal white",
+      "artist": "Mashiro Ayano",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=-P_B2AC5WJM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 279,
+          "bpm": 180.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 386,
+          "bpm": 180.0
+        },
+        {
+          "name": "HARD",
+          "notes": 533,
+          "bpm": 180.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 659,
+          "bpm": 180.0
+        }
+      ],
+      "duration_s": 260.1,
+      "size_bytes": 21963412,
+      "has_video": true,
+      "zip": "songs/community-167-v1.zip",
+      "zip_bytes": 21334708,
+      "sha256": "22b6b608ccb8cb58d17a1a3f4c050b2eacbb20e8693eb4605d2f4b8ef98af24a",
+      "thumb": "thumbs/community-167-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 167,
+      "local_id": "popular7_ideal",
+      "previous_objects": [],
+      "source_sha256": "a0037af7dc35adc5dbead16c5a8fdbdbceb6dd061cff3f3030b4f067fef2646e"
+    },
+    {
       "id": "community-35",
       "version": 1,
       "title": "Idol",
