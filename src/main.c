@@ -177,6 +177,10 @@ int main(int argc, char *argv[]) {
     Uint32 *record_pixels = record ? malloc((size_t)SCREEN_W * SCREEN_H * 4) : NULL;
     const bool autoplay = getenv("VITAGAME_AUTOPLAY") != NULL;   /* jeu automatique sans enregistrer */
     game.fixed_clock = record != NULL || autoplay;
+    /* VITAGAME_RECORD_MENU=n : avec VITAGAME_RECORD, enregistre les n premières images (menus, touches de
+       VITAGAME_KEYS) au lieu d'une carte en autoplay */
+    const char *menu_env = getenv("VITAGAME_RECORD_MENU");
+    const int menu_frames = record && menu_env ? atoi(menu_env) : 0;
 #endif
 
     while (!in.quit_requested && !game.wants_quit) {
@@ -196,7 +200,7 @@ int main(int argc, char *argv[]) {
                et Start ouvre la pause */
             bool keep = autoplay && !record && (game.paused || game.screen != SCREEN_PLAY);
             bool start = in.pressed[BTN_START];
-            if (!keep) {
+            if (!keep && !menu_frames) {
                 memset(in.held, 0, sizeof in.held);
                 memset(in.pressed, 0, sizeof in.pressed);
                 in.scratch_cw = in.scratch_ccw = false;
@@ -215,7 +219,10 @@ int main(int argc, char *argv[]) {
         perf_draw(&perf, ren, &game.font);
 #ifndef __vita__
         if (screenshot_due(ren, ++frame)) break;
-        if (record && game.audio_started) {
+        if (record && menu_frames) {
+            record_frame(record, ren, record_pixels);
+            if (frame >= menu_frames) break;
+        } else if (record && game.audio_started) {
             record_frame(record, ren, record_pixels);
             if (game.rhythm.finished && game.rhythm.results_ms > RECORD_RESULTS_MS) break;
         }
