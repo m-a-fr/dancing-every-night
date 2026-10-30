@@ -6304,6 +6304,52 @@
       "source_sha256": "62e1421b3d4ab67538f02a51b4a0cdd298be940d608c4ccd56d53f85140b216b"
     },
     {
+      "id": "community-152",
+      "version": 1,
+      "title": "Yuusha (TV Size)",
+      "artist": "YOASOBI",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=QoGM9hCxr4k",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 75,
+          "bpm": 104.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 116,
+          "bpm": 104.0
+        },
+        {
+          "name": "HARD",
+          "notes": 173,
+          "bpm": 104.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 218,
+          "bpm": 104.0
+        }
+      ],
+      "duration_s": 93.0,
+      "size_bytes": 12211349,
+      "has_video": true,
+      "zip": "songs/community-152-v1.zip",
+      "zip_bytes": 11873870,
+      "sha256": "6dc2f8ba8a00761597f40c6dcf32e3bb5c64effbc6d3bfd502a811559572bb02",
+      "thumb": "thumbs/community-152-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 152,
+      "local_id": "popular7_yusha",
+      "previous_objects": [],
+      "source_sha256": "1e88fc21a3146620fe8a012bc2db48ed77918eaaf72d657d55a7a8c1dd361e28"
+    },
+    {
       "id": "community-103",
       "version": 1,
       "title": "Zankyou Sanka (TV Size)",
