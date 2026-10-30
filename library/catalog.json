@@ -1152,6 +1152,52 @@
       "source_sha256": "3f32c155791d1a2607c3445b2e1ea605401048c6ef6f2d971dfa4d5032258d0e"
     },
     {
+      "id": "community-166",
+      "version": 1,
+      "title": "Brave Shine (TV Size)",
+      "artist": "Aimer",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=plmXVrCKwnE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 99,
+          "bpm": 171.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 140,
+          "bpm": 171.0
+        },
+        {
+          "name": "HARD",
+          "notes": 204,
+          "bpm": 171.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 232,
+          "bpm": 171.0
+        }
+      ],
+      "duration_s": 90.2,
+      "size_bytes": 11976504,
+      "has_video": true,
+      "zip": "songs/community-166-v1.zip",
+      "zip_bytes": 11834382,
+      "sha256": "503ab573d0443195e5a1c0b8f9b6db5f69f8d6891fab5273ad2d866b60314570",
+      "thumb": "thumbs/community-166-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 166,
+      "local_id": "popular7_brave",
+      "previous_objects": [],
+      "source_sha256": "956b56755f835cefddce9c41d5096af9758119f4548f4f64adc0dd74ef9fdf16"
+    },
+    {
       "id": "community-106",
       "version": 1,
       "title": "Bravely You (TV Size)",
