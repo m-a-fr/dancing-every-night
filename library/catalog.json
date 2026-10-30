@@ -968,6 +968,52 @@
       "source_sha256": "7b98caedab4f9ca7858115b9d4300cac23980e77640ee1cffb46126921a61040"
     },
     {
+      "id": "community-159",
+      "version": 1,
+      "title": "Boku no Sensou (TV Size)",
+      "artist": "Shinsei Kamattechan",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Yopj_860hM4",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 88,
+          "bpm": 144.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 126,
+          "bpm": 144.0
+        },
+        {
+          "name": "HARD",
+          "notes": 189,
+          "bpm": 144.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 222,
+          "bpm": 144.0
+        }
+      ],
+      "duration_s": 91.0,
+      "size_bytes": 2040759,
+      "has_video": false,
+      "zip": "songs/community-159-v1.zip",
+      "zip_bytes": 2031488,
+      "sha256": "2abfcd6d33237f0ef532c68e18269fcc5da21afdf87bb5fb8e4839d1095394a5",
+      "thumb": "thumbs/community-159-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 159,
+      "local_id": "popular7_boku",
+      "previous_objects": [],
+      "source_sha256": "f5a1bb09f6016218728b68533f279a8149bc350d3b3ddec513b1a2587526feef"
+    },
+    {
       "id": "community-18",
       "version": 2,
       "title": "Bounded Quietude",
