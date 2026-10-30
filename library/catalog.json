@@ -600,6 +600,52 @@
       "source_sha256": "95a5be621fc8552efe73c75e73592a6d925fb862f78fef2845fbc94f8d70a2b7"
     },
     {
+      "id": "community-155",
+      "version": 1,
+      "title": "Baton Road (TV Size)",
+      "artist": "KANA-BOON",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=unR1h10HPsk",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 100,
+          "bpm": 162.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 134,
+          "bpm": 162.0
+        },
+        {
+          "name": "HARD",
+          "notes": 208,
+          "bpm": 162.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 244,
+          "bpm": 162.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 11910192,
+      "has_video": true,
+      "zip": "songs/community-155-v1.zip",
+      "zip_bytes": 11753157,
+      "sha256": "bd68ddd16922f0b72ddc34aa559e4a38e70dd66d21ba4ae6dd82a087829e1a60",
+      "thumb": "thumbs/community-155-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 155,
+      "local_id": "popular7_baton",
+      "previous_objects": [],
+      "source_sha256": "df51fbbe936f35018c09379de830f78d6d7216bffdc7dba868ee55d802f14b9c"
+    },
+    {
       "id": "community-16",
       "version": 1,
       "title": "Beatucada",
