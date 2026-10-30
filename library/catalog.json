@@ -2578,6 +2578,52 @@
       "source_sha256": "1647b5ca271d0f34bbae9f9e6b116af8bde68f336a133534ca10170b7d037f44"
     },
     {
+      "id": "community-153",
+      "version": 1,
+      "title": "Haru (TV Size)",
+      "artist": "Yorushika",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=iqsnJJK8GA4",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 66,
+          "bpm": 102.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 101,
+          "bpm": 102.0
+        },
+        {
+          "name": "HARD",
+          "notes": 146,
+          "bpm": 102.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 183,
+          "bpm": 102.0
+        }
+      ],
+      "duration_s": 93.1,
+      "size_bytes": 12293828,
+      "has_video": true,
+      "zip": "songs/community-153-v1.zip",
+      "zip_bytes": 12051262,
+      "sha256": "572ddc4163607ecdcf60d825bd6e8259dca15c912552f19c1fe41dd07e740e79",
+      "thumb": "thumbs/community-153-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 153,
+      "local_id": "popular7_hare",
+      "previous_objects": [],
+      "source_sha256": "248c9c1b02704a151bdd0252071063ff02c914039f0f12493ac67666f154bdfb"
+    },
+    {
       "id": "community-135",
       "version": 1,
       "title": "Haruka Kanata (TV Size)",
