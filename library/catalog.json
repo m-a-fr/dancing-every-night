@@ -1796,6 +1796,52 @@
       "source_sha256": "8f8eb6494623b7d57fb45850d18b803ba3fdd9abaf7c264f13104fac176cc945"
     },
     {
+      "id": "community-158",
+      "version": 1,
+      "title": "Cry Baby (TV Size)",
+      "artist": "Official HIGE DANdism",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=2qbHikwRimU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 75,
+          "bpm": 100.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 125,
+          "bpm": 100.0
+        },
+        {
+          "name": "HARD",
+          "notes": 174,
+          "bpm": 100.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 222,
+          "bpm": 100.0
+        }
+      ],
+      "duration_s": 90.9,
+      "size_bytes": 12263251,
+      "has_video": true,
+      "zip": "songs/community-158-v1.zip",
+      "zip_bytes": 12088024,
+      "sha256": "9a68bf412bc63ffeeef4b29abf0ae9fe2ca1ed35fc75aae14581a8d39d59b274",
+      "thumb": "thumbs/community-158-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 158,
+      "local_id": "popular7_crybaby",
+      "previous_objects": [],
+      "source_sha256": "b769bcf63f726001b84c64b1d5b79b071e7bbf8cc55bcd1f10755d4c59abc6ad"
+    },
+    {
       "id": "community-49",
       "version": 1,
       "title": "crystallized",
