@@ -2118,6 +2118,52 @@
       "source_sha256": "7f0957d46b94446f882c7d878144bd5b371e3fd8066d81b663568798f542abe6"
     },
     {
+      "id": "community-178",
+      "version": 1,
+      "title": "Cyaegha",
+      "artist": "USAO",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=OW8pMvedAtM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 158,
+          "bpm": 200.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 200,
+          "bpm": 200.0
+        },
+        {
+          "name": "HARD",
+          "notes": 274,
+          "bpm": 200.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 325,
+          "bpm": 200.0
+        }
+      ],
+      "duration_s": 142.3,
+      "size_bytes": 19507279,
+      "has_video": true,
+      "zip": "songs/community-178-v1.zip",
+      "zip_bytes": 19386067,
+      "sha256": "da7a190b0e3569cab94d3a369438d5780c7e0d2bc448516eaeebb59f14abb365",
+      "thumb": "thumbs/community-178-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 178,
+      "local_id": "popular7_cyaegha",
+      "previous_objects": [],
+      "source_sha256": "e9dce00eb4480d315a840f3b04e8f6bcb8a597e81432dace74696a901eb27303"
+    },
+    {
       "id": "community-130",
       "version": 1,
       "title": "D-tecnoLife (TV Size)",
