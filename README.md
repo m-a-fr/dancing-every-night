@@ -52,8 +52,11 @@ The Releases page also has PC versions, with nothing else to install:
 
 - **Windows**: unzip `DancingEveryNight-<version>-windows.zip` and run `DancingEveryNight.exe`. The build is not
   signed: if SmartScreen warns, choose *More info → Run anyway*.
-- **macOS** (11 or later, Intel or Apple Silicon): unzip, move *Dancing Every Night* to Applications, then the first
-  time right-click it → *Open* (the app is not notarised).
+- **macOS** (11 or later, Intel or Apple Silicon): unzip and move *Dancing Every Night* to Applications. The app is not
+  notarised, so macOS blocks the first launch. On macOS 15 and later: open the app once, dismiss the warning, then go to
+  *System Settings → Privacy & Security*, scroll down and click *Open Anyway* (on macOS 11–14, right-click the app →
+  *Open* works). If macOS says the app is "damaged", run this once in Terminal, then open it again:
+  `xattr -cr "/Applications/Dancing Every Night.app"`
 - **Linux**: extract `DancingEveryNight-<version>-linux.tar.gz` and run `DancingEveryNight`.
 
 Keyboard: arrows / WASD, Space or J (Cross), K (Circle), U (Square), I (Triangle), Q / E (scratch), Enter (Start),
@@ -61,9 +64,6 @@ Backspace (Select); a game controller works too. Songs install the same way, thr
 `save/` folder next to the game on Windows and Linux, in `~/Library/Application Support/Dancing Every Night/save/`
 on macOS.
 
-## For song creators
-
-**Online editor: <https://dancing-every-night.pages.dev/editor/>**. Nothing to install: create a song from a music file, detect the tempo, place
 ### Replacing the hostess pictures and voices
 
 Everything the hostess shows or says is a plain file you can swap. Put your own copy in a `custom/` folder inside
@@ -80,6 +80,9 @@ Pictures: PNG with a transparent background, at most 2048 px on a side; they are
 screen, so crop them there. Sounds: WAV, 16-bit, mono, 44100 Hz (`ffmpeg -i in.wav -ar 44100 -ac 1 -sample_fmt s16 out.wav`).
 Every other interface sound in `audio/sfx/` can be replaced the same way.
 
+## For song creators
+
+**Online editor: <https://dancing-every-night.pages.dev/editor/>**. Nothing to install: create a song from a music file, detect the tempo, place
 the notes (or start from an automatic draft) and export the `.zip` for the console. Start with the
 [creator guide](https://dancing-every-night.pages.dev/guide.html).
 
@@ -176,11 +179,11 @@ I want to be clear about where AI was used in this project, and what I think abo
 |---|---|---|
 | Code | The game (C11 + SDL2), the Python tools (automatic draft, editor, library scripts), the online editor, the CI, the tests, the documentation and its translations | Written with [Claude Code](https://claude.com/claude-code) (Anthropic). I set the design and the goals, play-test on a real Vita, review and decide; the model writes most of the code. |
 | Visual identity | The logo, the hostess (mascot) and the title screen layers, plus the images derived from them: boot splash, LiveArea and icon | Generated with AI image tools (ChatGPT), then selected and edited by hand (the stained-glass look is applied by a script). |
+| Hostess pictures | The six poses of the hostess (results, loading, pause) | Generated with AI image tools (ChatGPT), then selected and edited by hand. |
+| Hostess voice | The title and results lines | Synthesized with [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) (Apache-2.0): an invented voice, no real person cloned. I chose the voice and the takes by ear and trimmed them. |
 | Charts | The difficulties of the official songs | Start from an automatic draft (`tools/mapper.py`: a signal-analysis algorithm I wrote with Claude, not a generative model), then played, corrected and tuned by me. |
 
 **What was not made with AI**: the music (the three official songs are by their artists and used under their label's
-| Hostess pictures | The six poses of the hostess (results, loading, pause) | Generated with AI image tools (ChatGPT), then selected and edited by hand. |
-| Hostess voice | The title and results lines | Synthesized with [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) (Apache-2.0): an invented voice, no real person cloned. I chose the voice and the takes by ear and trimmed them. |
 terms; the menu music is by Juhani Junkala), the fonts, the button icons, and the interface sounds (synthesized by a
 script; only the hostess's voice is generative audio). Community songs carry their own rights, declared by their authors.
 
