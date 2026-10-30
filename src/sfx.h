@@ -14,7 +14,7 @@ struct stb_vorbis;
     X(START, "start") X(PAUSE_OPEN, "pause_open") X(PAUSE_CLOSE, "pause_close") X(TICK, "tick") X(TICK_GO, "tick_go") \
     X(SCORE_TICK, "score_tick") X(RANK_S, "rank_s") X(RANK_A, "rank_a") X(RANK_B, "rank_b") X(RANK_C, "rank_c") \
     X(RANK_D, "rank_d") X(NEW_RECORD, "new_record") X(FULL_COMBO, "full_combo") X(ALL_PERFECT, "all_perfect") \
-    X(BOOT, "boot") X(QUIT, "quit") X(PERFECT, "perfect") X(GOOD, "good") X(MISS, "miss") X(SCRATCH, "scratch") \
+    X(QUIT, "quit") X(PERFECT, "perfect") X(GOOD, "good") X(MISS, "miss") X(SCRATCH, "scratch") \
     X(VOICE_TITLE, "voice_title") X(VOICE_RANK_S, "voice_rank_s") X(VOICE_RANK_A, "voice_rank_a") \
     X(VOICE_RANK_B, "voice_rank_b") X(VOICE_RANK_CD, "voice_rank_cd")
 
@@ -45,6 +45,7 @@ typedef struct {
     unsigned char     *bgm_data;
     char       bgm_path[192];
     float      bgm_gain;         /* gain courant (fondu), rejoint bgm_target */
+    float      duck;             /* atténuation de la musique sous la voix de l'accueil, 1 = aucune */
     float      bgm_target;       /* 0 = coupé / baissé, 1 = plein */
 } Sfx;
 
