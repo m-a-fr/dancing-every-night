@@ -2624,6 +2624,52 @@
       "source_sha256": "92cf624911628ba7d4ad8634cee58b7e9f4d5e0f1dcbf6ed3795a33d2a72234b"
     },
     {
+      "id": "community-170",
+      "version": 1,
+      "title": "Great Days (TV Size)",
+      "artist": "Karen Aoki & Daisuke Hasegawa",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Zx_rFZhJCB0",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 84,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 115,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 184,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 217,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 84.0,
+      "size_bytes": 11338723,
+      "has_video": true,
+      "zip": "songs/community-170-v1.zip",
+      "zip_bytes": 11222847,
+      "sha256": "fe44f66d5da60970cc71e490fa6986d5342e26cccaa8853548e4b043b1f25bf4",
+      "thumb": "thumbs/community-170-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 170,
+      "local_id": "popular7_great",
+      "previous_objects": [],
+      "source_sha256": "1d9cfd7dff4e2dcb2eb38091eb318e1a1e69bbc2876a8c9f6c8b56dbb5d21214"
+    },
+    {
       "id": "community-111",
       "version": 1,
       "title": "Guren no Yumiya (TV Size)",
