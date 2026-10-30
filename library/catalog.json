@@ -5614,6 +5614,52 @@
       "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
     },
     {
+      "id": "community-180",
+      "version": 1,
+      "title": "PUPA",
+      "artist": "Morimori Atsushi",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=LFcKV42U3wA",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 146,
+          "bpm": 202.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 179,
+          "bpm": 202.0
+        },
+        {
+          "name": "HARD",
+          "notes": 245,
+          "bpm": 202.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 271,
+          "bpm": 202.0
+        }
+      ],
+      "duration_s": 131.6,
+      "size_bytes": 17319994,
+      "has_video": true,
+      "zip": "songs/community-180-v1.zip",
+      "zip_bytes": 16932371,
+      "sha256": "dcaf8a56ddf2fb13b9b6cb0559e4a1d71089e45f1e87175150cbda0e6114994b",
+      "thumb": "thumbs/community-180-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 180,
+      "local_id": "popular7_pupa",
+      "previous_objects": [],
+      "source_sha256": "8495d75af5032a9278638e3646314922a5e0cc4f5f4c96623e2ac6623351a796"
+    },
+    {
       "id": "community-44",
       "version": 1,
       "title": "quaver",
