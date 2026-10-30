@@ -5752,6 +5752,52 @@
       "source_sha256": "a46d546fe60ede4651833bb44107c6d40d42312060131d5b9f1b9e02aacfaab0"
     },
     {
+      "id": "community-171",
+      "version": 1,
+      "title": "Seishun Complex (TV Size)",
+      "artist": "Kessoku Band",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Yd8kUoB72xU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 99,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 138,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 190,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 227,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 11873841,
+      "has_video": true,
+      "zip": "songs/community-171-v1.zip",
+      "zip_bytes": 11601382,
+      "sha256": "7405aad451f3361aec9f000b17fec97e7b61457d6f91d6a447bb11dcbac2aef9",
+      "thumb": "thumbs/community-171-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 171,
+      "local_id": "popular7_seishun",
+      "previous_objects": [],
+      "source_sha256": "10f7a6acb78d33f36dfbedb1f6303217a833bf8aa0b934cbbe17f4f8488e3e2d"
+    },
+    {
       "id": "community-37",
       "version": 1,
       "title": "Shinzou wo Sasageyo! (TV Size)",
