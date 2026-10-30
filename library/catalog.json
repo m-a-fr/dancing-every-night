@@ -5246,6 +5246,52 @@
       "source_sha256": "de7c49bc2b0595334464ac785bf3160cead89d70e99db6f9f620b0ac05017765"
     },
     {
+      "id": "community-161",
+      "version": 1,
+      "title": "Red Swan (TV Size)",
+      "artist": "YOSHIKI feat. HYDE",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=IjwuJT6q54s",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 86,
+          "bpm": 132.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 129,
+          "bpm": 132.0
+        },
+        {
+          "name": "HARD",
+          "notes": 184,
+          "bpm": 132.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 220,
+          "bpm": 132.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12141565,
+      "has_video": true,
+      "zip": "songs/community-161-v1.zip",
+      "zip_bytes": 12013548,
+      "sha256": "59031c3717d428a62cec2cd60b9f189255617341f043f77aba0827dc2b13d0e9",
+      "thumb": "thumbs/community-161-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 161,
+      "local_id": "popular7_red",
+      "previous_objects": [],
+      "source_sha256": "030419986b2297591467d583a5b289b5cc3522018c49412215d1acd447a545f2"
+    },
+    {
       "id": "community-97",
       "version": 1,
       "title": "Redo (TV Size)",
