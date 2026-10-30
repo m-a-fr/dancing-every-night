@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Nouveau morceau de A à Z : source -> piste .ogg, vidéo .mpg, image de fond, 4 cartes.
+"""Nouveau morceau de A à Z : source -> piste .ogg, vidéo .h264, image de fond, 4 cartes.
 
     make song SRC="https://www.youtube.com/watch?v=..." [TITLE="..."] [ARTIST="..."] [PACK="..."] [NAME=x] [FORCE=1]
     make song SRC=~/Downloads/clip.mp4 TITLE="..." ARTIST="..."
@@ -221,9 +221,9 @@ def main():
             if old != kept: old.unlink()
         shutil.copyfile(src, kept)
         if not args.no_video:
-            step("Vidéo (MPEG-1)")
-            res = media.convert_video(kept, folder / "video.mpg", 24, (480, 272), media.DEFAULT_KBPS)
-            video_rel = "video.mpg"
+            step("Vidéo (H.264 Baseline)")
+            res = media.convert_video(kept, folder / "video.h264", 24, (480, 272), media.DEFAULT_KBPS_H264)
+            video_rel = "video.h264"
             if args.audio:
                 video_off = -av_offset_ms(kept, Path(args.audio).expanduser())
             print(f"   {video_rel} ({res['bytes'] / 1048576:.1f} Mo){f', VIDEO_OFFSET_MS {video_off}' if video_off else ''}")

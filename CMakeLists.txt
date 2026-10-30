@@ -20,9 +20,13 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.c)
-# Code tiers (stb_vorbis, stb_image) : on ne corrige pas ses warnings
+# Code tiers (stb_vorbis, stb_image, h264bsd) : on ne corrige pas ses warnings
+file(GLOB H264BSD_SOURCES src/third_party/h264bsd/*.c)
 set_source_files_properties(src/third_party/stb_vorbis.c src/third_party/stb_image_impl.c src/third_party/pl_mpeg_impl.c
-                            src/third_party/miniz.c PROPERTIES COMPILE_FLAGS "-w")
+                            src/third_party/miniz.c ${H264BSD_SOURCES} PROPERTIES COMPILE_FLAGS "-w")
+if(BUILD_VITA)  # la Vita décode le H.264 par son décodeur matériel (src/video_h264_vita.c) : h264bsd n'y sert à rien
+  list(REMOVE_ITEM SOURCES ${H264BSD_SOURCES})
+endif()
 # miniz (lecture des zips de maps) : ni écriture d'archives, ni dates de fichiers (utime absent sur Vita)
 add_compile_definitions(MINIZ_NO_ARCHIVE_WRITING_APIS MINIZ_NO_TIME MINIZ_NO_ZLIB_COMPATIBLE_NAMES)
 
@@ -93,6 +97,8 @@ if(VITA)
 
   # Annonce des mises à jour (src/update.c) : libcurl + OpenSSL (VitaSDK) pour le HTTPS actuel ; quelle que soit la façon dont SDL2 a été trouvée
   target_link_libraries(${PROJECT_NAME} curl ssl crypto zstd z SceNet_stub SceNetCtl_stub SceSysmodule_stub)
+  # Vidéos H.264 : décodeur matériel (src/video_h264_vita.c)
+  target_link_libraries(${PROJECT_NAME} SceVideodec_stub)
 
   # SDL2 récentes de VitaSDK (image Docker de la CI) : rendu par vitaGL, écrit en C++, dont l'interface CMake oublie
   # ces bibliothèques. Sans effet sur une SDL2 qui ne s'en sert pas (archives statiques non référencées).

@@ -7,12 +7,14 @@
    pl_mpeg dans un thread séparé ; la conversion YUV -> RGB est faite par le GPU (texture IYUV).
    Si le décodage prend trop de retard, on saute à l'image clé suivante au lieu de ralentir
    le jeu. L'interface est volontairement minimale (image pour un temps donné) pour pouvoir
-   changer de décodeur (matériel Vita) sans toucher au reste. */
+   changer de décodeur sans toucher au reste : les fichiers .h264 passent par le décodeur matériel
+   de la Vita (video_h264_vita.c) ou par h264bsd sur PC (video_h264_pc.c), les .mpg par pl_mpeg. */
 typedef struct {
     void        *impl;      /* état interne (NULL = pas de vidéo) */
     SDL_Texture *tex;       /* dernière image reçue */
     int          w, h;
     bool         has_frame;
+    bool         h264;      /* vidéo H.264 (.h264) : décodeur matériel sur Vita (video_h264_vita.c), logiciel ailleurs (video_h264_pc.c) */
 } Video;
 
 bool video_open(Video *v, SDL_Renderer *r, const char *path);

@@ -84,12 +84,12 @@ the notes (or start from an automatic draft) and export the `.zip` for the conso
 [creator guide](https://dancing-every-night.pages.dev/guide.html).
 
 A song is **one folder** named after its ID, holding one `.chart` file per difficulty, the song audio
-(`.ogg`) and an optional background image (`.jpg`) or video (`.mpg`, MPEG-1):
+(`.ogg`) and an optional background image (`.jpg`) or video (`.h264`, H.264 Baseline; older songs may use `.mpg`, MPEG-1):
 
 ```
 my_song/
   easy.chart  normal.chart  hard.chart  expert.chart
-  audio.ogg  background.jpg  video.mpg
+  audio.ogg  background.jpg  video.h264
 ```
 
 Each `.chart` starts with a header, then one note per line (times in beats):
@@ -128,7 +128,7 @@ brew install ffmpeg            # or your package manager
 
 - `make editor` — graphical chart editor in the browser (http://localhost:8765), with audio/video conversion.
 - `make editor-site` — the online version of the editor (http://localhost:8766): no server, songs are kept in the
-  browser. Audio in another format (mp3, wav, m4a…) is converted to `.ogg` and videos to MPEG-1 right in the browser
+  browser. Audio in another format (mp3, wav, m4a…) is converted to `.ogg` and videos to H.264 right in the browser
   (ffmpeg.wasm, about 31 MB downloaded on first use). BPM detection and the automatic draft run the same
   `tools/mapper.py` in the browser (Pyodide, about 30 MB downloaded on first use). The editor speaks English and
   French, and comes with a creator guide (`tools/editor/guide.html`). Open a song `.zip`, edit it (including MAPPER, LICENSE, VERSION), export the `.zip` for the Vita.

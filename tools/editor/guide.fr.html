@@ -152,7 +152,7 @@ sur un passage que tu connais par cœur, les joueurs bloqueront aussi.</p>
   <tr><th>Fichier</th><th>Ce que lit le jeu</th><th>Dans l'éditeur en ligne</th></tr>
   <tr><td>Musique</td><td>Ogg Vorbis (<code>.ogg</code>)</td><td>gardée telle quelle ; autres formats convertis</td></tr>
   <tr><td>Image de fond</td><td>JPEG ou PNG, 2048 px au plus</td><td>convertie en JPEG 960×544</td></tr>
-  <tr><td>Vidéo</td><td>MPEG-1 (<code>.mpg</code>), sans son ; 480×272 à 24 ips conseillé</td><td><code>.mpg</code> gardée telle quelle ; autres formats convertis</td></tr>
+  <tr><td>Vidéo</td><td>H.264 Baseline (<code>.h264</code>) ou ancien MPEG-1 (<code>.mpg</code>), sans son ; 480×272 à 24 ips conseillé</td><td><code>.h264</code> et <code>.mpg</code> gardées telles quelles ; autres formats convertis en H.264</td></tr>
 </table>
 <ul>
   <li>La vidéo est muette : le son vient toujours du fichier de musique. Utilise <i>Décalage vidéo</i> et
@@ -210,7 +210,7 @@ dans l’étape <i>Fond</i>.</p>
 <h2 id="format"><span class="n">10</span>Format des fichiers</h2>
 <p>Pas besoin de ça pour créer des chansons, mais c'est utile pour modifier les fichiers à la main. Une chanson est un
 dossier <code>&lt;ID&gt;/</code> (lettres, chiffres, <code>_</code> et <code>-</code>) qui contient <code>audio.ogg</code>,
-éventuellement <code>background.jpg</code> et <code>video.mpg</code>, et un fichier texte par difficulté, par exemple
+éventuellement <code>background.jpg</code> et <code>video.h264</code>, et un fichier texte par difficulté, par exemple
 <code>normal.chart</code> :</p>
 <pre><code>FORMAT 1
 ID ma_chanson

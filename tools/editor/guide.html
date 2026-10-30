@@ -149,7 +149,7 @@ stumble on a passage you know by heart, players will too.</p>
   <tr><th>File</th><th>What the game reads</th><th>In the online editor</th></tr>
   <tr><td>Music</td><td>Ogg Vorbis (<code>.ogg</code>)</td><td>kept as is; other formats converted</td></tr>
   <tr><td>Background image</td><td>JPEG or PNG, up to 2048 px</td><td>converted to a 960×544 JPEG</td></tr>
-  <tr><td>Video</td><td>MPEG-1 (<code>.mpg</code>), no sound; 480×272 at 24 fps recommended</td><td><code>.mpg</code> kept as is; other formats converted</td></tr>
+  <tr><td>Video</td><td>H.264 Baseline (<code>.h264</code>) or older MPEG-1 (<code>.mpg</code>), no sound; 480×272 at 24 fps recommended</td><td><code>.h264</code> and <code>.mpg</code> kept as is; other formats converted to H.264</td></tr>
 </table>
 <ul>
   <li>The video is silent: the sound always comes from the music file. Use <i>Video offset</i> and <i>Test the sync</i>
@@ -206,7 +206,7 @@ up to <b>25&nbsp;MB</b> (the Publish step shows your song's size); if yours is b
 <h2 id="format"><span class="n">10</span>File format</h2>
 <p>You don't need this to make songs, but it helps if you want to edit files by hand. A song is a folder
 <code>&lt;ID&gt;/</code> (letters, digits, <code>_</code> and <code>-</code>) containing <code>audio.ogg</code>, optional
-<code>background.jpg</code> and <code>video.mpg</code>, and one text file per difficulty, for example
+<code>background.jpg</code> and <code>video.h264</code>, and one text file per difficulty, for example
 <code>normal.chart</code>:</p>
 <pre><code>FORMAT 1
 ID my_song

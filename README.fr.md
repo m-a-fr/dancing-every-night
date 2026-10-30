@@ -70,12 +70,12 @@ pose les notes (ou pars d'un brouillon automatique) et exporte le `.zip` pour la
 [guide du créateur](https://dancing-every-night.pages.dev/guide.fr.html).
 
 Une chanson, c'est **un dossier** au nom de son ID, qui contient un `.chart` par difficulté, la piste audio (`.ogg`)
-et, au choix, une image (`.jpg`) ou une vidéo de fond (`.mpg`, MPEG-1) :
+et, au choix, une image (`.jpg`) ou une vidéo de fond (`.h264`, H.264 Baseline ; les anciennes chansons peuvent avoir un `.mpg`, MPEG-1) :
 
 ```
 ma_chanson/
   easy.chart  normal.chart  hard.chart  expert.chart
-  audio.ogg  background.jpg  video.mpg
+  audio.ogg  background.jpg  video.h264
 ```
 
 Chaque `.chart` commence par un en-tête, puis une note par ligne (temps en beats) :
@@ -115,7 +115,7 @@ brew install ffmpeg            # ou le gestionnaire de paquets de ton système
 
 - `make editor` : éditeur graphique de cartes dans le navigateur (http://localhost:8765), avec conversion audio/vidéo.
 - `make editor-site` : la version en ligne de l'éditeur (http://localhost:8766) : sans serveur, les chansons restent dans
-  le navigateur. Un audio dans un autre format (mp3, wav, m4a…) est converti en `.ogg` et une vidéo en MPEG-1 directement
+  le navigateur. Un audio dans un autre format (mp3, wav, m4a…) est converti en `.ogg` et une vidéo en H.264 directement
   dans le navigateur (ffmpeg.wasm, environ 31 Mo téléchargés au premier usage). La détection du BPM et le brouillon
   automatique exécutent le même `tools/mapper.py` dans le navigateur (Pyodide, environ 30 Mo au premier usage). L'éditeur
   parle anglais et français et a son guide du créateur (`tools/editor/guide.fr.html`). Ouvrir le `.zip` d'une chanson, l'éditer (MAPPER, LICENSE, VERSION compris), exporter le `.zip` pour la Vita.
