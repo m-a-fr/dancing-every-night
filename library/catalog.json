@@ -784,6 +784,52 @@
       "source_sha256": "0f157382b962180413ebee2cf919324a9e41c8f57bc6daaacbe3b15e6009e085"
     },
     {
+      "id": "community-150",
+      "version": 1,
+      "title": "Bling-Bang-Bang-Born (TV Size)",
+      "artist": "Creepy Nuts",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=210R0ozmLwg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 89,
+          "bpm": 157.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 125,
+          "bpm": 157.0
+        },
+        {
+          "name": "HARD",
+          "notes": 207,
+          "bpm": 157.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 241,
+          "bpm": 157.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12509359,
+      "has_video": true,
+      "zip": "songs/community-150-v1.zip",
+      "zip_bytes": 12279541,
+      "sha256": "ed5ab3da4038acbaa24572131f0957a9f18d4217d3c14e1b6a87cb7c5b49e295",
+      "thumb": "thumbs/community-150-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 150,
+      "local_id": "popular7_bling",
+      "previous_objects": [],
+      "source_sha256": "5f17d19f77d5faa9c2410f5484f2b467bb63c54346585bc6cd4023c3a5c407b8"
+    },
+    {
       "id": "community-123",
       "version": 1,
       "title": "Blue Bird (TV Size)",
