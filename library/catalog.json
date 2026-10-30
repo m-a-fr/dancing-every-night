@@ -6166,6 +6166,52 @@
       "source_sha256": "9c42bff918132afd31bff1d0031d4e795aae08ff08f3ca0b8408e17cb52ade97"
     },
     {
+      "id": "community-156",
+      "version": 1,
+      "title": "VIVID VICE (TV Size)",
+      "artist": "Who-ya Extended",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=8nNujr378EA",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 103,
+          "bpm": 184.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 132,
+          "bpm": 184.0
+        },
+        {
+          "name": "HARD",
+          "notes": 184,
+          "bpm": 184.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 232,
+          "bpm": 184.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12475202,
+      "has_video": true,
+      "zip": "songs/community-156-v1.zip",
+      "zip_bytes": 12292137,
+      "sha256": "d224770af3018c40845ea2b57254c069ab19b15647661a6e4d9f9e39c9756816",
+      "thumb": "thumbs/community-156-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 156,
+      "local_id": "popular7_vivid",
+      "previous_objects": [],
+      "source_sha256": "1e98bbf1c9e6e6b36de9e593ef0d68abf0774b32c48b7d5df928266e437a73bb"
+    },
+    {
       "id": "community-101",
       "version": 1,
       "title": "VORACITY (TV Size)",
