@@ -118,7 +118,8 @@ void game_init(Game *g, SDL_Renderer *r, const char *chart_path) {
         g->screen = SCREEN_TITLE;
         sfx_bgm_load(&g->sfx, ASSET_PATH("audio/bgm/menu.ogg"));
         preview_open(&g->menu.preview);
-        sfx_play(&g->sfx, SFX_BOOT);
+        sfx_play(&g->sfx, SFX_VOICE_TITLE);   /* premier son du jeu */
+        g->title_voice = true;
     }
     splash_show(&splash, r, 1.0f);
     splash_shutdown(&splash);
@@ -377,7 +378,6 @@ void game_update(Game *g, const Input *in, float dt) {
 
     if (g->screen == SCREEN_TITLE) {
         title_update(&g->title, dt);
-        if (!g->title_voice && g->time > 0.9f) { g->title_voice = true; sfx_play(&g->sfx, SFX_VOICE_TITLE); }
         if (in->pressed[BTN_CROSS] || in->pressed[BTN_START]) {
             g->screen = SCREEN_MAIN;
             g->main_sel = MAIN_BEATMAPS;
