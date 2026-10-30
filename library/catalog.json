@@ -324,6 +324,52 @@
       "source_sha256": "863ebcaaee2c619a54da3b498e33c31dd5945c5d009ab7ca8ab2aab21edb0c3f"
     },
     {
+      "id": "community-164",
+      "version": 1,
+      "title": "ambiguous",
+      "artist": "GARNiDELiA",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=K42ED-7PWAo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 292,
+          "bpm": 178.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 407,
+          "bpm": 178.0
+        },
+        {
+          "name": "HARD",
+          "notes": 556,
+          "bpm": 178.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 664,
+          "bpm": 178.0
+        }
+      ],
+      "duration_s": 269.7,
+      "size_bytes": 6064648,
+      "has_video": false,
+      "zip": "songs/community-164-v1.zip",
+      "zip_bytes": 6031678,
+      "sha256": "9a450c38f8e583863f97b9f5e4bf2938210e7e31bcd3a9cca4a2501ef37931ce",
+      "thumb": "thumbs/community-164-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 164,
+      "local_id": "popular7_ambiguous",
+      "previous_objects": [],
+      "source_sha256": "d65a2705c74ad7f985b45bd117423acda15efefa25642d8414d9b23730480112"
+    },
+    {
       "id": "community-92",
       "version": 1,
       "title": "Aoi Shiori (TV Size)",
