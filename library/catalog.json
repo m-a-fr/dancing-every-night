@@ -5752,6 +5752,52 @@
       "source_sha256": "d5e9e165f802bec290379cc1cb02cfaba048ffbc964729cc58f7be2456d442cc"
     },
     {
+      "id": "community-165",
+      "version": 1,
+      "title": "Sirius (TV Size)",
+      "artist": "Eir Aoi",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Np0se7yKRBU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 92,
+          "bpm": 176.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 137,
+          "bpm": 176.0
+        },
+        {
+          "name": "HARD",
+          "notes": 192,
+          "bpm": 176.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 224,
+          "bpm": 176.0
+        }
+      ],
+      "duration_s": 89.9,
+      "size_bytes": 11998805,
+      "has_video": true,
+      "zip": "songs/community-165-v1.zip",
+      "zip_bytes": 11784795,
+      "sha256": "24b2c5c7fbf2c5fcdb5be3a2fc70aa4335d9669c64b1e115a41a9f5e73a3ae5f",
+      "thumb": "thumbs/community-165-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 165,
+      "local_id": "popular7_sirius",
+      "previous_objects": [],
+      "source_sha256": "34a0b9396dd6917d6b1cc94ac6721046922f87b7d7e595d4e6e78b09d9c41712"
+    },
+    {
       "id": "community-15",
       "version": 1,
       "title": "Some Things Must (OutFox Edit)",
