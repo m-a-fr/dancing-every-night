@@ -90,6 +90,8 @@ Convention occidentale : Croix = valider, Rond = annuler.
 ## Fichiers et chemins
 
 - Lecture d'assets : macro `ASSET_PATH("fichier.png")` (→ `app0:assets/` sur Vita).
+- Assets remplaçables par le joueur : `asset_resolve("ui/hostess/rank_s.png", ...)` (`files.h`) lit `SAVE_DIR "custom/"` avant `assets/` ;
+  images de l'hôtesse (`src/hostess.c`, `assets/ui/hostess/`) et bruitages/voix (`assets/audio/sfx/*.wav`, dont `voice_*`) passent par là.
 - Sauvegardes : `SAVE_DIR` (→ `ux0:data/dancingeverynight/`). Créer le dossier au besoin
   (`sceIoMkdir` sur Vita, `mkdir` sur desktop).
 - `app0:` est en lecture seule.
@@ -111,6 +113,7 @@ Convention occidentale : Croix = valider, Rond = annuler.
   se combine avec `VITAGAME_SHOT`. Sans carte en argument, le jeu démarre sur l'écran titre (Croix = menu principal, Croix encore = sélection de chanson).
 - Capturer l'écran de jeu ou de résultats sans jouer (desktop) : `VITAGAME_AUTOPLAY=1` joue la carte parfaitement
   (Start et les touches simulées restent actifs en pause), à combiner avec `VITAGAME_SHOT` / `VITAGAME_KEYS`.
+- Enregistrer une vidéo de menus (desktop) : `VITAGAME_RECORD=clip.mp4 VITAGAME_RECORD_MENU=420` enregistre les 420 premières images (60 fps, sans son), touches de `VITAGAME_KEYS` actives ; sans `VITAGAME_RECORD_MENU`, `VITAGAME_RECORD` joue une carte en autoplay (`scripts/record-gameplay.sh`).
 - Essayer l'écran LIBRARY sans réseau (desktop) : `VITAGAME_LIBRARY_JSON=catalogue.json` lit un catalogue local (même format que `catalog.json`) ; l'état « installée » se lit dans `save/songs/<ID>/*.chart` (ligne `VERSION`). Se combine avec `VITAGAME_KEYS` (Croix, Bas, Croix depuis l'écran titre) et `VITAGAME_SHOT`.
 - Un comportement qui marche sur desktop mais pas sur Vita vient presque toujours de :
   chemin de fichier, mémoire insuffisante, format de texture, ou alignement/endianness

@@ -70,12 +70,12 @@ pose les notes (ou pars d'un brouillon automatique) et exporte le `.zip` pour la
 [guide du créateur](https://dancing-every-night.pages.dev/guide.fr.html).
 
 Une chanson, c'est **un dossier** au nom de son ID, qui contient un `.chart` par difficulté, la piste audio (`.ogg`)
-et, au choix, une image (`.jpg`) ou une vidéo de fond (`.mpg`, MPEG-1) :
+et, au choix, une image (`.jpg`) ou une vidéo de fond (`.h264`, H.264 Baseline ; les anciennes chansons peuvent avoir un `.mpg`, MPEG-1) :
 
 ```
 ma_chanson/
   easy.chart  normal.chart  hard.chart  expert.chart
-  audio.ogg  background.jpg  video.mpg
+  audio.ogg  background.jpg  video.h264
 ```
 
 Chaque `.chart` commence par un en-tête, puis une note par ligne (temps en beats) :
@@ -115,7 +115,7 @@ brew install ffmpeg            # ou le gestionnaire de paquets de ton système
 
 - `make editor` : éditeur graphique de cartes dans le navigateur (http://localhost:8765), avec conversion audio/vidéo.
 - `make editor-site` : la version en ligne de l'éditeur (http://localhost:8766) : sans serveur, les chansons restent dans
-  le navigateur. Un audio dans un autre format (mp3, wav, m4a…) est converti en `.ogg` et une vidéo en MPEG-1 directement
+  le navigateur. Un audio dans un autre format (mp3, wav, m4a…) est converti en `.ogg` et une vidéo en H.264 directement
   dans le navigateur (ffmpeg.wasm, environ 31 Mo téléchargés au premier usage). La détection du BPM et le brouillon
   automatique exécutent le même `tools/mapper.py` dans le navigateur (Pyodide, environ 30 Mo au premier usage). L'éditeur
   parle anglais et français et a son guide du créateur (`tools/editor/guide.fr.html`). Ouvrir le `.zip` d'une chanson, l'éditer (MAPPER, LICENSE, VERSION compris), exporter le `.zip` pour la Vita.
@@ -153,6 +153,34 @@ dans le jeu, pas seuls. Ils vivent dans un dépôt privé lu par la CI. Sans eux
 chansons sont muettes (un métronome joue), et `make check` signale l'`audio.ogg` manquant. Les builds de release
 (`make release`, `make pc`) reprennent les fichiers de `assets/songs/<ID>/audio.ogg` quand tu les as
 (`scripts/official-audio.sh`).
+
+## Utilisation de l'IA
+
+Je veux être clair sur ce qui a été fait avec de l'IA dans ce projet, et sur ce que j'en pense.
+
+**Ce qui a été fait avec de l'IA**
+
+| Domaine | Quoi | Comment |
+|---|---|---|
+| Code | Le jeu (C11 + SDL2), les outils Python (brouillon automatique, éditeur, scripts de la bibliothèque), l'éditeur en ligne, la CI, les tests, la documentation et ses traductions | Écrit avec [Claude Code](https://claude.com/claude-code) (Anthropic). Je fixe le design et les objectifs, je teste sur une vraie Vita, je relis et je tranche ; le modèle écrit l'essentiel du code. |
+| Identité visuelle | Le logo, l'hôtesse (la mascotte) et les couches de l'écran titre, plus les images qui en dérivent : splash de démarrage, LiveArea et icône | Générés avec des outils d'image par IA (ChatGPT), puis choisis et retouchés à la main (l'effet vitrail est appliqué par un script). |
+| Difficultés | Les difficultés des chansons officielles | Partent d'un brouillon automatique (`tools/mapper.py` : un algorithme d'analyse du signal écrit avec Claude, pas un modèle génératif), puis jouées, corrigées et réglées par moi. |
+
+**Ce qui n'a pas été fait avec de l'IA** : la musique (les trois chansons officielles sont celles de leurs artistes,
+utilisées selon les conditions de leur label ; la musique du menu est de Juhani Junkala), les polices, les icônes des
+boutons et les sons de l'interface (synthétisés par un script, aucun audio génératif). Les chansons de la communauté
+portent leurs propres droits, déclarés par leurs auteurs.
+
+**Ce que j'en pense**
+
+- **Graphismes : un pis-aller.** C'est un projet bénévole, sans budget. L'IA permet au jeu d'avoir une identité
+  cohérente plutôt qu'aucune, mais ce n'est pas là que je veux m'arrêter. Je préfère de loin travailler avec des
+  artistes, et je remplacerai ces visuels dès que je pourrai collaborer avec eux. Si tu dessines, animes ou conçois des
+  interfaces et que le projet te parle, viens en discuter sur [Discord](https://discord.gg/vTJDvgJe74).
+- **Ingénierie : assumée.** L'IA est aujourd'hui ma façon de construire ce jeu, et je ne le cache pas. C'est ce qui
+  permet à une seule personne de sortir un jeu Vita avec un éditeur de chansons et une bibliothèque en ligne. Cela
+  ne supprime pas la responsabilité : je décide de ce que doit être le jeu, je le teste sur la console, et les bugs
+  sont à moi de les corriger.
 
 ## Licence
 

@@ -1,5 +1,6 @@
 #include "sfx.h"
 #include "config.h"
+#include "files.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,6 +10,8 @@
 
 #define SFX_FREQ        44100
 #define BGM_FADE_S      0.5f
+#define SFX_DUCK_GAIN   0.25f   /* musique sous la voix de l'accueil */
+#define SFX_DUCK_FADE_S 0.15f
 #define BGM_BLOCK       512     /* frames décodées par tour dans le callback */
 
 static const char *const SFX_NAMES[SFX_COUNT] = {
@@ -22,6 +25,11 @@ static inline Sint16 clamp16(int v) { return (Sint16)(v > 32767 ? 32767 : v < -3
 /* Ajoute la musique de fond et les bruitages aux `frames` frames stéréo de `out` (déjà remplies par l'appelant).
    Appelé par le callback du périphérique qui est ouvert (aperçu du menu ou audio de jeu), donc avec son verrou. */
 void sfx_mix(Sfx *s, Sint16 *out, int frames) {
+    /* La voix de l'accueil passe au-dessus de la musique : celle-ci baisse (en fondu) tant qu'elle parle */
+    bool talking = false;
+    for (int v = 0; v < SFX_VOICES; v++) if (s->voices[v].id == SFX_VOICE_TITLE) talking = true;
+    const float duck_target = talking ? SFX_DUCK_GAIN : 1.0f;
+    const float duck_step = 1.0f / ((float)s->freq * SFX_DUCK_FADE_S);
     /* Musique de fond : décodée en continu, boucle au début du fichier. Gain en fondu vers la cible. */
     if (s->bgm && (s->bgm_gain > 0.0f || s->bgm_target > 0.0f)) {
         Sint16 buf[BGM_BLOCK * 2];
@@ -37,7 +45,9 @@ void sfx_mix(Sfx *s, Sint16 *out, int frames) {
             for (int i = 0; i < got; i++) {
                 if (s->bgm_gain < s->bgm_target) { s->bgm_gain += step; if (s->bgm_gain > s->bgm_target) s->bgm_gain = s->bgm_target; }
                 else if (s->bgm_gain > s->bgm_target) { s->bgm_gain -= step; if (s->bgm_gain < s->bgm_target) s->bgm_gain = s->bgm_target; }
-                float g = s->bgm_gain * s->bgm_vol;
+                if (s->duck < duck_target) { s->duck += duck_step; if (s->duck > duck_target) s->duck = duck_target; }
+                else if (s->duck > duck_target) { s->duck -= duck_step; if (s->duck < duck_target) s->duck = duck_target; }
+                float g = s->bgm_gain * s->bgm_vol * s->duck;
                 out[(done + i) * 2]     = clamp16(out[(done + i) * 2]     + (int)(buf[i * 2] * g));
                 out[(done + i) * 2 + 1] = clamp16(out[(done + i) * 2 + 1] + (int)(buf[i * 2 + 1] * g));
             }
@@ -68,10 +78,12 @@ void sfx_init(Sfx *s) {
     s->sfx_vol = 1.0f;
     s->bgm_vol = 0.6f;
     s->bgm_target = 1.0f;
+    s->duck = 1.0f;
     for (int v = 0; v < SFX_VOICES; v++) s->voices[v].id = -1;
     for (int i = 0; i < SFX_COUNT; i++) {
-        char path[192];
-        snprintf(path, sizeof path, "%saudio/sfx/%s.wav", ASSET_DIR, SFX_NAMES[i]);
+        char rel[64], path[192];
+        snprintf(rel, sizeof rel, "audio/sfx/%s.wav", SFX_NAMES[i]);
+        asset_resolve(rel, path, sizeof path);   /* custom/ du joueur d'abord */
         SDL_AudioSpec spec;
         Uint8 *buf = NULL;
         Uint32 bytes = 0;

@@ -52,14 +52,33 @@ The Releases page also has PC versions, with nothing else to install:
 
 - **Windows**: unzip `DancingEveryNight-<version>-windows.zip` and run `DancingEveryNight.exe`. The build is not
   signed: if SmartScreen warns, choose *More info → Run anyway*.
-- **macOS** (11 or later, Intel or Apple Silicon): unzip, move *Dancing Every Night* to Applications, then the first
-  time right-click it → *Open* (the app is not notarised).
+- **macOS** (11 or later, Intel or Apple Silicon): unzip and move *Dancing Every Night* to Applications. The app is not
+  notarised, so macOS blocks the first launch. On macOS 15 and later: open the app once, dismiss the warning, then go to
+  *System Settings → Privacy & Security*, scroll down and click *Open Anyway* (on macOS 11–14, right-click the app →
+  *Open* works). If macOS says the app is "damaged", run this once in Terminal, then open it again:
+  `xattr -cr "/Applications/Dancing Every Night.app"`
 - **Linux**: extract `DancingEveryNight-<version>-linux.tar.gz` and run `DancingEveryNight`.
 
 Keyboard: arrows / WASD, Space or J (Cross), K (Circle), U (Square), I (Triangle), Q / E (scratch), Enter (Start),
 Backspace (Select); a game controller works too. Songs install the same way, through an `import/` folder: in the
 `save/` folder next to the game on Windows and Linux, in `~/Library/Application Support/Dancing Every Night/save/`
 on macOS.
+
+### Replacing the hostess pictures and voices
+
+Everything the hostess shows or says is a plain file you can swap. Put your own copy in a `custom/` folder inside
+`save/` (on the Vita: `ux0:data/dancingeverynight/custom/`), with the same path it has under `assets/`; the game reads
+`custom/` first, so nothing in the game itself changes and removing your file brings the original back.
+
+| File in `custom/` | What it is |
+|---|---|
+| `ui/hostess/rank_s.png`, `rank_a.png`, `rank_b.png`, `rank_cd.png` | The hostess on the results screen for each rank (C and D share one) |
+| `ui/hostess/loading.png`, `pause.png` | The hostess on the loading and pause screens |
+| `audio/sfx/voice_*.wav` | Her voice: `voice_title`, `voice_rank_s`, `voice_rank_a`, `voice_rank_b`, `voice_rank_cd` (heard at the title and on the results) |
+
+Pictures: PNG with a transparent background, at most 2048 px on a side; they are drawn anchored to the bottom of the
+screen, so crop them there. Sounds: WAV, 16-bit, mono, 44100 Hz (`ffmpeg -i in.wav -ar 44100 -ac 1 -sample_fmt s16 out.wav`).
+Every other interface sound in `audio/sfx/` can be replaced the same way.
 
 ## For song creators
 
@@ -68,12 +87,12 @@ the notes (or start from an automatic draft) and export the `.zip` for the conso
 [creator guide](https://dancing-every-night.pages.dev/guide.html).
 
 A song is **one folder** named after its ID, holding one `.chart` file per difficulty, the song audio
-(`.ogg`) and an optional background image (`.jpg`) or video (`.mpg`, MPEG-1):
+(`.ogg`) and an optional background image (`.jpg`) or video (`.h264`, H.264 Baseline; older songs may use `.mpg`, MPEG-1):
 
 ```
 my_song/
   easy.chart  normal.chart  hard.chart  expert.chart
-  audio.ogg  background.jpg  video.mpg
+  audio.ogg  background.jpg  video.h264
 ```
 
 Each `.chart` starts with a header, then one note per line (times in beats):
@@ -112,7 +131,7 @@ brew install ffmpeg            # or your package manager
 
 - `make editor` — graphical chart editor in the browser (http://localhost:8765), with audio/video conversion.
 - `make editor-site` — the online version of the editor (http://localhost:8766): no server, songs are kept in the
-  browser. Audio in another format (mp3, wav, m4a…) is converted to `.ogg` and videos to MPEG-1 right in the browser
+  browser. Audio in another format (mp3, wav, m4a…) is converted to `.ogg` and videos to H.264 right in the browser
   (ffmpeg.wasm, about 31 MB downloaded on first use). BPM detection and the automatic draft run the same
   `tools/mapper.py` in the browser (Pyodide, about 30 MB downloaded on first use). The editor speaks English and
   French, and comes with a creator guide (`tools/editor/guide.html`). Open a song `.zip`, edit it (including MAPPER, LICENSE, VERSION), export the `.zip` for the Vita.
@@ -149,6 +168,34 @@ audio files are **not** in this repository: the labels' terms allow distributing
 They live in a private repository read by the CI. Without them the game runs normally and those songs are silent
 (a metronome plays), and `make check` reports the missing `audio.ogg`. Release builds (`make release`, `make pc`)
 pick the files up from `assets/songs/<ID>/audio.ogg` when you have them (`scripts/official-audio.sh`).
+
+## Use of AI
+
+I want to be clear about where AI was used in this project, and what I think about it.
+
+**What was made with AI**
+
+| Area | What | How |
+|---|---|---|
+| Code | The game (C11 + SDL2), the Python tools (automatic draft, editor, library scripts), the online editor, the CI, the tests, the documentation and its translations | Written with [Claude Code](https://claude.com/claude-code) (Anthropic). I set the design and the goals, play-test on a real Vita, review and decide; the model writes most of the code. |
+| Visual identity | The logo, the hostess (mascot) and the title screen layers, plus the images derived from them: boot splash, LiveArea and icon | Generated with AI image tools (ChatGPT), then selected and edited by hand (the stained-glass look is applied by a script). |
+| Hostess pictures | The six poses of the hostess (results, loading, pause) | Generated with AI image tools (ChatGPT), then selected and edited by hand. |
+| Hostess voice | The title and results lines | Synthesized with [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) (Apache-2.0): an invented voice, no real person cloned. I chose the voice and the takes by ear and trimmed them. |
+| Charts | The difficulties of the official songs | Start from an automatic draft (`tools/mapper.py`: a signal-analysis algorithm I wrote with Claude, not a generative model), then played, corrected and tuned by me. |
+
+**What was not made with AI**: the music (the three official songs are by their artists and used under their label's
+terms; the menu music is by Juhani Junkala), the fonts, the button icons, and the interface sounds (synthesized by a
+script; only the hostess's voice is generative audio). Community songs carry their own rights, declared by their authors.
+
+**What I think**
+
+- **Graphics: a stopgap.** This is a volunteer project with no budget. AI let the game have a coherent look rather
+  than none, but it is not where I want it to stay. I would much rather work with artists, and I will replace these
+  visuals as soon as I can collaborate with some. If you draw, animate or design interfaces and the project speaks to you,
+  come and talk on [Discord](https://discord.gg/vTJDvgJe74).
+- **Engineering: assumed.** AI is how I build this game today, and I do not hide it. It is what lets one person ship
+  a Vita game with a song editor and an online library. It does not remove responsibility: I choose what the game
+  should be, I test it on the console, and bugs are mine to fix.
 
 ## Licence
 

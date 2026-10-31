@@ -143,7 +143,8 @@
 #define RESULTS_FADE_MS         300.0f
 #define RESULTS_COUNT_START_MS  350.0f
 #define RESULTS_COUNT_MS       1200.0f
-#define RESULTS_RANK_MS        1750.0f
+#define HOSTESS_RESULTS_CX      790.0f   /* hôtesse des résultats : centre horizontal et hauteur (ancrée en bas) */
+#define HOSTESS_RESULTS_H       500.0f
 #define RESULTS_RANK_POP_MS     280.0f
 #define RESULTS_DELAY_MS       1200.0f /* pause après la dernière note avant l'écran de résultats */
 
@@ -784,22 +785,31 @@ static float ease_back(float t) {
     return 1.0f + 2.70158f * u * u * u + 1.70158f * u * u;
 }
 
-/* Écran de résultats « Cascade pop » (maquette validée le 2026-10-14) : fiche du morceau en haut à gauche, score
-   qui défile, carte d'encre des compteurs, rang en tampon incliné qui tombe après le décompte, médailles en
-   pastilles. La moitié droite reste libre (réservée à l'hôtesse). */
-static void draw_results(const RhythmState *rh, SDL_Renderer *r, const Font *font, const Sprites *sprites,
-                         const Background *bg, int best_score, bool new_best, int night) {
-    char buf[96], num[24];
-
-    /* Précision et rang : points plats (sans le combo), comme dans le jeu de référence où le rang suit la qualité des
-       jugements et non la valeur du score */
+/* Précision : points plats (sans le combo), comme dans le jeu de référence où le rang suit la qualité des jugements et
+   non la valeur du score */
+static float results_accuracy(const RhythmState *rh) {
     float max_flat = 0.0f;
     for (int i = 0; i < rh->chart.note_count; i++) {
         NoteType nt = rh->chart.notes[i].type;
         max_flat += (nt == NOTE_DOUBLE ? 2.0f : 1.0f) * ACC_PERFECT;
         if (nt == NOTE_HOLD) max_flat += ACC_PERFECT;   /* la fin de la tenue vaut une note */
     }
-    float acc = max_flat > 0.0f ? (float)rh->flat_points / max_flat : 0.0f;
+    return max_flat > 0.0f ? (float)rh->flat_points / max_flat : 0.0f;
+}
+
+int rhythm_rank(const RhythmState *rh) {
+    float acc = results_accuracy(rh);
+    return acc >= 0.95f ? 0 : acc >= 0.85f ? 1 : acc >= 0.70f ? 2 : acc >= 0.50f ? 3 : 4;
+}
+
+/* Écran de résultats « Cascade pop » (maquette validée le 2026-10-14) : fiche du morceau en haut à gauche, score
+   qui défile, carte d'encre des compteurs, rang en tampon incliné qui tombe après le décompte, médailles en
+   pastilles. La moitié droite reste libre (réservée à l'hôtesse). */
+static void draw_results(const RhythmState *rh, SDL_Renderer *r, const Font *font, const Sprites *sprites,
+                         const Background *bg, const Hostess *host, int best_score, bool new_best, int night) {
+    char buf[96], num[24];
+
+    float acc = results_accuracy(rh);
     /* Médailles : ALL PERFECT = aucun GOOD ni MISS (scratch et fins de tenue comprises) ; FULL COMBO = combo jamais cassé */
     bool all_perfect = rh->judgment_count[JUDGE_GOOD] == 0 && rh->judgment_count[JUDGE_MISS] == 0;
     bool full_combo = rh->combo_breaks == 0;
@@ -901,6 +911,12 @@ static void draw_results(const RhythmState *rh, SDL_Renderer *r, const Font *fon
             snprintf(num, sizeof num, "%d", (int)(rows[i].value * count + 0.5f));
             font_draw_ex(font, r, FONT_CARD_NAME, rx, top, ALIGN_RIGHT, rsc, ui_alpha(CH_WHITE, ca), UI_NONE, num);
         }
+    }
+
+    /* l'hôtesse du rang, à droite, arrive avec le tampon (derrière lui) */
+    if (t >= RESULTS_RANK_MS) {
+        const HostPose pose = acc >= 0.95f ? HOST_RANK_S : acc >= 0.85f ? HOST_RANK_A : acc >= 0.70f ? HOST_RANK_B : HOST_RANK_CD;
+        hostess_draw(host, r, pose, HOSTESS_RESULTS_CX, HOSTESS_RESULTS_H, ease_out((t - RESULTS_RANK_MS) / 500.0f));
     }
 
     /* rang : tampon incliné qui tombe (grand et tourné -> en place, avec un rebond) */
@@ -1188,12 +1204,12 @@ static void draw_link(SDL_Renderer *r, const Sprites *sprites, const Button lane
 }
 
 void rhythm_draw(const RhythmState *rh, SDL_Renderer *r, const Font *font, const Sprites *sprites, const Background *bg,
-                 int best_score, bool new_best, int night) {
+                 const Hostess *host, int best_score, bool new_best, int night) {
     SDL_SetRenderDrawBlendMode(r, SDL_BLENDMODE_BLEND);
     SDL_SetRenderDrawColor(r, 12, 12, 20, 255);
     SDL_RenderClear(r);
     if (rh->finished && rh->results_ms >= RESULTS_FADE_MS) {   /* résultats posés : le jeu n'est plus visible dessous */
-        draw_results(rh, r, font, sprites, bg, best_score, new_best, night);
+        draw_results(rh, r, font, sprites, bg, host, best_score, new_best, night);
         return;
     }
     background_draw_ex(bg, r, false);   /* couleurs d'origine, sans le voile noir de la carte */
@@ -1441,7 +1457,7 @@ void rhythm_draw(const RhythmState *rh, SDL_Renderer *r, const Font *font, const
     if (!rh->finished) draw_hit_effects(rh, r);   /* par-dessus les notes et leurs têtes */
 
     if (rh->finished) {
-        draw_results(rh, r, font, sprites, bg, best_score, new_best, night);
+        draw_results(rh, r, font, sprites, bg, host, best_score, new_best, night);
     } else {
         draw_progress_bar(rh, r);
         draw_hud(rh, r, font);

@@ -24,6 +24,10 @@
 #define USER_SONGS_DIR SAVE_DIR "songs/"
 #define IMPORT_DIR     SAVE_DIR "import/"
 
+/* Dossier du joueur pour remplacer des assets du jeu : custom/<même chemin que sous assets/> (ex. custom/ui/hostess/rank_s.png,
+   custom/audio/sfx/voice_rank_s.wav). Lu avant assets/ à chaque lancement (voir asset_resolve, files.h). */
+#define CUSTOM_DIR SAVE_DIR "custom/"
+
 /* Fiche de la dernière version (publiée avec le site) : lue au démarrage sur Vita pour annoncer une mise à jour (update.h) */
 #define UPDATE_URL "https://dancing-every-night.pages.dev/latest.json"
 

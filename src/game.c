@@ -47,6 +47,7 @@ static void start_song(Game *g, const char *path, int entry) {
     g->loading = 1;
     g->audio_started = false;
     g->result_recorded = false;
+    g->results_voice = false;
     g->new_best = false;
     g->paused = false;
     g->countdown_ms = 0.0f;
@@ -106,6 +107,7 @@ void game_init(Game *g, SDL_Renderer *r, const char *chart_path) {
     menu_init(&g->menu, r);
     splash_show(&splash, r, 0.56f);
     title_init(&g->title, r);
+    hostess_init(&g->host, r);
     splash_show(&splash, r, 0.75f);
     sfx_init(&g->sfx);
     g->entry = -1;
@@ -116,7 +118,8 @@ void game_init(Game *g, SDL_Renderer *r, const char *chart_path) {
         g->screen = SCREEN_TITLE;
         sfx_bgm_load(&g->sfx, ASSET_PATH("audio/bgm/menu.ogg"));
         preview_open(&g->menu.preview);
-        sfx_play(&g->sfx, SFX_BOOT);
+        sfx_play(&g->sfx, SFX_VOICE_TITLE);   /* premier son du jeu */
+        g->title_voice = true;
     }
     splash_show(&splash, r, 1.0f);
     splash_shutdown(&splash);
@@ -130,6 +133,7 @@ void game_shutdown(Game *g) {
     menu_shutdown(&g->menu);   /* ferme le périphérique qui mixe les bruitages : ils peuvent ensuite être libérés */
     sfx_shutdown(&g->sfx);
     title_shutdown(&g->title);
+    hostess_shutdown(&g->host);
     sprites_shutdown(&g->sprites);
     font_shutdown(&g->font);
 }
@@ -138,6 +142,7 @@ static void restart_song(Game *g) {
     rhythm_restart(&g->rhythm);
     g->audio_started = false; /* la musique redémarre à la fin du compte à rebours */
     g->result_recorded = false;
+    g->results_voice = false;
     g->new_best = false;
 }
 
@@ -229,6 +234,7 @@ static void update_play(Game *g, const Input *in, float dt) {
         audio_start(&g->audio, g->rhythm.chart.bpm, g->rhythm.chart.offset_ms, SONG_LEAD_IN_MS);
         g->audio_started = true;
         g->result_recorded = false;
+    g->results_voice = false;
         g->new_best = false;
     }
 
@@ -236,6 +242,14 @@ static void update_play(Game *g, const Input *in, float dt) {
     play_hit_sounds(g);
     if (audio_has_music(&g->audio) && !g->fixed_clock) rhythm_sync_time(&g->rhythm, audio_song_time_ms(&g->audio));
     background_seek(&g->background, g->rhythm.song_time_ms);
+
+    /* voix de l'hôtesse : celle du rang, quand le tampon tombe */
+    if (g->rhythm.finished && !g->results_voice && g->rhythm.results_ms >= RESULTS_RANK_MS) {
+        static const SfxId RANK_VOICE[5] = { SFX_VOICE_RANK_S, SFX_VOICE_RANK_A, SFX_VOICE_RANK_B, SFX_VOICE_RANK_CD,
+                                             SFX_VOICE_RANK_CD };
+        sfx_play(&g->sfx, RANK_VOICE[rhythm_rank(&g->rhythm)]);
+        g->results_voice = true;
+    }
 
     if (g->rhythm.finished && !g->result_recorded) {
         g->result_recorded = true;
@@ -430,6 +444,7 @@ static void draw_loading(const Game *g, SDL_Renderer *r) {
     background_draw_ex(&g->background, r, false);
     static const float VX[4] = { 0.0f, 0.40f, 0.62f, 1.0f }, VA[4] = { 0.92f, 0.92f, 0.5f, 0.1f };
     ui_veil_gradient(r, VX, VA, 4);
+    hostess_draw(&g->host, r, HOST_LOADING, 790.0f, 500.0f, 1.0f);
 
     /* avant la première étape la carte n'est pas lue : titre, artiste et difficulté viennent de la liste du menu */
     const MenuEntry *me = g->entry >= 0 && g->entry < g->menu.entry_count ? &g->menu.entries[g->entry] : NULL;
@@ -530,6 +545,7 @@ static void draw_pause(const Game *g, SDL_Renderer *r) {
     SDL_SetRenderDrawBlendMode(r, SDL_BLENDMODE_BLEND);
     SDL_SetRenderDrawColor(r, CH_NIGHT.r, CH_NIGHT.g, CH_NIGHT.b, 199);
     SDL_RenderFillRect(r, NULL);
+    hostess_draw(&g->host, r, HOST_PAUSE, 790.0f, 500.0f, 1.0f);
 
     const float hsc = 64.0f / 66.0f, hw = (float)font_width(&g->font, FONT_POP_XL, "PAUSE") * hsc;
     ui_pop_text(r, &g->font, FONT_POP_XL, 40.0f + hw * 0.5f, 81.0f, hsc, 0.0f, -4.0f, 0.0f, CH_GOLD, CH_INK, CH_PINK, 5.0f, 5.0f,
@@ -737,7 +753,7 @@ void game_draw(const Game *g, SDL_Renderer *r) {
         return;
     }
 
-    rhythm_draw(&g->rhythm, r, &g->font, &g->sprites, &g->background,
+    rhythm_draw(&g->rhythm, r, &g->font, &g->sprites, &g->background, &g->host,
                 g->entry >= 0 ? g->menu.entries[g->entry].best_score : -1, g->new_best, game_night(g));
     if (g->paused) draw_pause(g, r);
     else if (g->countdown_ms > 0.0f) draw_countdown(g, r);

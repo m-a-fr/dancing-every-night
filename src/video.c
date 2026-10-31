@@ -1,4 +1,5 @@
 #include "video.h"
+#include "video_h264.h"
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -65,9 +66,15 @@ static int decode_thread(void *arg) {
     return 0;
 }
 
+static bool is_h264(const char *path) {
+    size_t n = strlen(path);
+    return n > 5 && strcmp(path + n - 5, ".h264") == 0;
+}
+
 bool video_open(Video *v, SDL_Renderer *r, const char *path) {
     *v = (Video){0};
     if (!path || !path[0]) return false;
+    if (is_h264(path)) return video_h264_open(v, r, path);
 
     FILE *fh = fopen(path, "rb");
     if (!fh) { fprintf(stderr, "video: introuvable '%s'\n", path); return false; }
@@ -116,6 +123,7 @@ bool video_open(Video *v, SDL_Renderer *r, const char *path) {
 }
 
 void video_close(Video *v) {
+    if (v->h264) { video_h264_close(v); return; }
     Impl *im = v->impl;
     if (im) {
         if (im->thread) {
@@ -136,6 +144,7 @@ void video_close(Video *v) {
 }
 
 void video_seek(Video *v, float t_ms) {
+    if (v->h264) { video_h264_seek(v, t_ms); return; }
     Impl *im = v->impl;
     if (!im) return;
     double t = t_ms > 0.0f ? (double)t_ms / 1000.0 : 0.0;
@@ -148,6 +157,7 @@ void video_seek(Video *v, float t_ms) {
 }
 
 void video_update(Video *v) {
+    if (v->h264) { video_h264_update(v); return; }
     Impl *im = v->impl;
     if (!im) return;
     SDL_LockMutex(im->mutex);

@@ -2,6 +2,24 @@
 
 All notable changes to Dancing Every Night. Versions follow `MAJOR.MINOR.PATCH`.
 
+## [Unreleased]
+
+### Song creation
+- Each difficulty preserves its own note travel time when imported and exported in the editor, with a reset to the unchanged 1500 ms default. Shorter times make notes faster.
+- The song generator accepts deliberate travel-time choices per difficulty, checks repeated-note spacing against that time, and keeps original motifs stable across musical returns. Mirrored answers now require matching rhythms in adjacent bars.
+
+### Background videos
+- New songs use H.264 (Baseline profile, `video.h264`) instead of MPEG-1: about 20 % smaller files at the same picture quality,
+  decoded by the Vita's hardware video decoder (almost no CPU) and by a built-in software decoder on PC. Songs already
+  published with an `.mpg` video keep working. The editor, `make song` and `make check` handle both formats.
+
+### The hostess
+- The hostess now appears on the results screen (a different picture for each rank: S, A, B, C/D), on the loading screen
+  and on the pause screen. The title screen keeps only the logo.
+- She speaks: a line at the title screen and one for each rank. Her voice is synthesized (see the credits).
+- Replace her pictures or voices with your own: put files in a `custom/` folder next to your saves (`ux0:data/dancingeverynight/custom/`
+  on the Vita), using the same path as under `assets/`. See the README for the list.
+
 ## [1.0.0] — 2026-10-25
 
 The song library comes into the game.

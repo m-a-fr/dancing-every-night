@@ -281,7 +281,7 @@ class Handler(SimpleHTTPRequestHandler):
         q = parse_qs(query)
         name = q.get("name", [""])[0]
         fps = q.get("fps", ["24"])[0]
-        kbps = q.get("kbps", ["900"])[0]  # = DEFAULT_KBPS de media.py (non importé ici : Pillow absent du Python système)
+        kbps = q.get("kbps", ["720"])[0]  # = DEFAULT_KBPS_H264 de media.py (non importé ici : Pillow absent du Python système)
         if (not MEDIA_NAME.match(name) or not fps.isdigit() or not 10 <= int(fps) <= 30
                 or not kbps.isdigit() or not 200 <= int(kbps) <= 1500):
             self.send_json({"error": "paramètres invalides (nom, fps 10-30, débit 200-1500 kb/s)"}, 400)
@@ -289,17 +289,18 @@ class Handler(SimpleHTTPRequestHandler):
         return name, fps, kbps
 
     def encode_video(self, src, name, fps, kbps):
-        """Convertit src en assets/songs/<ID>/video.mpg (MPEG-1 sans son) et répond au client."""
+        """Convertit src en assets/songs/<ID>/video.h264 (H.264 Baseline sans son) et répond au client."""
         folder = SONGS / name
         folder.mkdir(parents=True, exist_ok=True)
         py = VENV_PY if VENV_PY.exists() else "python3"
-        res, err = self.run_media(py, ["video", str(src), str(folder / "video.mpg"), "--fps", fps, "--kbps", kbps], 3600)
+        res, err = self.run_media(py, ["video", str(src), str(folder / "video.h264"), "--fps", fps, "--kbps", kbps], 3600)
         if err:
             return self.send_json({"error": err}, 500)
-        self.send_json({"ok": True, "video": f"songs/{name}/video.mpg", "source": f"/media/video?name={name}", **res})
+        (folder / "video.mpg").unlink(missing_ok=True)   # ancienne version MPEG-1 de la même chanson
+        self.send_json({"ok": True, "video": f"songs/{name}/video.h264", "source": f"/media/video?name={name}", **res})
 
     def put_video(self, query):
-        """Import d'une vidéo : l'original est gardé dans art/videos/, la version du jeu est un .mpg sans son."""
+        """Import d'une vidéo : l'original est gardé dans art/videos/, la version du jeu est un .h264 sans son."""
         params = self.video_params(query)
         if not params:
             return
@@ -355,6 +356,7 @@ class Handler(SimpleHTTPRequestHandler):
         level = q.get("level", ["normal"])[0]
         try:
             bpm, offset = float(q.get("bpm", [""])[0]), int(q.get("offset", [""])[0])
+            approach = max(500, min(5000, int(q.get("approach", ["1500"])[0])))
         except ValueError:
             return self.send_json({"error": "BPM ou OFFSET_MS invalide"}, 400)
         if not SONG_PATH.match(name) or not (SONGS / name).is_file():
@@ -365,7 +367,7 @@ class Handler(SimpleHTTPRequestHandler):
             return self.send_json({"error": "génération indisponible : crée l'environnement Python avec "
                                    "python3 -m venv tools/.venv && tools/.venv/bin/pip install -r tools/requirements.txt"}, 500)
         cmd = [str(VENV_PY), str(ROOT / "tools" / "mapper.py"), str(SONGS / name), "--stdout", level.upper(),
-               "--bpm", str(bpm), "--offset-ms", str(offset)]
+               "--bpm", str(bpm), "--offset-ms", str(offset), "--approach-ms", str(approach)]
         if q.get("holds", ["1"])[0] == "0":
             cmd.append("--no-holds")
         try:

@@ -2,7 +2,7 @@
 """Conversion des médias de fond pour le jeu (utilisé par l'éditeur de cartes).
 
     tools/.venv/bin/python tools/media.py image entree.png sortie.jpg
-    python3 tools/media.py video entree.mp4 sortie.mpg [--fps 24] [--kbps 900] [--size 480x272]
+    python3 tools/media.py video entree.mp4 sortie.mpg|sortie.h264 [--fps 24] [--kbps 900] [--size 480x272]
 
 image : 960x544 en JPEG (Pillow requis). --fill auto (défaut) : recadrage « cover » si l'image
         couvre bien l'écran, sinon effet « ambilight » : image entière au centre, bords vides
@@ -64,6 +64,20 @@ def convert_image(src, dst, fill="auto"):
 DEFAULT_KBPS = 900  # débit moyen par défaut de tous les outils (import, éditeur, ligne de commande)
 
 
+DEFAULT_KBPS_H264 = 720  # H.264 Baseline : même qualité que le MPEG-1 à 900 kb/s pour ~20 % de poids en moins (essais sur console et PC 2026-10-30 ; 450 était visiblement moins bon)
+
+
+def h264_cmd(ffmpeg, src, dst, vf, fps, kbps):
+    # Flux brut Annex B, profil BASELINE (le seul que lit le décodeur logiciel des PC, h264bsd ; la Vita le lit aussi
+    # par son décodeur matériel) : niveau 3.0, sans B-frames, image clé toutes les secondes (pas de détection de scène :
+    # le jeu saute d'image clé en image clé), une tranche par image, SPS/PPS répétés devant chaque image clé (src/h264idx.c).
+    return [ffmpeg, "-nostdin", "-y", "-v", "error", "-i", str(src), "-an", "-vf", vf,
+            "-c:v", "libx264", "-profile:v", "baseline", "-level", "3.0", "-preset", "veryslow",
+            "-b:v", f"{kbps}k", "-maxrate", f"{kbps * 2}k", "-bufsize", "3M",
+            "-x264-params", f"keyint={fps}:min-keyint={fps}:scenecut=0:bframes=0:ref=3:repeat-headers=1:slices=1",
+            "-f", "h264", str(dst)]
+
+
 def convert_video(src, dst, fps, size, kbps):
     ffmpeg = shutil.which("ffmpeg")
     if not ffmpeg:
@@ -74,11 +88,14 @@ def convert_video(src, dst, fps, size, kbps):
     # débit-distorsion contre les « gros carrés » du MPEG-1. Pas de B-frames : GOP ouvert = seek corrompu
     # dans pl_mpeg, et sans eux la qualité mesurée est la même (SSIM 0,922 contre 0,921).
     rate, peak = f"{kbps}k", f"{kbps * 2}k"
-    cmd = [ffmpeg, "-nostdin", "-y", "-v", "error", "-i", str(src), "-an", "-vf", vf,
-           "-c:v", "mpeg1video", "-b:v", rate, "-maxrate", peak, "-bufsize", "3M",
-           "-g", str(fps), "-bf", "0", "-mbd", "rd", "-trellis", "1",
-           "-cmp", "2", "-subcmp", "2", "-mbcmp", "2",
-           "-muxrate", "20M", "-f", "mpeg", str(dst)]
+    if str(dst).endswith(".h264"):
+        cmd = h264_cmd(ffmpeg, src, dst, vf, fps, kbps)
+    else:
+        cmd = [ffmpeg, "-nostdin", "-y", "-v", "error", "-i", str(src), "-an", "-vf", vf,
+               "-c:v", "mpeg1video", "-b:v", rate, "-maxrate", peak, "-bufsize", "3M",
+               "-g", str(fps), "-bf", "0", "-mbd", "rd", "-trellis", "1",
+               "-cmp", "2", "-subcmp", "2", "-mbcmp", "2",
+               "-muxrate", "20M", "-f", "mpeg", str(dst)]
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0:
         raise RuntimeError("ffmpeg a échoué : " + (r.stderr.strip().splitlines() or ["?"])[-1][:200])
@@ -95,14 +112,15 @@ def main():
     a.add_argument("--fill", choices=["auto", "cover", "blur"], default="auto")
     v = sub.add_parser("video"); v.add_argument("src"); v.add_argument("dst")
     v.add_argument("--fps", type=int, default=24)
-    v.add_argument("--kbps", type=int, default=DEFAULT_KBPS)
+    v.add_argument("--kbps", type=int, default=None, help=f"défaut {DEFAULT_KBPS} (.mpg) ou {DEFAULT_KBPS_H264} (.h264)")
     v.add_argument("--size", default="480x272")
     args = ap.parse_args()
     try:
         if args.kind == "image":
             out = convert_image(args.src, args.dst, args.fill)
         else:
-            out = convert_video(args.src, args.dst, args.fps, tuple(int(x) for x in args.size.split("x")), args.kbps)
+            kbps = args.kbps or (DEFAULT_KBPS_H264 if args.dst.endswith(".h264") else DEFAULT_KBPS)
+            out = convert_video(args.src, args.dst, args.fps, tuple(int(x) for x in args.size.split("x")), kbps)
     except Exception as e:  # message lisible pour l'éditeur
         print(json.dumps({"error": str(e)}))
         sys.exit(1)
