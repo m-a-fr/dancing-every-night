@@ -6672,6 +6672,52 @@
       "source_sha256": "48bcfc8fbd2a18d07771f0d549137d99ada37fd26ec608d78137ba5d0e9c4b68"
     },
     {
+      "id": "community-184",
+      "version": 1,
+      "title": "Spider Dance",
+      "artist": "Toby Fox",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=5qZqqUgb1Rw",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 129,
+          "bpm": 230.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 159,
+          "bpm": 230.0
+        },
+        {
+          "name": "HARD",
+          "notes": 209,
+          "bpm": 230.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 244,
+          "bpm": 230.0
+        }
+      ],
+      "duration_s": 110.1,
+      "size_bytes": 2272351,
+      "has_video": false,
+      "zip": "songs/community-184-v1.zip",
+      "zip_bytes": 2207876,
+      "sha256": "89f57faf227a8a3322b0f2e04155ef78e956dadee22334cd3ac279b184484880",
+      "thumb": "thumbs/community-184-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 184,
+      "local_id": "popular8_spider",
+      "previous_objects": [],
+      "source_sha256": "d21e333dd548d23f4cf29d2cd017bb1df612b8ecdfef14d782bfbe1b980314e4"
+    },
+    {
       "id": "community-13",
       "version": 1,
       "title": "Sweeteners",
