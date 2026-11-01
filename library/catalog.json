@@ -7270,6 +7270,52 @@
       "source_sha256": "1a56db711b9e5908d59fc8b353f3eefdb56d5a157eede932547b132c6389f356"
     },
     {
+      "id": "community-201",
+      "version": 1,
+      "title": "Sono Chi no Sadame (TV Size)",
+      "artist": "Hiroaki Tommy Tominaga",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=BW4H15rK6iI",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 89,
+          "bpm": 146.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 138,
+          "bpm": 146.0
+        },
+        {
+          "name": "HARD",
+          "notes": 197,
+          "bpm": 146.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 238,
+          "bpm": 146.0
+        }
+      ],
+      "duration_s": 92.0,
+      "size_bytes": 9729204,
+      "has_video": true,
+      "zip": "songs/community-201-v1.zip",
+      "zip_bytes": 9702446,
+      "sha256": "7ec357055bcb7fdea1d4cd241135364b513a3fa92d7652bd89979b6c1c8f6f9e",
+      "thumb": "thumbs/community-201-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 201,
+      "local_id": "popular8_sono",
+      "previous_objects": [],
+      "source_sha256": "5f67e270eb8a6353440810721c6fe92fa4e97e486a3083b1bcc0de30cf5232d5"
+    },
+    {
       "id": "community-163",
       "version": 1,
       "title": "Sorairo Days (TV Size)",
