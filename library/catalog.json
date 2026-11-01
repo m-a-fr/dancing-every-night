@@ -738,6 +738,52 @@
       "source_sha256": "cc9f2e13184adbbe7c8d766c47bd7a4c92966abc145913e404b349b68245f648"
     },
     {
+      "id": "community-185",
+      "version": 1,
+      "title": "BIG SHOT",
+      "artist": "Toby Fox",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=V31PVkwzpEY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 139,
+          "bpm": 140.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 207,
+          "bpm": 140.0
+        },
+        {
+          "name": "HARD",
+          "notes": 306,
+          "bpm": 140.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 351,
+          "bpm": 140.0
+        }
+      ],
+      "duration_s": 146.9,
+      "size_bytes": 2891462,
+      "has_video": false,
+      "zip": "songs/community-185-v1.zip",
+      "zip_bytes": 2856278,
+      "sha256": "613003e03c28c5e5831126db515d8d3b45048f334ea11899918db84a8f82ca9a",
+      "thumb": "thumbs/community-185-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 185,
+      "local_id": "popular8_bigshot",
+      "previous_objects": [],
+      "source_sha256": "69e2830d27ac27b3a223e6f43ad31c977bf821ecc8bd419b1027c4847a1e151e"
+    },
+    {
       "id": "community-105",
       "version": 1,
       "title": "Black Catcher (TV Size)",
@@ -2300,6 +2346,52 @@
       "local_id": "popular5_deal",
       "previous_objects": [],
       "source_sha256": "1cefa83decadeb99d83b01c794cfa40d785e937a30e99723d2dfaa81d4873f76"
+    },
+    {
+      "id": "community-183",
+      "version": 1,
+      "title": "Death by Glamour",
+      "artist": "Toby Fox",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=qeDIZCc6Cyo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 124,
+          "bpm": 148.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 184,
+          "bpm": 148.0
+        },
+        {
+          "name": "HARD",
+          "notes": 268,
+          "bpm": 148.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 317,
+          "bpm": 148.0
+        }
+      ],
+      "duration_s": 138.7,
+      "size_bytes": 3034726,
+      "has_video": false,
+      "zip": "songs/community-183-v1.zip",
+      "zip_bytes": 3009829,
+      "sha256": "58f2a292300bc4a5f049ae7b0d7d58aa27bfbce16fa7392112ed98148f16d81a",
+      "thumb": "thumbs/community-183-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 183,
+      "local_id": "popular8_glamour",
+      "previous_objects": [],
+      "source_sha256": "b54e26f516f55023c10e2e5eb16bd66c4cea0dd8d008a092f9916b604c3c7071"
     },
     {
       "id": "community-21",
@@ -6624,6 +6716,98 @@
       "local_id": "popular7_specialz",
       "previous_objects": [],
       "source_sha256": "48bcfc8fbd2a18d07771f0d549137d99ada37fd26ec608d78137ba5d0e9c4b68"
+    },
+    {
+      "id": "community-184",
+      "version": 1,
+      "title": "Spider Dance",
+      "artist": "Toby Fox",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=5qZqqUgb1Rw",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 129,
+          "bpm": 230.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 159,
+          "bpm": 230.0
+        },
+        {
+          "name": "HARD",
+          "notes": 209,
+          "bpm": 230.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 244,
+          "bpm": 230.0
+        }
+      ],
+      "duration_s": 110.1,
+      "size_bytes": 2272351,
+      "has_video": false,
+      "zip": "songs/community-184-v1.zip",
+      "zip_bytes": 2207876,
+      "sha256": "89f57faf227a8a3322b0f2e04155ef78e956dadee22334cd3ac279b184484880",
+      "thumb": "thumbs/community-184-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 184,
+      "local_id": "popular8_spider",
+      "previous_objects": [],
+      "source_sha256": "d21e333dd548d23f4cf29d2cd017bb1df612b8ecdfef14d782bfbe1b980314e4"
+    },
+    {
+      "id": "community-186",
+      "version": 1,
+      "title": "Stickerbush Symphony",
+      "artist": "David Wise",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=mdPlcKg-qFs",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 221,
+          "bpm": 98.43
+        },
+        {
+          "name": "NORMAL",
+          "notes": 348,
+          "bpm": 98.43
+        },
+        {
+          "name": "HARD",
+          "notes": 509,
+          "bpm": 98.43
+        },
+        {
+          "name": "EXPERT",
+          "notes": 655,
+          "bpm": 98.43
+        }
+      ],
+      "duration_s": 263.1,
+      "size_bytes": 4995391,
+      "has_video": false,
+      "zip": "songs/community-186-v1.zip",
+      "zip_bytes": 4948197,
+      "sha256": "aadc93561c7ad4fd7c6a2fac96ac1a3ac76206c07a2a22cfac18e6a692fb699d",
+      "thumb": "thumbs/community-186-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 186,
+      "local_id": "popular8_stickerbush",
+      "previous_objects": [],
+      "source_sha256": "4163e7c15189cb4f626ea4025ad3606f410c466ec78c94136d275f6a0329b12b"
     },
     {
       "id": "community-13",
