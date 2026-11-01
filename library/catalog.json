@@ -6764,6 +6764,52 @@
       "source_sha256": "a12cd444ce9d146ca1f5cf0928100984ffb5da77aa05511ad664b33e3854e95b"
     },
     {
+      "id": "community-208",
+      "version": 1,
+      "title": "Sayonara Planet Wars (Full Version)",
+      "artist": "Chroma",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=JIDdv4aDKTY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 311,
+          "bpm": 224.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 386,
+          "bpm": 224.0
+        },
+        {
+          "name": "HARD",
+          "notes": 500,
+          "bpm": 224.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 570,
+          "bpm": 224.0
+        }
+      ],
+      "duration_s": 245.0,
+      "size_bytes": 5863075,
+      "has_video": false,
+      "zip": "songs/community-208-v1.zip",
+      "zip_bytes": 5820970,
+      "sha256": "2a5c8f28146e321bd27bd21f2dbbb7828e15869548bdaf0df1025fb2d930354e",
+      "thumb": "thumbs/community-208-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 208,
+      "local_id": "popular8_sayonara",
+      "previous_objects": [],
+      "source_sha256": "6952d2938fa13205c8170bf3751db65282e97e0b76b2eb8264cc9f13042ff02d"
+    },
+    {
       "id": "community-85",
       "version": 1,
       "title": "Scream out!",
