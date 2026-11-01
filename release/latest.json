@@ -1,10 +1,10 @@
 {
-  "version": "1.0.0",
-  "date": "2026-10-25",
-  "url": "https://github.com/m-a-fr/dancing-every-night/releases/tag/v1.0.0",
-  "notes_en": "The song library is in the game: browse and install community songs from the new LIBRARY menu.",
-  "notes_fr": "La bibliothèque de chansons arrive dans le jeu : parcours et installe les chansons de la communauté depuis LIBRARY.",
-  "vpk_url": "https://github.com/m-a-fr/dancing-every-night/releases/download/v1.0.0/DancingEveryNight-1.0.0.vpk",
-  "sha256": "901d2cbdd7371431534384e0bef36c8dfbd902dbcdd3f6825324d99b9a7a5b2f",
-  "size": 19993424
+  "version": "1.1.0",
+  "date": "2026-11-01",
+  "url": "https://github.com/m-a-fr/dancing-every-night/releases/tag/v1.1.0",
+  "notes_en": "Song videos move to H.264 and the hostess joins the results, loading and pause screens.",
+  "notes_fr": "Les vidéos passent en H.264 et l'hôtesse arrive sur les écrans de résultats, de chargement et de pause.",
+  "vpk_url": "https://github.com/m-a-fr/dancing-every-night/releases/download/v1.1.0/DancingEveryNight-1.1.0.vpk",
+  "sha256": "e20b2cbcab5703fe9b72e7c632bc8aa9e7f1b8420d7e67fd6422f93722da0c60",
+  "size": 23215572
 }
