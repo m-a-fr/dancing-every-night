@@ -2808,6 +2808,52 @@
       "source_sha256": "ca8e289d6f0b6c4720a7ce65f7736595bda16e3f59cb6eb29b0394401204f748"
     },
     {
+      "id": "community-195",
+      "version": 1,
+      "title": "Frog's Theme",
+      "artist": "Yasunori Mitsuda",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=vZyITgB7KZc",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 93,
+          "bpm": 124.75
+        },
+        {
+          "name": "NORMAL",
+          "notes": 152,
+          "bpm": 124.75
+        },
+        {
+          "name": "HARD",
+          "notes": 236,
+          "bpm": 124.75
+        },
+        {
+          "name": "EXPERT",
+          "notes": 276,
+          "bpm": 124.75
+        }
+      ],
+      "duration_s": 105.2,
+      "size_bytes": 2015757,
+      "has_video": false,
+      "zip": "songs/community-195-v1.zip",
+      "zip_bytes": 1980602,
+      "sha256": "66a8facceaf7154de0406595e5d132de535e8639a2d4d7905b3190190eac1bb8",
+      "thumb": "thumbs/community-195-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 195,
+      "local_id": "popular8_frog",
+      "previous_objects": [],
+      "source_sha256": "e4e418b44a8d5848720d7b0a5105513d7c736c1bb34523ec11ba94dacee05a67"
+    },
+    {
       "id": "community-177",
       "version": 1,
       "title": "Garakuta Doll Play",
