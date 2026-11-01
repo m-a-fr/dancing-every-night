@@ -7822,6 +7822,52 @@
       "source_sha256": "60ff3ab5f9f06ca605557ad1b2022222a7eb497b01e4990143508fad2484b792"
     },
     {
+      "id": "community-203",
+      "version": 1,
+      "title": "The Blessing (TV Size)",
+      "artist": "YOASOBI",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=vIhQ9zya2-g",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 96,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 136,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 207,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 240,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 89.6,
+      "size_bytes": 10157721,
+      "has_video": true,
+      "zip": "songs/community-203-v1.zip",
+      "zip_bytes": 10057698,
+      "sha256": "0657ef150b01da54389c02a3544deedc1661025114a7420607e67450b2ba1ee1",
+      "thumb": "thumbs/community-203-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 203,
+      "local_id": "popular8_shukufuku",
+      "previous_objects": [],
+      "source_sha256": "afd282c7631f4a4d39912f6a793cb691373333e3df5640b099f9bd555240bc93"
+    },
+    {
       "id": "community-87",
       "version": 1,
       "title": "THE HERO!! (TV Size)",
