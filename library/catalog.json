@@ -8328,6 +8328,52 @@
       "source_sha256": "1ed41a444f5d7b60c80289fd6f856ade95c490af74516f0d56fbde2bf636bc41"
     },
     {
+      "id": "community-198",
+      "version": 1,
+      "title": "We Go! (TV Size)",
+      "artist": "Hiroshi Kitadani",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=fCQufN8Wsgc",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 163,
+          "bpm": 176.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 222,
+          "bpm": 176.0
+        },
+        {
+          "name": "HARD",
+          "notes": 319,
+          "bpm": 176.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 392,
+          "bpm": 176.0
+        }
+      ],
+      "duration_s": 150.0,
+      "size_bytes": 17274027,
+      "has_video": true,
+      "zip": "songs/community-198-v1.zip",
+      "zip_bytes": 17215975,
+      "sha256": "224676c6380de4144ccc05a47e8e7087c6b16ae55a706db254e1252f82d2371c",
+      "thumb": "thumbs/community-198-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 198,
+      "local_id": "popular8_wego",
+      "previous_objects": [],
+      "source_sha256": "f059f1a1298813106935d45674776358de62153a1c513705c6345c5ef874ed41"
+    },
+    {
       "id": "community-89",
       "version": 1,
       "title": "Who Killed U.N.Owen",
