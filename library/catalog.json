@@ -4740,6 +4740,52 @@
       "source_sha256": "70fced2596ffbb65a10fe0f355f66a4a7992b7e45880aa89dc76b60caf7dbc3c"
     },
     {
+      "id": "community-199",
+      "version": 1,
+      "title": "Limit-Break x Survivor",
+      "artist": "Kiyoshi Hikawa",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=1TLRmiKwZ3o",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 290,
+          "bpm": 187.5
+        },
+        {
+          "name": "NORMAL",
+          "notes": 395,
+          "bpm": 187.5
+        },
+        {
+          "name": "HARD",
+          "notes": 554,
+          "bpm": 187.5
+        },
+        {
+          "name": "EXPERT",
+          "notes": 666,
+          "bpm": 187.5
+        }
+      ],
+      "duration_s": 272.0,
+      "size_bytes": 6091938,
+      "has_video": false,
+      "zip": "songs/community-199-v1.zip",
+      "zip_bytes": 6059894,
+      "sha256": "8fb946a3dbddc8bb268d1e87dcdfe5cb7139097f23ddfab95a708d850019ffb0",
+      "thumb": "thumbs/community-199-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 199,
+      "local_id": "popular8_limit",
+      "previous_objects": [],
+      "source_sha256": "4d6eef88bd56d7cb573032c4daa75ecfe07881a4089e10b3c6ffb3db7a1a576f"
+    },
+    {
       "id": "community-191",
       "version": 1,
       "title": "Live & Learn",
