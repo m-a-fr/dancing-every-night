@@ -7776,6 +7776,52 @@
       "source_sha256": "be6ee0e879b8b62f87f05c292543e40232b4cd067d448586d63e0cb665df2075"
     },
     {
+      "id": "community-194",
+      "version": 1,
+      "title": "Those Who Fight Further",
+      "artist": "Nobuo Uematsu",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=QYPgLFyrYoc",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 198,
+          "bpm": 168.07
+        },
+        {
+          "name": "NORMAL",
+          "notes": 301,
+          "bpm": 168.07
+        },
+        {
+          "name": "HARD",
+          "notes": 486,
+          "bpm": 168.07
+        },
+        {
+          "name": "EXPERT",
+          "notes": 559,
+          "bpm": 168.07
+        }
+      ],
+      "duration_s": 214.4,
+      "size_bytes": 24917223,
+      "has_video": true,
+      "zip": "songs/community-194-v1.zip",
+      "zip_bytes": 24882667,
+      "sha256": "668d6060d73f261811af39b0bcb3992e89ad9ffc4277da32b3ba5856a64f2057",
+      "thumb": "thumbs/community-194-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 194,
+      "local_id": "popular8_fight",
+      "previous_objects": [],
+      "source_sha256": "904eea53732a596ffec07ba3bc83804809eb6bc5f72c4c3b33ec7ae2ad726fe3"
+    },
+    {
       "id": "community-100",
       "version": 1,
       "title": "Touch off (TV Size)",
