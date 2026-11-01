@@ -1,50 +1,43 @@
-# Dancing Every Night 1.0.0
+# Dancing Every Night 1.1.0
 
 *[Version française plus bas](#version-française)*
 
 A community rhythm game for the **PS Vita** (and your computer). Notes fly in towards two arcs of
 targets; hit the right button on the beat, keep your combo, chase the S rank.
 
-**1.0 brings the song library into the game**: browse the online catalogue from your console and install a
-song with one button. No computer, no zip, no cable.
+**1.1 changes how song videos work and brings the hostess into the menus.**
 
-## What's new since 0.9.0
+## What's new since 1.0.0
 
-### In-game song library
-- New **LIBRARY** entry in the main menu: the whole online catalogue in a dense list, with the cover picture,
-  difficulties, number of notes, length and size of the selected song.
-- Each song tells you if it is already yours: a **check** when it is installed, an **arrow** when a newer version
-  exists, an empty circle when you don't have it yet.
-- Filter (all / not installed / installed / updates) and sort (newest / title / artist).
-- **Cross installs** a song: download with a progress bar (Circle cancels), checked against the catalogue, then
-  added to your song list straight away. An update replaces the old version and keeps your scores.
-- Works on the Vita (Wi-Fi), Windows, macOS and Linux. It needs an internet connection; without one the game
-  tells you so, and everything else keeps working.
+### Lighter, sharper song videos
+- Songs now use **H.264** video (Baseline profile): about 20 % smaller files at the same picture quality. The Vita
+  decodes them with its hardware video decoder (almost no CPU), and the computer versions with a built-in decoder.
+- **Songs published before 1.1 keep working**, and the library already has songs with H.264 video: these play their
+  video only from 1.1 on (on 1.0 you get the still picture).
 
-### Playing
-- **Scratch notes are clearer**: the blue ring now reads "SCRATCH" and "R OR L", and **a light touch of either
-  stick, in any direction**, hits them. L and R still work.
-- **Loading is honest**: the loading card appears the moment you pick a song, and its bar shows the steps really
-  done (song, music, video) with the current one named.
-- **Linked notes** lose their black outline: the bar between the two heads now matches the other notes.
+### The hostess
+- She now appears on the **results screen** (a different picture for each rank), on the **loading** screen and on the
+  **pause** screen. The title screen keeps only the logo.
+- She **speaks**: a line at the title screen and one for each rank.
+- Replace her pictures or voices with your own: put files in a `custom/` folder next to your saves
+  (`ux0:data/dancingeverynight/custom/` on the Vita), with the same path as under `assets/`.
 
-### Everything else
-- The main menu announces a newer game version when one exists (switch it off in OPTIONS > UPDATE CHECK; nothing
-  is ever downloaded or installed by it).
-- Songs can also be installed from an extracted folder in `import/`, not only from a `.zip`.
-- A website home page; the online editor can send a finished song straight to the library.
+### Songs
+- Each difficulty can have its **own note speed** (travel time); songs made with the online editor keep it.
+- The song generator and the editor handle both video formats; creators get a new
+  [generation guide](tools/MAPPING_GUIDE.md).
 
 ## Download
 
 | System | File |
 |---|---|
-| PS Vita | `DancingEveryNight-1.0.0.vpk` |
-| Windows | `DancingEveryNight-1.0.0-windows.zip` |
-| macOS (11+, Intel and Apple Silicon) | `DancingEveryNight-1.0.0-macos.zip` |
-| Linux | `DancingEveryNight-1.0.0-linux.tar.gz` |
+| PS Vita | `DancingEveryNight-1.1.0.vpk` |
+| Windows | `DancingEveryNight-1.1.0-windows.zip` |
+| macOS (11+, Intel and Apple Silicon) | `DancingEveryNight-1.1.0-macos.zip` |
+| Linux | `DancingEveryNight-1.1.0-linux.tar.gz` |
 
 **Vita**: you need a console with custom firmware and VitaShell ([guide](https://vita.hacks.guide)). Copy the
-`.vpk` to the console, open it in VitaShell and press Cross to install. Updating from 0.9.x keeps your songs
+`.vpk` to the console, open it in VitaShell and press Cross to install. Updating from 1.0 keeps your songs
 and scores.
 
 **Computer**: nothing to install. Windows is not signed (SmartScreen: *More info → Run anyway*); on macOS, right-click
@@ -83,46 +76,41 @@ Full list of changes: [CHANGELOG.md](CHANGELOG.md).
 Un jeu de rythme communautaire pour la **PS Vita** (et ton ordinateur). Les notes arrivent vers deux arcs de
 cibles ; appuie sur le bon bouton en rythme, garde ton combo, vise le rang S.
 
-**La 1.0 met la bibliothèque de chansons dans le jeu** : parcours le catalogue en ligne depuis ta console et
-installe une chanson d'un bouton. Sans ordinateur, sans zip, sans câble.
+**La 1.1 change la vidéo des chansons et fait entrer l'hôtesse dans les menus.**
 
-## Nouveautés depuis la 0.9.0
+## Nouveautés depuis la 1.0.0
 
-### Bibliothèque de chansons dans le jeu
-- Nouvelle entrée **LIBRARY** dans le menu principal : tout le catalogue en ligne dans une liste dense, avec
-  l'image, les difficultés, le nombre de notes, la durée et la taille de la chanson sélectionnée.
-- Chaque chanson indique si elle est déjà à toi : une **coche** si elle est installée, une **flèche** si une version
-  plus récente existe, un cercle vide si tu ne l'as pas encore.
-- Filtre (toutes / non installées / installées / mises à jour) et tri (récentes / titre / artiste).
-- **Croix installe** une chanson : téléchargement avec une barre de progression (Rond annule), vérifié avec le
-  catalogue, puis ajouté tout de suite à ta liste. Une mise à jour remplace l'ancienne version et garde tes scores.
-- Fonctionne sur la Vita (Wi-Fi), Windows, macOS et Linux. Il faut une connexion internet ; sans elle le jeu te le
-  dit, et tout le reste continue de marcher.
+### Des vidéos plus légères et plus nettes
+- Les chansons utilisent désormais la vidéo **H.264** (profil Baseline) : des fichiers environ 20 % plus petits à
+  qualité d'image égale. La Vita les décode avec son décodeur vidéo matériel (presque aucun CPU), les versions
+  ordinateur avec un décodeur intégré.
+- **Les chansons publiées avant la 1.1 continuent de marcher**, et la bibliothèque contient déjà des chansons avec
+  vidéo H.264 : leur vidéo ne se lit qu'à partir de la 1.1 (en 1.0 tu vois l'image fixe).
 
-### En jeu
-- **Les scratches sont plus lisibles** : l'anneau bleu affiche « SCRATCH » et « R OR L », et **un léger toucher de
-  l'un des deux sticks, dans n'importe quel sens,** les valide. L et R marchent toujours.
-- **Le chargement est honnête** : la fiche apparaît dès que tu choisis une chanson, et la barre montre les étapes
-  réellement terminées (chanson, musique, vidéo), l'étape en cours étant nommée.
-- **Les notes liées** n'ont plus de contour noir : la barre entre les deux têtes est assortie aux autres notes.
+### L'hôtesse
+- Elle apparaît maintenant sur l'**écran de résultats** (une image différente par rang), sur l'écran de
+  **chargement** et sur l'écran de **pause**. L'écran titre ne garde que le logo.
+- Elle **parle** : une phrase à l'écran titre et une pour chaque rang.
+- Remplace ses images ou ses voix par les tiennes : mets des fichiers dans un dossier `custom/` à côté de tes
+  sauvegardes (`ux0:data/dancingeverynight/custom/` sur la Vita), avec le même chemin que sous `assets/`.
 
-### Le reste
-- Le menu principal annonce une nouvelle version du jeu quand il y en a une (désactivable dans OPTIONS > UPDATE
-  CHECK ; rien n'est jamais téléchargé ni installé par ce biais).
-- Une chanson s'installe aussi depuis un dossier décompressé dans `import/`, pas seulement depuis un `.zip`.
-- Une page d'accueil pour le site ; l'éditeur en ligne envoie une chanson terminée directement à la bibliothèque.
+### Chansons
+- Chaque difficulté peut avoir sa **propre vitesse de notes** (temps de trajet) ; les chansons faites avec l'éditeur
+  en ligne la conservent.
+- Le générateur de chansons et l'éditeur gèrent les deux formats de vidéo ; les créateurs ont un nouveau
+  [guide de génération](tools/MAPPING_GUIDE.md).
 
 ## Téléchargement
 
 | Système | Fichier |
 |---|---|
-| PS Vita | `DancingEveryNight-1.0.0.vpk` |
-| Windows | `DancingEveryNight-1.0.0-windows.zip` |
-| macOS (11+, Intel et Apple Silicon) | `DancingEveryNight-1.0.0-macos.zip` |
-| Linux | `DancingEveryNight-1.0.0-linux.tar.gz` |
+| PS Vita | `DancingEveryNight-1.1.0.vpk` |
+| Windows | `DancingEveryNight-1.1.0-windows.zip` |
+| macOS (11+, Intel et Apple Silicon) | `DancingEveryNight-1.1.0-macos.zip` |
+| Linux | `DancingEveryNight-1.1.0-linux.tar.gz` |
 
 **Vita** : il faut une console avec firmware personnalisé et VitaShell ([guide](https://vita.hacks.guide)). Copie le
-`.vpk` sur la console, ouvre-le dans VitaShell et appuie sur Croix pour l'installer. Depuis la 0.9.x, tes chansons
+`.vpk` sur la console, ouvre-le dans VitaShell et appuie sur Croix pour l'installer. Depuis la 1.0, tes chansons
 et tes scores sont conservés.
 
 **Ordinateur** : rien à installer. Windows n'est pas signé (SmartScreen : *Informations complémentaires →

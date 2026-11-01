@@ -4,6 +4,10 @@ All notable changes to Dancing Every Night. Versions follow `MAJOR.MINOR.PATCH`.
 
 ## [Unreleased]
 
+## [1.1.0] — 2026-11-01
+
+Song videos move to H.264, the hostess joins the menus, and songs can set their own note speed.
+
 ### Song generation
 - Automatic difficulty drafts can use anchor-return, repeated relay and turnaround gestures when the existing rhythm supports them. Reports show how much of each gesture survives the playability constraints. A shared creation guide documents musical intent, difficulty limits and travel-time choices.
 
