@@ -3268,6 +3268,52 @@
       "source_sha256": "a2862a266d4c59e0bd95f94e456960d163e3383850e6eff0a6b6896640d24fdc"
     },
     {
+      "id": "community-209",
+      "version": 1,
+      "title": "GOODTEK (Rework)",
+      "artist": "EBIMAYO",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=CCcvGQ16FnQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 136,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 179,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 271,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 327,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 124.2,
+      "size_bytes": 14896131,
+      "has_video": true,
+      "zip": "songs/community-209-v1.zip",
+      "zip_bytes": 14834997,
+      "sha256": "c6e697c4c549892c14615e252ecf905b7dcd946597778eafa831e430ab75d72f",
+      "thumb": "thumbs/community-209-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 209,
+      "local_id": "popular8_goodtek",
+      "previous_objects": [],
+      "source_sha256": "056c2478018e10a13a7092ba345956ce4654e8a99abaebfde002509dc9b46a74"
+    },
+    {
       "id": "community-170",
       "version": 1,
       "title": "Great Days (TV Size)",
