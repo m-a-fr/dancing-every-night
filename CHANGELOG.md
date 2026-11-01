@@ -4,6 +4,9 @@ All notable changes to Dancing Every Night. Versions follow `MAJOR.MINOR.PATCH`.
 
 ## [Unreleased]
 
+### Song generation
+- Automatic difficulty drafts can use anchor-return, repeated relay and turnaround gestures when the existing rhythm supports them. Reports show how much of each gesture survives the playability constraints. A shared creation guide documents musical intent, difficulty limits and travel-time choices.
+
 ### Song creation
 - Each difficulty preserves its own note travel time when imported and exported in the editor, with a reset to the unchanged 1500 ms default. Shorter times make notes faster.
 - The song generator accepts deliberate travel-time choices per difficulty, checks repeated-note spacing against that time, and keeps original motifs stable across musical returns. Mirrored answers now require matching rhythms in adjacent bars.

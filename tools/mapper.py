@@ -10,7 +10,7 @@ Format de map 1 : la piste est dans le dossier de la map (assets/songs/<ID>/), l
 
 Utilisé par tools/song_import.py (make song) ; peut être relancé seul pour regénérer les cartes
 (par exemple avec --bpm / --offset-ms si l'analyse s'est trompée). Règles de mapping : voir
-GAME_DESIGN.md (« Règles de mapping »).
+tools/MAPPING_GUIDE.md (guide partagé) et GAME_DESIGN.md (décisions internes locales).
 
 Étapes :
  1. tempo (constant) et phase : grille de temps qui colle le mieux aux attaques, calée pour que
@@ -483,6 +483,9 @@ FEELS = {
     "alternate": "gauche-droite à chaque note",
     "sweep":     "les deux mains descendent (ou montent) ensemble en alternant",
     "jump":      "une main saute haut-bas",
+    "pedal_return": "ancre, détour voisin, retour à l'ancre puis relais",
+    "relay_pair": "appel d'une main, réponse répétée de l'autre",
+    "turnaround": "détour croisé puis retour au point de départ",
 }
 FEEL_SETS = {
     "EASY":   {"jack": 1.4, "jack3": 0.8, "jackpair": 1.0, "callresp": 1.0, "anchor": 0.8, "alternate": 0.8, "roll": 0.6},
@@ -493,12 +496,18 @@ FEEL_SETS = {
     "EXPERT": {"jack": 0.9, "jack3": 0.5, "jackpair": 0.8, "callresp": 0.9, "anchor": 1.0, "alternate": 1.0,
                "roll": 1.1, "handtrill": 1.0, "sweep": 1.0, "jump": 0.7},
 }
+for _level in FEEL_SETS:
+    FEEL_SETS[_level]["relay_pair"] = 0.35 if _level == "EASY" else 0.6
+    if _level != "EASY":
+        FEEL_SETS[_level]["pedal_return"] = 0.65
+    if _level in ("HARD", "EXPERT"):
+        FEEL_SETS[_level]["turnaround"] = 0.55
 # note répétée (même bouton) : écart minimal propre, jamais sous la limite visuelle (18 % du trajet)
 JACK_MS = {"EASY": 400, "NORMAL": 300, "HARD": 270, "EXPERT": 270}
 ALT_CAP = {"EASY": 0.22, "NORMAL": 0.22, "HARD": 0.25, "EXPERT": 0.28}   # part max de mesures « gauche-droite »
 # part max de mesures bâties sur des notes répétées (sinon c'est l'excès inverse : monotone)
 JACK_CAP = {"EASY": 0.30, "NORMAL": 0.28, "HARD": 0.24, "EXPERT": 0.20}
-JACK_FEELS = ("jack", "jack3", "jackpair", "anchor")
+JACK_FEELS = ("jack", "jack3", "jackpair", "anchor", "relay_pair")
 
 
 def feel_template(feel, n, h, s, rng):
@@ -524,6 +533,15 @@ def feel_template(feel, n, h, s, rng):
             path = [0, 1, 2] if s == 0 else [2, 1, 0]
             seq.append((h if i % 2 == 0 else o, path[(i // 2) % 3]))
         elif feel == "jump":     seq.append((h, [0, 2][i % 2]) if i % 3 < 2 else (o, 1))
+        elif feel == "pedal_return":
+            cell = [(h, s), (h, adj), (h, s), (o, t)]
+            seq.append(cell[i % len(cell)])
+        elif feel == "relay_pair":
+            cell = [(h, s), (o, t), (o, t), (h, adj)]
+            seq.append(cell[i % len(cell)])
+        elif feel == "turnaround":
+            cell = [(h, s), (o, adj), (o, t), (h, adj), (h, s), (o, t)]
+            seq.append(cell[i % len(cell)])
         else:                    seq.append((h if i % 2 == 0 else o, s))
     return seq
 
@@ -556,7 +574,9 @@ class Arranger:
                  "jack3": (1 + 2 * character["repeat"]) * (1.4 if character["slow"] else 0.7),
                  "roll": 1 + 2 * character["motion"], "sweep": 1 + 1.5 * character["motion"],
                  "anchor": 1.6 if character["steady"] else 1.0, "alternate": 1.3 if character["steady"] else 0.9,
-                 "handtrill": 1.3 if character["slow"] else 0.9, "callresp": 1 + character["dialog"]}
+                 "handtrill": 1.3 if character["slow"] else 0.9, "callresp": 1 + character["dialog"],
+                 "pedal_return": 1 + character["repeat"] + character["steady"],
+                 "relay_pair": 1 + character["dialog"], "turnaround": 1 + character["motion"]}
         for k in base:
             base[k] *= boost.get(k, 1.0)
         keys = list(base)
@@ -566,6 +586,7 @@ class Arranger:
         self.favorites = fav
         self.used = collections.Counter()
         self.forms = collections.Counter()   # répétition, variation, réponse, nouveau motif, pont, cadence
+        self.realization = collections.defaultdict(collections.Counter)
 
     # -- analyse musicale d'une mesure
     def bar_sim(self, a, b):
@@ -603,6 +624,10 @@ class Arranger:
         if n <= 2:                                     # mesure presque vide : peu de sens à « rouler »
             for k in ("roll", "sweep", "handtrill", "jump"):
                 w.pop(k, None)
+        # Ne pas tronquer le geste avant ce qui lui donne sa sensation propre.
+        for feel, minimum in (("relay_pair", 3), ("pedal_return", 4), ("turnaround", 5)):
+            if n < minimum:
+                w.pop(feel, None)
         return weighted(self.rng, w), shape
 
     # -- réalisation sous contraintes
@@ -688,6 +713,12 @@ class Arranger:
             if all(seq[i][0] != seq[i + 1][0] for i in range(len(seq) - 1)) and n >= 3:
                 self.alt_bars += 1
             placed = self.realize(playable, seq, holds_busy)
+            intended = {note[0]: gesture for note, gesture in zip(playable, seq)}
+            detail = self.realization[feel]
+            detail["requested"] += n
+            detail["placed"] += len(placed)
+            detail["preserved"] += sum(intended[b] == ("L" if lane in LEFT else "R", POS_OF[lane])
+                                       for b, lane, typ, extra in placed)
             out += placed + [x for x in items if x[2] not in ("TAP", "HOLD")]
             # Une reprise conserve son noyau initial : ne pas mémoriser sa variation
             # comme un nouveau modèle, et compter réellement ses occurrences.
@@ -1587,6 +1618,11 @@ def run(args, log=print):
         if arr:
             report.append("         personnalité : " + ", ".join(FEELS[k] for k in arr.favorites[:3]))
             report.append("         forme : " + ", ".join(f"{v} {k}" for k, v in arr.forms.most_common()))
+            for feel in ("pedal_return", "relay_pair", "turnaround"):
+                detail = arr.realization.get(feel)
+                if detail:
+                    report.append(f"         {FEELS[feel]} : {detail['preserved']}/{detail['requested']} gestes préservés, "
+                                  f"{detail['requested'] - detail['placed']} notes retirées par les contraintes")
         report.append(f"         fin : {getattr(comp, 'ending_desc', '?')}")
     if warnings:
         report += ["", "À vérifier :"] + [f"  - {w}" for w in warnings]

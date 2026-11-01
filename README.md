@@ -138,6 +138,9 @@ brew install ffmpeg            # or your package manager
 - `make map SONG=/path/track.ogg NAME=my_song` — automatic first draft from an audio file.
 - `make run CHART=assets/songs/my_song/normal.chart` — play it on the computer.
 
+For automatic song creation, read [the generation guide](tools/MAPPING_GUIDE.md): musical gestures,
+difficulty limits, tempo checks and deliberate travel-time choices. Generated difficulties need playtesting.
+
 ## For developers
 
 | Command | What it does |
