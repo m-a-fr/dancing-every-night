@@ -2762,6 +2762,52 @@
       "source_sha256": "d465f8cdb57e77babae824c6958299dd74060c1fbe86bf8e9e485c16be55f25c"
     },
     {
+      "id": "community-187",
+      "version": 1,
+      "title": "Gerudo Valley",
+      "artist": "Koji Kondo",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=0hEYvdMoF2g",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 168,
+          "bpm": 120.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 244,
+          "bpm": 120.0
+        },
+        {
+          "name": "HARD",
+          "notes": 365,
+          "bpm": 120.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 424,
+          "bpm": 120.0
+        }
+      ],
+      "duration_s": 175.0,
+      "size_bytes": 3698218,
+      "has_video": false,
+      "zip": "songs/community-187-v1.zip",
+      "zip_bytes": 3663121,
+      "sha256": "f51d715d2ae4b6e1a8e1b538bf7bd2ad762ff24aeb79cf9169eb68815972cad0",
+      "thumb": "thumbs/community-187-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 187,
+      "local_id": "popular8_gerudo",
+      "previous_objects": [],
+      "source_sha256": "653775f771a5fcd7838344e6b8ba89f8da0dc4b3d15c1a95ab350ae3da614204"
+    },
+    {
       "id": "community-110",
       "version": 1,
       "title": "GHOST",
