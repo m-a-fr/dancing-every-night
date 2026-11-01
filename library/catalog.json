@@ -2486,6 +2486,52 @@
       "source_sha256": "b54e26f516f55023c10e2e5eb16bd66c4cea0dd8d008a092f9916b604c3c7071"
     },
     {
+      "id": "community-197",
+      "version": 1,
+      "title": "departure! (TV Size)",
+      "artist": "Masatoshi Ono",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=faqmNf_fZlE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 93,
+          "bpm": 160.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 129,
+          "bpm": 160.0
+        },
+        {
+          "name": "HARD",
+          "notes": 197,
+          "bpm": 160.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 243,
+          "bpm": 160.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 10207626,
+      "has_video": true,
+      "zip": "songs/community-197-v1.zip",
+      "zip_bytes": 10156004,
+      "sha256": "e84b46fbff163a5108afb7b3ea9963a3c0d309c27986513ebaa38c67733c4714",
+      "thumb": "thumbs/community-197-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 197,
+      "local_id": "popular8_departure",
+      "previous_objects": [],
+      "source_sha256": "d301e3a008d193cab7a8a1a8d88188db99bab7abc4c41d88e78e28c4e85e21d1"
+    },
+    {
       "id": "community-21",
       "version": 1,
       "title": "Digital Native",
