@@ -33,6 +33,12 @@ Après chaque modification : **`make desktop` doit compiler sans warning**. Lanc
 avant de déclarer une fonctionnalité terminée. Ne jamais lancer `make deploy` sans que
 l'utilisateur l'ait demandé (la console doit être allumée et connectée).
 
+## Génération des chansons
+
+Avant de générer des difficultés ou de modifier le mapper, lire `tools/MAPPING_GUIDE.md`.
+Les gestes suivent la musique ; les limites validées restent prioritaires. Le trajet se choisit pour
+la sensation, sans vitesse imposée par niveau ou BPM (défaut : 1500 ms).
+
 ## Architecture
 
 ```

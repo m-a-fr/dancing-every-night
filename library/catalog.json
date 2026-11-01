@@ -324,6 +324,52 @@
       "source_sha256": "863ebcaaee2c619a54da3b498e33c31dd5945c5d009ab7ca8ab2aab21edb0c3f"
     },
     {
+      "id": "community-164",
+      "version": 1,
+      "title": "ambiguous",
+      "artist": "GARNiDELiA",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=K42ED-7PWAo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 292,
+          "bpm": 178.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 407,
+          "bpm": 178.0
+        },
+        {
+          "name": "HARD",
+          "notes": 556,
+          "bpm": 178.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 664,
+          "bpm": 178.0
+        }
+      ],
+      "duration_s": 269.7,
+      "size_bytes": 6064648,
+      "has_video": false,
+      "zip": "songs/community-164-v1.zip",
+      "zip_bytes": 6031678,
+      "sha256": "9a450c38f8e583863f97b9f5e4bf2938210e7e31bcd3a9cca4a2501ef37931ce",
+      "thumb": "thumbs/community-164-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 164,
+      "local_id": "popular7_ambiguous",
+      "previous_objects": [],
+      "source_sha256": "d65a2705c74ad7f985b45bd117423acda15efefa25642d8414d9b23730480112"
+    },
+    {
       "id": "community-92",
       "version": 1,
       "title": "Aoi Shiori (TV Size)",
@@ -600,6 +646,52 @@
       "source_sha256": "95a5be621fc8552efe73c75e73592a6d925fb862f78fef2845fbc94f8d70a2b7"
     },
     {
+      "id": "community-155",
+      "version": 1,
+      "title": "Baton Road (TV Size)",
+      "artist": "KANA-BOON",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=unR1h10HPsk",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 100,
+          "bpm": 162.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 134,
+          "bpm": 162.0
+        },
+        {
+          "name": "HARD",
+          "notes": 208,
+          "bpm": 162.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 244,
+          "bpm": 162.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 11910192,
+      "has_video": true,
+      "zip": "songs/community-155-v1.zip",
+      "zip_bytes": 11753157,
+      "sha256": "bd68ddd16922f0b72ddc34aa559e4a38e70dd66d21ba4ae6dd82a087829e1a60",
+      "thumb": "thumbs/community-155-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 155,
+      "local_id": "popular7_baton",
+      "previous_objects": [],
+      "source_sha256": "df51fbbe936f35018c09379de830f78d6d7216bffdc7dba868ee55d802f14b9c"
+    },
+    {
       "id": "community-16",
       "version": 1,
       "title": "Beatucada",
@@ -644,6 +736,52 @@
       "local_id": "launch_beatucada",
       "previous_objects": [],
       "source_sha256": "cc9f2e13184adbbe7c8d766c47bd7a4c92966abc145913e404b349b68245f648"
+    },
+    {
+      "id": "community-185",
+      "version": 1,
+      "title": "BIG SHOT",
+      "artist": "Toby Fox",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=V31PVkwzpEY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 139,
+          "bpm": 140.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 207,
+          "bpm": 140.0
+        },
+        {
+          "name": "HARD",
+          "notes": 306,
+          "bpm": 140.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 351,
+          "bpm": 140.0
+        }
+      ],
+      "duration_s": 146.9,
+      "size_bytes": 2891462,
+      "has_video": false,
+      "zip": "songs/community-185-v1.zip",
+      "zip_bytes": 2856278,
+      "sha256": "613003e03c28c5e5831126db515d8d3b45048f334ea11899918db84a8f82ca9a",
+      "thumb": "thumbs/community-185-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 185,
+      "local_id": "popular8_bigshot",
+      "previous_objects": [],
+      "source_sha256": "69e2830d27ac27b3a223e6f43ad31c977bf821ecc8bd419b1027c4847a1e151e"
     },
     {
       "id": "community-105",
@@ -784,6 +922,98 @@
       "source_sha256": "0f157382b962180413ebee2cf919324a9e41c8f57bc6daaacbe3b15e6009e085"
     },
     {
+      "id": "community-150",
+      "version": 1,
+      "title": "Bling-Bang-Bang-Born (TV Size)",
+      "artist": "Creepy Nuts",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=210R0ozmLwg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 89,
+          "bpm": 157.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 125,
+          "bpm": 157.0
+        },
+        {
+          "name": "HARD",
+          "notes": 207,
+          "bpm": 157.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 241,
+          "bpm": 157.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12509359,
+      "has_video": true,
+      "zip": "songs/community-150-v1.zip",
+      "zip_bytes": 12279541,
+      "sha256": "ed5ab3da4038acbaa24572131f0957a9f18d4217d3c14e1b6a87cb7c5b49e295",
+      "thumb": "thumbs/community-150-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 150,
+      "local_id": "popular7_bling",
+      "previous_objects": [],
+      "source_sha256": "5f17d19f77d5faa9c2410f5484f2b467bb63c54346585bc6cd4023c3a5c407b8"
+    },
+    {
+      "id": "community-169",
+      "version": 1,
+      "title": "BLOODY STREAM (TV Size)",
+      "artist": "Coda",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=e0yrZXSXTSg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 102,
+          "bpm": 132.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 137,
+          "bpm": 132.0
+        },
+        {
+          "name": "HARD",
+          "notes": 199,
+          "bpm": 132.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 231,
+          "bpm": 132.0
+        }
+      ],
+      "duration_s": 91.9,
+      "size_bytes": 12193530,
+      "has_video": true,
+      "zip": "songs/community-169-v1.zip",
+      "zip_bytes": 12059630,
+      "sha256": "c41b83c01828bd2ae0ba28c33dc7fe2c24254ea701a34e1ee56d67472e9eba03",
+      "thumb": "thumbs/community-169-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 169,
+      "local_id": "popular7_bloody",
+      "previous_objects": [],
+      "source_sha256": "5570e1e05c81c5958e3acacf6d46a51d8b97e7d611dd2d68c15a002dfeaf7856"
+    },
+    {
       "id": "community-123",
       "version": 1,
       "title": "Blue Bird (TV Size)",
@@ -876,6 +1106,52 @@
       "source_sha256": "7b98caedab4f9ca7858115b9d4300cac23980e77640ee1cffb46126921a61040"
     },
     {
+      "id": "community-159",
+      "version": 1,
+      "title": "Boku no Sensou (TV Size)",
+      "artist": "Shinsei Kamattechan",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Yopj_860hM4",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 88,
+          "bpm": 144.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 126,
+          "bpm": 144.0
+        },
+        {
+          "name": "HARD",
+          "notes": 189,
+          "bpm": 144.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 222,
+          "bpm": 144.0
+        }
+      ],
+      "duration_s": 91.0,
+      "size_bytes": 2040759,
+      "has_video": false,
+      "zip": "songs/community-159-v1.zip",
+      "zip_bytes": 2031488,
+      "sha256": "2abfcd6d33237f0ef532c68e18269fcc5da21afdf87bb5fb8e4839d1095394a5",
+      "thumb": "thumbs/community-159-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 159,
+      "local_id": "popular7_boku",
+      "previous_objects": [],
+      "source_sha256": "f5a1bb09f6016218728b68533f279a8149bc350d3b3ddec513b1a2587526feef"
+    },
+    {
       "id": "community-18",
       "version": 2,
       "title": "Bounded Quietude",
@@ -966,6 +1242,52 @@
       "local_id": "popular5_brain_power",
       "previous_objects": [],
       "source_sha256": "3f32c155791d1a2607c3445b2e1ea605401048c6ef6f2d971dfa4d5032258d0e"
+    },
+    {
+      "id": "community-166",
+      "version": 1,
+      "title": "Brave Shine (TV Size)",
+      "artist": "Aimer",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=plmXVrCKwnE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 99,
+          "bpm": 171.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 140,
+          "bpm": 171.0
+        },
+        {
+          "name": "HARD",
+          "notes": 204,
+          "bpm": 171.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 232,
+          "bpm": 171.0
+        }
+      ],
+      "duration_s": 90.2,
+      "size_bytes": 11976504,
+      "has_video": true,
+      "zip": "songs/community-166-v1.zip",
+      "zip_bytes": 11834382,
+      "sha256": "503ab573d0443195e5a1c0b8f9b6db5f69f8d6891fab5273ad2d866b60314570",
+      "thumb": "thumbs/community-166-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 166,
+      "local_id": "popular7_brave",
+      "previous_objects": [],
+      "source_sha256": "956b56755f835cefddce9c41d5096af9758119f4548f4f64adc0dd74ef9fdf16"
     },
     {
       "id": "community-106",
@@ -1704,6 +2026,52 @@
       "source_sha256": "8f8eb6494623b7d57fb45850d18b803ba3fdd9abaf7c264f13104fac176cc945"
     },
     {
+      "id": "community-158",
+      "version": 1,
+      "title": "Cry Baby (TV Size)",
+      "artist": "Official HIGE DANdism",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=2qbHikwRimU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 75,
+          "bpm": 100.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 125,
+          "bpm": 100.0
+        },
+        {
+          "name": "HARD",
+          "notes": 174,
+          "bpm": 100.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 222,
+          "bpm": 100.0
+        }
+      ],
+      "duration_s": 90.9,
+      "size_bytes": 12263251,
+      "has_video": true,
+      "zip": "songs/community-158-v1.zip",
+      "zip_bytes": 12088024,
+      "sha256": "9a68bf412bc63ffeeef4b29abf0ae9fe2ca1ed35fc75aae14581a8d39d59b274",
+      "thumb": "thumbs/community-158-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 158,
+      "local_id": "popular7_crybaby",
+      "previous_objects": [],
+      "source_sha256": "b769bcf63f726001b84c64b1d5b79b071e7bbf8cc55bcd1f10755d4c59abc6ad"
+    },
+    {
       "id": "community-49",
       "version": 1,
       "title": "crystallized",
@@ -1794,6 +2162,52 @@
       "local_id": "popular4_cthugha",
       "previous_objects": [],
       "source_sha256": "7f0957d46b94446f882c7d878144bd5b371e3fd8066d81b663568798f542abe6"
+    },
+    {
+      "id": "community-178",
+      "version": 1,
+      "title": "Cyaegha",
+      "artist": "USAO",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=OW8pMvedAtM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 158,
+          "bpm": 200.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 200,
+          "bpm": 200.0
+        },
+        {
+          "name": "HARD",
+          "notes": 274,
+          "bpm": 200.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 325,
+          "bpm": 200.0
+        }
+      ],
+      "duration_s": 142.3,
+      "size_bytes": 19507279,
+      "has_video": true,
+      "zip": "songs/community-178-v1.zip",
+      "zip_bytes": 19386067,
+      "sha256": "da7a190b0e3569cab94d3a369438d5780c7e0d2bc448516eaeebb59f14abb365",
+      "thumb": "thumbs/community-178-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 178,
+      "local_id": "popular7_cyaegha",
+      "previous_objects": [],
+      "source_sha256": "e9dce00eb4480d315a840f3b04e8f6bcb8a597e81432dace74696a901eb27303"
     },
     {
       "id": "community-130",
@@ -1934,6 +2348,52 @@
       "source_sha256": "1cefa83decadeb99d83b01c794cfa40d785e937a30e99723d2dfaa81d4873f76"
     },
     {
+      "id": "community-183",
+      "version": 1,
+      "title": "Death by Glamour",
+      "artist": "Toby Fox",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=qeDIZCc6Cyo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 124,
+          "bpm": 148.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 184,
+          "bpm": 148.0
+        },
+        {
+          "name": "HARD",
+          "notes": 268,
+          "bpm": 148.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 317,
+          "bpm": 148.0
+        }
+      ],
+      "duration_s": 138.7,
+      "size_bytes": 3034726,
+      "has_video": false,
+      "zip": "songs/community-183-v1.zip",
+      "zip_bytes": 3009829,
+      "sha256": "58f2a292300bc4a5f049ae7b0d7d58aa27bfbce16fa7392112ed98148f16d81a",
+      "thumb": "thumbs/community-183-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 183,
+      "local_id": "popular8_glamour",
+      "previous_objects": [],
+      "source_sha256": "b54e26f516f55023c10e2e5eb16bd66c4cea0dd8d008a092f9916b604c3c7071"
+    },
+    {
       "id": "community-21",
       "version": 1,
       "title": "Digital Native",
@@ -2024,6 +2484,52 @@
       "local_id": "popular5_diver",
       "previous_objects": [],
       "source_sha256": "da15d46d28cb22a5c4f6b7c64846652e4ad06b089dd3b772253d331ef45f7f7e"
+    },
+    {
+      "id": "community-175",
+      "version": 1,
+      "title": "DOKUZU",
+      "artist": "Nakiso feat. Kaai Yuki",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=5XehRIb81k8",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 105,
+          "bpm": 115.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 152,
+          "bpm": 115.0
+        },
+        {
+          "name": "HARD",
+          "notes": 246,
+          "bpm": 115.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 274,
+          "bpm": 115.0
+        }
+      ],
+      "duration_s": 118.7,
+      "size_bytes": 11038498,
+      "has_video": true,
+      "zip": "songs/community-175-v1.zip",
+      "zip_bytes": 10696306,
+      "sha256": "e4d99c1ae5d63786d541c467beda54f68f3026c64f718fc281a3670a3fae4c1f",
+      "thumb": "thumbs/community-175-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 175,
+      "local_id": "popular7_dokuzu",
+      "previous_objects": [],
+      "source_sha256": "3af5aeb6325360a38fab650f8a9d0201e9c4056dcdba1af7224698aa8d63f35c"
     },
     {
       "id": "community-131",
@@ -2210,6 +2716,98 @@
       "source_sha256": "ca8e289d6f0b6c4720a7ce65f7736595bda16e3f59cb6eb29b0394401204f748"
     },
     {
+      "id": "community-177",
+      "version": 1,
+      "title": "Garakuta Doll Play",
+      "artist": "t+pazolite",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=GDIC4O8po-U",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 188,
+          "bpm": 256.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 231,
+          "bpm": 256.0
+        },
+        {
+          "name": "HARD",
+          "notes": 255,
+          "bpm": 256.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 295,
+          "bpm": 256.0
+        }
+      ],
+      "duration_s": 129.3,
+      "size_bytes": 3038444,
+      "has_video": false,
+      "zip": "songs/community-177-v1.zip",
+      "zip_bytes": 3017880,
+      "sha256": "64a7f9a40e0a95c471f9408f4b496defe1141d7117d555214ddcc57c2baf8bba",
+      "thumb": "thumbs/community-177-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 177,
+      "local_id": "popular7_garakuta",
+      "previous_objects": [],
+      "source_sha256": "d465f8cdb57e77babae824c6958299dd74060c1fbe86bf8e9e485c16be55f25c"
+    },
+    {
+      "id": "community-187",
+      "version": 1,
+      "title": "Gerudo Valley",
+      "artist": "Koji Kondo",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=0hEYvdMoF2g",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 168,
+          "bpm": 120.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 244,
+          "bpm": 120.0
+        },
+        {
+          "name": "HARD",
+          "notes": 365,
+          "bpm": 120.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 424,
+          "bpm": 120.0
+        }
+      ],
+      "duration_s": 175.0,
+      "size_bytes": 3698218,
+      "has_video": false,
+      "zip": "songs/community-187-v1.zip",
+      "zip_bytes": 3663121,
+      "sha256": "f51d715d2ae4b6e1a8e1b538bf7bd2ad762ff24aeb79cf9169eb68815972cad0",
+      "thumb": "thumbs/community-187-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 187,
+      "local_id": "popular8_gerudo",
+      "previous_objects": [],
+      "source_sha256": "653775f771a5fcd7838344e6b8ba89f8da0dc4b3d15c1a95ab350ae3da614204"
+    },
+    {
       "id": "community-110",
       "version": 1,
       "title": "GHOST",
@@ -2300,6 +2898,144 @@
       "local_id": "popular5_go",
       "previous_objects": [],
       "source_sha256": "92cf624911628ba7d4ad8634cee58b7e9f4d5e0f1dcbf6ed3795a33d2a72234b"
+    },
+    {
+      "id": "community-174",
+      "version": 1,
+      "title": "Goodbye Sengen",
+      "artist": "Chinozo feat. flower",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=dHXC_ahjtEE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 174,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 250,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 390,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 442,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 176.5,
+      "size_bytes": 13103814,
+      "has_video": true,
+      "zip": "songs/community-174-v1.zip",
+      "zip_bytes": 12045311,
+      "sha256": "7a6fa2adbd9c2c7d2efee9eab43431dd7297cab5aeaff49c02d48d9dfe339148",
+      "thumb": "thumbs/community-174-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 174,
+      "local_id": "popular7_goodbye",
+      "previous_objects": [],
+      "source_sha256": "a2862a266d4c59e0bd95f94e456960d163e3383850e6eff0a6b6896640d24fdc"
+    },
+    {
+      "id": "community-170",
+      "version": 1,
+      "title": "Great Days (TV Size)",
+      "artist": "Karen Aoki & Daisuke Hasegawa",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Zx_rFZhJCB0",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 84,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 115,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 184,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 217,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 84.0,
+      "size_bytes": 11338723,
+      "has_video": true,
+      "zip": "songs/community-170-v1.zip",
+      "zip_bytes": 11222847,
+      "sha256": "fe44f66d5da60970cc71e490fa6986d5342e26cccaa8853548e4b043b1f25bf4",
+      "thumb": "thumbs/community-170-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 170,
+      "local_id": "popular7_great",
+      "previous_objects": [],
+      "source_sha256": "1d9cfd7dff4e2dcb2eb38091eb318e1a1e69bbc2876a8c9f6c8b56dbb5d21214"
+    },
+    {
+      "id": "community-179",
+      "version": 1,
+      "title": "Grievous Lady",
+      "artist": "Team Grimoire vs Laur",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Eax2zhVA0Zo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 165,
+          "bpm": 210.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 192,
+          "bpm": 210.0
+        },
+        {
+          "name": "HARD",
+          "notes": 283,
+          "bpm": 210.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 320,
+          "bpm": 210.0
+        }
+      ],
+      "duration_s": 141.3,
+      "size_bytes": 3668647,
+      "has_video": false,
+      "zip": "songs/community-179-v1.zip",
+      "zip_bytes": 3644702,
+      "sha256": "c4222a097e0db596629380be6f70a4079ead39173eba76ccfbd8e59006af5944",
+      "thumb": "thumbs/community-179-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 179,
+      "local_id": "popular7_grievous",
+      "previous_objects": [],
+      "source_sha256": "b18d8f092ffe5a8580d86bbb1b53f24e98a62008ee3c67984584ba65799a2884"
     },
     {
       "id": "community-111",
@@ -2530,6 +3266,52 @@
       "local_id": "popular3_hanipaganda",
       "previous_objects": [],
       "source_sha256": "1647b5ca271d0f34bbae9f9e6b116af8bde68f336a133534ca10170b7d037f44"
+    },
+    {
+      "id": "community-153",
+      "version": 1,
+      "title": "Haru (TV Size)",
+      "artist": "Yorushika",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=iqsnJJK8GA4",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 66,
+          "bpm": 102.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 101,
+          "bpm": 102.0
+        },
+        {
+          "name": "HARD",
+          "notes": 146,
+          "bpm": 102.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 183,
+          "bpm": 102.0
+        }
+      ],
+      "duration_s": 93.1,
+      "size_bytes": 12293828,
+      "has_video": true,
+      "zip": "songs/community-153-v1.zip",
+      "zip_bytes": 12051262,
+      "sha256": "572ddc4163607ecdcf60d825bd6e8259dca15c912552f19c1fe41dd07e740e79",
+      "thumb": "thumbs/community-153-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 153,
+      "local_id": "popular7_hare",
+      "previous_objects": [],
+      "source_sha256": "248c9c1b02704a151bdd0252071063ff02c914039f0f12493ac67666f154bdfb"
     },
     {
       "id": "community-135",
@@ -2898,6 +3680,98 @@
       "local_id": "popular5_smile_bomb",
       "previous_objects": [],
       "source_sha256": "cc51acdc868d57175874d231f67457d6fac0d08cc01b77bd17e4090a22ccc94b"
+    },
+    {
+      "id": "community-182",
+      "version": 1,
+      "title": "Hopes and Dreams",
+      "artist": "Toby Fox",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=wbO3p7_Mf30",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 187,
+          "bpm": 170.68
+        },
+        {
+          "name": "NORMAL",
+          "notes": 254,
+          "bpm": 170.68
+        },
+        {
+          "name": "HARD",
+          "notes": 370,
+          "bpm": 170.68
+        },
+        {
+          "name": "EXPERT",
+          "notes": 413,
+          "bpm": 170.68
+        }
+      ],
+      "duration_s": 184.9,
+      "size_bytes": 3750089,
+      "has_video": false,
+      "zip": "songs/community-182-v1.zip",
+      "zip_bytes": 3708329,
+      "sha256": "8ba78463fe0cc4cc22ce520be06a23ac4d39beacbe2a83fb730902272dea1e51",
+      "thumb": "thumbs/community-182-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 182,
+      "local_id": "popular8_hopes",
+      "previous_objects": [],
+      "source_sha256": "3b11d0f8b6b8e1189b4458f1bed26e548317444055e25454e0a67354ac49d676"
+    },
+    {
+      "id": "community-167",
+      "version": 1,
+      "title": "ideal white",
+      "artist": "Mashiro Ayano",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=-P_B2AC5WJM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 279,
+          "bpm": 180.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 386,
+          "bpm": 180.0
+        },
+        {
+          "name": "HARD",
+          "notes": 533,
+          "bpm": 180.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 659,
+          "bpm": 180.0
+        }
+      ],
+      "duration_s": 260.1,
+      "size_bytes": 21963412,
+      "has_video": true,
+      "zip": "songs/community-167-v1.zip",
+      "zip_bytes": 21334708,
+      "sha256": "22b6b608ccb8cb58d17a1a3f4c050b2eacbb20e8693eb4605d2f4b8ef98af24a",
+      "thumb": "thumbs/community-167-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 167,
+      "local_id": "popular7_ideal",
+      "previous_objects": [],
+      "source_sha256": "a0037af7dc35adc5dbead16c5a8fdbdbceb6dd061cff3f3030b4f067fef2646e"
     },
     {
       "id": "community-35",
@@ -3636,6 +4510,52 @@
       "source_sha256": "0b8a7bd3eab11bd25c808784c5ac6bc7b0486ec592d71132cc7e972712126b31"
     },
     {
+      "id": "community-176",
+      "version": 1,
+      "title": "Libera me from hell",
+      "artist": "Taku Iwasaki",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=mLHX6n9EoAs",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 213,
+          "bpm": 100.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 347,
+          "bpm": 100.0
+        },
+        {
+          "name": "HARD",
+          "notes": 493,
+          "bpm": 100.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 628,
+          "bpm": 100.0
+        }
+      ],
+      "duration_s": 295.9,
+      "size_bytes": 6223097,
+      "has_video": false,
+      "zip": "songs/community-176-v1.zip",
+      "zip_bytes": 6182610,
+      "sha256": "29a2f42e3f62f7d8859dd899cd622ab0d0eb9b65cd8f7a50cdb3bc096f2dc37d",
+      "thumb": "thumbs/community-176-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 176,
+      "local_id": "popular7_libera",
+      "previous_objects": [],
+      "source_sha256": "70fced2596ffbb65a10fe0f355f66a4a7992b7e45880aa89dc76b60caf7dbc3c"
+    },
+    {
       "id": "community-74",
       "version": 1,
       "title": "Lost One's Weeping",
@@ -3818,6 +4738,52 @@
       "local_id": "popular_marshmary",
       "previous_objects": [],
       "source_sha256": "c8b80811e37868d3e1549ac1803d509ed800ce96083f5cdd7e21e26058994899"
+    },
+    {
+      "id": "community-181",
+      "version": 1,
+      "title": "MEGALOVANIA",
+      "artist": "Toby Fox",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=KK3KXAECte4",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 139,
+          "bpm": 120.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 228,
+          "bpm": 120.0
+        },
+        {
+          "name": "HARD",
+          "notes": 320,
+          "bpm": 120.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 374,
+          "bpm": 120.0
+        }
+      ],
+      "duration_s": 160.2,
+      "size_bytes": 3406750,
+      "has_video": false,
+      "zip": "songs/community-181-v1.zip",
+      "zip_bytes": 3373095,
+      "sha256": "e051e64a74f2f72ade4f3b6e53cc37c2b0bd6dc3f475b5cc3150ac498b275995",
+      "thumb": "thumbs/community-181-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 181,
+      "local_id": "popular8_megalovania",
+      "previous_objects": [],
+      "source_sha256": "4b1ed1b408a7cdd8b7f04e4028900cc86320592f4d5891dbe0d0a15a4416342f"
     },
     {
       "id": "community-77",
@@ -4556,6 +5522,52 @@
       "source_sha256": "c940d658ac96b83c93e6692ce5ff29ef725102625640cf711dafcd275bb46f9e"
     },
     {
+      "id": "community-151",
+      "version": 1,
+      "title": "Otonoke (TV Size)",
+      "artist": "Creepy Nuts",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Nw_XzGZ35As",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 101,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 139,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 224,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 255,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12478660,
+      "has_video": true,
+      "zip": "songs/community-151-v1.zip",
+      "zip_bytes": 12231648,
+      "sha256": "af1d5dcac9dbd40fef27e1303112a031b8993b17d815a3da2e35b03b2b53b212",
+      "thumb": "thumbs/community-151-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 151,
+      "local_id": "popular7_otonoke",
+      "previous_objects": [],
+      "source_sha256": "7dd056335c510fe1db0efe48ec3cbb346376e4b06254afe0eca8cce23f695cb6"
+    },
+    {
       "id": "community-81",
       "version": 1,
       "title": "Overdrive (PV Edit)",
@@ -4832,6 +5844,52 @@
       "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
     },
     {
+      "id": "community-180",
+      "version": 1,
+      "title": "PUPA",
+      "artist": "Morimori Atsushi",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=LFcKV42U3wA",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 146,
+          "bpm": 202.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 179,
+          "bpm": 202.0
+        },
+        {
+          "name": "HARD",
+          "notes": 245,
+          "bpm": 202.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 271,
+          "bpm": 202.0
+        }
+      ],
+      "duration_s": 131.6,
+      "size_bytes": 17319994,
+      "has_video": true,
+      "zip": "songs/community-180-v1.zip",
+      "zip_bytes": 16932371,
+      "sha256": "dcaf8a56ddf2fb13b9b6cb0559e4a1d71089e45f1e87175150cbda0e6114994b",
+      "thumb": "thumbs/community-180-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 180,
+      "local_id": "popular7_pupa",
+      "previous_objects": [],
+      "source_sha256": "8495d75af5032a9278638e3646314922a5e0cc4f5f4c96623e2ac6623351a796"
+    },
+    {
       "id": "community-44",
       "version": 1,
       "title": "quaver",
@@ -4876,6 +5934,52 @@
       "local_id": "popular_quaver",
       "previous_objects": [],
       "source_sha256": "1012e1bbad997752a8e6abd09915b1c915f830973ab010dc502430147c98ed1a"
+    },
+    {
+      "id": "community-172",
+      "version": 1,
+      "title": "Rabbit Hole",
+      "artist": "DECO*27 feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=eSW2LVbPThw",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 172,
+          "bpm": 173.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 247,
+          "bpm": 173.0
+        },
+        {
+          "name": "HARD",
+          "notes": 351,
+          "bpm": 173.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 421,
+          "bpm": 173.0
+        }
+      ],
+      "duration_s": 162.1,
+      "size_bytes": 22020470,
+      "has_video": true,
+      "zip": "songs/community-172-v1.zip",
+      "zip_bytes": 21664654,
+      "sha256": "682e57464c906f5e603f03bb1963e24f2f9dade40dd0c3d96c147eef1def2426",
+      "thumb": "thumbs/community-172-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 172,
+      "local_id": "popular7_rabbit",
+      "previous_objects": [],
+      "source_sha256": "b27451d079d955c7350cefeee78f4fe7473e82da9d775c45fbca904114e98888"
     },
     {
       "id": "community-57",
@@ -4968,6 +6072,52 @@
       "local_id": "popular4_realize",
       "previous_objects": [],
       "source_sha256": "de7c49bc2b0595334464ac785bf3160cead89d70e99db6f9f620b0ac05017765"
+    },
+    {
+      "id": "community-161",
+      "version": 1,
+      "title": "Red Swan (TV Size)",
+      "artist": "YOSHIKI feat. HYDE",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=IjwuJT6q54s",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 86,
+          "bpm": 132.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 129,
+          "bpm": 132.0
+        },
+        {
+          "name": "HARD",
+          "notes": 184,
+          "bpm": 132.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 220,
+          "bpm": 132.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 12141565,
+      "has_video": true,
+      "zip": "songs/community-161-v1.zip",
+      "zip_bytes": 12013548,
+      "sha256": "59031c3717d428a62cec2cd60b9f189255617341f043f77aba0827dc2b13d0e9",
+      "thumb": "thumbs/community-161-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 161,
+      "local_id": "popular7_red",
+      "previous_objects": [],
+      "source_sha256": "030419986b2297591467d583a5b289b5cc3522018c49412215d1acd447a545f2"
     },
     {
       "id": "community-97",
@@ -5200,6 +6350,52 @@
       "source_sha256": "a46d546fe60ede4651833bb44107c6d40d42312060131d5b9f1b9e02aacfaab0"
     },
     {
+      "id": "community-171",
+      "version": 1,
+      "title": "Seishun Complex (TV Size)",
+      "artist": "Kessoku Band",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Yd8kUoB72xU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 99,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 138,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 190,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 227,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 11873841,
+      "has_video": true,
+      "zip": "songs/community-171-v1.zip",
+      "zip_bytes": 11601382,
+      "sha256": "7405aad451f3361aec9f000b17fec97e7b61457d6f91d6a447bb11dcbac2aef9",
+      "thumb": "thumbs/community-171-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 171,
+      "local_id": "popular7_seishun",
+      "previous_objects": [],
+      "source_sha256": "10f7a6acb78d33f36dfbedb1f6303217a833bf8aa0b934cbbe17f4f8488e3e2d"
+    },
+    {
       "id": "community-37",
       "version": 1,
       "title": "Shinzou wo Sasageyo! (TV Size)",
@@ -5244,6 +6440,52 @@
       "local_id": "popular_shinzou",
       "previous_objects": [],
       "source_sha256": "6748fa7a36da1c1cfb874c64a81258f9727fb0e7679d0dc16701d561f9004187"
+    },
+    {
+      "id": "community-162",
+      "version": 1,
+      "title": "Shoukei to Shikabane no Michi (TV Size)",
+      "artist": "Linked Horizon",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=5IdD-y4KKVA",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 90,
+          "bpm": 178.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 125,
+          "bpm": 178.0
+        },
+        {
+          "name": "HARD",
+          "notes": 174,
+          "bpm": 178.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 216,
+          "bpm": 178.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12207619,
+      "has_video": true,
+      "zip": "songs/community-162-v1.zip",
+      "zip_bytes": 12102822,
+      "sha256": "2ec54092913620010179cd408a22144d36db85f81a95979482da0f8b3f3f8678",
+      "thumb": "thumbs/community-162-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 162,
+      "local_id": "popular7_shoukei",
+      "previous_objects": [],
+      "source_sha256": "6b1a0ad4ed79e60e9c31eafa7b918e294f0286d484f5f53a08990b818fd946d3"
     },
     {
       "id": "community-145",
@@ -5338,6 +6580,52 @@
       "source_sha256": "d5e9e165f802bec290379cc1cb02cfaba048ffbc964729cc58f7be2456d442cc"
     },
     {
+      "id": "community-165",
+      "version": 1,
+      "title": "Sirius (TV Size)",
+      "artist": "Eir Aoi",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Np0se7yKRBU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 92,
+          "bpm": 176.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 137,
+          "bpm": 176.0
+        },
+        {
+          "name": "HARD",
+          "notes": 192,
+          "bpm": 176.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 224,
+          "bpm": 176.0
+        }
+      ],
+      "duration_s": 89.9,
+      "size_bytes": 11998805,
+      "has_video": true,
+      "zip": "songs/community-165-v1.zip",
+      "zip_bytes": 11784795,
+      "sha256": "24b2c5c7fbf2c5fcdb5be3a2fc70aa4335d9669c64b1e115a41a9f5e73a3ae5f",
+      "thumb": "thumbs/community-165-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 165,
+      "local_id": "popular7_sirius",
+      "previous_objects": [],
+      "source_sha256": "34a0b9396dd6917d6b1cc94ac6721046922f87b7d7e595d4e6e78b09d9c41712"
+    },
+    {
       "id": "community-15",
       "version": 1,
       "title": "Some Things Must (OutFox Edit)",
@@ -5382,6 +6670,190 @@
       "local_id": "launch_some_things_must",
       "previous_objects": [],
       "source_sha256": "1a56db711b9e5908d59fc8b353f3eefdb56d5a157eede932547b132c6389f356"
+    },
+    {
+      "id": "community-163",
+      "version": 1,
+      "title": "Sorairo Days (TV Size)",
+      "artist": "Shoko Nakagawa",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=vH0GSgotke0",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 97,
+          "bpm": 174.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 138,
+          "bpm": 174.0
+        },
+        {
+          "name": "HARD",
+          "notes": 186,
+          "bpm": 174.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 227,
+          "bpm": 174.0
+        }
+      ],
+      "duration_s": 91.1,
+      "size_bytes": 11694759,
+      "has_video": true,
+      "zip": "songs/community-163-v1.zip",
+      "zip_bytes": 11549736,
+      "sha256": "c3787608a06371d8eaa784639d2ee2028956a868daf3e344ca16eb552624eb04",
+      "thumb": "thumbs/community-163-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 163,
+      "local_id": "popular7_sorairo",
+      "previous_objects": [],
+      "source_sha256": "5cc4f6207319803724a25495d917aaa242a376002f2765b32bc9b0b6d3218803"
+    },
+    {
+      "id": "community-154",
+      "version": 1,
+      "title": "SPECIALZ (TV Size)",
+      "artist": "King Gnu",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=5yb2N3pnztU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 85,
+          "bpm": 117.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 130,
+          "bpm": 117.0
+        },
+        {
+          "name": "HARD",
+          "notes": 187,
+          "bpm": 117.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 215,
+          "bpm": 117.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12013491,
+      "has_video": true,
+      "zip": "songs/community-154-v1.zip",
+      "zip_bytes": 11833430,
+      "sha256": "f41293e69a8b4ea3a3989a056c8d9c04417cf9593b5b206add101be34ab3df38",
+      "thumb": "thumbs/community-154-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 154,
+      "local_id": "popular7_specialz",
+      "previous_objects": [],
+      "source_sha256": "48bcfc8fbd2a18d07771f0d549137d99ada37fd26ec608d78137ba5d0e9c4b68"
+    },
+    {
+      "id": "community-184",
+      "version": 1,
+      "title": "Spider Dance",
+      "artist": "Toby Fox",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=5qZqqUgb1Rw",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 129,
+          "bpm": 230.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 159,
+          "bpm": 230.0
+        },
+        {
+          "name": "HARD",
+          "notes": 209,
+          "bpm": 230.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 244,
+          "bpm": 230.0
+        }
+      ],
+      "duration_s": 110.1,
+      "size_bytes": 2272351,
+      "has_video": false,
+      "zip": "songs/community-184-v1.zip",
+      "zip_bytes": 2207876,
+      "sha256": "89f57faf227a8a3322b0f2e04155ef78e956dadee22334cd3ac279b184484880",
+      "thumb": "thumbs/community-184-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 184,
+      "local_id": "popular8_spider",
+      "previous_objects": [],
+      "source_sha256": "d21e333dd548d23f4cf29d2cd017bb1df612b8ecdfef14d782bfbe1b980314e4"
+    },
+    {
+      "id": "community-186",
+      "version": 1,
+      "title": "Stickerbush Symphony",
+      "artist": "David Wise",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=mdPlcKg-qFs",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 221,
+          "bpm": 98.43
+        },
+        {
+          "name": "NORMAL",
+          "notes": 348,
+          "bpm": 98.43
+        },
+        {
+          "name": "HARD",
+          "notes": 509,
+          "bpm": 98.43
+        },
+        {
+          "name": "EXPERT",
+          "notes": 655,
+          "bpm": 98.43
+        }
+      ],
+      "duration_s": 263.1,
+      "size_bytes": 4995391,
+      "has_video": false,
+      "zip": "songs/community-186-v1.zip",
+      "zip_bytes": 4948197,
+      "sha256": "aadc93561c7ad4fd7c6a2fac96ac1a3ac76206c07a2a22cfac18e6a692fb699d",
+      "thumb": "thumbs/community-186-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 186,
+      "local_id": "popular8_stickerbush",
+      "previous_objects": [],
+      "source_sha256": "4163e7c15189cb4f626ea4025ad3606f410c466ec78c94136d275f6a0329b12b"
     },
     {
       "id": "community-13",
@@ -5660,6 +7132,98 @@
       "source_sha256": "19eed6d58bb051848d1c2cac45f6a25cc7c82d9c510c578df7b4a3061fa2c71f"
     },
     {
+      "id": "community-160",
+      "version": 1,
+      "title": "The Rumbling (TV Size)",
+      "artist": "SiM",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=2S4qGKmzBJE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 88,
+          "bpm": 145.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 140,
+          "bpm": 145.0
+        },
+        {
+          "name": "HARD",
+          "notes": 191,
+          "bpm": 145.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 216,
+          "bpm": 145.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12493395,
+      "has_video": true,
+      "zip": "songs/community-160-v1.zip",
+      "zip_bytes": 12265366,
+      "sha256": "765c94a13dc7ec9b1e44d240ebdf47c7f0fbf20d5bcfbccb97c86980d33f9fed",
+      "thumb": "thumbs/community-160-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 160,
+      "local_id": "popular7_rumbling",
+      "previous_objects": [],
+      "source_sha256": "a700ac2a2ef71b1a823048d83c4f239eb4d4da02c05e748b4016f427d2e8e91b"
+    },
+    {
+      "id": "community-173",
+      "version": 1,
+      "title": "The Vampire",
+      "artist": "DECO*27 feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=e1xCOsgWG0M",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 189,
+          "bpm": 164.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 276,
+          "bpm": 164.0
+        },
+        {
+          "name": "HARD",
+          "notes": 401,
+          "bpm": 164.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 473,
+          "bpm": 164.0
+        }
+      ],
+      "duration_s": 180.0,
+      "size_bytes": 24786813,
+      "has_video": true,
+      "zip": "songs/community-173-v1.zip",
+      "zip_bytes": 24211709,
+      "sha256": "fd02c0c69bb2d6c00f7ae8cedf7ffe150af59aaeb30f1c13c7348ef7e95459b9",
+      "thumb": "thumbs/community-173-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 173,
+      "local_id": "popular7_vampire",
+      "previous_objects": [],
+      "source_sha256": "23385a0ebd217127ab8cc7a5bd270d0ed50847caf8f379c2c11bd64b959c4ec3"
+    },
+    {
       "id": "community-99",
       "version": 1,
       "title": "This game (TV Size)",
@@ -5936,6 +7500,98 @@
       "source_sha256": "9c42bff918132afd31bff1d0031d4e795aae08ff08f3ca0b8408e17cb52ade97"
     },
     {
+      "id": "community-168",
+      "version": 1,
+      "title": "Uragirimono no Requiem (TV Size)",
+      "artist": "Daisuke Hasegawa",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=kbjr3JIuOtY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 94,
+          "bpm": 168.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 134,
+          "bpm": 168.0
+        },
+        {
+          "name": "HARD",
+          "notes": 188,
+          "bpm": 168.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 224,
+          "bpm": 168.0
+        }
+      ],
+      "duration_s": 94.1,
+      "size_bytes": 12514634,
+      "has_video": true,
+      "zip": "songs/community-168-v1.zip",
+      "zip_bytes": 12344613,
+      "sha256": "2af0297a838bb80cd090d7a6df86717c65df7b065f81da7483d9142758c111fe",
+      "thumb": "thumbs/community-168-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 168,
+      "local_id": "popular7_gurenge2",
+      "previous_objects": [],
+      "source_sha256": "49caf90e8f8f7e439a949270ba47ec20196ad0d135b65c4ef012760f1401bcda"
+    },
+    {
+      "id": "community-156",
+      "version": 1,
+      "title": "VIVID VICE (TV Size)",
+      "artist": "Who-ya Extended",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=8nNujr378EA",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 103,
+          "bpm": 184.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 132,
+          "bpm": 184.0
+        },
+        {
+          "name": "HARD",
+          "notes": 184,
+          "bpm": 184.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 232,
+          "bpm": 184.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 12475202,
+      "has_video": true,
+      "zip": "songs/community-156-v1.zip",
+      "zip_bytes": 12292137,
+      "sha256": "d224770af3018c40845ea2b57254c069ab19b15647661a6e4d9f9e39c9756816",
+      "thumb": "thumbs/community-156-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 156,
+      "local_id": "popular7_vivid",
+      "previous_objects": [],
+      "source_sha256": "1e98bbf1c9e6e6b36de9e593ef0d68abf0774b32c48b7d5df928266e437a73bb"
+    },
+    {
       "id": "community-101",
       "version": 1,
       "title": "VORACITY (TV Size)",
@@ -6164,6 +7820,52 @@
       "local_id": "popular_yoru_ni_kakeru",
       "previous_objects": [],
       "source_sha256": "62e1421b3d4ab67538f02a51b4a0cdd298be940d608c4ccd56d53f85140b216b"
+    },
+    {
+      "id": "community-152",
+      "version": 1,
+      "title": "Yuusha (TV Size)",
+      "artist": "YOASOBI",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=QoGM9hCxr4k",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 75,
+          "bpm": 104.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 116,
+          "bpm": 104.0
+        },
+        {
+          "name": "HARD",
+          "notes": 173,
+          "bpm": 104.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 218,
+          "bpm": 104.0
+        }
+      ],
+      "duration_s": 93.0,
+      "size_bytes": 12211349,
+      "has_video": true,
+      "zip": "songs/community-152-v1.zip",
+      "zip_bytes": 11873870,
+      "sha256": "6dc2f8ba8a00761597f40c6dcf32e3bb5c64effbc6d3bfd502a811559572bb02",
+      "thumb": "thumbs/community-152-v1.jpg",
+      "added": "2026-10-30",
+      "updated": "2026-10-30",
+      "submitter": "DocteurBob",
+      "issue": 152,
+      "local_id": "popular7_yusha",
+      "previous_objects": [],
+      "source_sha256": "1e88fc21a3146620fe8a012bc2db48ed77918eaaf72d657d55a7a8c1dd361e28"
     },
     {
       "id": "community-103",

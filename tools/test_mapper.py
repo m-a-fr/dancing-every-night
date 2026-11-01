@@ -1,9 +1,26 @@
 """Regression checks for musical motif memory and per-difficulty travel time."""
 import unittest
+import random
 from types import SimpleNamespace
 import mapper
 
 class ArrangerTests(unittest.TestCase):
+    def test_new_gestures_have_distinct_touch_relations(self):
+        def seq(feel):return mapper.feel_template(feel,6,'L',0,random.Random(1))
+        pedal,relay,turn=map(seq,('pedal_return','relay_pair','turnaround'))
+        self.assertEqual(pedal[0],pedal[2])
+        self.assertNotEqual(pedal[0],pedal[1])
+        self.assertEqual(relay[1],relay[2])
+        self.assertNotEqual(relay[0][0],relay[1][0])
+        self.assertEqual(turn[0],turn[4])
+        self.assertEqual(turn[1][0],turn[2][0])
+        self.assertEqual(len({tuple(pedal),tuple(relay),tuple(turn)}),3)
+
+    def test_incomplete_gestures_are_not_selected(self):
+        a=self.arranger()
+        for n,forbidden in ((2,{'pedal_return','relay_pair','turnaround'}),(3,{'pedal_return','turnaround'}),(4,{'turnaround'})):
+            for i in range(100):self.assertNotIn(a.choose_feel(0,4,n,False)[0],forbidden)
+
     def arranger(self, similarity=1.0):
         song=SimpleNamespace(bpm=120,meter=4,bar0=0,sim=lambda a,b,n:similarity,
                              slot=lambda b:{'P':60,'V':False,'K':0.,'S':0.,'E':1.})
