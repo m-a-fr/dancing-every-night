@@ -6534,6 +6534,52 @@
       "source_sha256": "7a79f417b2a140835212eb43c350f86a602c5bb615962dc6b8754be9bfe71010"
     },
     {
+      "id": "community-193",
+      "version": 1,
+      "title": "Rivers In the Desert",
+      "artist": "Lyn",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=lvuHvXsZPrk",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 315,
+          "bpm": 130.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 447,
+          "bpm": 130.0
+        },
+        {
+          "name": "HARD",
+          "notes": 667,
+          "bpm": 130.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 757,
+          "bpm": 130.0
+        }
+      ],
+      "duration_s": 315.0,
+      "size_bytes": 7557221,
+      "has_video": false,
+      "zip": "songs/community-193-v1.zip",
+      "zip_bytes": 7524328,
+      "sha256": "f3a368f7bf4b08811dbf8beebc6722474ae618d22dad99a1c0db8a79fa5bf968",
+      "thumb": "thumbs/community-193-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 193,
+      "local_id": "popular8_rivers",
+      "previous_objects": [],
+      "source_sha256": "8657265d697c04b8f9cdc3dda60ca0d298c7dcf46c9ab87a455f401d0ecc602e"
+    },
+    {
       "id": "community-85",
       "version": 1,
       "title": "Scream out!",
