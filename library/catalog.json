@@ -4694,6 +4694,52 @@
       "source_sha256": "8009d9ef7d4a7ba80b0cfbf75ca5778600aa18b4dba9189fcc2066656fd6b1be"
     },
     {
+      "id": "community-202",
+      "version": 1,
+      "title": "KIZUNA MUSIC (TV Size)",
+      "artist": "Poppin'Party",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=0aBsD9jpL5I",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 103,
+          "bpm": 189.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 142,
+          "bpm": 189.0
+        },
+        {
+          "name": "HARD",
+          "notes": 196,
+          "bpm": 189.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 240,
+          "bpm": 189.0
+        }
+      ],
+      "duration_s": 96.3,
+      "size_bytes": 11187500,
+      "has_video": true,
+      "zip": "songs/community-202-v1.zip",
+      "zip_bytes": 11167208,
+      "sha256": "9a0302aa555dd504635336c0b4689b6bb4ed13cf74fbe870a6c03a8f38515419",
+      "thumb": "thumbs/community-202-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 202,
+      "local_id": "popular8_kizuna",
+      "previous_objects": [],
+      "source_sha256": "9082511bb48d92c67a6d265b257e90c329e44b322be93e5306f5ca5aeb998805"
+    },
+    {
       "id": "community-72",
       "version": 1,
       "title": "Konton Boogie",
