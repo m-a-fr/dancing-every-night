@@ -96,7 +96,7 @@ if(VITA)
   endif()
 
   # Annonce des mises à jour (src/update.c) : libcurl + OpenSSL (VitaSDK) pour le HTTPS actuel ; quelle que soit la façon dont SDL2 a été trouvée
-  target_link_libraries(${PROJECT_NAME} curl ssl crypto zstd z SceNet_stub SceNetCtl_stub SceSysmodule_stub)
+  target_link_libraries(${PROJECT_NAME} curl ssl crypto zstd z pthread SceNet_stub SceNetCtl_stub SceSysmodule_stub)
   # Vidéos H.264 : décodeur matériel (src/video_h264_vita.c)
   target_link_libraries(${PROJECT_NAME} SceVideodec_stub)
 
