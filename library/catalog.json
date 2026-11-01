@@ -3130,6 +3130,52 @@
       "source_sha256": "c9cc40eb221c6faae477009962552586430c03025fea900e655a189dae69f6fd"
     },
     {
+      "id": "community-188",
+      "version": 1,
+      "title": "Gusty Garden Galaxy",
+      "artist": "Mahito Yokota",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=1bvDHAUv2ak",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 214,
+          "bpm": 152.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 285,
+          "bpm": 152.0
+        },
+        {
+          "name": "HARD",
+          "notes": 425,
+          "bpm": 152.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 516,
+          "bpm": 152.0
+        }
+      ],
+      "duration_s": 330.0,
+      "size_bytes": 5003644,
+      "has_video": false,
+      "zip": "songs/community-188-v1.zip",
+      "zip_bytes": 4949150,
+      "sha256": "3400f5f9766f7c38fb164e67a0b20189feebcefb1b95eef29a05c0a130f054d4",
+      "thumb": "thumbs/community-188-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 188,
+      "local_id": "popular8_gusty",
+      "previous_objects": [],
+      "source_sha256": "6b1e88ecf34c67fdeccc5745030d2d8d63acc8b0e72f88162f2151581eea4d55"
+    },
+    {
       "id": "community-134",
       "version": 1,
       "title": "Hacking to the Gate (TV Size)",
