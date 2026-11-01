@@ -3544,6 +3544,52 @@
       "source_sha256": "cc51acdc868d57175874d231f67457d6fac0d08cc01b77bd17e4090a22ccc94b"
     },
     {
+      "id": "community-182",
+      "version": 1,
+      "title": "Hopes and Dreams",
+      "artist": "Toby Fox",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=wbO3p7_Mf30",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 187,
+          "bpm": 170.68
+        },
+        {
+          "name": "NORMAL",
+          "notes": 254,
+          "bpm": 170.68
+        },
+        {
+          "name": "HARD",
+          "notes": 370,
+          "bpm": 170.68
+        },
+        {
+          "name": "EXPERT",
+          "notes": 413,
+          "bpm": 170.68
+        }
+      ],
+      "duration_s": 184.9,
+      "size_bytes": 3750089,
+      "has_video": false,
+      "zip": "songs/community-182-v1.zip",
+      "zip_bytes": 3708329,
+      "sha256": "8ba78463fe0cc4cc22ce520be06a23ac4d39beacbe2a83fb730902272dea1e51",
+      "thumb": "thumbs/community-182-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 182,
+      "local_id": "popular8_hopes",
+      "previous_objects": [],
+      "source_sha256": "3b11d0f8b6b8e1189b4458f1bed26e548317444055e25454e0a67354ac49d676"
+    },
+    {
       "id": "community-167",
       "version": 1,
       "title": "ideal white",
