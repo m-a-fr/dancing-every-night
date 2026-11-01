@@ -6212,6 +6212,52 @@
       "source_sha256": "8241dd38858567adc10178a01f975c83763516f3031e2834c4e944e4ffe8926c"
     },
     {
+      "id": "community-192",
+      "version": 1,
+      "title": "Reach Out To The Truth",
+      "artist": "Shihoko Hirata",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=A9zlXUSuUeo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 179,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 223,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 364,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 409,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 167.9,
+      "size_bytes": 3804567,
+      "has_video": false,
+      "zip": "songs/community-192-v1.zip",
+      "zip_bytes": 3786363,
+      "sha256": "b840dca4cb1799b94e0761ab4d765f8e4604a2166f044cd4e3699b53a3e19e2f",
+      "thumb": "thumbs/community-192-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 192,
+      "local_id": "popular8_reach",
+      "previous_objects": [],
+      "source_sha256": "21549081cac8aeca083628f5970763941dba35d4ba84b63783b8fd5ff7b4d02e"
+    },
+    {
       "id": "community-96",
       "version": 1,
       "title": "Realize (TV Size)",
