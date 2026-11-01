@@ -4694,6 +4694,52 @@
       "source_sha256": "70fced2596ffbb65a10fe0f355f66a4a7992b7e45880aa89dc76b60caf7dbc3c"
     },
     {
+      "id": "community-191",
+      "version": 1,
+      "title": "Live & Learn",
+      "artist": "Crush 40",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=sefGW__p6WE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 294,
+          "bpm": 172.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 412,
+          "bpm": 172.0
+        },
+        {
+          "name": "HARD",
+          "notes": 569,
+          "bpm": 172.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 690,
+          "bpm": 172.0
+        }
+      ],
+      "duration_s": 273.2,
+      "size_bytes": 6121776,
+      "has_video": false,
+      "zip": "songs/community-191-v1.zip",
+      "zip_bytes": 6089368,
+      "sha256": "d58391531ca57d6a39a60e5a847773d421a26a3471b622ba4d69e725531a8b66",
+      "thumb": "thumbs/community-191-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 191,
+      "local_id": "popular8_livelearn",
+      "previous_objects": [],
+      "source_sha256": "51e9f16af9dc0ab297d76d328dbf750af61eca726d54ceb6a9a8cd8dea1f97db"
+    },
+    {
       "id": "community-74",
       "version": 1,
       "title": "Lost One's Weeping",
