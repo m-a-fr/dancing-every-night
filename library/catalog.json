@@ -2,6 +2,52 @@
   "schema": 1,
   "songs": [
     {
+      "id": "community-196",
+      "version": 1,
+      "title": "* ~Asterisk~ (TV Size)",
+      "artist": "ORANGE RANGE",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=wW9TwZdWpjw",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 90,
+          "bpm": 124.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 129,
+          "bpm": 124.0
+        },
+        {
+          "name": "HARD",
+          "notes": 172,
+          "bpm": 124.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 219,
+          "bpm": 124.0
+        }
+      ],
+      "duration_s": 95.5,
+      "size_bytes": 10599946,
+      "has_video": true,
+      "zip": "songs/community-196-v1.zip",
+      "zip_bytes": 10496845,
+      "sha256": "50d9f970b2c57393388309366b191c3636fbb7fefcaebb2f4f7697665d57f107",
+      "thumb": "thumbs/community-196-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 196,
+      "local_id": "popular8_asterisk",
+      "previous_objects": [],
+      "source_sha256": "f382a8838aa8f83163e3f6459dbc0a7f66342cb2f9dc68f8ca03713e0ccbe39c"
+    },
+    {
       "id": "community-90",
       "version": 1,
       "title": "99 (TV Size)",
