@@ -2578,6 +2578,52 @@
       "source_sha256": "3af5aeb6325360a38fab650f8a9d0201e9c4056dcdba1af7224698aa8d63f35c"
     },
     {
+      "id": "community-207",
+      "version": 1,
+      "title": "Dramaturgy",
+      "artist": "Eve",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=jJzw1h5CR-I",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 232,
+          "bpm": 149.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 362,
+          "bpm": 149.0
+        },
+        {
+          "name": "HARD",
+          "notes": 532,
+          "bpm": 149.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 637,
+          "bpm": 149.0
+        }
+      ],
+      "duration_s": 245.7,
+      "size_bytes": 5603497,
+      "has_video": false,
+      "zip": "songs/community-207-v1.zip",
+      "zip_bytes": 5572247,
+      "sha256": "dee208f907cdaa03a519eed99c83a03c56da953f8ae6db8c210a5817cca91d46",
+      "thumb": "thumbs/community-207-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 207,
+      "local_id": "popular8_dramaturgy",
+      "previous_objects": [],
+      "source_sha256": "0b98e76fccba6aafd8a28f561e09b815b17b54b59d3a3bc0cdd1f79ea9245af4"
+    },
+    {
       "id": "community-131",
       "version": 1,
       "title": "End Time",
