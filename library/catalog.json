@@ -6764,6 +6764,52 @@
       "source_sha256": "d21e333dd548d23f4cf29d2cd017bb1df612b8ecdfef14d782bfbe1b980314e4"
     },
     {
+      "id": "community-186",
+      "version": 1,
+      "title": "Stickerbush Symphony",
+      "artist": "David Wise",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=mdPlcKg-qFs",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 221,
+          "bpm": 98.43
+        },
+        {
+          "name": "NORMAL",
+          "notes": 348,
+          "bpm": 98.43
+        },
+        {
+          "name": "HARD",
+          "notes": 509,
+          "bpm": 98.43
+        },
+        {
+          "name": "EXPERT",
+          "notes": 655,
+          "bpm": 98.43
+        }
+      ],
+      "duration_s": 263.1,
+      "size_bytes": 4995391,
+      "has_video": false,
+      "zip": "songs/community-186-v1.zip",
+      "zip_bytes": 4948197,
+      "sha256": "aadc93561c7ad4fd7c6a2fac96ac1a3ac76206c07a2a22cfac18e6a692fb699d",
+      "thumb": "thumbs/community-186-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 186,
+      "local_id": "popular8_stickerbush",
+      "previous_objects": [],
+      "source_sha256": "4163e7c15189cb4f626ea4025ad3606f410c466ec78c94136d275f6a0329b12b"
+    },
+    {
       "id": "community-13",
       "version": 1,
       "title": "Sweeteners",
