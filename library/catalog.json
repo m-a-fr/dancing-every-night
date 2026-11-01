@@ -3774,6 +3774,52 @@
       "source_sha256": "cf9bf8916a6641b72e7400ff8d57098b84b472dde4706b4f98c7a1251991dc17"
     },
     {
+      "id": "community-205",
+      "version": 1,
+      "title": "HIBANA",
+      "artist": "DECO*27 feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=hxSg2Ioz3LM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 231,
+          "bpm": 200.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 332,
+          "bpm": 200.0
+        },
+        {
+          "name": "HARD",
+          "notes": 459,
+          "bpm": 200.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 554,
+          "bpm": 200.0
+        }
+      ],
+      "duration_s": 202.9,
+      "size_bytes": 24025537,
+      "has_video": true,
+      "zip": "songs/community-205-v1.zip",
+      "zip_bytes": 23828051,
+      "sha256": "9921f6b930a86a8e99aadb4861594f1b428d951fa7560c392f1ff07d5b833e12",
+      "thumb": "thumbs/community-205-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 205,
+      "local_id": "popular8_hibana",
+      "previous_objects": [],
+      "source_sha256": "9ddbc902e364d1e6bebeee9daf5da57c1e54385af0c386e6ce92808635c396e4"
+    },
+    {
       "id": "community-50",
       "version": 1,
       "title": "Highscore",
