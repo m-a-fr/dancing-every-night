@@ -3130,6 +3130,52 @@
       "source_sha256": "73f367e2f576d728005697e40d49cc5a0d890ec9f1375ed75a7008d0f4cf3d51"
     },
     {
+      "id": "community-206",
+      "version": 1,
+      "title": "Ghost Rule",
+      "artist": "DECO*27 feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=KushW6zvazM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 245,
+          "bpm": 210.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 305,
+          "bpm": 210.0
+        },
+        {
+          "name": "HARD",
+          "notes": 420,
+          "bpm": 210.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 499,
+          "bpm": 210.0
+        }
+      ],
+      "duration_s": 206.4,
+      "size_bytes": 24220776,
+      "has_video": true,
+      "zip": "songs/community-206-v1.zip",
+      "zip_bytes": 23935701,
+      "sha256": "8231b4e9d7c1e8344bd0701e28b4ff3700edd182735603dd27c694542e991655",
+      "thumb": "thumbs/community-206-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 206,
+      "local_id": "popular8_ghostrule",
+      "previous_objects": [],
+      "source_sha256": "df6380c0facf95acaaad656a94853f3c79659b804bda8a2e552d363aded74443"
+    },
+    {
       "id": "community-133",
       "version": 1,
       "title": "GO!!! (TV Size)",
