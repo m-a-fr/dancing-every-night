@@ -43,7 +43,7 @@ jobs:
         with: { name: linux, path: "dist/*-linux.tar.gz", if-no-files-found: error }
 
   macos:
-    runs-on: macos-14
+    runs-on: macos-15   # macos-14 est retiré le 2026-11-02
     steps:
       - uses: actions/checkout@v4
       # Audio officiel : dépôt privé lu avec une clé en lecture seule. Jamais via un artefact : sur un dépôt public,

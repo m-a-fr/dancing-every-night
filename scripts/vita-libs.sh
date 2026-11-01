@@ -12,7 +12,10 @@ strings "$LIB/libcrypto.a" 2>/dev/null | grep -m1 -E '^OpenSSL [0-9]' || true
 # remplace le second par le premier, comme sur la VitaSDK de développement.
 # Cette image change : si sa libcurl demande déjà l'API d'OpenSSL 1.1 (OPENSSL_sk_num…), ses paquets vont ensemble et on
 # n'y touche pas (l'échange a fait échouer l'édition de liens sur OPENSSL_sk_num le 2026-11-01).
-if "$VITASDK/bin/arm-vita-eabi-nm" "$LIB/libcurl.a" 2>/dev/null | grep -q -E ' U (OPENSSL_sk_num|OpenSSL_version_num)'; then
+# (sortie capturée avant le grep : avec pipefail, « nm | grep -q » échoue par SIGPIPE même quand le symbole est là)
+CURL_SYMS=$("$VITASDK/bin/arm-vita-eabi-nm" "$LIB/libcurl.a" 2>/dev/null || true)
+echo "==> symboles libcurl lus : $(printf '%s' "$CURL_SYMS" | wc -l) lignes"
+if grep -q -E ' U (OPENSSL_sk_num|OpenSSL_version_num)' <<<"$CURL_SYMS"; then
   echo "==> libcurl de l'image vise OpenSSL 1.1 : on garde ses bibliothèques"
 else
   # -Rdd : sans contrôle des dépendances (cpython, boost, libzip… en demandent un, mais le conteneur est jetable et n'en a pas besoin)
