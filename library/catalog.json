@@ -2808,6 +2808,52 @@
       "source_sha256": "a4de2ac19926a0175f3b6965f0406aa1acce879f3aa7f672194877221740e054"
     },
     {
+      "id": "community-210",
+      "version": 1,
+      "title": "felys",
+      "artist": "onoken",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=L0sXF-jAIf8",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 148,
+          "bpm": 180.08
+        },
+        {
+          "name": "NORMAL",
+          "notes": 192,
+          "bpm": 180.08
+        },
+        {
+          "name": "HARD",
+          "notes": 275,
+          "bpm": 180.08
+        },
+        {
+          "name": "EXPERT",
+          "notes": 331,
+          "bpm": 180.08
+        }
+      ],
+      "duration_s": 165.4,
+      "size_bytes": 16228732,
+      "has_video": true,
+      "zip": "songs/community-210-v1.zip",
+      "zip_bytes": 16121177,
+      "sha256": "48e941a9128dc828357fffdface05561a1fb1ea571343c7cf94c725589db0062",
+      "thumb": "thumbs/community-210-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 210,
+      "local_id": "popular8_felys",
+      "previous_objects": [],
+      "source_sha256": "ac50f78c75f1d95d678aa532ffa6bde74250484c47a85b90079784539c2fb703"
+    },
+    {
       "id": "community-7",
       "version": 1,
       "title": "Firestarter",
