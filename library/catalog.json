@@ -2624,6 +2624,52 @@
       "source_sha256": "de104442fe0425809a9d884e44077b696b1cae166abdb6100b81616a1758de9d"
     },
     {
+      "id": "community-190",
+      "version": 1,
+      "title": "Escape from the City",
+      "artist": "Ted Poley & Tony Harnell",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=qR6mTJRbcaE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 140,
+          "bpm": 130.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 212,
+          "bpm": 130.0
+        },
+        {
+          "name": "HARD",
+          "notes": 311,
+          "bpm": 130.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 371,
+          "bpm": 130.0
+        }
+      ],
+      "duration_s": 139.9,
+      "size_bytes": 3219312,
+      "has_video": false,
+      "zip": "songs/community-190-v1.zip",
+      "zip_bytes": 3204090,
+      "sha256": "d4dcd31142da761310e096f31acec8f643be7950ce790e9917657c0ee7dcb312",
+      "thumb": "thumbs/community-190-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 190,
+      "local_id": "popular8_escape",
+      "previous_objects": [],
+      "source_sha256": "a4de2ac19926a0175f3b6965f0406aa1acce879f3aa7f672194877221740e054"
+    },
+    {
       "id": "community-7",
       "version": 1,
       "title": "Firestarter",
