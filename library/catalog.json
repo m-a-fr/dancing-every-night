@@ -1796,6 +1796,52 @@
       "source_sha256": "c96630d2c1bc42e4372b4d0169502a5427249d5f55fcdb39f5b88c75350d1b9a"
     },
     {
+      "id": "community-189",
+      "version": 1,
+      "title": "Coconut Mall",
+      "artist": "Asuka Ohta & Ryo Nagamatsu",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=cscuCIzItZQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 132,
+          "bpm": 132.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 205,
+          "bpm": 132.0
+        },
+        {
+          "name": "HARD",
+          "notes": 291,
+          "bpm": 132.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 350,
+          "bpm": 132.0
+        }
+      ],
+      "duration_s": 141.6,
+      "size_bytes": 3466701,
+      "has_video": false,
+      "zip": "songs/community-189-v1.zip",
+      "zip_bytes": 3450633,
+      "sha256": "f902316b1127904a4f114c07369aed3814fa6ccf9132dbdfc680c7d17664d631",
+      "thumb": "thumbs/community-189-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 189,
+      "local_id": "popular8_coconut",
+      "previous_objects": [],
+      "source_sha256": "443dba118df1fefafccf13dc57f8c058d9a8ee833c370b1e69935661d33b9a2c"
+    },
+    {
       "id": "community-47",
       "version": 1,
       "title": "Cold Green Eyes feat. Roos Denayer",
@@ -2532,6 +2578,52 @@
       "source_sha256": "3af5aeb6325360a38fab650f8a9d0201e9c4056dcdba1af7224698aa8d63f35c"
     },
     {
+      "id": "community-207",
+      "version": 1,
+      "title": "Dramaturgy",
+      "artist": "Eve",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=jJzw1h5CR-I",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 232,
+          "bpm": 149.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 362,
+          "bpm": 149.0
+        },
+        {
+          "name": "HARD",
+          "notes": 532,
+          "bpm": 149.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 637,
+          "bpm": 149.0
+        }
+      ],
+      "duration_s": 245.7,
+      "size_bytes": 5603497,
+      "has_video": false,
+      "zip": "songs/community-207-v1.zip",
+      "zip_bytes": 5572247,
+      "sha256": "dee208f907cdaa03a519eed99c83a03c56da953f8ae6db8c210a5817cca91d46",
+      "thumb": "thumbs/community-207-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 207,
+      "local_id": "popular8_dramaturgy",
+      "previous_objects": [],
+      "source_sha256": "0b98e76fccba6aafd8a28f561e09b815b17b54b59d3a3bc0cdd1f79ea9245af4"
+    },
+    {
       "id": "community-131",
       "version": 1,
       "title": "End Time",
@@ -2576,6 +2668,52 @@
       "local_id": "popular5_end_time",
       "previous_objects": [],
       "source_sha256": "de104442fe0425809a9d884e44077b696b1cae166abdb6100b81616a1758de9d"
+    },
+    {
+      "id": "community-190",
+      "version": 1,
+      "title": "Escape from the City",
+      "artist": "Ted Poley & Tony Harnell",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=qR6mTJRbcaE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 140,
+          "bpm": 130.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 212,
+          "bpm": 130.0
+        },
+        {
+          "name": "HARD",
+          "notes": 311,
+          "bpm": 130.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 371,
+          "bpm": 130.0
+        }
+      ],
+      "duration_s": 139.9,
+      "size_bytes": 3219312,
+      "has_video": false,
+      "zip": "songs/community-190-v1.zip",
+      "zip_bytes": 3204090,
+      "sha256": "d4dcd31142da761310e096f31acec8f643be7950ce790e9917657c0ee7dcb312",
+      "thumb": "thumbs/community-190-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 190,
+      "local_id": "popular8_escape",
+      "previous_objects": [],
+      "source_sha256": "a4de2ac19926a0175f3b6965f0406aa1acce879f3aa7f672194877221740e054"
     },
     {
       "id": "community-7",
@@ -2716,6 +2854,52 @@
       "source_sha256": "ca8e289d6f0b6c4720a7ce65f7736595bda16e3f59cb6eb29b0394401204f748"
     },
     {
+      "id": "community-195",
+      "version": 1,
+      "title": "Frog's Theme",
+      "artist": "Yasunori Mitsuda",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=vZyITgB7KZc",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 93,
+          "bpm": 124.75
+        },
+        {
+          "name": "NORMAL",
+          "notes": 152,
+          "bpm": 124.75
+        },
+        {
+          "name": "HARD",
+          "notes": 236,
+          "bpm": 124.75
+        },
+        {
+          "name": "EXPERT",
+          "notes": 276,
+          "bpm": 124.75
+        }
+      ],
+      "duration_s": 105.2,
+      "size_bytes": 2015757,
+      "has_video": false,
+      "zip": "songs/community-195-v1.zip",
+      "zip_bytes": 1980602,
+      "sha256": "66a8facceaf7154de0406595e5d132de535e8639a2d4d7905b3190190eac1bb8",
+      "thumb": "thumbs/community-195-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 195,
+      "local_id": "popular8_frog",
+      "previous_objects": [],
+      "source_sha256": "e4e418b44a8d5848720d7b0a5105513d7c736c1bb34523ec11ba94dacee05a67"
+    },
+    {
       "id": "community-177",
       "version": 1,
       "title": "Garakuta Doll Play",
@@ -2760,6 +2944,52 @@
       "local_id": "popular7_garakuta",
       "previous_objects": [],
       "source_sha256": "d465f8cdb57e77babae824c6958299dd74060c1fbe86bf8e9e485c16be55f25c"
+    },
+    {
+      "id": "community-187",
+      "version": 1,
+      "title": "Gerudo Valley",
+      "artist": "Koji Kondo",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=0hEYvdMoF2g",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 168,
+          "bpm": 120.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 244,
+          "bpm": 120.0
+        },
+        {
+          "name": "HARD",
+          "notes": 365,
+          "bpm": 120.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 424,
+          "bpm": 120.0
+        }
+      ],
+      "duration_s": 175.0,
+      "size_bytes": 3698218,
+      "has_video": false,
+      "zip": "songs/community-187-v1.zip",
+      "zip_bytes": 3663121,
+      "sha256": "f51d715d2ae4b6e1a8e1b538bf7bd2ad762ff24aeb79cf9169eb68815972cad0",
+      "thumb": "thumbs/community-187-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 187,
+      "local_id": "popular8_gerudo",
+      "previous_objects": [],
+      "source_sha256": "653775f771a5fcd7838344e6b8ba89f8da0dc4b3d15c1a95ab350ae3da614204"
     },
     {
       "id": "community-110",
@@ -3082,6 +3312,52 @@
       "local_id": "popular4_gurenge",
       "previous_objects": [],
       "source_sha256": "c9cc40eb221c6faae477009962552586430c03025fea900e655a189dae69f6fd"
+    },
+    {
+      "id": "community-188",
+      "version": 1,
+      "title": "Gusty Garden Galaxy",
+      "artist": "Mahito Yokota",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=1bvDHAUv2ak",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 214,
+          "bpm": 152.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 285,
+          "bpm": 152.0
+        },
+        {
+          "name": "HARD",
+          "notes": 425,
+          "bpm": 152.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 516,
+          "bpm": 152.0
+        }
+      ],
+      "duration_s": 330.0,
+      "size_bytes": 5003644,
+      "has_video": false,
+      "zip": "songs/community-188-v1.zip",
+      "zip_bytes": 4949150,
+      "sha256": "3400f5f9766f7c38fb164e67a0b20189feebcefb1b95eef29a05c0a130f054d4",
+      "thumb": "thumbs/community-188-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 188,
+      "local_id": "popular8_gusty",
+      "previous_objects": [],
+      "source_sha256": "6b1e88ecf34c67fdeccc5745030d2d8d63acc8b0e72f88162f2151581eea4d55"
     },
     {
       "id": "community-134",
@@ -4508,6 +4784,98 @@
       "local_id": "popular7_libera",
       "previous_objects": [],
       "source_sha256": "70fced2596ffbb65a10fe0f355f66a4a7992b7e45880aa89dc76b60caf7dbc3c"
+    },
+    {
+      "id": "community-199",
+      "version": 1,
+      "title": "Limit-Break x Survivor",
+      "artist": "Kiyoshi Hikawa",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=1TLRmiKwZ3o",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 290,
+          "bpm": 187.5
+        },
+        {
+          "name": "NORMAL",
+          "notes": 395,
+          "bpm": 187.5
+        },
+        {
+          "name": "HARD",
+          "notes": 554,
+          "bpm": 187.5
+        },
+        {
+          "name": "EXPERT",
+          "notes": 666,
+          "bpm": 187.5
+        }
+      ],
+      "duration_s": 272.0,
+      "size_bytes": 6091938,
+      "has_video": false,
+      "zip": "songs/community-199-v1.zip",
+      "zip_bytes": 6059894,
+      "sha256": "8fb946a3dbddc8bb268d1e87dcdfe5cb7139097f23ddfab95a708d850019ffb0",
+      "thumb": "thumbs/community-199-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 199,
+      "local_id": "popular8_limit",
+      "previous_objects": [],
+      "source_sha256": "4d6eef88bd56d7cb573032c4daa75ecfe07881a4089e10b3c6ffb3db7a1a576f"
+    },
+    {
+      "id": "community-191",
+      "version": 1,
+      "title": "Live & Learn",
+      "artist": "Crush 40",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=sefGW__p6WE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 294,
+          "bpm": 172.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 412,
+          "bpm": 172.0
+        },
+        {
+          "name": "HARD",
+          "notes": 569,
+          "bpm": 172.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 690,
+          "bpm": 172.0
+        }
+      ],
+      "duration_s": 273.2,
+      "size_bytes": 6121776,
+      "has_video": false,
+      "zip": "songs/community-191-v1.zip",
+      "zip_bytes": 6089368,
+      "sha256": "d58391531ca57d6a39a60e5a847773d421a26a3471b622ba4d69e725531a8b66",
+      "thumb": "thumbs/community-191-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 191,
+      "local_id": "popular8_livelearn",
+      "previous_objects": [],
+      "source_sha256": "51e9f16af9dc0ab297d76d328dbf750af61eca726d54ceb6a9a8cd8dea1f97db"
     },
     {
       "id": "community-74",
@@ -5982,6 +6350,52 @@
       "source_sha256": "8241dd38858567adc10178a01f975c83763516f3031e2834c4e944e4ffe8926c"
     },
     {
+      "id": "community-192",
+      "version": 1,
+      "title": "Reach Out To The Truth",
+      "artist": "Shihoko Hirata",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=A9zlXUSuUeo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 179,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 223,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 364,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 409,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 167.9,
+      "size_bytes": 3804567,
+      "has_video": false,
+      "zip": "songs/community-192-v1.zip",
+      "zip_bytes": 3786363,
+      "sha256": "b840dca4cb1799b94e0761ab4d765f8e4604a2166f044cd4e3699b53a3e19e2f",
+      "thumb": "thumbs/community-192-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 192,
+      "local_id": "popular8_reach",
+      "previous_objects": [],
+      "source_sha256": "21549081cac8aeca083628f5970763941dba35d4ba84b63783b8fd5ff7b4d02e"
+    },
+    {
       "id": "community-96",
       "version": 1,
       "title": "Realize (TV Size)",
@@ -6256,6 +6670,144 @@
       "local_id": "popular4_rising_hope",
       "previous_objects": [],
       "source_sha256": "7a79f417b2a140835212eb43c350f86a602c5bb615962dc6b8754be9bfe71010"
+    },
+    {
+      "id": "community-193",
+      "version": 1,
+      "title": "Rivers In the Desert",
+      "artist": "Lyn",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=lvuHvXsZPrk",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 315,
+          "bpm": 130.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 447,
+          "bpm": 130.0
+        },
+        {
+          "name": "HARD",
+          "notes": 667,
+          "bpm": 130.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 757,
+          "bpm": 130.0
+        }
+      ],
+      "duration_s": 315.0,
+      "size_bytes": 7557221,
+      "has_video": false,
+      "zip": "songs/community-193-v1.zip",
+      "zip_bytes": 7524328,
+      "sha256": "f3a368f7bf4b08811dbf8beebc6722474ae618d22dad99a1c0db8a79fa5bf968",
+      "thumb": "thumbs/community-193-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 193,
+      "local_id": "popular8_rivers",
+      "previous_objects": [],
+      "source_sha256": "8657265d697c04b8f9cdc3dda60ca0d298c7dcf46c9ab87a455f401d0ecc602e"
+    },
+    {
+      "id": "community-204",
+      "version": 1,
+      "title": "ROKI",
+      "artist": "mikitoP feat. Kagamine Rin",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Xg-qfsKN2_E",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 223,
+          "bpm": 150.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 342,
+          "bpm": 150.0
+        },
+        {
+          "name": "HARD",
+          "notes": 507,
+          "bpm": 150.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 592,
+          "bpm": 150.0
+        }
+      ],
+      "duration_s": 230.4,
+      "size_bytes": 5550239,
+      "has_video": false,
+      "zip": "songs/community-204-v1.zip",
+      "zip_bytes": 5518807,
+      "sha256": "da8be40300860d9a1a3d5ca529e103e84c5d62b0d9449b1f5779e1c1c273f144",
+      "thumb": "thumbs/community-204-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 204,
+      "local_id": "popular8_roki",
+      "previous_objects": [],
+      "source_sha256": "a12cd444ce9d146ca1f5cf0928100984ffb5da77aa05511ad664b33e3854e95b"
+    },
+    {
+      "id": "community-208",
+      "version": 1,
+      "title": "Sayonara Planet Wars (Full Version)",
+      "artist": "Chroma",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=JIDdv4aDKTY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 311,
+          "bpm": 224.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 386,
+          "bpm": 224.0
+        },
+        {
+          "name": "HARD",
+          "notes": 500,
+          "bpm": 224.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 570,
+          "bpm": 224.0
+        }
+      ],
+      "duration_s": 245.0,
+      "size_bytes": 5863075,
+      "has_video": false,
+      "zip": "songs/community-208-v1.zip",
+      "zip_bytes": 5820970,
+      "sha256": "2a5c8f28146e321bd27bd21f2dbbb7828e15869548bdaf0df1025fb2d930354e",
+      "thumb": "thumbs/community-208-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 208,
+      "local_id": "popular8_sayonara",
+      "previous_objects": [],
+      "source_sha256": "6952d2938fa13205c8170bf3751db65282e97e0b76b2eb8264cc9f13042ff02d"
     },
     {
       "id": "community-85",
