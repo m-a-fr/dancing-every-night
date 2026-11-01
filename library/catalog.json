@@ -2,6 +2,52 @@
   "schema": 1,
   "songs": [
     {
+      "id": "community-196",
+      "version": 1,
+      "title": "* ~Asterisk~ (TV Size)",
+      "artist": "ORANGE RANGE",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=wW9TwZdWpjw",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 90,
+          "bpm": 124.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 129,
+          "bpm": 124.0
+        },
+        {
+          "name": "HARD",
+          "notes": 172,
+          "bpm": 124.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 219,
+          "bpm": 124.0
+        }
+      ],
+      "duration_s": 95.5,
+      "size_bytes": 10599946,
+      "has_video": true,
+      "zip": "songs/community-196-v1.zip",
+      "zip_bytes": 10496845,
+      "sha256": "50d9f970b2c57393388309366b191c3636fbb7fefcaebb2f4f7697665d57f107",
+      "thumb": "thumbs/community-196-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 196,
+      "local_id": "popular8_asterisk",
+      "previous_objects": [],
+      "source_sha256": "f382a8838aa8f83163e3f6459dbc0a7f66342cb2f9dc68f8ca03713e0ccbe39c"
+    },
+    {
       "id": "community-90",
       "version": 1,
       "title": "99 (TV Size)",
@@ -2440,6 +2486,52 @@
       "source_sha256": "b54e26f516f55023c10e2e5eb16bd66c4cea0dd8d008a092f9916b604c3c7071"
     },
     {
+      "id": "community-197",
+      "version": 1,
+      "title": "departure! (TV Size)",
+      "artist": "Masatoshi Ono",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=faqmNf_fZlE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 93,
+          "bpm": 160.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 129,
+          "bpm": 160.0
+        },
+        {
+          "name": "HARD",
+          "notes": 197,
+          "bpm": 160.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 243,
+          "bpm": 160.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 10207626,
+      "has_video": true,
+      "zip": "songs/community-197-v1.zip",
+      "zip_bytes": 10156004,
+      "sha256": "e84b46fbff163a5108afb7b3ea9963a3c0d309c27986513ebaa38c67733c4714",
+      "thumb": "thumbs/community-197-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 197,
+      "local_id": "popular8_departure",
+      "previous_objects": [],
+      "source_sha256": "d301e3a008d193cab7a8a1a8d88188db99bab7abc4c41d88e78e28c4e85e21d1"
+    },
+    {
       "id": "community-21",
       "version": 1,
       "title": "Digital Native",
@@ -2714,6 +2806,52 @@
       "local_id": "popular8_escape",
       "previous_objects": [],
       "source_sha256": "a4de2ac19926a0175f3b6965f0406aa1acce879f3aa7f672194877221740e054"
+    },
+    {
+      "id": "community-210",
+      "version": 1,
+      "title": "felys",
+      "artist": "onoken",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=L0sXF-jAIf8",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 148,
+          "bpm": 180.08
+        },
+        {
+          "name": "NORMAL",
+          "notes": 192,
+          "bpm": 180.08
+        },
+        {
+          "name": "HARD",
+          "notes": 275,
+          "bpm": 180.08
+        },
+        {
+          "name": "EXPERT",
+          "notes": 331,
+          "bpm": 180.08
+        }
+      ],
+      "duration_s": 165.4,
+      "size_bytes": 16228732,
+      "has_video": true,
+      "zip": "songs/community-210-v1.zip",
+      "zip_bytes": 16121177,
+      "sha256": "48e941a9128dc828357fffdface05561a1fb1ea571343c7cf94c725589db0062",
+      "thumb": "thumbs/community-210-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 210,
+      "local_id": "popular8_felys",
+      "previous_objects": [],
+      "source_sha256": "ac50f78c75f1d95d678aa532ffa6bde74250484c47a85b90079784539c2fb703"
     },
     {
       "id": "community-7",
@@ -3038,6 +3176,52 @@
       "source_sha256": "73f367e2f576d728005697e40d49cc5a0d890ec9f1375ed75a7008d0f4cf3d51"
     },
     {
+      "id": "community-206",
+      "version": 1,
+      "title": "Ghost Rule",
+      "artist": "DECO*27 feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=KushW6zvazM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 245,
+          "bpm": 210.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 305,
+          "bpm": 210.0
+        },
+        {
+          "name": "HARD",
+          "notes": 420,
+          "bpm": 210.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 499,
+          "bpm": 210.0
+        }
+      ],
+      "duration_s": 206.4,
+      "size_bytes": 24220776,
+      "has_video": true,
+      "zip": "songs/community-206-v1.zip",
+      "zip_bytes": 23935701,
+      "sha256": "8231b4e9d7c1e8344bd0701e28b4ff3700edd182735603dd27c694542e991655",
+      "thumb": "thumbs/community-206-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 206,
+      "local_id": "popular8_ghostrule",
+      "previous_objects": [],
+      "source_sha256": "df6380c0facf95acaaad656a94853f3c79659b804bda8a2e552d363aded74443"
+    },
+    {
       "id": "community-133",
       "version": 1,
       "title": "GO!!! (TV Size)",
@@ -3128,6 +3312,52 @@
       "local_id": "popular7_goodbye",
       "previous_objects": [],
       "source_sha256": "a2862a266d4c59e0bd95f94e456960d163e3383850e6eff0a6b6896640d24fdc"
+    },
+    {
+      "id": "community-209",
+      "version": 1,
+      "title": "GOODTEK (Rework)",
+      "artist": "EBIMAYO",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=CCcvGQ16FnQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 136,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 179,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 271,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 327,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 124.2,
+      "size_bytes": 14896131,
+      "has_video": true,
+      "zip": "songs/community-209-v1.zip",
+      "zip_bytes": 14834997,
+      "sha256": "c6e697c4c549892c14615e252ecf905b7dcd946597778eafa831e430ab75d72f",
+      "thumb": "thumbs/community-209-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 209,
+      "local_id": "popular8_goodtek",
+      "previous_objects": [],
+      "source_sha256": "056c2478018e10a13a7092ba345956ce4654e8a99abaebfde002509dc9b46a74"
     },
     {
       "id": "community-170",
@@ -3680,6 +3910,52 @@
       "local_id": "popular5_heroes",
       "previous_objects": [],
       "source_sha256": "cf9bf8916a6641b72e7400ff8d57098b84b472dde4706b4f98c7a1251991dc17"
+    },
+    {
+      "id": "community-205",
+      "version": 1,
+      "title": "HIBANA",
+      "artist": "DECO*27 feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=hxSg2Ioz3LM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 231,
+          "bpm": 200.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 332,
+          "bpm": 200.0
+        },
+        {
+          "name": "HARD",
+          "notes": 459,
+          "bpm": 200.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 554,
+          "bpm": 200.0
+        }
+      ],
+      "duration_s": 202.9,
+      "size_bytes": 24025537,
+      "has_video": true,
+      "zip": "songs/community-205-v1.zip",
+      "zip_bytes": 23828051,
+      "sha256": "9921f6b930a86a8e99aadb4861594f1b428d951fa7560c392f1ff07d5b833e12",
+      "thumb": "thumbs/community-205-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 205,
+      "local_id": "popular8_hibana",
+      "previous_objects": [],
+      "source_sha256": "9ddbc902e364d1e6bebeee9daf5da57c1e54385af0c386e6ce92808635c396e4"
     },
     {
       "id": "community-50",
@@ -4600,6 +4876,52 @@
       "local_id": "popular3_king",
       "previous_objects": [],
       "source_sha256": "8009d9ef7d4a7ba80b0cfbf75ca5778600aa18b4dba9189fcc2066656fd6b1be"
+    },
+    {
+      "id": "community-202",
+      "version": 1,
+      "title": "KIZUNA MUSIC (TV Size)",
+      "artist": "Poppin'Party",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=0aBsD9jpL5I",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 103,
+          "bpm": 189.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 142,
+          "bpm": 189.0
+        },
+        {
+          "name": "HARD",
+          "notes": 196,
+          "bpm": 189.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 240,
+          "bpm": 189.0
+        }
+      ],
+      "duration_s": 96.3,
+      "size_bytes": 11187500,
+      "has_video": true,
+      "zip": "songs/community-202-v1.zip",
+      "zip_bytes": 11167208,
+      "sha256": "9a0302aa555dd504635336c0b4689b6bb4ed13cf74fbe870a6c03a8f38515419",
+      "thumb": "thumbs/community-202-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 202,
+      "local_id": "popular8_kizuna",
+      "previous_objects": [],
+      "source_sha256": "9082511bb48d92c67a6d265b257e90c329e44b322be93e5306f5ca5aeb998805"
     },
     {
       "id": "community-72",
@@ -7178,6 +7500,52 @@
       "source_sha256": "1a56db711b9e5908d59fc8b353f3eefdb56d5a157eede932547b132c6389f356"
     },
     {
+      "id": "community-201",
+      "version": 1,
+      "title": "Sono Chi no Sadame (TV Size)",
+      "artist": "Hiroaki Tommy Tominaga",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=BW4H15rK6iI",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 89,
+          "bpm": 146.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 138,
+          "bpm": 146.0
+        },
+        {
+          "name": "HARD",
+          "notes": 197,
+          "bpm": 146.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 238,
+          "bpm": 146.0
+        }
+      ],
+      "duration_s": 92.0,
+      "size_bytes": 9729204,
+      "has_video": true,
+      "zip": "songs/community-201-v1.zip",
+      "zip_bytes": 9702446,
+      "sha256": "7ec357055bcb7fdea1d4cd241135364b513a3fa92d7652bd89979b6c1c8f6f9e",
+      "thumb": "thumbs/community-201-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 201,
+      "local_id": "popular8_sono",
+      "previous_objects": [],
+      "source_sha256": "5f67e270eb8a6353440810721c6fe92fa4e97e486a3083b1bcc0de30cf5232d5"
+    },
+    {
       "id": "community-163",
       "version": 1,
       "title": "Sorairo Days (TV Size)",
@@ -7314,6 +7682,52 @@
       "local_id": "popular8_spider",
       "previous_objects": [],
       "source_sha256": "d21e333dd548d23f4cf29d2cd017bb1df612b8ecdfef14d782bfbe1b980314e4"
+    },
+    {
+      "id": "community-200",
+      "version": 1,
+      "title": "STAND PROUD (TV Size)",
+      "artist": "Jin Hashimoto",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=dfFfMRC3E1g",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 99,
+          "bpm": 165.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 139,
+          "bpm": 165.0
+        },
+        {
+          "name": "HARD",
+          "notes": 194,
+          "bpm": 165.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 230,
+          "bpm": 165.0
+        }
+      ],
+      "duration_s": 92.0,
+      "size_bytes": 10770176,
+      "has_video": true,
+      "zip": "songs/community-200-v1.zip",
+      "zip_bytes": 10747055,
+      "sha256": "bd4d7f60fa055cdd22f5f9e75b6e0c5824dec0821eba845d03605564725f4552",
+      "thumb": "thumbs/community-200-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 200,
+      "local_id": "popular8_stand",
+      "previous_objects": [],
+      "source_sha256": "e86f727f66e2d77a8c252f48df67357857f58cded73da35829d761c095334ef1"
     },
     {
       "id": "community-186",
@@ -7592,6 +8006,52 @@
       "source_sha256": "60ff3ab5f9f06ca605557ad1b2022222a7eb497b01e4990143508fad2484b792"
     },
     {
+      "id": "community-203",
+      "version": 1,
+      "title": "The Blessing (TV Size)",
+      "artist": "YOASOBI",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=vIhQ9zya2-g",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 96,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 136,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 207,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 240,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 89.6,
+      "size_bytes": 10157721,
+      "has_video": true,
+      "zip": "songs/community-203-v1.zip",
+      "zip_bytes": 10057698,
+      "sha256": "0657ef150b01da54389c02a3544deedc1661025114a7420607e67450b2ba1ee1",
+      "thumb": "thumbs/community-203-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 203,
+      "local_id": "popular8_shukufuku",
+      "previous_objects": [],
+      "source_sha256": "afd282c7631f4a4d39912f6a793cb691373333e3df5640b099f9bd555240bc93"
+    },
+    {
       "id": "community-87",
       "version": 1,
       "title": "THE HERO!! (TV Size)",
@@ -7774,6 +8234,52 @@
       "local_id": "popular4_this_game",
       "previous_objects": [],
       "source_sha256": "be6ee0e879b8b62f87f05c292543e40232b4cd067d448586d63e0cb665df2075"
+    },
+    {
+      "id": "community-194",
+      "version": 1,
+      "title": "Those Who Fight Further",
+      "artist": "Nobuo Uematsu",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=QYPgLFyrYoc",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 198,
+          "bpm": 168.07
+        },
+        {
+          "name": "NORMAL",
+          "notes": 301,
+          "bpm": 168.07
+        },
+        {
+          "name": "HARD",
+          "notes": 486,
+          "bpm": 168.07
+        },
+        {
+          "name": "EXPERT",
+          "notes": 559,
+          "bpm": 168.07
+        }
+      ],
+      "duration_s": 214.4,
+      "size_bytes": 24917223,
+      "has_video": true,
+      "zip": "songs/community-194-v1.zip",
+      "zip_bytes": 24882667,
+      "sha256": "668d6060d73f261811af39b0bcb3992e89ad9ffc4277da32b3ba5856a64f2057",
+      "thumb": "thumbs/community-194-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 194,
+      "local_id": "popular8_fight",
+      "previous_objects": [],
+      "source_sha256": "904eea53732a596ffec07ba3bc83804809eb6bc5f72c4c3b33ec7ae2ad726fe3"
     },
     {
       "id": "community-100",
@@ -8188,6 +8694,52 @@
       "local_id": "popular4_we_are",
       "previous_objects": [],
       "source_sha256": "1ed41a444f5d7b60c80289fd6f856ade95c490af74516f0d56fbde2bf636bc41"
+    },
+    {
+      "id": "community-198",
+      "version": 1,
+      "title": "We Go! (TV Size)",
+      "artist": "Hiroshi Kitadani",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=fCQufN8Wsgc",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 163,
+          "bpm": 176.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 222,
+          "bpm": 176.0
+        },
+        {
+          "name": "HARD",
+          "notes": 319,
+          "bpm": 176.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 392,
+          "bpm": 176.0
+        }
+      ],
+      "duration_s": 150.0,
+      "size_bytes": 17274027,
+      "has_video": true,
+      "zip": "songs/community-198-v1.zip",
+      "zip_bytes": 17215975,
+      "sha256": "224676c6380de4144ccc05a47e8e7087c6b16ae55a706db254e1252f82d2371c",
+      "thumb": "thumbs/community-198-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 198,
+      "local_id": "popular8_wego",
+      "previous_objects": [],
+      "source_sha256": "f059f1a1298813106935d45674776358de62153a1c513705c6345c5ef874ed41"
     },
     {
       "id": "community-89",
