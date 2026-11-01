@@ -7408,6 +7408,52 @@
       "source_sha256": "d21e333dd548d23f4cf29d2cd017bb1df612b8ecdfef14d782bfbe1b980314e4"
     },
     {
+      "id": "community-200",
+      "version": 1,
+      "title": "STAND PROUD (TV Size)",
+      "artist": "Jin Hashimoto",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=dfFfMRC3E1g",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 99,
+          "bpm": 165.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 139,
+          "bpm": 165.0
+        },
+        {
+          "name": "HARD",
+          "notes": 194,
+          "bpm": 165.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 230,
+          "bpm": 165.0
+        }
+      ],
+      "duration_s": 92.0,
+      "size_bytes": 10770176,
+      "has_video": true,
+      "zip": "songs/community-200-v1.zip",
+      "zip_bytes": 10747055,
+      "sha256": "bd4d7f60fa055cdd22f5f9e75b6e0c5824dec0821eba845d03605564725f4552",
+      "thumb": "thumbs/community-200-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 200,
+      "local_id": "popular8_stand",
+      "previous_objects": [],
+      "source_sha256": "e86f727f66e2d77a8c252f48df67357857f58cded73da35829d761c095334ef1"
+    },
+    {
       "id": "community-186",
       "version": 1,
       "title": "Stickerbush Symphony",
