@@ -1796,6 +1796,52 @@
       "source_sha256": "c96630d2c1bc42e4372b4d0169502a5427249d5f55fcdb39f5b88c75350d1b9a"
     },
     {
+      "id": "community-189",
+      "version": 1,
+      "title": "Coconut Mall",
+      "artist": "Asuka Ohta & Ryo Nagamatsu",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=cscuCIzItZQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 132,
+          "bpm": 132.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 205,
+          "bpm": 132.0
+        },
+        {
+          "name": "HARD",
+          "notes": 291,
+          "bpm": 132.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 350,
+          "bpm": 132.0
+        }
+      ],
+      "duration_s": 141.6,
+      "size_bytes": 3466701,
+      "has_video": false,
+      "zip": "songs/community-189-v1.zip",
+      "zip_bytes": 3450633,
+      "sha256": "f902316b1127904a4f114c07369aed3814fa6ccf9132dbdfc680c7d17664d631",
+      "thumb": "thumbs/community-189-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 189,
+      "local_id": "popular8_coconut",
+      "previous_objects": [],
+      "source_sha256": "443dba118df1fefafccf13dc57f8c058d9a8ee833c370b1e69935661d33b9a2c"
+    },
+    {
       "id": "community-47",
       "version": 1,
       "title": "Cold Green Eyes feat. Roos Denayer",
