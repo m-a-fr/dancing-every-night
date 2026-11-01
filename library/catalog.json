@@ -6672,6 +6672,52 @@
       "source_sha256": "8657265d697c04b8f9cdc3dda60ca0d298c7dcf46c9ab87a455f401d0ecc602e"
     },
     {
+      "id": "community-204",
+      "version": 1,
+      "title": "ROKI",
+      "artist": "mikitoP feat. Kagamine Rin",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Xg-qfsKN2_E",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 223,
+          "bpm": 150.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 342,
+          "bpm": 150.0
+        },
+        {
+          "name": "HARD",
+          "notes": 507,
+          "bpm": 150.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 592,
+          "bpm": 150.0
+        }
+      ],
+      "duration_s": 230.4,
+      "size_bytes": 5550239,
+      "has_video": false,
+      "zip": "songs/community-204-v1.zip",
+      "zip_bytes": 5518807,
+      "sha256": "da8be40300860d9a1a3d5ca529e103e84c5d62b0d9449b1f5779e1c1c273f144",
+      "thumb": "thumbs/community-204-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 204,
+      "local_id": "popular8_roki",
+      "previous_objects": [],
+      "source_sha256": "a12cd444ce9d146ca1f5cf0928100984ffb5da77aa05511ad664b33e3854e95b"
+    },
+    {
       "id": "community-85",
       "version": 1,
       "title": "Scream out!",
