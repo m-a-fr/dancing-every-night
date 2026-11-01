@@ -2302,6 +2302,52 @@
       "source_sha256": "1cefa83decadeb99d83b01c794cfa40d785e937a30e99723d2dfaa81d4873f76"
     },
     {
+      "id": "community-183",
+      "version": 1,
+      "title": "Death by Glamour",
+      "artist": "Toby Fox",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=qeDIZCc6Cyo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 124,
+          "bpm": 148.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 184,
+          "bpm": 148.0
+        },
+        {
+          "name": "HARD",
+          "notes": 268,
+          "bpm": 148.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 317,
+          "bpm": 148.0
+        }
+      ],
+      "duration_s": 138.7,
+      "size_bytes": 3034726,
+      "has_video": false,
+      "zip": "songs/community-183-v1.zip",
+      "zip_bytes": 3009829,
+      "sha256": "58f2a292300bc4a5f049ae7b0d7d58aa27bfbce16fa7392112ed98148f16d81a",
+      "thumb": "thumbs/community-183-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 183,
+      "local_id": "popular8_glamour",
+      "previous_objects": [],
+      "source_sha256": "b54e26f516f55023c10e2e5eb16bd66c4cea0dd8d008a092f9916b604c3c7071"
+    },
+    {
       "id": "community-21",
       "version": 1,
       "title": "Digital Native",
