@@ -738,6 +738,52 @@
       "source_sha256": "cc9f2e13184adbbe7c8d766c47bd7a4c92966abc145913e404b349b68245f648"
     },
     {
+      "id": "community-185",
+      "version": 1,
+      "title": "BIG SHOT",
+      "artist": "Toby Fox",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=V31PVkwzpEY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 139,
+          "bpm": 140.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 207,
+          "bpm": 140.0
+        },
+        {
+          "name": "HARD",
+          "notes": 306,
+          "bpm": 140.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 351,
+          "bpm": 140.0
+        }
+      ],
+      "duration_s": 146.9,
+      "size_bytes": 2891462,
+      "has_video": false,
+      "zip": "songs/community-185-v1.zip",
+      "zip_bytes": 2856278,
+      "sha256": "613003e03c28c5e5831126db515d8d3b45048f334ea11899918db84a8f82ca9a",
+      "thumb": "thumbs/community-185-v1.jpg",
+      "added": "2026-11-01",
+      "updated": "2026-11-01",
+      "submitter": "DocteurBob",
+      "issue": 185,
+      "local_id": "popular8_bigshot",
+      "previous_objects": [],
+      "source_sha256": "69e2830d27ac27b3a223e6f43ad31c977bf821ecc8bd419b1027c4847a1e151e"
+    },
+    {
       "id": "community-105",
       "version": 1,
       "title": "Black Catcher (TV Size)",
