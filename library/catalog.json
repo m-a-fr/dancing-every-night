@@ -4786,6 +4786,52 @@
       "source_sha256": "62099715c433c406502c122d5d294c8efb4a2d6e2f11134141d9cda49612e445"
     },
     {
+      "id": "community-217",
+      "version": 1,
+      "title": "Just Awake (TV Size)",
+      "artist": "Fear, and Loathing in Las Vegas",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/hunter_x_hunter_2011/ED1",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 92,
+          "bpm": 191.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 124,
+          "bpm": 191.0
+        },
+        {
+          "name": "HARD",
+          "notes": 167,
+          "bpm": 191.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 208,
+          "bpm": 191.0
+        }
+      ],
+      "duration_s": 80.0,
+      "size_bytes": 8594662,
+      "has_video": true,
+      "zip": "songs/community-217-v1.zip",
+      "zip_bytes": 8535452,
+      "sha256": "bd34cbd74946ef63ead14fb8338e0cf4c6a37f71406779ed92928dd8c2f35cb9",
+      "thumb": "thumbs/community-217-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 217,
+      "local_id": "folv_just_awake",
+      "previous_objects": [],
+      "source_sha256": "ed640b1b42819e2eeccf08035da70b11302ac440453418d7294e75222af6df48"
+    },
+    {
       "id": "community-70",
       "version": 1,
       "title": "Kaikai Kitan (TV Size)",
