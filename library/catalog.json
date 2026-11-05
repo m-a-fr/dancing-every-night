@@ -9984,6 +9984,52 @@
       "source_sha256": "7a3615f5e24892cc7cc70e65d628b5ccb8cc4997a3e421476ef84fedd0f24908"
     },
     {
+      "id": "community-236",
+      "version": 1,
+      "title": "World is Mine",
+      "artist": "ryo (supercell) feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=jhl5afLEKdo",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 173,
+          "bpm": 165.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 248,
+          "bpm": 165.0
+        },
+        {
+          "name": "HARD",
+          "notes": 385,
+          "bpm": 165.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 453,
+          "bpm": 165.0
+        }
+      ],
+      "duration_s": 176.7,
+      "size_bytes": 19400378,
+      "has_video": true,
+      "zip": "songs/community-236-v1.zip",
+      "zip_bytes": 19371283,
+      "sha256": "caa0cb6b3a0ea1a17819718b272e3ca6562c1d8e7c859c98197e5e670966119e",
+      "thumb": "thumbs/community-236-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 236,
+      "local_id": "supercell_world_is_mine",
+      "previous_objects": [],
+      "source_sha256": "7ee10a842a86593b2e11a0dbcf957fa1792b7b399e781a7e815c83b42767b1da"
+    },
+    {
       "id": "community-40",
       "version": 1,
       "title": "Yoru ni Kakeru",
