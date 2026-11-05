@@ -1750,6 +1750,52 @@
       "source_sha256": "dfaf956c32201e8df8ba8331b3db6386c702ac9c1188fae3ea64cc6d40370a6e"
     },
     {
+      "id": "community-224",
+      "version": 1,
+      "title": "chAngE (TV Size)",
+      "artist": "miwa",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/bleach/OP12",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 95,
+          "bpm": 165.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 134,
+          "bpm": 165.0
+        },
+        {
+          "name": "HARD",
+          "notes": 209,
+          "bpm": 165.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 234,
+          "bpm": 165.0
+        }
+      ],
+      "duration_s": 92.9,
+      "size_bytes": 10490503,
+      "has_video": true,
+      "zip": "songs/community-224-v1.zip",
+      "zip_bytes": 10457817,
+      "sha256": "c9c059a47c651594808f7f4f62b9fc3f54d31096399f05fea8dbc46dffa9ce15",
+      "thumb": "thumbs/community-224-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 224,
+      "local_id": "miwa_change",
+      "previous_objects": [],
+      "source_sha256": "528472cc8037b8841fc482ee1800e84721654e8c00685842cc138988f9d8ff0a"
+    },
+    {
       "id": "community-19",
       "version": 1,
       "title": "Chibi Ninja",
