@@ -5890,6 +5890,52 @@
       "source_sha256": "c8b80811e37868d3e1549ac1803d509ed800ce96083f5cdd7e21e26058994899"
     },
     {
+      "id": "community-239",
+      "version": 1,
+      "title": "Matryoshka",
+      "artist": "Hachi feat. Hatsune Miku & GUMI",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=HOz-9FzIDf0",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 166,
+          "bpm": 102.5
+        },
+        {
+          "name": "NORMAL",
+          "notes": 278,
+          "bpm": 102.5
+        },
+        {
+          "name": "HARD",
+          "notes": 393,
+          "bpm": 102.5
+        },
+        {
+          "name": "EXPERT",
+          "notes": 415,
+          "bpm": 102.5
+        }
+      ],
+      "duration_s": 200.1,
+      "size_bytes": 4912598,
+      "has_video": false,
+      "zip": "songs/community-239-v1.zip",
+      "zip_bytes": 4887924,
+      "sha256": "fec05795445af5911c33fd6b43aee4edb9a50f32ece65d14e7e5570a2052d851",
+      "thumb": "thumbs/community-239-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 239,
+      "local_id": "hachi_matryoshka",
+      "previous_objects": [],
+      "source_sha256": "1ecc9fc40ff6bb6b764dbfea8346a04d03ee067912fec95904d44888adb290ab"
+    },
+    {
       "id": "community-181",
       "version": 1,
       "title": "MEGALOVANIA",
