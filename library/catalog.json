@@ -3038,6 +3038,52 @@
       "source_sha256": "432cf96f2dfcf64613268a47d02ef7c8df1ea40bc72a18ea9fa617a95b14aedf"
     },
     {
+      "id": "community-221",
+      "version": 1,
+      "title": "Fly Me to the Moon (TV Size)",
+      "artist": "Claire",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/neon_genesis_evangelion/ED1",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 60,
+          "bpm": 119.32
+        },
+        {
+          "name": "NORMAL",
+          "notes": 93,
+          "bpm": 119.32
+        },
+        {
+          "name": "HARD",
+          "notes": 151,
+          "bpm": 119.32
+        },
+        {
+          "name": "EXPERT",
+          "notes": 175,
+          "bpm": 119.32
+        }
+      ],
+      "duration_s": 65.1,
+      "size_bytes": 7427989,
+      "has_video": true,
+      "zip": "songs/community-221-v1.zip",
+      "zip_bytes": 7419093,
+      "sha256": "59a8292404edf4a3adeb424f6d51de472aac4582c72c5bdd6e3de2983820be53",
+      "thumb": "thumbs/community-221-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 221,
+      "local_id": "claire_fly_me_to_the_moon",
+      "previous_objects": [],
+      "source_sha256": "d593202dcc7c0086f33417b15469b98be9eca1b15d3aad0109af6ae259ff2e36"
+    },
+    {
       "id": "community-42",
       "version": 1,
       "title": "FREEDOM DiVE",
