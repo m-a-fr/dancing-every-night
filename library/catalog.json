@@ -7270,6 +7270,52 @@
       "source_sha256": "de7c49bc2b0595334464ac785bf3160cead89d70e99db6f9f620b0ac05017765"
     },
     {
+      "id": "community-227",
+      "version": 1,
+      "title": "Recollect (TV Size)",
+      "artist": "Konomi Suzuki feat. Ashnikko",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/rezero_kara_hajimeru_isekai_seika",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 87,
+          "bpm": 145.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 132,
+          "bpm": 145.0
+        },
+        {
+          "name": "HARD",
+          "notes": 190,
+          "bpm": 145.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 226,
+          "bpm": 145.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 9851336,
+      "has_video": true,
+      "zip": "songs/community-227-v1.zip",
+      "zip_bytes": 9820761,
+      "sha256": "3376753db9b6f2d823c879be64ddd0111f8dfe0ed81fb645b5f605b5ab8f11d7",
+      "thumb": "thumbs/community-227-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 227,
+      "local_id": "suzuki_konomi_recollect",
+      "previous_objects": [],
+      "source_sha256": "b9834234aeca80aa138f2223a8d4030668e7cef4ffdd89c2336be4447509fc01"
+    },
+    {
       "id": "community-161",
       "version": 1,
       "title": "Red Swan (TV Size)",
