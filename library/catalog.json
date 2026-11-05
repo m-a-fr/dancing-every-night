@@ -7776,6 +7776,52 @@
       "source_sha256": "10f7a6acb78d33f36dfbedb1f6303217a833bf8aa0b934cbbe17f4f8488e3e2d"
     },
     {
+      "id": "community-228",
+      "version": 1,
+      "title": "Senbonzakura",
+      "artist": "WhiteFlame feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=shs0rAiwsGQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 240,
+          "bpm": 154.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 350,
+          "bpm": 154.0
+        },
+        {
+          "name": "HARD",
+          "notes": 522,
+          "bpm": 154.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 635,
+          "bpm": 154.0
+        }
+      ],
+      "duration_s": 244.1,
+      "size_bytes": 5802684,
+      "has_video": false,
+      "zip": "songs/community-228-v1.zip",
+      "zip_bytes": 5772701,
+      "sha256": "ebf54d1082f03aba95796ed44dcc6290ffb38f00d9a008a6c7766e57dcdba69f",
+      "thumb": "thumbs/community-228-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 228,
+      "local_id": "whiteflame_senbonzakura",
+      "previous_objects": [],
+      "source_sha256": "15995e9ab107de0a5794a1ec7662a3aa41ff02c55027edb4b480e49871acd0c9"
+    },
+    {
       "id": "community-37",
       "version": 1,
       "title": "Shinzou wo Sasageyo! (TV Size)",
