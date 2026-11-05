@@ -1198,6 +1198,52 @@
       "source_sha256": "f5a1bb09f6016218728b68533f279a8149bc350d3b3ddec513b1a2587526feef"
     },
     {
+      "id": "community-212",
+      "version": 1,
+      "title": "Bouken Desho Desho? (TV Size)",
+      "artist": "Aya Hirano",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/suzumiya_haruhi_no_yuuutsu/OP2",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 86,
+          "bpm": 150.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 126,
+          "bpm": 150.0
+        },
+        {
+          "name": "HARD",
+          "notes": 196,
+          "bpm": 150.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 226,
+          "bpm": 150.0
+        }
+      ],
+      "duration_s": 91.0,
+      "size_bytes": 10221334,
+      "has_video": true,
+      "zip": "songs/community-212-v1.zip",
+      "zip_bytes": 10187249,
+      "sha256": "a56696b778da7425abbb6d8c397d70592c5c663979b4b217472df03a6956bb8c",
+      "thumb": "thumbs/community-212-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 212,
+      "local_id": "aya_hirano_bouken_desho_desho",
+      "previous_objects": [],
+      "source_sha256": "a6092e75d2425a258ac21944067f4ec1784cc9c606c785f1f549c2623b398f49"
+    },
+    {
       "id": "community-18",
       "version": 2,
       "title": "Bounded Quietude",
