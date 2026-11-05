@@ -6948,6 +6948,52 @@
       "source_sha256": "b27451d079d955c7350cefeee78f4fe7473e82da9d775c45fbca904114e98888"
     },
     {
+      "id": "community-219",
+      "version": 1,
+      "title": "Rain (TV Size)",
+      "artist": "SID",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/fullmetal_alchemist_brotherhood/O",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 104,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 136,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 190,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 234,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 9772598,
+      "has_video": true,
+      "zip": "songs/community-219-v1.zip",
+      "zip_bytes": 9736531,
+      "sha256": "3ee32c59c32ae4be559d6bd074b272e4430e65a5dc93ac5a931059971405ac9d",
+      "thumb": "thumbs/community-219-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 219,
+      "local_id": "sid_rain",
+      "previous_objects": [],
+      "source_sha256": "a7ac3ade73e1efd3507ae8925ea5ed061f16cfba467b16e12014d690b8438506"
+    },
+    {
       "id": "community-57",
       "version": 1,
       "title": "Rainbow Tylenol",
