@@ -3820,6 +3820,52 @@
       "source_sha256": "1647b5ca271d0f34bbae9f9e6b116af8bde68f336a133534ca10170b7d037f44"
     },
     {
+      "id": "community-213",
+      "version": 1,
+      "title": "Hare Hare Yukai (TV Size)",
+      "artist": "Aya Hirano, Minori Chihara & Yuuko Gotou",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/suzumiya_haruhi_no_yuuutsu/ED1",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 70,
+          "bpm": 172.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 96,
+          "bpm": 172.0
+        },
+        {
+          "name": "HARD",
+          "notes": 136,
+          "bpm": 172.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 163,
+          "bpm": 172.0
+        }
+      ],
+      "duration_s": 66.0,
+      "size_bytes": 7578533,
+      "has_video": true,
+      "zip": "songs/community-213-v1.zip",
+      "zip_bytes": 7549380,
+      "sha256": "9fc857f5c3d01ff7e9f66ca91aa0951cc1393990c51ee59351810f44667f9bef",
+      "thumb": "thumbs/community-213-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 213,
+      "local_id": "aya_hirano_hare_hare_yukai",
+      "previous_objects": [],
+      "source_sha256": "9fbc5cbd5dcf810581e53e4b6eb7cc1469cbd9273dd2b763fd849c92af91600f"
+    },
+    {
       "id": "community-153",
       "version": 1,
       "title": "Haru (TV Size)",
