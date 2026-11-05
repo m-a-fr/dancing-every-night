@@ -8880,6 +8880,52 @@
       "source_sha256": "d48cb4acf0b64d69f283013e3e8f05d21ee5188009ff5b6f9644ffa9424e8a1a"
     },
     {
+      "id": "community-231",
+      "version": 1,
+      "title": "The Disappearance of Hatsune Miku",
+      "artist": "cosMo@bousouP feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=VWVtIg5cdDU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 283,
+          "bpm": 120.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 430,
+          "bpm": 120.0
+        },
+        {
+          "name": "HARD",
+          "notes": 642,
+          "bpm": 120.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 713,
+          "bpm": 120.0
+        }
+      ],
+      "duration_s": 290.1,
+      "size_bytes": 6355969,
+      "has_video": false,
+      "zip": "songs/community-231-v1.zip",
+      "zip_bytes": 6306145,
+      "sha256": "64d39a58dfb4d42fc69928cdcb2bc1eeff704c1db54d63cc78c9c404db47bb97",
+      "thumb": "thumbs/community-231-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 231,
+      "local_id": "cosmo_miku_disappearance",
+      "previous_objects": [],
+      "source_sha256": "0df8cb52318dafb41cb5ae19577730afd3333bb57f25028a13de2f5ff18b41f5"
+    },
+    {
       "id": "community-87",
       "version": 1,
       "title": "THE HERO!! (TV Size)",
