@@ -7638,6 +7638,52 @@
       "source_sha256": "a12cd444ce9d146ca1f5cf0928100984ffb5da77aa05511ad664b33e3854e95b"
     },
     {
+      "id": "community-230",
+      "version": 1,
+      "title": "Rolling Girl",
+      "artist": "wowaka feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=vnw8zURAxkU",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 206,
+          "bpm": 195.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 274,
+          "bpm": 195.0
+        },
+        {
+          "name": "HARD",
+          "notes": 398,
+          "bpm": 195.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 488,
+          "bpm": 195.0
+        }
+      ],
+      "duration_s": 196.1,
+      "size_bytes": 4973630,
+      "has_video": false,
+      "zip": "songs/community-230-v1.zip",
+      "zip_bytes": 4935235,
+      "sha256": "400028c30e02f3595e3ec3a325897edc4216f3a3305cef4887ad5cb4cfa54eb8",
+      "thumb": "thumbs/community-230-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 230,
+      "local_id": "wowaka_rolling_girl",
+      "previous_objects": [],
+      "source_sha256": "5a20ccd9f8b3a914e8bd268722456bc66645231b5834f24b4eb396ed905c2844"
+    },
+    {
       "id": "community-208",
       "version": 1,
       "title": "Sayonara Planet Wars (Full Version)",
