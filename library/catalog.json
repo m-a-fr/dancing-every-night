@@ -9340,6 +9340,52 @@
       "source_sha256": "a0b8ec19dca6dfbe6dd2edbfe80aed9e8d3267820396e9c85a6d4d1eb6490329"
     },
     {
+      "id": "community-232",
+      "version": 1,
+      "title": "Umiyuri Kaiteitan",
+      "artist": "n-buna feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=7JANm3jOb2k",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 213,
+          "bpm": 120.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 337,
+          "bpm": 120.0
+        },
+        {
+          "name": "HARD",
+          "notes": 507,
+          "bpm": 120.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 593,
+          "bpm": 120.0
+        }
+      ],
+      "duration_s": 238.7,
+      "size_bytes": 5451186,
+      "has_video": false,
+      "zip": "songs/community-232-v1.zip",
+      "zip_bytes": 5423605,
+      "sha256": "c46acc6aec010a1fc4d3361613933cfda95d4df4a2a35730f0deb4469f3d9da7",
+      "thumb": "thumbs/community-232-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 232,
+      "local_id": "n_buna_umiyuri_kaiteitan",
+      "previous_objects": [],
+      "source_sha256": "fc90a7bccaa874bb213b46c4ec8dd0f7a5173cc69a7ba00ea463c9a4e468cd42"
+    },
+    {
       "id": "community-59",
       "version": 1,
       "title": "Unity",
