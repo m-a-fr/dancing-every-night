@@ -1566,6 +1566,52 @@
       "source_sha256": "15bdebfc01fb8c43acb36de04952578c95457c287430474565c91bbb5196ab7d"
     },
     {
+      "id": "community-211",
+      "version": 1,
+      "title": "Cagayake! GIRLS (TV Size)",
+      "artist": "Houkago Tea Time",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/k_on/OP1",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 97,
+          "bpm": 170.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 133,
+          "bpm": 170.0
+        },
+        {
+          "name": "HARD",
+          "notes": 208,
+          "bpm": 170.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 246,
+          "bpm": 170.0
+        }
+      ],
+      "duration_s": 89.8,
+      "size_bytes": 10356265,
+      "has_video": true,
+      "zip": "songs/community-211-v1.zip",
+      "zip_bytes": 10334503,
+      "sha256": "a6a2918e6d4c1de36f1ca918b1477652c57a9997ad61069c32a3e4e0d9b02c95",
+      "thumb": "thumbs/community-211-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 211,
+      "local_id": "houkago_tea_time_cagayake_girls",
+      "previous_objects": [],
+      "source_sha256": "ebf9ead022a86085e4ac733b7e162b326a4ceffaf39bc9717c30e6c1e235b3e4"
+    },
+    {
       "id": "community-107",
       "version": 1,
       "title": "Calamity Fortune",
