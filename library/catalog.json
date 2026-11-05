@@ -7684,6 +7684,52 @@
       "source_sha256": "6748fa7a36da1c1cfb874c64a81258f9727fb0e7679d0dc16701d561f9004187"
     },
     {
+      "id": "community-223",
+      "version": 1,
+      "title": "Shoujo S (TV Size)",
+      "artist": "SCANDAL",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/bleach/OP10",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 89,
+          "bpm": 136.49
+        },
+        {
+          "name": "NORMAL",
+          "notes": 140,
+          "bpm": 136.49
+        },
+        {
+          "name": "HARD",
+          "notes": 206,
+          "bpm": 136.49
+        },
+        {
+          "name": "EXPERT",
+          "notes": 243,
+          "bpm": 136.49
+        }
+      ],
+      "duration_s": 92.9,
+      "size_bytes": 11048615,
+      "has_video": true,
+      "zip": "songs/community-223-v1.zip",
+      "zip_bytes": 11010273,
+      "sha256": "b13c4d8dda551a4b6681bf9f6c9612112ca09dda6d58632ce633438e199358a9",
+      "thumb": "thumbs/community-223-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 223,
+      "local_id": "scandal_shoujo_s",
+      "previous_objects": [],
+      "source_sha256": "941717473e6f8f2d0686d23631ec4c0059a29199f497221ca299974f44a32ef1"
+    },
+    {
       "id": "community-162",
       "version": 1,
       "title": "Shoukei to Shikabane no Michi (TV Size)",
