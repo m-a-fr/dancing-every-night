@@ -6626,6 +6626,52 @@
       "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
     },
     {
+      "id": "community-214",
+      "version": 1,
+      "title": "Pre-Parade (TV Size)",
+      "artist": "Eri Kitamura, Rie Kugimiya & Yui Horie",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/toradora/OP1",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 88,
+          "bpm": 160.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 133,
+          "bpm": 160.0
+        },
+        {
+          "name": "HARD",
+          "notes": 205,
+          "bpm": 160.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 231,
+          "bpm": 160.0
+        }
+      ],
+      "duration_s": 90.5,
+      "size_bytes": 10314096,
+      "has_video": true,
+      "zip": "songs/community-214-v1.zip",
+      "zip_bytes": 10299710,
+      "sha256": "f83b2c26f5926454e56d347c98852e9d22739e2c3c8761ec9944844223948757",
+      "thumb": "thumbs/community-214-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 214,
+      "local_id": "kitamura_pre_parade",
+      "previous_objects": [],
+      "source_sha256": "fe719bdaa72725bacaad55f0b7ee515562cededaf461b4166636b483f03f23d4"
+    },
+    {
       "id": "community-180",
       "version": 1,
       "title": "PUPA",
