@@ -5016,6 +5016,52 @@
       "source_sha256": "43857522dc3c532c477634e2872e6671d666469167196e33a8f1420f32cbb1c8"
     },
     {
+      "id": "community-233",
+      "version": 1,
+      "title": "Kasukana Hana (TV Size)",
+      "artist": "Tatsuya Kitani feat. BABYMETAL",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=gHIA3Mhc618",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 101,
+          "bpm": 184.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 134,
+          "bpm": 184.0
+        },
+        {
+          "name": "HARD",
+          "notes": 186,
+          "bpm": 184.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 229,
+          "bpm": 184.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 10352026,
+      "has_video": true,
+      "zip": "songs/community-233-v1.zip",
+      "zip_bytes": 10305633,
+      "sha256": "560e69a9edf1f3be513bf26f6df3049c435bba0a3e618239f486af40717c775e",
+      "thumb": "thumbs/community-233-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 233,
+      "local_id": "kitani_kasukana_hana",
+      "previous_objects": [],
+      "source_sha256": "e4172964548e116c6fa706bc8cf626d7b7240e10311da84b36434c28ea62ff62"
+    },
+    {
       "id": "community-51",
       "version": 1,
       "title": "Kawaki wo Ameku (TV Size)",
