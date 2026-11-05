@@ -6764,6 +6764,52 @@
       "source_sha256": "34b784114782a69de2a9be73b7573a77c3f4394e684fe7d20c4b49fcb012e013"
     },
     {
+      "id": "community-234",
+      "version": 1,
+      "title": "Packaged",
+      "artist": "livetune feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=f5kUd72R_tg",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 276,
+          "bpm": 125.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 413,
+          "bpm": 125.0
+        },
+        {
+          "name": "HARD",
+          "notes": 610,
+          "bpm": 125.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 705,
+          "bpm": 125.0
+        }
+      ],
+      "duration_s": 293.3,
+      "size_bytes": 6436814,
+      "has_video": false,
+      "zip": "songs/community-234-v1.zip",
+      "zip_bytes": 6384462,
+      "sha256": "5cec7d714c9d519777e08d8661ec8e1c90fe172dd2c4ca64e0981dc4d3c99de9",
+      "thumb": "thumbs/community-234-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 234,
+      "local_id": "kz_livetune_packaged",
+      "previous_objects": [],
+      "source_sha256": "cfcc0e22513be7a08e85eaa09cc474b0c757ae13769d899c4b1a7d9234c6a15a"
+    },
+    {
       "id": "community-94",
       "version": 1,
       "title": "Paradisus-Paradoxum (TV Size)",
