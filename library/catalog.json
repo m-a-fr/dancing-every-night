@@ -5384,6 +5384,52 @@
       "source_sha256": "3f5cbf653ce1ba682340390b8a5b472af0f85d9582d70d06f23e78b3f015d3ab"
     },
     {
+      "id": "community-216",
+      "version": 1,
+      "title": "Love Dramatic (TV Size)",
+      "artist": "Masayuki Suzuki feat. Rikka Ihara",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/kaguya_sama_wa_kokurasetai_tensai",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 85,
+          "bpm": 129.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 123,
+          "bpm": 129.0
+        },
+        {
+          "name": "HARD",
+          "notes": 193,
+          "bpm": 129.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 227,
+          "bpm": 129.0
+        }
+      ],
+      "duration_s": 93.1,
+      "size_bytes": 11174570,
+      "has_video": true,
+      "zip": "songs/community-216-v1.zip",
+      "zip_bytes": 11151701,
+      "sha256": "09ddbae5a7fde1e3251dd9f481283835ee0282195300a7665cfb08188c5a9fa0",
+      "thumb": "thumbs/community-216-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 216,
+      "local_id": "masayuki_suzuki_love_dramatic",
+      "previous_objects": [],
+      "source_sha256": "4f64fd07ebb846f29f34dd32198b86b8694765bef69c6790451a0c189a1d330f"
+    },
+    {
       "id": "community-75",
       "version": 1,
       "title": "Machine Love",
