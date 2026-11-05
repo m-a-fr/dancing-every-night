@@ -8236,6 +8236,52 @@
       "source_sha256": "afd282c7631f4a4d39912f6a793cb691373333e3df5640b099f9bd555240bc93"
     },
     {
+      "id": "community-215",
+      "version": 1,
+      "title": "The Day (TV Size)",
+      "artist": "Porno Graffitti",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/boku_no_hero_academia/OP1",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 97,
+          "bpm": 186.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 136,
+          "bpm": 186.0
+        },
+        {
+          "name": "HARD",
+          "notes": 193,
+          "bpm": 186.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 245,
+          "bpm": 186.0
+        }
+      ],
+      "duration_s": 92.1,
+      "size_bytes": 11401665,
+      "has_video": true,
+      "zip": "songs/community-215-v1.zip",
+      "zip_bytes": 11371042,
+      "sha256": "bbe05d4018a2f12e374b2bc55ff5d380b6609df2c375d25c2ac9de25336ac4a7",
+      "thumb": "thumbs/community-215-v1.jpg",
+      "added": "2026-11-05",
+      "updated": "2026-11-05",
+      "submitter": "DocteurBob",
+      "issue": 215,
+      "local_id": "porno_graffitti_the_day",
+      "previous_objects": [],
+      "source_sha256": "d48cb4acf0b64d69f283013e3e8f05d21ee5188009ff5b6f9644ffa9424e8a1a"
+    },
+    {
       "id": "community-87",
       "version": 1,
       "title": "THE HERO!! (TV Size)",
