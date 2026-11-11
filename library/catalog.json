@@ -9018,6 +9018,52 @@
       "source_sha256": "29e7fdd1cfcefba142dc2d93e590c4d76c4ebdb4e05fe62a62f30415f21e71bd"
     },
     {
+      "id": "community-242",
+      "version": 2,
+      "title": "TEST ME (TV Size)",
+      "artist": "CHANMINA",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/oshi_no_ko_3rd_season/OP2",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 88,
+          "bpm": 130.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 133,
+          "bpm": 130.0
+        },
+        {
+          "name": "HARD",
+          "notes": 209,
+          "bpm": 130.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 246,
+          "bpm": 130.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 10365048,
+      "has_video": true,
+      "zip": "songs/community-242-v2.zip",
+      "zip_bytes": 10342359,
+      "sha256": "98507bf96f31c3229f0331dfe2c00e3144874a690c10143b1556d769dec96267",
+      "thumb": "thumbs/community-242-v2.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 242,
+      "local_id": "chanmina_test_me",
+      "previous_objects": [],
+      "source_sha256": "ef608859f41106b24a67e29e2d0742799182de4d15a60b6ba83544f4af1cfc49"
+    },
+    {
       "id": "community-203",
       "version": 1,
       "title": "The Blessing (TV Size)",
