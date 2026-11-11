@@ -830,6 +830,52 @@
       "source_sha256": "df51fbbe936f35018c09379de830f78d6d7216bffdc7dba868ee55d802f14b9c"
     },
     {
+      "id": "community-260",
+      "version": 1,
+      "title": "Battlecry",
+      "artist": "Nujabes feat. Shing02",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=fE3tc9-OWA0",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 215,
+          "bpm": 196.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 264,
+          "bpm": 196.0
+        },
+        {
+          "name": "HARD",
+          "notes": 368,
+          "bpm": 196.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 524,
+          "bpm": 196.0
+        }
+      ],
+      "duration_s": 202.1,
+      "size_bytes": 4085622,
+      "has_video": false,
+      "zip": "songs/community-260-v1.zip",
+      "zip_bytes": 4060396,
+      "sha256": "eb54c2d89a3bd2592324371e9fb6f1b5bc80e2b74feb512d6cb07aa2a0c93584",
+      "thumb": "thumbs/community-260-v1.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 260,
+      "local_id": "nujabes_battlecry",
+      "previous_objects": [],
+      "source_sha256": "03046e507ff61d0f3ed9e93700c6a3fdf5e1022e5bf45e5df57ae343029f63bc"
+    },
+    {
       "id": "community-16",
       "version": 1,
       "title": "Beatucada",
