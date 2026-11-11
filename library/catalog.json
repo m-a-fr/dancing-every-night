@@ -416,6 +416,52 @@
       "source_sha256": "681d66a63190a878178086484ae617d534826ef50130a06901f949d5b7b29fb8"
     },
     {
+      "id": "community-243",
+      "version": 2,
+      "title": "AIZO (TV Size)",
+      "artist": "King Gnu",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Xr032EhUDPw",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 100,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 141,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 198,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 238,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 10070800,
+      "has_video": true,
+      "zip": "songs/community-243-v2.zip",
+      "zip_bytes": 10041259,
+      "sha256": "e4f7ce85ee06d4c309984927356b7be20bb1ffefcec2cd1b1fd23a7e1784b43e",
+      "thumb": "thumbs/community-243-v2.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 243,
+      "local_id": "king_gnu_aizo",
+      "previous_objects": [],
+      "source_sha256": "9e585f4825789ff77b7a0382847539346ce6d2d7e0ea2160d6717573b4440728"
+    },
+    {
       "id": "community-164",
       "version": 1,
       "title": "ambiguous",
