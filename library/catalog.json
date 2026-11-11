@@ -5844,52 +5844,6 @@
       "source_sha256": "40acff3843c46ac48b9071e865907791fb358a60e92befe5672cb67e7d90d623"
     },
     {
-      "id": "community-225",
-      "version": 1,
-      "title": "lulu. (TV Size)",
-      "artist": "Mrs. GREEN APPLE",
-      "pack": "",
-      "mapper": "DocteurBob",
-      "source": "https://animethemes.moe/anime/sousou_no_frieren_2nd_season/OP1",
-      "license": "Redistribution permission not established",
-      "difficulties": [
-        {
-          "name": "EASY",
-          "notes": 91,
-          "bpm": 175.0
-        },
-        {
-          "name": "NORMAL",
-          "notes": 126,
-          "bpm": 175.0
-        },
-        {
-          "name": "HARD",
-          "notes": 175,
-          "bpm": 175.0
-        },
-        {
-          "name": "EXPERT",
-          "notes": 214,
-          "bpm": 175.0
-        }
-      ],
-      "duration_s": 90.0,
-      "size_bytes": 10462384,
-      "has_video": true,
-      "zip": "songs/community-225-v1.zip",
-      "zip_bytes": 10440799,
-      "sha256": "3335753b8ab01ef02b32f458e7a54c1464abc7187ac72d2a96f78192a190bcb7",
-      "thumb": "thumbs/community-225-v1.jpg",
-      "added": "2026-11-05",
-      "updated": "2026-11-05",
-      "submitter": "DocteurBob",
-      "issue": 225,
-      "local_id": "mrs_green_apple_lulu",
-      "previous_objects": [],
-      "source_sha256": "72248ef4c70e027be34f53ee4eebcb803e7ce069ee477ef9572f8485bfe70663"
-    },
-    {
       "id": "community-245",
       "version": 2,
       "title": "lulu. (TV Size)",
