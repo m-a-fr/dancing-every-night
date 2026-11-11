@@ -2164,6 +2164,52 @@
       "source_sha256": "686ddd70a7747eb3b69ba99c8a05c7d3660433a6bfb542e8629bcb3bad0372ac"
     },
     {
+      "id": "community-253",
+      "version": 1,
+      "title": "Comedy (TV Size)",
+      "artist": "Gen Hoshino",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=nRKJBpFFsuI",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 84,
+          "bpm": 176.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 121,
+          "bpm": 176.0
+        },
+        {
+          "name": "HARD",
+          "notes": 175,
+          "bpm": 176.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 215,
+          "bpm": 176.0
+        }
+      ],
+      "duration_s": 89.9,
+      "size_bytes": 10239201,
+      "has_video": true,
+      "zip": "songs/community-253-v1.zip",
+      "zip_bytes": 10158891,
+      "sha256": "e271079b46a65285ec47f9ac8b92d89467d79bc754e16ddee182c61827c2e6f6",
+      "thumb": "thumbs/community-253-v1.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 253,
+      "local_id": "gen_hoshino_comedy",
+      "previous_objects": [],
+      "source_sha256": "816d9a4355dc03282a4b26d8dd41c8a54244dd4c2abea271af00cc2c940179b0"
+    },
+    {
       "id": "community-108",
       "version": 1,
       "title": "conflict",
