@@ -9846,52 +9846,6 @@
       "source_sha256": "9c42bff918132afd31bff1d0031d4e795aae08ff08f3ca0b8408e17cb52ade97"
     },
     {
-      "id": "community-237",
-      "version": 1,
-      "title": "Ura-Omote Lovers",
-      "artist": "wowaka feat. Hatsune Miku",
-      "pack": "",
-      "mapper": "DocteurBob",
-      "source": "https://www.youtube.com/watch?v=b_cuMcDWwsI",
-      "license": "Redistribution permission not established",
-      "difficulties": [
-        {
-          "name": "EASY",
-          "notes": 176,
-          "bpm": 159.0
-        },
-        {
-          "name": "NORMAL",
-          "notes": 273,
-          "bpm": 159.0
-        },
-        {
-          "name": "HARD",
-          "notes": 434,
-          "bpm": 159.0
-        },
-        {
-          "name": "EXPERT",
-          "notes": 474,
-          "bpm": 159.0
-        }
-      ],
-      "duration_s": 189.3,
-      "size_bytes": 4425996,
-      "has_video": false,
-      "zip": "songs/community-237-v1.zip",
-      "zip_bytes": 4387394,
-      "sha256": "617647cc97b0ec3732d44db7654aa26f2b3aa39a79b7b7e1e1e5c80ab3fa59f6",
-      "thumb": "thumbs/community-237-v1.jpg",
-      "added": "2026-11-05",
-      "updated": "2026-11-05",
-      "submitter": "DocteurBob",
-      "issue": 237,
-      "local_id": "wowaka_ura_omote_lovers",
-      "previous_objects": [],
-      "source_sha256": "70eb1b76b42aae2f908c74decdff7c718fb38781ab1dd1d677650e3009b5979f"
-    },
-    {
       "id": "community-250",
       "version": 2,
       "title": "Ura-Omote Lovers",
