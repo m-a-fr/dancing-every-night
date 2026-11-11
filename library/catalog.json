@@ -5798,6 +5798,52 @@
       "source_sha256": "72248ef4c70e027be34f53ee4eebcb803e7ce069ee477ef9572f8485bfe70663"
     },
     {
+      "id": "community-245",
+      "version": 2,
+      "title": "lulu. (TV Size)",
+      "artist": "Mrs. GREEN APPLE",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/sousou_no_frieren_2nd_season/OP1",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 88,
+          "bpm": 175.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 122,
+          "bpm": 175.0
+        },
+        {
+          "name": "HARD",
+          "notes": 185,
+          "bpm": 175.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 223,
+          "bpm": 175.0
+        }
+      ],
+      "duration_s": 90.0,
+      "size_bytes": 10462289,
+      "has_video": true,
+      "zip": "songs/community-245-v2.zip",
+      "zip_bytes": 10440690,
+      "sha256": "7d2213048099c19630af19a829542c5765b23d5167f73edbc8c4e77ec37011f5",
+      "thumb": "thumbs/community-245-v2.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 245,
+      "local_id": "mrs_green_apple_lulu",
+      "previous_objects": [],
+      "source_sha256": "1b90d994ccec0d6969c1b71a119f1ebbfaeca44b2b8ddd85fad13f8b7eebe5d4"
+    },
+    {
       "id": "community-75",
       "version": 1,
       "title": "Machine Love",
