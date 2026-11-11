@@ -9018,6 +9018,52 @@
       "source_sha256": "2a4f852ca07235a370c69cd076815f9c4b97da772ec30df053d8cd2e80c06677"
     },
     {
+      "id": "community-244",
+      "version": 2,
+      "title": "Tell Your World",
+      "artist": "livetune feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=PqJNc9KVIZE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 246,
+          "bpm": 150.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 359,
+          "bpm": 150.0
+        },
+        {
+          "name": "HARD",
+          "notes": 514,
+          "bpm": 150.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 602,
+          "bpm": 150.0
+        }
+      ],
+      "duration_s": 272.4,
+      "size_bytes": 7437983,
+      "has_video": false,
+      "zip": "songs/community-244-v2.zip",
+      "zip_bytes": 7380314,
+      "sha256": "feaf20ea8036670e670c5f1c5f8c3d6e73455232bf0d6225c7adecc9ba720c38",
+      "thumb": "thumbs/community-244-v2.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 244,
+      "local_id": "livetune_tell_your_world",
+      "previous_objects": [],
+      "source_sha256": "a9596fd299d818456b445aeb53e0eb2c2f63f9d24d33dd051db7f998d6952063"
+    },
+    {
       "id": "community-226",
       "version": 1,
       "title": "TEST ME (TV Size)",
