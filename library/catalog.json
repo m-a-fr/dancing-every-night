@@ -9432,52 +9432,6 @@
       "source_sha256": "23385a0ebd217127ab8cc7a5bd270d0ed50847caf8f379c2c11bd64b959c4ec3"
     },
     {
-      "id": "community-235",
-      "version": 1,
-      "title": "THE WORLD (TV Size)",
-      "artist": "Nightmare",
-      "pack": "",
-      "mapper": "DocteurBob",
-      "source": "https://animethemes.moe/anime/death_note/OP1",
-      "license": "Redistribution permission not established",
-      "difficulties": [
-        {
-          "name": "EASY",
-          "notes": 83,
-          "bpm": 190.0
-        },
-        {
-          "name": "NORMAL",
-          "notes": 116,
-          "bpm": 190.0
-        },
-        {
-          "name": "HARD",
-          "notes": 165,
-          "bpm": 190.0
-        },
-        {
-          "name": "EXPERT",
-          "notes": 209,
-          "bpm": 190.0
-        }
-      ],
-      "duration_s": 79.5,
-      "size_bytes": 8910932,
-      "has_video": true,
-      "zip": "songs/community-235-v1.zip",
-      "zip_bytes": 8857403,
-      "sha256": "fbafc2577d54ba0088a188436618a19b0ab6ac73676c47cbac68fe4ecb43304a",
-      "thumb": "thumbs/community-235-v1.jpg",
-      "added": "2026-11-05",
-      "updated": "2026-11-05",
-      "submitter": "DocteurBob",
-      "issue": 235,
-      "local_id": "nightmare_the_world",
-      "previous_objects": [],
-      "source_sha256": "3cf9f3bf520a696d91f25b5b8a76491bedba8095e7c6cdeb571d5a14c8b0c153"
-    },
-    {
       "id": "community-246",
       "version": 2,
       "title": "THE WORLD (TV Size)",
