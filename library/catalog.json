@@ -9800,6 +9800,52 @@
       "source_sha256": "70eb1b76b42aae2f908c74decdff7c718fb38781ab1dd1d677650e3009b5979f"
     },
     {
+      "id": "community-250",
+      "version": 2,
+      "title": "Ura-Omote Lovers",
+      "artist": "wowaka feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=b_cuMcDWwsI",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 181,
+          "bpm": 159.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 259,
+          "bpm": 159.0
+        },
+        {
+          "name": "HARD",
+          "notes": 416,
+          "bpm": 159.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 493,
+          "bpm": 159.0
+        }
+      ],
+      "duration_s": 189.3,
+      "size_bytes": 4425951,
+      "has_video": false,
+      "zip": "songs/community-250-v2.zip",
+      "zip_bytes": 4387383,
+      "sha256": "b273b34dff9ecb0522c1fd7e36d80bd2caad8f7f8748ba1d8739ccaf0073ecbb",
+      "thumb": "thumbs/community-250-v2.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 250,
+      "local_id": "wowaka_ura_omote_lovers",
+      "previous_objects": [],
+      "source_sha256": "2615fe86ad69c6a07c87838cee7f2b06a73e8f68f3cd70567e374eb78abf66aa"
+    },
+    {
       "id": "community-168",
       "version": 1,
       "title": "Uragirimono no Requiem (TV Size)",
