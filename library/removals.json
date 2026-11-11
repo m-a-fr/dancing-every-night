@@ -77,6 +77,13 @@
       "title": "Velonica (TV Size)",
       "date": "2026-11-11",
       "reason": "Replaced by a corrected version: the beat grid was half a beat off the music"
+    },
+    {
+      "id": "community-226",
+      "version": 1,
+      "title": "TEST ME (TV Size)",
+      "date": "2026-11-11",
+      "reason": "Replaced by a corrected version: the beat grid was half a beat off the music"
     }
   ]
 }

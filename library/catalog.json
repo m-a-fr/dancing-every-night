@@ -9064,52 +9064,6 @@
       "source_sha256": "a9596fd299d818456b445aeb53e0eb2c2f63f9d24d33dd051db7f998d6952063"
     },
     {
-      "id": "community-226",
-      "version": 1,
-      "title": "TEST ME (TV Size)",
-      "artist": "CHANMINA",
-      "pack": "",
-      "mapper": "DocteurBob",
-      "source": "https://animethemes.moe/anime/oshi_no_ko_3rd_season/OP2",
-      "license": "Redistribution permission not established",
-      "difficulties": [
-        {
-          "name": "EASY",
-          "notes": 92,
-          "bpm": 130.0
-        },
-        {
-          "name": "NORMAL",
-          "notes": 134,
-          "bpm": 130.0
-        },
-        {
-          "name": "HARD",
-          "notes": 195,
-          "bpm": 130.0
-        },
-        {
-          "name": "EXPERT",
-          "notes": 236,
-          "bpm": 130.0
-        }
-      ],
-      "duration_s": 90.0,
-      "size_bytes": 10364945,
-      "has_video": true,
-      "zip": "songs/community-226-v1.zip",
-      "zip_bytes": 10342346,
-      "sha256": "770cb27d648fc58dd0f84c97ef705dbc936a4595cae97c1caff9f107007233fd",
-      "thumb": "thumbs/community-226-v1.jpg",
-      "added": "2026-11-05",
-      "updated": "2026-11-05",
-      "submitter": "DocteurBob",
-      "issue": 226,
-      "local_id": "chanmina_test_me",
-      "previous_objects": [],
-      "source_sha256": "29e7fdd1cfcefba142dc2d93e590c4d76c4ebdb4e05fe62a62f30415f21e71bd"
-    },
-    {
       "id": "community-242",
       "version": 2,
       "title": "TEST ME (TV Size)",
