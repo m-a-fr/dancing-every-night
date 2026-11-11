@@ -9892,6 +9892,52 @@
       "source_sha256": "ef9cbf0f7123a392e545b2a2e54a07f846353a8f5a35530c2111b604367d27c6"
     },
     {
+      "id": "community-241",
+      "version": 2,
+      "title": "Velonica (TV Size)",
+      "artist": "Aqua Timez",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/bleach/OP9",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 87,
+          "bpm": 137.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 136,
+          "bpm": 137.0
+        },
+        {
+          "name": "HARD",
+          "notes": 188,
+          "bpm": 137.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 231,
+          "bpm": 137.0
+        }
+      ],
+      "duration_s": 93.0,
+      "size_bytes": 10129761,
+      "has_video": true,
+      "zip": "songs/community-241-v2.zip",
+      "zip_bytes": 10099463,
+      "sha256": "14f9162ee20a734b410d24c11e92f0a8679364ff49bbf4ac2d1f1342465e4e6b",
+      "thumb": "thumbs/community-241-v2.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 241,
+      "local_id": "aqua_timez_velonica",
+      "previous_objects": [],
+      "source_sha256": "5032a81363ca1da1a33448479975e12bf9f0f5ded435ae77b95e96f03a307861"
+    },
+    {
       "id": "community-156",
       "version": 1,
       "title": "VIVID VICE (TV Size)",
