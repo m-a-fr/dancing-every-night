@@ -5982,6 +5982,52 @@
       "source_sha256": "3d8904e114925a3133ff27d82311f1dae009763091f25ef5682368fa504de201"
     },
     {
+      "id": "community-256",
+      "version": 1,
+      "title": "Magia (TV Size)",
+      "artist": "Kalafina",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=XF-Rf3hBvFY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 86,
+          "bpm": 125.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 131,
+          "bpm": 125.0
+        },
+        {
+          "name": "HARD",
+          "notes": 179,
+          "bpm": 125.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 226,
+          "bpm": 125.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 9528231,
+      "has_video": true,
+      "zip": "songs/community-256-v1.zip",
+      "zip_bytes": 9506553,
+      "sha256": "0125a31bc19e354715072577f2f7ab80113f72edde960979f00766a26ae97b07",
+      "thumb": "thumbs/community-256-v1.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 256,
+      "local_id": "kalafina_magia",
+      "previous_objects": [],
+      "source_sha256": "d9e8fd6cacbf73f5db2b6454293000c576df88e6458677205e7d1ffa9a1d37fa"
+    },
+    {
       "id": "community-76",
       "version": 1,
       "title": "Marisa Stole the Precious Thing (PV Edit)",
