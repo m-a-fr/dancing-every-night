@@ -3544,6 +3544,52 @@
       "source_sha256": "fd060a8ecc3b42d78af304b2ca0e3605878660d0198e18d354510653cd8aed75"
     },
     {
+      "id": "community-247",
+      "version": 2,
+      "title": "Golden Time Lover (TV Size)",
+      "artist": "Sukima Switch",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/fullmetal_alchemist_brotherhood/O",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 89,
+          "bpm": 125.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 138,
+          "bpm": 125.0
+        },
+        {
+          "name": "HARD",
+          "notes": 203,
+          "bpm": 125.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 234,
+          "bpm": 125.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 9969405,
+      "has_video": true,
+      "zip": "songs/community-247-v2.zip",
+      "zip_bytes": 9944787,
+      "sha256": "51619bf4b716e7bf4d7bfc712b3e6dd83b1a18f19a4ec8f045f252444d4cf1a2",
+      "thumb": "thumbs/community-247-v2.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 247,
+      "local_id": "sukima_switch_golden_time_lover",
+      "previous_objects": [],
+      "source_sha256": "1d20907c3c82703949be4d2dca26593373dfd979e3f4f8de7499a0259e3b739a"
+    },
+    {
       "id": "community-174",
       "version": 1,
       "title": "Goodbye Sengen",
