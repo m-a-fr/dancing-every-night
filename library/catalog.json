@@ -9662,6 +9662,52 @@
       "source_sha256": "c011837e5a1a81b45d61a8f768008959aa74c8dfb25345d691431be6df649b99"
     },
     {
+      "id": "community-259",
+      "version": 1,
+      "title": "This Fffire",
+      "artist": "Franz Ferdinand",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=mH2wmyeiIpA",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 201,
+          "bpm": 148.15
+        },
+        {
+          "name": "NORMAL",
+          "notes": 292,
+          "bpm": 148.15
+        },
+        {
+          "name": "HARD",
+          "notes": 415,
+          "bpm": 148.15
+        },
+        {
+          "name": "EXPERT",
+          "notes": 483,
+          "bpm": 148.15
+        }
+      ],
+      "duration_s": 211.9,
+      "size_bytes": 4449057,
+      "has_video": false,
+      "zip": "songs/community-259-v1.zip",
+      "zip_bytes": 4423175,
+      "sha256": "944efdc230f8c45ce5076cea586ac256a8294a1c1d5a51de3ce896e2827f2397",
+      "thumb": "thumbs/community-259-v1.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 259,
+      "local_id": "franz_ferdinand_this_fffire",
+      "previous_objects": [],
+      "source_sha256": "03d01e8a5d9b31a1e01bd27674804c99e95b880c24a8c19c2ee986c0d482c73e"
+    },
+    {
       "id": "community-99",
       "version": 1,
       "title": "This game (TV Size)",
