@@ -9984,52 +9984,6 @@
       "source_sha256": "49caf90e8f8f7e439a949270ba47ec20196ad0d135b65c4ef012760f1401bcda"
     },
     {
-      "id": "community-222",
-      "version": 1,
-      "title": "Velonica (TV Size)",
-      "artist": "Aqua Timez",
-      "pack": "",
-      "mapper": "DocteurBob",
-      "source": "https://animethemes.moe/anime/bleach/OP9",
-      "license": "Redistribution permission not established",
-      "difficulties": [
-        {
-          "name": "EASY",
-          "notes": 86,
-          "bpm": 137.0
-        },
-        {
-          "name": "NORMAL",
-          "notes": 139,
-          "bpm": 137.0
-        },
-        {
-          "name": "HARD",
-          "notes": 195,
-          "bpm": 137.0
-        },
-        {
-          "name": "EXPERT",
-          "notes": 236,
-          "bpm": 137.0
-        }
-      ],
-      "duration_s": 93.0,
-      "size_bytes": 10130071,
-      "has_video": true,
-      "zip": "songs/community-222-v1.zip",
-      "zip_bytes": 10099526,
-      "sha256": "79a9ab2b7e30d03a4382330dd88aaf2df7f9a873a8043ebf32a6d0949a28c3bc",
-      "thumb": "thumbs/community-222-v1.jpg",
-      "added": "2026-11-05",
-      "updated": "2026-11-05",
-      "submitter": "DocteurBob",
-      "issue": 222,
-      "local_id": "aqua_timez_velonica",
-      "previous_objects": [],
-      "source_sha256": "ef9cbf0f7123a392e545b2a2e54a07f846353a8f5a35530c2111b604367d27c6"
-    },
-    {
       "id": "community-241",
       "version": 2,
       "title": "Velonica (TV Size)",

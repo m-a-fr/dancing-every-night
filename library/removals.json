@@ -70,6 +70,13 @@
       "title": "Test Clicks",
       "date": "2026-10-25",
       "reason": "Discord announcement test; remove disposable CC0 fixture"
+    },
+    {
+      "id": "community-222",
+      "version": 1,
+      "title": "Velonica (TV Size)",
+      "date": "2026-11-11",
+      "reason": "Replaced by a corrected version: the beat grid was half a beat off the music"
     }
   ]
 }
