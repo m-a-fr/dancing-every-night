@@ -3498,52 +3498,6 @@
       "source_sha256": "92cf624911628ba7d4ad8634cee58b7e9f4d5e0f1dcbf6ed3795a33d2a72234b"
     },
     {
-      "id": "community-218",
-      "version": 1,
-      "title": "Golden Time Lover (TV Size)",
-      "artist": "Sukima Switch",
-      "pack": "",
-      "mapper": "DocteurBob",
-      "source": "https://animethemes.moe/anime/fullmetal_alchemist_brotherhood/O",
-      "license": "Redistribution permission not established",
-      "difficulties": [
-        {
-          "name": "EASY",
-          "notes": 90,
-          "bpm": 125.0
-        },
-        {
-          "name": "NORMAL",
-          "notes": 134,
-          "bpm": 125.0
-        },
-        {
-          "name": "HARD",
-          "notes": 193,
-          "bpm": 125.0
-        },
-        {
-          "name": "EXPERT",
-          "notes": 229,
-          "bpm": 125.0
-        }
-      ],
-      "duration_s": 90.1,
-      "size_bytes": 9969146,
-      "has_video": true,
-      "zip": "songs/community-218-v1.zip",
-      "zip_bytes": 9944685,
-      "sha256": "fe6ec8448d1187a8f4d30a1ad27f590ef40486e1625c19b4530734badbd95c51",
-      "thumb": "thumbs/community-218-v1.jpg",
-      "added": "2026-11-05",
-      "updated": "2026-11-05",
-      "submitter": "DocteurBob",
-      "issue": 218,
-      "local_id": "sukima_switch_golden_time_lover",
-      "previous_objects": [],
-      "source_sha256": "fd060a8ecc3b42d78af304b2ca0e3605878660d0198e18d354510653cd8aed75"
-    },
-    {
       "id": "community-247",
       "version": 2,
       "title": "Golden Time Lover (TV Size)",
