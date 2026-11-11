@@ -5798,6 +5798,52 @@
       "source_sha256": "ac25d4652ace91061e51643922c8e837eb515a6b99693b5923fa91e7f2db9140"
     },
     {
+      "id": "community-248",
+      "version": 2,
+      "title": "Love is War",
+      "artist": "ryo (supercell) feat. Hatsune Miku",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=jDop41Bxq2A",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 226,
+          "bpm": 175.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 312,
+          "bpm": 175.0
+        },
+        {
+          "name": "HARD",
+          "notes": 456,
+          "bpm": 175.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 557,
+          "bpm": 175.0
+        }
+      ],
+      "duration_s": 236.6,
+      "size_bytes": 5898621,
+      "has_video": false,
+      "zip": "songs/community-248-v2.zip",
+      "zip_bytes": 5861427,
+      "sha256": "3de5c4d5b9655ab6ab648858202a4a730c72289e6f381d3d135ec1912b45511b",
+      "thumb": "thumbs/community-248-v2.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 248,
+      "local_id": "supercell_love_is_war",
+      "previous_objects": [],
+      "source_sha256": "40acff3843c46ac48b9071e865907791fb358a60e92befe5672cb67e7d90d623"
+    },
+    {
       "id": "community-225",
       "version": 1,
       "title": "lulu. (TV Size)",
