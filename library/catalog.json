@@ -9294,6 +9294,52 @@
       "source_sha256": "c10fea158a95442a0e0eb21f438c4a5f7d9dd3664dcdd42e14d5fe7812453337"
     },
     {
+      "id": "community-251",
+      "version": 2,
+      "title": "The Real Folk Blues (TV Size)",
+      "artist": "SEATBELTS",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://animethemes.moe/anime/cowboy_bebop/ED1",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 99,
+          "bpm": 159.99
+        },
+        {
+          "name": "NORMAL",
+          "notes": 136,
+          "bpm": 159.99
+        },
+        {
+          "name": "HARD",
+          "notes": 220,
+          "bpm": 159.99
+        },
+        {
+          "name": "EXPERT",
+          "notes": 259,
+          "bpm": 159.99
+        }
+      ],
+      "duration_s": 94.9,
+      "size_bytes": 11201112,
+      "has_video": true,
+      "zip": "songs/community-251-v2.zip",
+      "zip_bytes": 11086757,
+      "sha256": "a2b3ce2b6979de3eebbb9a1dc2fe2a774f2db31f4751a0a4531c1bf3c19a66a0",
+      "thumb": "thumbs/community-251-v2.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 251,
+      "local_id": "seatbelts_real_folk_blues",
+      "previous_objects": [],
+      "source_sha256": "58a0bcceeb10f7cc3b25c564138d62af36140cef71c6cef64e9fa8557e99e164"
+    },
+    {
       "id": "community-160",
       "version": 1,
       "title": "The Rumbling (TV Size)",
