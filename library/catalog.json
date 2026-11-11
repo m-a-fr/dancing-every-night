@@ -7040,6 +7040,52 @@
       "source_sha256": "7dd056335c510fe1db0efe48ec3cbb346376e4b06254afe0eca8cce23f695cb6"
     },
     {
+      "id": "community-258",
+      "version": 1,
+      "title": "Out of Control (TV Size)",
+      "artist": "Nothing's Carved In Stone",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=SJ-aUXmJM8Q",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 86,
+          "bpm": 140.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 128,
+          "bpm": 140.0
+        },
+        {
+          "name": "HARD",
+          "notes": 185,
+          "bpm": 140.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 203,
+          "bpm": 140.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 10196617,
+      "has_video": true,
+      "zip": "songs/community-258-v1.zip",
+      "zip_bytes": 10178341,
+      "sha256": "156826dce1968adbee0992266e68cb4b3f1ef73efa294c9f9eb07fd8d3f22825",
+      "thumb": "thumbs/community-258-v1.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 258,
+      "local_id": "ncis_out_of_control",
+      "previous_objects": [],
+      "source_sha256": "2877a3a6a8720a4d168700e2c11e25055d0348b94b464e6c6789a16809acdff5"
+    },
+    {
       "id": "community-81",
       "version": 1,
       "title": "Overdrive (PV Edit)",
