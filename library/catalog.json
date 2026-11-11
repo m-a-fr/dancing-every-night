@@ -232,6 +232,52 @@
       "source_sha256": "6e2e0ac9b5b327ed95b07f95052fb9292ba84168b050486315de597ee1b5d063"
     },
     {
+      "id": "community-254",
+      "version": 1,
+      "title": "Abyss (TV Size)",
+      "artist": "YUNGBLUD",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=CFjI21M9wZs",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 73,
+          "bpm": 115.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 112,
+          "bpm": 115.0
+        },
+        {
+          "name": "HARD",
+          "notes": 154,
+          "bpm": 115.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 195,
+          "bpm": 115.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 9341883,
+      "has_video": true,
+      "zip": "songs/community-254-v1.zip",
+      "zip_bytes": 9322061,
+      "sha256": "cdcc4090fb6b51a848f61cfbc3625e8b55d8f614108a193b52ce1a06b3ec252a",
+      "thumb": "thumbs/community-254-v1.jpg",
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "submitter": "DocteurBob",
+      "issue": 254,
+      "local_id": "yungblud_abyss",
+      "previous_objects": [],
+      "source_sha256": "98e7e161c5fb77d0e24fd2b492906e811140034ca1a54136a3764a1e80c32e28"
+    },
+    {
       "id": "community-91",
       "version": 1,
       "title": "ADAMAS (TV Size)",
