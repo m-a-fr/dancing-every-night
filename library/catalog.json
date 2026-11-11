@@ -9248,52 +9248,6 @@
       "source_sha256": "19eed6d58bb051848d1c2cac45f6a25cc7c82d9c510c578df7b4a3061fa2c71f"
     },
     {
-      "id": "community-220",
-      "version": 1,
-      "title": "The Real Folk Blues (TV Size)",
-      "artist": "SEATBELTS",
-      "pack": "",
-      "mapper": "DocteurBob",
-      "source": "https://animethemes.moe/anime/cowboy_bebop/ED1",
-      "license": "Redistribution permission not established",
-      "difficulties": [
-        {
-          "name": "EASY",
-          "notes": 98,
-          "bpm": 160.0
-        },
-        {
-          "name": "NORMAL",
-          "notes": 135,
-          "bpm": 160.0
-        },
-        {
-          "name": "HARD",
-          "notes": 219,
-          "bpm": 160.0
-        },
-        {
-          "name": "EXPERT",
-          "notes": 256,
-          "bpm": 160.0
-        }
-      ],
-      "duration_s": 94.9,
-      "size_bytes": 11201069,
-      "has_video": true,
-      "zip": "songs/community-220-v1.zip",
-      "zip_bytes": 11086731,
-      "sha256": "e3d82745a35b32bfa73017ee6375be4a2664e5144d748fe2417f521d418d7a45",
-      "thumb": "thumbs/community-220-v1.jpg",
-      "added": "2026-11-05",
-      "updated": "2026-11-05",
-      "submitter": "DocteurBob",
-      "issue": 220,
-      "local_id": "seatbelts_real_folk_blues",
-      "previous_objects": [],
-      "source_sha256": "c10fea158a95442a0e0eb21f438c4a5f7d9dd3664dcdd42e14d5fe7812453337"
-    },
-    {
       "id": "community-251",
       "version": 2,
       "title": "The Real Folk Blues (TV Size)",
