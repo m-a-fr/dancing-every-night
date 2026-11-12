@@ -1566,6 +1566,52 @@
       "source_sha256": "98ab3d562facc812b784685518ba2d6db13646392bae92e4e4362ebcbd0cecea"
     },
     {
+      "id": "community-276",
+      "version": 1,
+      "title": "BOW AND ARROW (TV Size)",
+      "artist": "Kenshi Yonezu",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=H3SUAiwfyp0",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 92,
+          "bpm": 180.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 131,
+          "bpm": 180.0
+        },
+        {
+          "name": "HARD",
+          "notes": 191,
+          "bpm": 180.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 231,
+          "bpm": 180.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 10436008,
+      "has_video": true,
+      "zip": "songs/community-276-v1.zip",
+      "zip_bytes": 10405333,
+      "sha256": "388693339c5efa47858f0b14f3cb405ab358c8d2883a4199a28298c8cf623393",
+      "thumb": "thumbs/community-276-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 276,
+      "local_id": "kenshi_yonezu_bow_and_arrow",
+      "previous_objects": [],
+      "source_sha256": "ce7914926f3c9808849e994aeca255a9df5d2df62b76526e9adbf858fb57721b"
+    },
+    {
       "id": "community-124",
       "version": 1,
       "title": "Brain Power (Game Edit)",
