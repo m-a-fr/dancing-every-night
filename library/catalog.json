@@ -3360,6 +3360,52 @@
       "source_sha256": "59b8c4e8fd9a32054556055a1f8abc8e79ddc1dea9b65627c11e48733d1bacea"
     },
     {
+      "id": "community-269",
+      "version": 1,
+      "title": "First Love",
+      "artist": "Hikaru Utada",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=o1sUaVJUeB0",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 261,
+          "bpm": 180.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 339,
+          "bpm": 180.0
+        },
+        {
+          "name": "HARD",
+          "notes": 482,
+          "bpm": 180.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 582,
+          "bpm": 180.0
+        }
+      ],
+      "duration_s": 257.6,
+      "size_bytes": 5456372,
+      "has_video": false,
+      "zip": "songs/community-269-v1.zip",
+      "zip_bytes": 5424830,
+      "sha256": "9852fbbc296919956395b1571613d2626b325eb4ab751f22157110ed30f7e148",
+      "thumb": "thumbs/community-269-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 269,
+      "local_id": "hikaru_utada_first_love",
+      "previous_objects": [],
+      "source_sha256": "6ec6a6e4da0efe86dbdef7f799c14fb39c19fac7874c1083849f636de03041a3"
+    },
+    {
       "id": "community-132",
       "version": 1,
       "title": "FLY HIGH!! (TV Size)",
