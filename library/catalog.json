@@ -6258,6 +6258,52 @@
       "source_sha256": "1ecc9fc40ff6bb6b764dbfea8346a04d03ee067912fec95904d44888adb290ab"
     },
     {
+      "id": "community-264",
+      "version": 1,
+      "title": "Mayonaka no Door ~ Stay With Me",
+      "artist": "Miki Matsubara",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=nuU2YHtxMik",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 229,
+          "bpm": 108.27
+        },
+        {
+          "name": "NORMAL",
+          "notes": 391,
+          "bpm": 108.27
+        },
+        {
+          "name": "HARD",
+          "notes": 593,
+          "bpm": 108.27
+        },
+        {
+          "name": "EXPERT",
+          "notes": 738,
+          "bpm": 108.27
+        }
+      ],
+      "duration_s": 310.7,
+      "size_bytes": 7276354,
+      "has_video": false,
+      "zip": "songs/community-264-v1.zip",
+      "zip_bytes": 7238499,
+      "sha256": "5548879691569c0a5ff8bd94016af0cfc97f9483231541790d28a12da66f1630",
+      "thumb": "thumbs/community-264-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 264,
+      "local_id": "miki_matsubara_mayonaka_no_door",
+      "previous_objects": [],
+      "source_sha256": "2dd8b7dcd474a31bb2538d8cd6d394ee6f17cb3c823af4c86b8bf7dda048c85e"
+    },
+    {
       "id": "community-181",
       "version": 1,
       "title": "MEGALOVANIA",
