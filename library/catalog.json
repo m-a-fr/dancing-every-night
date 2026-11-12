@@ -554,6 +554,52 @@
       "source_sha256": "be2f7d3f773ee7360771da2038c6b44a0200a04f93e139f53a221e0b3ed20629"
     },
     {
+      "id": "community-279",
+      "version": 1,
+      "title": "Anytime Anywhere (TV Size)",
+      "artist": "milet",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=7pmd0kt3FOs",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 87,
+          "bpm": 164.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 125,
+          "bpm": 164.0
+        },
+        {
+          "name": "HARD",
+          "notes": 176,
+          "bpm": 164.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 213,
+          "bpm": 164.0
+        }
+      ],
+      "duration_s": 93.0,
+      "size_bytes": 10446678,
+      "has_video": true,
+      "zip": "songs/community-279-v1.zip",
+      "zip_bytes": 10395525,
+      "sha256": "b5136caac54f14afc1bbf951d62b39f87fb59cb6563657281b625f400f486487",
+      "thumb": "thumbs/community-279-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 279,
+      "local_id": "milet_anytime_anywhere",
+      "previous_objects": [],
+      "source_sha256": "c24444d7be98e605aabd611a5d5347cad25f88961ca7a39b2039563a14600c43"
+    },
+    {
       "id": "community-92",
       "version": 1,
       "title": "Aoi Shiori (TV Size)",
