@@ -554,6 +554,52 @@
       "source_sha256": "4131b8265e0cf289b45b0120cba6e1b7c6162fd0232dc72552aeb5b714f9d084"
     },
     {
+      "id": "community-262",
+      "version": 1,
+      "title": "Around the World",
+      "artist": "Daft Punk",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=K0HSD_i2DvA",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 236,
+          "bpm": 121.29
+        },
+        {
+          "name": "NORMAL",
+          "notes": 358,
+          "bpm": 121.29
+        },
+        {
+          "name": "HARD",
+          "notes": 544,
+          "bpm": 121.29
+        },
+        {
+          "name": "EXPERT",
+          "notes": 622,
+          "bpm": 121.29
+        }
+      ],
+      "duration_s": 241.6,
+      "size_bytes": 5739984,
+      "has_video": false,
+      "zip": "songs/community-262-v1.zip",
+      "zip_bytes": 5704126,
+      "sha256": "14819e320edb65b541068f830d221a79f57994e4cf48040ec4b7fb05546bbec9",
+      "thumb": "thumbs/community-262-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 262,
+      "local_id": "daft_punk_around_the_world",
+      "previous_objects": [],
+      "source_sha256": "456d93539b98f15885698c5875298d04b987ceccd5fe08c230d95a2b40f3ccfd"
+    },
+    {
       "id": "community-20",
       "version": 1,
       "title": "Arpanauts",
