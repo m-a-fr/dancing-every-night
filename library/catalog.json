@@ -8788,6 +8788,52 @@
       "source_sha256": "7a79f417b2a140835212eb43c350f86a602c5bb615962dc6b8754be9bfe71010"
     },
     {
+      "id": "community-280",
+      "version": 1,
+      "title": "River (TV Size)",
+      "artist": "Anonymouz",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=ll7Su_BCNCA",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 93,
+          "bpm": 176.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 133,
+          "bpm": 176.0
+        },
+        {
+          "name": "HARD",
+          "notes": 183,
+          "bpm": 176.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 234,
+          "bpm": 176.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 10280364,
+      "has_video": true,
+      "zip": "songs/community-280-v1.zip",
+      "zip_bytes": 10247036,
+      "sha256": "8a2f331601cba3f7d8e6df6a60db108be2d9b2e2f91e4dff78f5463f170bd208",
+      "thumb": "thumbs/community-280-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 280,
+      "local_id": "anonymouz_river",
+      "previous_objects": [],
+      "source_sha256": "fad5701fb0c17c56b61c5b53a9d4c936917451f80347231aac1dd4d1db771ea8"
+    },
+    {
       "id": "community-193",
       "version": 1,
       "title": "Rivers In the Desert",
