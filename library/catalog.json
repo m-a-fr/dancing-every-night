@@ -10122,6 +10122,52 @@
       "source_sha256": "904eea53732a596ffec07ba3bc83804809eb6bc5f72c4c3b33ec7ae2ad726fe3"
     },
     {
+      "id": "community-268",
+      "version": 1,
+      "title": "Tokyo Teddy Bear",
+      "artist": "Neru feat. Kagamine Rin",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=eSI7RsjZy1E",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 153,
+          "bpm": 102.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 250,
+          "bpm": 102.0
+        },
+        {
+          "name": "HARD",
+          "notes": 336,
+          "bpm": 102.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 407,
+          "bpm": 102.0
+        }
+      ],
+      "duration_s": 193.0,
+      "size_bytes": 23053823,
+      "has_video": true,
+      "zip": "songs/community-268-v1.zip",
+      "zip_bytes": 22995440,
+      "sha256": "4e06dbece925e7f715b19fcc69c7abfd82fa1d428556df3f9f876324da5e5695",
+      "thumb": "thumbs/community-268-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 268,
+      "local_id": "neru_tokyo_teddy_bear",
+      "previous_objects": [],
+      "source_sha256": "dac5fc02f9e551c3525d74eee6996ade2280d99ef6c0199e7adf2e81a45b3551"
+    },
+    {
       "id": "community-100",
       "version": 1,
       "title": "Touch off (TV Size)",
