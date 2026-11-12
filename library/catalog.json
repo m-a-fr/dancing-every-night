@@ -7868,6 +7868,52 @@
       "source_sha256": "fe719bdaa72725bacaad55f0b7ee515562cededaf461b4166636b483f03f23d4"
     },
     {
+      "id": "community-271",
+      "version": 1,
+      "title": "Pretender",
+      "artist": "Official HIGE DANdism",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=TQ8WlA2GXbk",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 339,
+          "bpm": 184.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 454,
+          "bpm": 184.0
+        },
+        {
+          "name": "HARD",
+          "notes": 647,
+          "bpm": 184.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 816,
+          "bpm": 184.0
+        }
+      ],
+      "duration_s": 335.6,
+      "size_bytes": 7507677,
+      "has_video": false,
+      "zip": "songs/community-271-v1.zip",
+      "zip_bytes": 7460998,
+      "sha256": "05a96a995668d51d1d8502b37c43c638cd0dba298dbc02bc0631e02a509b97f2",
+      "thumb": "thumbs/community-271-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 271,
+      "local_id": "hige_dandism_pretender",
+      "previous_objects": [],
+      "source_sha256": "5b62b80120d9853061dbac3743c593b31ec3acf84070d5fe434a46cf749d189a"
+    },
+    {
       "id": "community-180",
       "version": 1,
       "title": "PUPA",
