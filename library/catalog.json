@@ -10490,6 +10490,52 @@
       "source_sha256": "49caf90e8f8f7e439a949270ba47ec20196ad0d135b65c4ef012760f1401bcda"
     },
     {
+      "id": "community-267",
+      "version": 1,
+      "title": "Usseewa",
+      "artist": "Ado",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Qp3b-RXtz4w",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 211,
+          "bpm": 178.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 301,
+          "bpm": 178.0
+        },
+        {
+          "name": "HARD",
+          "notes": 423,
+          "bpm": 178.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 534,
+          "bpm": 178.0
+        }
+      ],
+      "duration_s": 202.8,
+      "size_bytes": 4778919,
+      "has_video": false,
+      "zip": "songs/community-267-v1.zip",
+      "zip_bytes": 4757270,
+      "sha256": "157338befe5c206c71816dc2eea04b1fc9c92c18ff0bcadb562d45176d9ec5e8",
+      "thumb": "thumbs/community-267-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 267,
+      "local_id": "ado_usseewa",
+      "previous_objects": [],
+      "source_sha256": "5fcc65fa423b39e37074fdc1c2cd50084c671f161864eecbeac09195b744148d"
+    },
+    {
       "id": "community-241",
       "version": 2,
       "title": "Velonica (TV Size)",
