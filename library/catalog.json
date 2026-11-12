@@ -5430,6 +5430,52 @@
       "source_sha256": "ed640b1b42819e2eeccf08035da70b11302ac440453418d7294e75222af6df48"
     },
     {
+      "id": "community-275",
+      "version": 1,
+      "title": "Kaijuu (TV Size)",
+      "artist": "Sakanaction",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=eZAocot63s8",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 98,
+          "bpm": 180.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 131,
+          "bpm": 180.0
+        },
+        {
+          "name": "HARD",
+          "notes": 184,
+          "bpm": 180.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 214,
+          "bpm": 180.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 10270706,
+      "has_video": true,
+      "zip": "songs/community-275-v1.zip",
+      "zip_bytes": 10231955,
+      "sha256": "04ccd76a5e32a791c27972963566bf0055064647c779a07016dcc0c0d4648831",
+      "thumb": "thumbs/community-275-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 275,
+      "local_id": "sakanaction_kaijuu",
+      "previous_objects": [],
+      "source_sha256": "107b8647a0acaf9e4f60f0063cb8dda552a2c4856c7eb1e2389b7c1233d3967d"
+    },
+    {
       "id": "community-70",
       "version": 1,
       "title": "Kaikai Kitan (TV Size)",
