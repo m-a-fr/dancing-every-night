@@ -1888,6 +1888,52 @@
       "source_sha256": "15bdebfc01fb8c43acb36de04952578c95457c287430474565c91bbb5196ab7d"
     },
     {
+      "id": "community-273",
+      "version": 1,
+      "title": "Byoushin wo Kamu",
+      "artist": "ZUTOMAYO",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=GJI4Gv7NbmE",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 253,
+          "bpm": 130.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 368,
+          "bpm": 130.0
+        },
+        {
+          "name": "HARD",
+          "notes": 531,
+          "bpm": 130.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 620,
+          "bpm": 130.0
+        }
+      ],
+      "duration_s": 272.1,
+      "size_bytes": 5964361,
+      "has_video": false,
+      "zip": "songs/community-273-v1.zip",
+      "zip_bytes": 5932064,
+      "sha256": "9b3a3dae684bc1881b0253fd3c89f033fed631de8d897606e7af75c3f6486560",
+      "thumb": "thumbs/community-273-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 273,
+      "local_id": "zutomayo_byoushin_wo_kamu",
+      "previous_objects": [],
+      "source_sha256": "f6f96d56c2939abf68b23a500288539dbca89d1a21816cd90983bf47c4f59762"
+    },
+    {
       "id": "community-211",
       "version": 1,
       "title": "Cagayake! GIRLS (TV Size)",
