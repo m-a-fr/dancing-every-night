@@ -8834,6 +8834,52 @@
       "source_sha256": "15995e9ab107de0a5794a1ec7662a3aa41ff02c55027edb4b480e49871acd0c9"
     },
     {
+      "id": "community-272",
+      "version": 1,
+      "title": "Shinunoga E-Wa",
+      "artist": "Fujii Kaze",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=dawrQnvwMTY",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 149,
+          "bpm": 158.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 258,
+          "bpm": 158.0
+        },
+        {
+          "name": "HARD",
+          "notes": 393,
+          "bpm": 158.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 455,
+          "bpm": 158.0
+        }
+      ],
+      "duration_s": 191.4,
+      "size_bytes": 20977610,
+      "has_video": true,
+      "zip": "songs/community-272-v1.zip",
+      "zip_bytes": 20938701,
+      "sha256": "7651db454f561db135325c300d07111543114c211b3260c2a42e9eb57f83a6a6",
+      "thumb": "thumbs/community-272-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 272,
+      "local_id": "fujii_kaze_shinunoga_e_wa",
+      "previous_objects": [],
+      "source_sha256": "5c86f3c10ec386aa7e7ae044a185841f0dba6f64411a25995127c805139d3439"
+    },
+    {
       "id": "community-37",
       "version": 1,
       "title": "Shinzou wo Sasageyo! (TV Size)",
