@@ -11088,6 +11088,52 @@
       "source_sha256": "f4b02782a4f3f6c68b6681e5cbd555f81fa0f92f809fb39d9a3576da3d69114d"
     },
     {
+      "id": "community-274",
+      "version": 1,
+      "title": "Work (TV Size)",
+      "artist": "millennium parade x SHIINA RINGO",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=RS94j08yIHs",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 73,
+          "bpm": 105.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 119,
+          "bpm": 105.0
+        },
+        {
+          "name": "HARD",
+          "notes": 167,
+          "bpm": 105.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 199,
+          "bpm": 105.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 9647767,
+      "has_video": true,
+      "zip": "songs/community-274-v1.zip",
+      "zip_bytes": 9605437,
+      "sha256": "dd9464a6facafb475ae9453d141716e4d41162d5d668ff88b50d118f3438ff7d",
+      "thumb": "thumbs/community-274-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 274,
+      "local_id": "millennium_parade_work",
+      "previous_objects": [],
+      "source_sha256": "5d2bc9633d18bfbc55918559ed0ce8dd46c8b236b94a9a306bea918d8f6aac49"
+    },
+    {
       "id": "community-149",
       "version": 1,
       "title": "WORLD END (TV Size)",
