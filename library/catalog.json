@@ -7454,6 +7454,52 @@
       "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
     },
     {
+      "id": "community-261",
+      "version": 1,
+      "title": "Polyrhythm",
+      "artist": "Perfume",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=KbiSxunJatM",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 240,
+          "bpm": 128.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 370,
+          "bpm": 128.0
+        },
+        {
+          "name": "HARD",
+          "notes": 552,
+          "bpm": 128.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 645,
+          "bpm": 128.0
+        }
+      ],
+      "duration_s": 257.8,
+      "size_bytes": 6380921,
+      "has_video": false,
+      "zip": "songs/community-261-v1.zip",
+      "zip_bytes": 6346652,
+      "sha256": "dc31b0bed764517e9019114ecf19063cf1b0613b811986ca73c5fcf512f37700",
+      "thumb": "thumbs/community-261-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 261,
+      "local_id": "perfume_polyrhythm",
+      "previous_objects": [],
+      "source_sha256": "c12203268bf890caa76841f4a425815c7bc07c14c517b18b67691b885165e356"
+    },
+    {
       "id": "community-214",
       "version": 1,
       "title": "Pre-Parade (TV Size)",
