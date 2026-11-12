@@ -1474,6 +1474,52 @@
       "source_sha256": "f5a1bb09f6016218728b68533f279a8149bc350d3b3ddec513b1a2587526feef"
     },
     {
+      "id": "community-277",
+      "version": 1,
+      "title": "Boku wa... (TV Size)",
+      "artist": "Ataraya",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=A0tKGpKOU4Y",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 95,
+          "bpm": 180.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 127,
+          "bpm": 180.0
+        },
+        {
+          "name": "HARD",
+          "notes": 185,
+          "bpm": 180.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 228,
+          "bpm": 180.0
+        }
+      ],
+      "duration_s": 100.1,
+      "size_bytes": 10831461,
+      "has_video": true,
+      "zip": "songs/community-277-v1.zip",
+      "zip_bytes": 10777163,
+      "sha256": "8e0cb623be8308a17e472849fa37bcfe19643009ce1e4b6a79513965011f7aae",
+      "thumb": "thumbs/community-277-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 277,
+      "local_id": "ataraya_boku_wa",
+      "previous_objects": [],
+      "source_sha256": "f07734a15fcf9384a30d39e0812621359834a0486c383ee423f01f35ae35f629"
+    },
+    {
       "id": "community-212",
       "version": 1,
       "title": "Bouken Desho Desho? (TV Size)",
