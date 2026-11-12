@@ -3452,6 +3452,52 @@
       "source_sha256": "a4de2ac19926a0175f3b6965f0406aa1acce879f3aa7f672194877221740e054"
     },
     {
+      "id": "community-281",
+      "version": 1,
+      "title": "Fatale (TV Size)",
+      "artist": "GEMN",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=PAcf55v6zqQ",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 84,
+          "bpm": 156.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 128,
+          "bpm": 156.0
+        },
+        {
+          "name": "HARD",
+          "notes": 195,
+          "bpm": 156.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 231,
+          "bpm": 156.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 10664781,
+      "has_video": true,
+      "zip": "songs/community-281-v1.zip",
+      "zip_bytes": 10635095,
+      "sha256": "3b066f03c92b01aee8296c3945180f22f984f8689e00d6601cafedf9f26ed321",
+      "thumb": "thumbs/community-281-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 281,
+      "local_id": "gemn_fatale",
+      "previous_objects": [],
+      "source_sha256": "31789434bff7ac67688e4e59ee29d29fdf65f0aa0cf307e10cbcd98689d32538"
+    },
+    {
       "id": "community-210",
       "version": 1,
       "title": "felys",
