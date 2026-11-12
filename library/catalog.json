@@ -6902,6 +6902,52 @@
       "source_sha256": "4b1ed1b408a7cdd8b7f04e4028900cc86320592f4d5891dbe0d0a15a4416342f"
     },
     {
+      "id": "community-282",
+      "version": 1,
+      "title": "Mephisto",
+      "artist": "QUEEN BEE",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=Yo83M-KOc7k",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 217,
+          "bpm": 150.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 312,
+          "bpm": 150.0
+        },
+        {
+          "name": "HARD",
+          "notes": 437,
+          "bpm": 150.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 508,
+          "bpm": 150.0
+        }
+      ],
+      "duration_s": 256.1,
+      "size_bytes": 5739248,
+      "has_video": false,
+      "zip": "songs/community-282-v1.zip",
+      "zip_bytes": 5687616,
+      "sha256": "9af4848f76ecef71ef0af5ed0ced069ee715c7d1e9e37b9a83bf1891f4b0b387",
+      "thumb": "thumbs/community-282-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 282,
+      "local_id": "queen_bee_mephisto",
+      "previous_objects": [],
+      "source_sha256": "de1817696983f903489f5ecc306b276028483f33b41b17f342364193765a2051"
+    },
+    {
       "id": "community-77",
       "version": 1,
       "title": "Mesmerizer",
