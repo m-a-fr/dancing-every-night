@@ -646,6 +646,52 @@
       "source_sha256": "021255b50ef6d61773948cfc0823a6e7116c6ca1ad8db74c72ad2287dc95966d"
     },
     {
+      "id": "community-265",
+      "version": 1,
+      "title": "Aruarian Dance",
+      "artist": "Nujabes",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=qYcoJpqCha4",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 272,
+          "bpm": 198.49
+        },
+        {
+          "name": "NORMAL",
+          "notes": 345,
+          "bpm": 198.49
+        },
+        {
+          "name": "HARD",
+          "notes": 501,
+          "bpm": 198.49
+        },
+        {
+          "name": "EXPERT",
+          "notes": 619,
+          "bpm": 198.49
+        }
+      ],
+      "duration_s": 250.4,
+      "size_bytes": 5195172,
+      "has_video": false,
+      "zip": "songs/community-265-v1.zip",
+      "zip_bytes": 5166776,
+      "sha256": "59d2181905e2eefcd645a7a01aea4d3262abb19c409d31103a1316e3e8e82d86",
+      "thumb": "thumbs/community-265-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 265,
+      "local_id": "nujabes_aruarian_dance",
+      "previous_objects": [],
+      "source_sha256": "aad8950dd07c722434c9fcdfe0a838745190893fa4716a854a8ca48dca516ce2"
+    },
+    {
       "id": "community-120",
       "version": 1,
       "title": "Ascension to Heaven",
