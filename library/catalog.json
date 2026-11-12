@@ -5614,6 +5614,52 @@
       "source_sha256": "43857522dc3c532c477634e2872e6671d666469167196e33a8f1420f32cbb1c8"
     },
     {
+      "id": "community-278",
+      "version": 1,
+      "title": "Karakara (TV Size)",
+      "artist": "Kessoku Band",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=MTPiaDzacSI",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 103,
+          "bpm": 190.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 139,
+          "bpm": 190.0
+        },
+        {
+          "name": "HARD",
+          "notes": 193,
+          "bpm": 190.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 235,
+          "bpm": 190.0
+        }
+      ],
+      "duration_s": 90.1,
+      "size_bytes": 10127598,
+      "has_video": true,
+      "zip": "songs/community-278-v1.zip",
+      "zip_bytes": 10061917,
+      "sha256": "ced56303800a4d9764561482cc4860aea9bddf273cabc94175c3353b15ac82ef",
+      "thumb": "thumbs/community-278-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 278,
+      "local_id": "kessoku_band_karakara",
+      "previous_objects": [],
+      "source_sha256": "74f5370f97863440c5380c63179f4e576a58c923b644ee857bef58a67847dc56"
+    },
+    {
       "id": "community-233",
       "version": 1,
       "title": "Kasukana Hana (TV Size)",
