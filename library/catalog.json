@@ -7500,6 +7500,52 @@
       "source_sha256": "316db45f16b407cfdf70a58e5a3e39d8f9dafb69c2f2afdfe6af849b010d4e2f"
     },
     {
+      "id": "community-263",
+      "version": 1,
+      "title": "Plastic Love",
+      "artist": "Mariya Takeuchi",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=T_lC2O1oIew",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 214,
+          "bpm": 102.4
+        },
+        {
+          "name": "NORMAL",
+          "notes": 366,
+          "bpm": 102.4
+        },
+        {
+          "name": "HARD",
+          "notes": 538,
+          "bpm": 102.4
+        },
+        {
+          "name": "EXPERT",
+          "notes": 660,
+          "bpm": 102.4
+        }
+      ],
+      "duration_s": 308.6,
+      "size_bytes": 7125476,
+      "has_video": false,
+      "zip": "songs/community-263-v1.zip",
+      "zip_bytes": 7095001,
+      "sha256": "4e533c824ce9b5201821ebde56a4955eab220812f9cff5a34208bc63e9ba9d03",
+      "thumb": "thumbs/community-263-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 263,
+      "local_id": "mariya_takeuchi_plastic_love",
+      "previous_objects": [],
+      "source_sha256": "eb613be82273b33db7feba11424d02bd66d8f01c35b65f828dec453b0eda9260"
+    },
+    {
       "id": "community-261",
       "version": 1,
       "title": "Polyrhythm",
