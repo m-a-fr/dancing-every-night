@@ -508,6 +508,52 @@
       "source_sha256": "d65a2705c74ad7f985b45bd117423acda15efefa25642d8414d9b23730480112"
     },
     {
+      "id": "community-266",
+      "version": 1,
+      "title": "Ano Yume wo Nazotte",
+      "artist": "YOASOBI",
+      "pack": "",
+      "mapper": "DocteurBob",
+      "source": "https://www.youtube.com/watch?v=sAuEeM_6zpk",
+      "license": "Redistribution permission not established",
+      "difficulties": [
+        {
+          "name": "EASY",
+          "notes": 237,
+          "bpm": 180.0
+        },
+        {
+          "name": "NORMAL",
+          "notes": 350,
+          "bpm": 180.0
+        },
+        {
+          "name": "HARD",
+          "notes": 494,
+          "bpm": 180.0
+        },
+        {
+          "name": "EXPERT",
+          "notes": 608,
+          "bpm": 180.0
+        }
+      ],
+      "duration_s": 239.5,
+      "size_bytes": 5561467,
+      "has_video": false,
+      "zip": "songs/community-266-v1.zip",
+      "zip_bytes": 5528685,
+      "sha256": "cfdc34cb432aedb6d5ea9978c18a8b3cf9ddc1166c812c707e1ba5962db2a776",
+      "thumb": "thumbs/community-266-v1.jpg",
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "submitter": "DocteurBob",
+      "issue": 266,
+      "local_id": "yoasobi_ano_yume_wo_nazotte",
+      "previous_objects": [],
+      "source_sha256": "be2f7d3f773ee7360771da2038c6b44a0200a04f93e139f53a221e0b3ed20629"
+    },
+    {
       "id": "community-92",
       "version": 1,
       "title": "Aoi Shiori (TV Size)",
